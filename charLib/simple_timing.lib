@@ -1,0 +1,132 @@
+/* table model: cell-delay */
+library(slow) {
+
+  /* general attributes */
+  delay_model : table_lookup;
+  in_place_swap_mode : match_footprint;
+  library_features(report_delay_calculation);
+
+  /* documentation attributes */
+  revision : 1.5;
+  date : "Fri Feb 20 14:51:09 2004";
+  comment : "Copyright (c) 2004 Artisan Components, Inc.  All Rights Reserved.";
+
+  /* unit attributes */
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1mA";
+  pulling_resistance_unit : "1kohm";
+  leakage_power_unit : "1pW";
+  capacitive_load_unit (1.0,pf);
+
+  /* operation conditions */
+  nom_process     : 1;
+  nom_temperature : 125;
+  nom_voltage     : 1.08;
+  operating_conditions(slow) {
+    process	: 1;
+    temperature	: 125;
+    voltage	: 1.08;
+    tree_type	: balanced_tree
+  }
+  default_operating_conditions : slow;
+
+  /* threshold definitions */
+  slew_lower_threshold_pct_fall : 30.0;
+  slew_upper_threshold_pct_fall : 70.0;
+  slew_lower_threshold_pct_rise : 30.0;
+  slew_upper_threshold_pct_rise : 70.0;
+  input_threshold_pct_fall      : 50.0;
+  input_threshold_pct_rise      : 50.0;
+  output_threshold_pct_fall     : 50.0;
+  output_threshold_pct_rise     : 50.0;
+  slew_derate_from_library      : 0.5;
+
+  /* default attributes */
+  default_leakage_power_density	: 0.0;
+  default_cell_leakage_power	: 0.0;
+  default_fanout_load	: 1.0;
+  default_output_pin_cap	: 0.0;
+  default_inout_pin_cap	: 0.00158;
+  default_input_pin_cap	: 0.00158;
+  default_max_transition	: 1.5;
+
+  /* templates */
+
+  lu_table_template(delay_template_7x7) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+    index_2 ("1000, 1001, 1002, 1003, 1004, 1005, 1006");
+  }
+
+
+
+cell (INV) { 
+  cell_footprint : inv;
+  area : 3.394800;
+  pin(in) {
+    direction : input;
+    capacitance : 0.002497;
+  }
+  pin(out) {
+    direction : output;
+    capacitance : 0.0;
+    function : "(!in)";
+
+    timing() {
+      related_pin : "in";
+      timing_sense : negative_unate;
+      cell_rise(delay_template_7x7) {
+        index_1 ("0.042, 0.066, 0.112, 0.206, 0.392, 0.764, 1.5");
+        index_2 ("0.00079, 0.002054, 0.00474, 0.010112, 0.020856, 0.042186, 0.08532");
+        values ( \
+          "0.030063, 0.036741, 0.050813, 0.078694, 0.134102, 0.243788, 0.465375", \
+          "0.036425, 0.043752, 0.057759, 0.085643, 0.141090, 0.250820, 0.472440", \
+          "0.045565, 0.055251, 0.071378, 0.099164, 0.154581, 0.264331, 0.485979", \
+          "0.058898, 0.071991, 0.094160, 0.127247, 0.182503, 0.292128, 0.513732", \
+          "0.077458, 0.095025, 0.125280, 0.171408, 0.238379, 0.347733, 0.568997", \
+          "0.103452, 0.127082, 0.168012, 0.231453, 0.325801, 0.459792, 0.680599", \
+          "0.139646, 0.171382, 0.226512, 0.312502, 0.442487, 0.631767, 0.902822");
+      }
+      rise_transition(delay_template_7x7) {
+        index_1 ("0.042, 0.066, 0.112, 0.206, 0.392, 0.764, 1.5");
+        index_2 ("0.00079, 0.002054, 0.00474, 0.010112, 0.020856, 0.042186, 0.08532");
+        values ( \
+          "0.027506, 0.038290, 0.063332, 0.113640, 0.214369, 0.414415, 0.818981", \
+          "0.032812, 0.040756, 0.063329, 0.113647, 0.214373, 0.414413, 0.818981", \
+          "0.043166, 0.051419, 0.068164, 0.113656, 0.214335, 0.414407, 0.818972", \
+          "0.059595, 0.071075, 0.090497, 0.123713, 0.214371, 0.414414, 0.818980", \
+          "0.085004, 0.100588, 0.127388, 0.167911, 0.234539, 0.414419, 0.818981", \
+          "0.125282, 0.146661, 0.183379, 0.239817, 0.322943, 0.455281, 0.818981", \
+          "0.189495, 0.218998, 0.269489, 0.347140, 0.463186, 0.630242, 0.898529");
+      }
+      cell_fall(delay_template_7x7) {
+        index_1 ("0.042, 0.066, 0.112, 0.206, 0.392, 0.764, 1.5");
+        index_2 ("0.00079, 0.002054, 0.00474, 0.010112, 0.020856, 0.042186, 0.08532");
+        values ( \
+          "0.032714, 0.040089, 0.055525, 0.085899, 0.146031, 0.264891, 0.504900", \
+          "0.038545, 0.046190, 0.061599, 0.092026, 0.152250, 0.271196, 0.511261", \
+          "0.046578, 0.056662, 0.073685, 0.104024, 0.164290, 0.283313, 0.523451", \
+          "0.057297, 0.070865, 0.094120, 0.129295, 0.189348, 0.308313, 0.548464", \
+          "0.070718, 0.088775, 0.120141, 0.168612, 0.240009, 0.358533, 0.598369", \
+          "0.086919, 0.110906, 0.152778, 0.218458, 0.317573, 0.460548, 0.699510", \
+          "0.104314, 0.136222, 0.191976, 0.279752, 0.414134, 0.612893, 0.902237");
+      }
+      fall_transition(delay_template_7x7) {
+        index_1 ("0.042, 0.066, 0.112, 0.206, 0.392, 0.764, 1.5");
+        index_2 ("0.00079, 0.002054, 0.00474, 0.010112, 0.020856, 0.042186, 0.08532");
+        values ( \
+          "0.027269, 0.039240, 0.065312, 0.117632, 0.222346, 0.430292, 0.850826", \
+          "0.031444, 0.040590, 0.065330, 0.117633, 0.222351, 0.430290, 0.850826", \
+          "0.041849, 0.050695, 0.068898, 0.117640, 0.222333, 0.430284, 0.850823", \
+          "0.058500, 0.070707, 0.091194, 0.126408, 0.222348, 0.430291, 0.850826", \
+          "0.083612, 0.100303, 0.128814, 0.171551, 0.241318, 0.430283, 0.850822", \
+          "0.123232, 0.145780, 0.184680, 0.244598, 0.332368, 0.470189, 0.850823", \
+          "0.185614, 0.216677, 0.269697, 0.351544, 0.474570, 0.651010, 0.929868");
+      }
+    }
+   } 
+  }
+}
+

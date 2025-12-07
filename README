@@ -1,0 +1,53 @@
+I.      Course Title and Version:
+
+        Tempus Signoff Timing Analysis and Closure with Stylus Common UI - Version 25.1
+	- Last Modified 05/07/2025  
+
+II.     Course Developer:
+
+        Sakshi Nema - sakshin@cadence.com
+
+III.    Minimum Hardware Requirements:
+
+	Installation requirement - 5GB
+	
+	Lab requirement - retain at least 1GB for the course 
+	duration for saving of intermediate files and designs.
+	
+	Please ensure that your Linux Operating System supports Red Hat Enterprise Linux release 8.4 or above to run the labs for the SSV 25.1 software release successfully.
+
+IV.     Software Products Required:
+
+	Install at least the following software:
+	******************************************
+	Tempus Timing Signoff Solution 
+		- SSV251 Base (or later)
+	Innovus Implementation System
+		- INNOVUS251 Base (or later)
+	******************************************
+	This course uses the following licenses :
+	Tempus_Timing_Signoff_XL
+	Tempus_Timing_Signoff_TSO
+	Innovus_Implementation_System
+
+	An X-Window environment is required to run the software.
+
+V.     Testing the course installation:
+
+	If you are not in a Cadence classroom, make sure you installed the required software.
+	Set all the paths within .class_setup file correctly, and have already installed the proper licenses.
+
+	Then, test the database installation, by entering:
+		ln -s .test/testscript.cmd .testscript # Optional step
+		source .testscript
+		If the script passes through without any error then you can be confident that:
+		 there are no errors with the tool and you have setup the database correctly.
+
+		If not:
+			If you still have a problem running the lab, 
+			please look into what the error is in the .test/testReport file and try to fix it. 
+			You may not have installed the required software in your path.
+			You may not have a proper license.
+		Check and fix these issues.
+		Otherwise please contact Cadence Design Systems Inc.
+

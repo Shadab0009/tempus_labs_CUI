@@ -1,0 +1,101 @@
+catch { setAnalysisMode -analysisType single }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -skew true }
+catch { setAnalysisMode -virtualIPO false }
+catch { setTrialRouteMode -handlePreroute true }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -effort high }
+catch { setOptMode -setupTargetSlack 0 }
+setExtractRCMode  -effortLevel low -engine postRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 -nrNetInMemory 103336 -minNetTermNrToBeInMem 50
+catch { setDelayCalMode -betaEngine sgs2 }
+catch { setDelayCalMode -engine aae }
+catch {setNanoRouteMode -quiet -drouteStartIteration 0}
+catch {setNanoRouteMode -quiet -routeExpSignatureEco false}
+catch {setNanoRouteMode -quiet -routeFillerInstPrefix "FILLER_"}
+catch {setNanoRouteMode -quiet -routeWithEco true}
+catch {setNanoRouteMode -quiet -routeWithSiDriven false}
+catch {setNanoRouteMode -quiet -routeWithSiPostRouteFix false}
+catch {setNanoRouteMode -quiet -routeWithTimingDriven false}
+
+catch { setFillerMode -corePrefix FILLER_ }
+setDontUse AND2_X1 false
+setDontUse AND2_X4 false
+setDontUse AND3_X1 false
+setDontUse AND3_X4 false
+setDontUse AND4_X2 false
+setDontUse AND4_X4 false
+setDontUse AOI211_X1 false
+setDontUse AOI211_X4 false
+setDontUse AOI21_X2 false
+setDontUse AOI21_X4 false
+setDontUse AOI221_X2 false
+setDontUse AOI221_X4 false
+setDontUse AOI222_X2 false
+setDontUse AOI222_X4 false
+setDontUse AOI22_X2 false
+setDontUse AOI22_X4 false
+setDontUse DFFRS_X1 false
+setDontUse DFFRS_X2 false
+setDontUse DFFR_X1 false
+setDontUse DFFR_X2 false
+setDontUse DFFS_X1 false
+setDontUse DFFS_X2 false
+setDontUse DFF_X1 false
+setDontUse DFF_X2 false
+setDontUse DLH_X1 false
+setDontUse DLH_X2 false
+setDontUse DLL_X1 false
+setDontUse DLL_X2 false
+setDontUse INV_X1 false
+setDontUse INV_X2 false
+setDontUse INV_X32 false
+setDontUse INV_X4 false
+setDontUse MUX2_X1 false
+setDontUse MUX2_X2 false
+setDontUse NAND2_X1 false
+setDontUse NAND2_X2 false
+setDontUse NAND3_X2 false
+setDontUse NAND3_X4 false
+setDontUse NAND4_X1 false
+setDontUse NAND4_X4 false
+setDontUse NOR2_X1 false
+setDontUse NOR2_X2 false
+setDontUse NOR3_X1 false
+setDontUse NOR3_X4 false
+setDontUse NOR4_X1 false
+setDontUse NOR4_X4 false
+setDontUse OAI211_X1 false
+setDontUse OAI211_X2 false
+setDontUse OAI21_X1 false
+setDontUse OAI21_X2 false
+setDontUse OAI221_X1 false
+setDontUse OAI221_X2 false
+setDontUse OAI222_X1 false
+setDontUse OAI222_X2 false
+setDontUse OAI22_X1 false
+setDontUse OAI22_X4 false
+setDontUse OR2_X1 false
+setDontUse OR2_X2 false
+setDontUse OR3_X1 false
+setDontUse OR3_X2 false
+setDontUse OR4_X1 false
+setDontUse OR4_X2 false
+setDontUse SDFFRS_X1 false
+setDontUse SDFFRS_X2 false
+setDontUse SDFFR_X1 false
+setDontUse SDFFR_X2 false
+setDontUse SDFFS_X1 false
+setDontUse SDFFS_X2 false
+setDontUse SDFF_X1 false
+setDontUse SDFF_X2 false
+setDontUse XNOR2_X1 false
+setDontUse XNOR2_X2 false
+setDontUse XOR2_X1 false
+setDontUse XOR2_X2 false
+setIlmMode -highFanoutPort true -loopBack false 
+catch { setSIMode -fixDRC false }
+catch { setSIMode -ignoreWarnings true }
+catch { setSIMode -runRouteWithEco true }
+catch { setSIMode -runRoutingFix true }

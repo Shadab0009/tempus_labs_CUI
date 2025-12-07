@@ -1,0 +1,14 @@
+if { $::DistMMMC::distribute_read_design_completed == 0 } { 
+enable_distributed_processing_wrappers 0;
+set _view_temp_dir  sta_ECO;
+set _active_setupview_name {} ;
+set _active_holdview_name {} ;
+setMultiCpuUsage -localCpu 4;
+set ::DistMMMC::timing_master_pid 155810;
+eval_common_ui {source ../scripts/loadDesign_stylus.tcl;
+};
+eval_common_ui {catch {::DistMMMC::invalidCommandOnClients};
+};
+set ::DistMMMC::distribute_read_design_completed 1;
+setMultiCpuUsage -localCpu 4
+disable_distributed_processing_wrappers }

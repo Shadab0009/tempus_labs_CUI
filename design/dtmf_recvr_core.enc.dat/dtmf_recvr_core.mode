@@ -1,0 +1,7 @@
+catch { setAnalysisMode -analysisType single }
+catch { setAnalysisMode -asyncChecks noAsync }
+catch { setAnalysisMode -multipleClockPerRegister true }
+setExtractRCMode  -engine preRoute
+catch { setPlaceMode -reorderScan false }
+catch { setIlmMode -highFanoutPort true -loopBack false -keepFlatten false }
+catch { setDelayCalMode -engine aae }

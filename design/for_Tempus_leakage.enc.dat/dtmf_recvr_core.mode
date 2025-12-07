@@ -1,0 +1,130 @@
+catch { setAnalysisMode -analysisType onChipVariation }
+catch { setAnalysisMode -aocv true }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -cppr both }
+catch { setAnalysisMode -skew true }
+catch { setOptMode -deleteInst true }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -effort high }
+catch { setOptMode -setupTargetSlack 1 }
+setExtractRCMode  -effortLevel low -engine postRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 -minNetTermNrToBeInMem 50
+catch {setNanoRouteMode -quiet -drouteAntennaFactor 1.000000}
+catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "false"}
+catch {setNanoRouteMode -quiet -drouteStartIteration 0}
+catch {setNanoRouteMode -quiet -routeWithSiPostRouteFix false}
+
+catch { setPlaceMode -rplaceIncrNPRollBackLevel 3 }
+setDontUse AND2_X1_HVT false
+setDontUse AND2_X2_HVT false
+setDontUse AND2_X4_HVT false
+setDontUse AND3_X1_HVT false
+setDontUse AND3_X2_HVT false
+setDontUse AND3_X4_HVT false
+setDontUse AND4_X1_HVT false
+setDontUse AND4_X2_HVT false
+setDontUse AND4_X4_HVT false
+setDontUse AOI211_X1_HVT false
+setDontUse AOI211_X2_HVT false
+setDontUse AOI211_X4_HVT false
+setDontUse AOI21_X1_HVT false
+setDontUse AOI21_X2_HVT false
+setDontUse AOI21_X4_HVT false
+setDontUse AOI221_X1_HVT false
+setDontUse AOI221_X2_HVT false
+setDontUse AOI221_X4_HVT false
+setDontUse AOI222_X1_HVT false
+setDontUse AOI222_X2_HVT false
+setDontUse AOI222_X4_HVT false
+setDontUse AOI22_X1_HVT false
+setDontUse AOI22_X2_HVT false
+setDontUse AOI22_X4_HVT false
+setDontUse BUF_X16_HVT false
+setDontUse BUF_X1_HVT false
+setDontUse BUF_X2_HVT false
+setDontUse BUF_X4_HVT false
+setDontUse BUF_X8_HVT false
+setDontUse DFFRS_X1_HVT false
+setDontUse DFFRS_X2_HVT false
+setDontUse DFFR_X1_HVT false
+setDontUse DFFR_X2_HVT false
+setDontUse DFFS_X1_HVT false
+setDontUse DFFS_X2_HVT false
+setDontUse DFF_X1_HVT false
+setDontUse DFF_X2_HVT false
+setDontUse DLH_X1_HVT false
+setDontUse DLH_X2_HVT false
+setDontUse DLL_X1_HVT false
+setDontUse DLL_X2_HVT false
+setDontUse INV_X16_HVT false
+setDontUse INV_X1_HVT false
+setDontUse INV_X2_HVT false
+setDontUse INV_X4_HVT false
+setDontUse INV_X8_HVT false
+setDontUse LOGIC0_X1_HVT false
+setDontUse LOGIC1_X1_HVT false
+setDontUse MUX2_X1_HVT false
+setDontUse MUX2_X2_HVT false
+setDontUse NAND2_X1_HVT false
+setDontUse NAND2_X2_HVT false
+setDontUse NAND2_X4_HVT false
+setDontUse NAND3_X1_HVT false
+setDontUse NAND3_X4_HVT false
+setDontUse NAND4_X1_HVT false
+setDontUse NAND4_X2_HVT false
+setDontUse NAND4_X4_HVT false
+setDontUse NOR2_X1_HVT false
+setDontUse NOR2_X2_HVT false
+setDontUse NOR2_X4_HVT false
+setDontUse NOR3_X1_HVT false
+setDontUse NOR3_X4_HVT false
+setDontUse NOR4_X1_HVT false
+setDontUse NOR4_X2_HVT false
+setDontUse NOR4_X4_HVT false
+setDontUse OAI211_X1_HVT false
+setDontUse OAI211_X2_HVT false
+setDontUse OAI211_X4_HVT false
+setDontUse OAI21_X1_HVT false
+setDontUse OAI21_X2_HVT false
+setDontUse OAI21_X4_HVT false
+setDontUse OAI221_X1_HVT false
+setDontUse OAI221_X2_HVT false
+setDontUse OAI221_X4_HVT false
+setDontUse OAI222_X1_HVT false
+setDontUse OAI222_X2_HVT false
+setDontUse OAI222_X4_HVT false
+setDontUse OAI22_X1_HVT false
+setDontUse OAI22_X2_HVT false
+setDontUse OAI22_X4_HVT false
+setDontUse OR2_X1_HVT false
+setDontUse OR2_X2_HVT false
+setDontUse OR2_X4_HVT false
+setDontUse OR3_X1_HVT false
+setDontUse OR3_X4_HVT false
+setDontUse OR4_X1_HVT false
+setDontUse OR4_X2_HVT false
+setDontUse OR4_X4_HVT false
+setDontUse SDFFRS_X1_HVT false
+setDontUse SDFFRS_X2_HVT false
+setDontUse SDFFR_X1_HVT false
+setDontUse SDFFR_X2_HVT false
+setDontUse SDFFS_X1_HVT false
+setDontUse SDFFS_X2_HVT false
+setDontUse SDFF_X1_HVT false
+setDontUse SDFF_X2_HVT false
+setDontUse XNOR2_X1_HVT false
+setDontUse XNOR2_X2_HVT false
+setDontUse XOR2_X1_HVT false
+setDontUse XOR2_X2_HVT false
+catch { setIlmMode -highFanoutPort true -loopBack false -keepFlatten false }
+catch { setDelayCalMode -enable_high_fanout false }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -SIAware true }
+catch { setTrialRouteMode -handlePreroute true }
+catch { setTrialRouteMode -keepMarkedOptRoutes true }
+catch { setHierMode -disableArt false }
+catch { setHierMode -reportPostRouteArtTiming false }
+catch { setHierMode -trialRouteHonorReadOnly false }
+catch { setImportMode -config true }
+catch { setImportMode -timerMode false }

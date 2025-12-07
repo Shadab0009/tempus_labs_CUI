@@ -1,0 +1,339 @@
+ **********************************************************
+
+ Running the Installation Test Script
+
+ **********************************************************
+
+
+Test Started Wed Sep  6 15:22:51 2017
+
+
+
+ --------- DIRECTORY CHECK BEGIN ----------- 
+
+
+
+
+Comparing the directory map listing.
+Done comparing the directory map listing.
+
+
+
+ --------- TOOL AND VERSION CHECK BEGIN ----------- 
+
+
+Required Tool Executable: innovus
+Required Tool Version: v17.1
+Finding the first occurence of the 'innovus' in your PATH.
+The tool 'innovus' is installed in '/icd/flow/INNOVUS/INNOVUS171/17.10-p006_1//lnx86/tools.lnx86/bin'.
+
+Running the command: 'innovus -version'
+
+Detected cadence.com domain. This build is not fully tested or qualified. Use it at your own risk.
+
+@(#)CDS: Innovus v17.10-p006_1 (64bit) 05/31/2017 11:06 (Linux 2.6.18-194.el5)
+
+INFO: I found the version v17.1.
+
+Required Tool Executable: tempus
+Required Tool Version: v17.1
+Finding the first occurence of the 'tempus' in your PATH.
+The tool 'tempus' is installed in '/icd/flow/SSV/SSV171/17.10-p004_1/lnx86/tools/bin'.
+
+Running the command: 'tempus -version'
+
+Detected cadence.com domain. This build is not fully tested or qualified. Use it at your own risk.
+
+@(#)CDS: Tempus Timing Signoff Solution v17.10-p004_1 (64bit) 05/23/2017 15:02 (Linux 2.6.18-194.el5)
+
+INFO: I found the version v17.1.
+
+
+
+ --------- LICENSE CHECK BEGIN ----------- 
+
+
+
+Checking license Innovus_Impl_System
+
+
+
+WARNING: Too few licenses for 'Innovus_Impl_System' (have , need 1).
+WARNING: The 1 Innovus_Impl_System licenses specified were not found in your license file
+ERROR: No valid licenses found matching 'Innovus_Impl_System'.
+
+Checking license Tempus_Timing_Signoff_XL
+
+
+
+WARNING: Too few licenses for 'Tempus_Timing_Signoff_XL' (have , need 3).
+WARNING: The 3 Tempus_Timing_Signoff_XL licenses specified were not found in your license file
+ERROR: No valid licenses found matching 'Tempus_Timing_Signoff_XL'.
+
+
+ --------- SYSTEM CHECK BEGIN ----------- 
+
+
+Comparing the current system profile against the required system profile.
+
+
+INFO: THE RESOLVED PATH IS /icd/flow/INNOVUS/INNOVUS171/17.10-p006_1/lnx86/tools/bin
+INFO: 
+INFO: WARNING: CheckSysConf detected your system is CentOS. This is not supported.
+INFO: Only the following OS versions are supported by Cadence:
+INFO: https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/support/cadence-platform-support-plan.pdf
+INFO: We will perform system verifications, but there is no guarantee Cadence software will run on this system.
+INFO: 
+INFO: =====================================================================
+INFO: [Copyright 2002-2016] Cadence Design Systems, Inc. All rights reserved.
+INFO: 
+INFO: This  program and online  documentation  may not be copied, modified,
+INFO: re-published, uploaded,  executed, or  distributed in any way, in any
+INFO: medium, whether in whole or in part, without prior written permission
+INFO: from Cadence Design Systems, Inc.
+INFO: =====================================================================
+INFO: 
+INFO: 
+INFO: ============== checkSysConf:  Version 3.32 ====================
+INFO: 
+INFO: 
+INFO: 
+INFO: WARNING: CentOS is not supported by Cadence software. The software might not work correctly
+INFO: even if no other errors are found. For the list of supported OS versions visit:
+INFO: https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/support/cadence-platform-support-plan.pdf
+INFO: 
+INFO: Valid release names are :  
+INFO:                              INVS171
+INFO: 
+INFO: 
+INFO: Exiting checkSysConf ... Good-bye
+INFO: Output is saved as /tmp/checkSysConf.noi-sakshin-2017.09.06.15:22.15018.log
+WARNING: No proper checkSysConf for this INNOVUS171 software release. You might need to upgrade your checkSysConf utility.
+INFO: Running command /icd/flow/INNOVUS/INNOVUS171/17.10-p006_1/lnx86/tools/bin/checkSysConf INNOVUS171 > sysinfo.txt
+
+WARNING: CheckSysConf detected your system is CentOS. This is not supported.
+Only the following OS versions are supported by Cadence:
+https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/support/cadence-platform-support-plan.pdf
+We will perform system verifications, but there is no guarantee Cadence software will run on this system.
+
+=====================================================================
+[Copyright 2002-2016] Cadence Design Systems, Inc. All rights reserved.
+
+This  program and online  documentation  may not be copied, modified,
+re-published, uploaded,  executed, or  distributed in any way, in any
+medium, whether in whole or in part, without prior written permission
+from Cadence Design Systems, Inc.
+=====================================================================
+
+
+============== checkSysConf:  Version 3.32 ====================
+
+
+
+ERROR: INNOVUS171 configuration check has failed. Please check if you have the latest checkSysConf utility installed.
+Configuration checks failed on this workstation (noi-sakshin), status is: FAIL
+
+WARNING: CentOS is not supported by Cadence software. The software might not work correctly
+even if no other errors are found. For the list of supported OS versions visit:
+https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/support/cadence-platform-support-plan.pdf
+
+The specified software release 'INNOVUS171' is not supported
+for your platform / OS (x86_64 / 6.0WS)
+Type checkSysConf -r to see the current versions
+
+
+Exiting checkSysConf ... Good-bye
+Output is saved as /tmp/checkSysConf.noi-sakshin-2017.09.06.15:22.15123.log
+INFO: THE RESOLVED PATH IS /icd/flow/SSV/SSV171/17.10-p004_1/lnx86/tools/bin
+INFO: 
+INFO: WARNING: CheckSysConf detected your system is CentOS. This is not supported.
+INFO: Only the following OS versions are supported by Cadence:
+INFO: https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/support/cadence-platform-support-plan.pdf
+INFO: We will perform system verifications, but there is no guarantee Cadence software will run on this system.
+INFO: 
+INFO: =====================================================================
+INFO: [Copyright 2002-2016] Cadence Design Systems, Inc. All rights reserved.
+INFO: 
+INFO: This  program and online  documentation  may not be copied, modified,
+INFO: re-published, uploaded,  executed, or  distributed in any way, in any
+INFO: medium, whether in whole or in part, without prior written permission
+INFO: from Cadence Design Systems, Inc.
+INFO: =====================================================================
+INFO: 
+INFO: 
+INFO: ============== checkSysConf:  Version 3.32 ====================
+INFO: 
+INFO: 
+INFO: 
+INFO: WARNING: CentOS is not supported by Cadence software. The software might not work correctly
+INFO: even if no other errors are found. For the list of supported OS versions visit:
+INFO: https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/support/cadence-platform-support-plan.pdf
+INFO: 
+INFO: Valid release names are :  
+INFO:                              SSV171
+INFO: 
+INFO: 
+INFO: Exiting checkSysConf ... Good-bye
+INFO: Output is saved as /tmp/checkSysConf.noi-sakshin-2017.09.06.15:22.15233.log
+Found appropriate checkSysConf for SSV171
+INFO: Running command /icd/flow/SSV/SSV171/17.10-p004_1/lnx86/tools/bin/checkSysConf SSV171 > sysinfo.txt
+
+WARNING: CheckSysConf detected your system is CentOS. This is not supported.
+Only the following OS versions are supported by Cadence:
+https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/support/cadence-platform-support-plan.pdf
+We will perform system verifications, but there is no guarantee Cadence software will run on this system.
+
+=====================================================================
+[Copyright 2002-2016] Cadence Design Systems, Inc. All rights reserved.
+
+This  program and online  documentation  may not be copied, modified,
+re-published, uploaded,  executed, or  distributed in any way, in any
+medium, whether in whole or in part, without prior written permission
+from Cadence Design Systems, Inc.
+=====================================================================
+
+
+============== checkSysConf:  Version 3.32 ====================
+
+
+Date information gathered: Wed Sep  6 15:22:55 IST 2017
+-------------------------------------------------------
+Host Name ..............:  noi-sakshin
+Hostid .................:  17ac303b
+Operating System .......:  Linux / x86_64
+OS Version .............:  CentOS release 6.5 (Final)
+Kernel Version .........:  2.6.32-431.11.2.el6.x86_64
+Hardware Type ..........:  x86_64
+Memory .................:  3832 Megabyte
+CPU model ..............:  Intel(R) Xeon(R) CPU E5-2699 v3 @ 2.30GHz
+No. of CPUs ............:  1
+Total Swap Space........:  4095 Megabyte
+X Server ...............:  
+Patch Data file ........:  /icd/flow/SSV/SSV171/17.10-p004_1/lnx86/share/patchData/Linux/x86_64/redhat/6.0WS/SSV171
+
+
+****************   Now verifying configuration     ****************
+
+
+Validating Kernel requirements...
+            Minimum             Installed                   Status    Info                
+            --------------      --------------------------  ------    --------------------
+            2.6.32-431.11.2     2.6.32-431.11.2.el6.x86_64  PASS                          
+
+
+Validating MEMORY requirements MegaByte ...
+            Minimum   Installed Status  Info                
+            -------   --------- ------  --------------------
+            2048MB    3832MB    PASS                        
+
+
+Validating SWAP requirements in MegaByte ...
+            Minimum   Installed Status  Info                
+            -------   --------- ------  --------------------
+            4096MB    4095MB    FAIL                        
+
+
+Validating DISPLAY requirements...
+          Minimum           Installed                   Status  Info                
+          ----------------- ---------------------       ------  ----                
+          --- planes        --- planes                  ---     None specified      
+                                                                                    
+
+
+Validating PACKAGE requirements.....29 to check
+#   PACKAGE                Release    Build          Installed               Arch        Status  Info               
+--  -------                -------    -----          ----------              ----        ------  --------------------
+1   glibc                  2.12       1.132          2.12-1.149.el6_6.5      i686        PASS                       
+->  'GlibC'
+2   glibc                  2.12       1.132          2.12-1.149.el6_6.5      x86_64      PASS                       
+->  'GlibC'
+3   elfutils-libelf        0.152      1              0.152-1.el6             i686        PASS                       
+->  'Libelf Library'
+4   elfutils-libelf        0.152      1              0.152-1.el6             x86_64      PASS                       
+->  'Libelf Library'
+5   ksh                    20120801   10             20120801-10.el6         x86_64      PASS                       
+->  'ksh'
+6   mesa-libGL             9.2        0.5            9.2-0.5.el6             i686        PASS                       
+->  'Mesa libGL Library'
+7   mesa-libGL             9.2        0.5            9.2-0.5.el6             x86_64      PASS                       
+->  'Mesa libGL Library'
+8   mesa-libGLU            9.2        0.5            9.2-0.5.el6             i686        PASS                       
+->  'Mesa libGLU Library'
+9   mesa-libGLU            9.2        0.5            9.2-0.5.el6             x86_64      PASS                       
+->  'Mesa libGLU Library'
+10  openmotif22            2.2.3      19             2.2.3-19.el6            i686        PASS                       
+->  'openmotif'
+11  openmotif22            2.2.3      19             2.2.3-19.el6            x86_64      PASS                       
+->  'openmotif'
+12  libXp                  1.0.0      15.1           1.0.0-15.1.el6          i686        PASS                       
+->  'libXp'
+13  libXp                  1.0.0      15.1           1.0.0-15.1.el6          x86_64      PASS                       
+->  'libXp'
+14  libpng                 1.2.49     1.el6_2        1.2.49-1.el6_2          i686        PASS                       
+->  'libpng'
+15  libpng                 1.2.49     1.el6_2        1.2.49-1.el6_2          x86_64      PASS                       
+->  'libpng'
+16  libjpeg-turbo          1.2.1      1              1.2.1-1.el6             i686        PASS                       
+->  'libjpeg'
+17  libjpeg-turbo          1.2.1      1              1.2.1-1.el6             x86_64      PASS                       
+->  'libjpeg'
+18  compat-expat1          1.95.8     8              1.95.8-8.el6            i686        PASS                       
+->  'libexpat.so.0'
+19  compat-expat1          1.95.8     8              1.95.8-8.el6            x86_64      PASS                       
+->  'libexpat.so.0'
+20  libXtst                1.2.1      2              1.2.1-2.el6             i686        PASS                       
+->  'libXtst.so.6'
+21  libXtst                1.2.1      2              1.2.1-2.el6             x86_64      PASS                       
+->  'libXtst.so.6'
+22  compat-readline5       5.2        17.1           5.2-17.1.el6            i686        PASS                       
+->  'Readline Library'
+23  compat-readline5       5.2        17.1           5.2-17.1.el6            x86_64      PASS                       
+->  'Readline Library'
+24  ncurses-libs           5.7        3.20090208     5.7-3.20090208.el6      i686        PASS                       
+->  'ncurses library'
+25  ncurses-libs           5.7        3.20090208     5.7-3.20090208.el6      x86_64      PASS                       
+->  'ncurses library'
+26  redhat-lsb             4.0        7              4.0-7.el6.centos        i686        PASS                       
+->  'lsb'
+27  redhat-lsb             4.0        7              4.0-7.el6.centos        x86_64      PASS                       
+->  'lsb'
+28  glibc-devel            2.12       1.132          2.12-1.149.el6_6.5      i686        PASS                       
+->  'GlibC-devel'
+29  glibc-devel            2.12       1.132          2.12-1.149.el6_6.5      x86_64      PASS                       
+->  'GlibC-devel'
+
+
+
+ERROR: SSV171 configuration check has failed. Please check if you have the latest checkSysConf utility installed.
+Configuration checks failed on this workstation (noi-sakshin), status is: FAIL
+
+WARNING: CentOS is not supported by Cadence software. The software might not work correctly
+even if no other errors are found. For the list of supported OS versions visit:
+https://www.cadence.com/content/dam/cadence-www/global/en_US/documents/support/cadence-platform-support-plan.pdf
+
+Need to have more SWAP space allocated
+
+
+Exiting checkSysConf ... Good-bye
+Output is saved as /tmp/checkSysConf.noi-sakshin-2017.09.06.15:22.15337.log
+Done comparing the system profiles.
+
+
+
+End testing Wed Sep  6 15:22:59 2017
+
+
+
+ --------- FINAL REPORT ----------- 
+
+
+
+Testing of 'Tempus' FAILED.
+
+ with 13 WARNINGS and 4 ERRORS. 
+Check .test/testReport for problems.
+
+This course is meant for Cadence classrooms only. For offsites, please contact the developer for library data.
+
+.
+

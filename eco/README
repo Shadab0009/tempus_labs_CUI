@@ -1,0 +1,31 @@
+This LABS is to learn on what is Tempus Stylus MMMC SignOff ECO feature and how to use it.  
+################# Shell commands to be ran in ./work/ directory    ######################
+
+tempus -stylus -files ../scripts/run_session1.tcl -log LOG_session1.log   
+
+tempus -stylus -eco -files ../scripts/run_session2.tcl -log LOG_session2.log      
+
+innovus -stylus -nowin -files ../scripts/run_PlaceAndRoute.tcl -log LOG_pnr.log
+
+tempus -stylus -files ../scripts/run_session3.tcl -log LOG_session3.log  
+
+ 
+################# Shell commands to be run in ./work/ directory for second lab   ######################
+
+tempus -stylus -eco -files ../scripts/run_session2_extra.tcl  -log LOG_session2_extra.log       
+
+################# Shell commands to be run in ./work/ directory for DRV fixing lab   ##################
+
+tempus -stylus -eco -files ../scripts/run_session2_DRV.tcl  -log LOG_session2_DRV.log       
+
+
+################# Shell commands to be ran in ./work/ directory for the incremental run DRV+HOLD+SETUP ####
+
+tempus -stylus -eco -files ../scripts/run_session2_incr.tcl -log LOG_session2_incr.log      
+
+innovus -stylus -nowin -files ../scripts/run_PlaceAndRoute_incr.tcl -log LOG_pnr_incr.log
+
+tempus -stylus -files ../scripts/run_signoff.tcl -log LOG_signoff.log  
+
+
+
