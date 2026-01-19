@@ -7,7 +7,7 @@
 ################################
 # Setup threading and client counts
 ################################
-set_multi_cpu_usage -local_cpu 1
+set_multi_cpu_usage -local_cpu 8
 
 ################################
 # Setup some global variables or report settings

@@ -1,0 +1,130 @@
+[12/08 11:11:43      0s] 
+[12/08 11:11:43      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[12/08 11:11:43      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[12/08 11:11:43      0s] 
+[12/08 11:11:43      0s] Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+[12/08 11:11:43      0s] Options:	
+[12/08 11:11:43      0s] Date:		Mon Dec  8 11:11:43 2025
+[12/08 11:11:43      0s] Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+[12/08 11:11:43      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[12/08 11:11:43      0s] 
+[12/08 11:11:43      0s] License:
+[12/08 11:11:44      0s] 		tpsxl	Tempus Timing Signoff Solution XL	17.2	checkout succeeded
+[12/08 11:11:44      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[12/08 11:11:59      7s] @(#)CDS: Tempus Timing Signoff Solution v17.21-s086_1 (64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5)
+[12/08 11:11:59      7s] @(#)CDS: NanoRoute 17.21-s086_1 NR171017-1606/MT (database version 2.30, 408.7.1) {superthreading v1.46}
+[12/08 11:11:59      7s] @(#)CDS: AAE 17.21-s044 (64bit) 03/26/2018 (Linux 2.6.18-194.el5)
+[12/08 11:11:59      7s] @(#)CDS: CTE 17.21-s024_1 () Mar 26 2018 08:55:31 ( )
+[12/08 11:11:59      7s] @(#)CDS: SYNTECH 17.21-s008_1 () Mar 22 2018 10:41:39 ( )
+[12/08 11:11:59      7s] @(#)CDS: CPE v17.21-s032
+[12/08 11:11:59      7s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[12/08 11:11:59      7s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[12/08 11:11:59      7s] @(#)CDS: RCDB 11.12
+[12/08 11:11:59      7s] --- Running on ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB) ---
+[12/08 11:11:59      7s] Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+[12/08 11:12:00      7s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_2499_cNAEZk'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_2499_cNAEZk'.
+[12/08 11:12:00      7s] <CMD> set enc_source_verbose 0
+[12/08 11:12:00      8s] <CMD> set enc_source_verbose 0
+[12/08 11:15:40     30s] <CMD> get_analysis_mode
+[12/08 11:15:40     30s] -analysisType onChipVariation              # enums={single bcwc onChipVariation}, default=onChipVariation, user setting
+[12/08 11:15:40     30s] -aocv false                                # bool, default=false
+[12/08 11:15:40     30s] -asyncChecks async                         # enums={async noAsync asyncOnly}, default=async
+[12/08 11:15:40     30s] -checkType setup                           # enums={setup hold}, default=setup
+[12/08 11:15:40     30s] -clkSrcPath true                           # bool, default=true
+[12/08 11:15:40     30s] -clockGatingCheck true                     # bool, default=true
+[12/08 11:15:40     30s] -clockPropagation sdcControl               # enums={sdcControl forcedIdeal autoDetectClockTree}, default=sdcControl, user setting
+[12/08 11:15:40     30s] -cppr none                                 # enums={both none setup hold}, default=none
+[12/08 11:15:40     30s] -enableMultipleDriveNet true               # bool, default=true
+[12/08 11:15:40     30s] -honorClockDomains false                   # bool, default=false
+[12/08 11:15:40     30s] -log true                                  # bool, default=true
+[12/08 11:15:40     30s] -propSlew true                             # bool, default=true
+[12/08 11:15:40     30s] -sequentialConstProp false                 # bool, default=false
+[12/08 11:15:40     30s] -skew true                                 # bool, default=true
+[12/08 11:15:40     30s] -socv false                                # bool, default=false
+[12/08 11:15:40     30s] -timeBorrowing true                        # bool, default=true
+[12/08 11:15:40     30s] -timingEngine static                       # enums={statistical static}, default=static
+[12/08 11:15:40     30s] -timingSelfLoopsNoSkew false               # bool, default=false
+[12/08 11:15:40     30s] -useOutputPinCap true                      # bool, default=true
+[12/08 11:15:40     30s] -warn true                                 # bool, default=true
+[12/08 11:15:40     30s] 
+[12/08 11:15:57     32s] <CMD> get_si_mode
+[12/08 11:15:57     32s] -accumulated_small_attacker_factor 1       # float, default=1
+[12/08 11:15:57     32s] -accumulated_small_attacker_mode cap       # enums={cap current zero_mean}, default=dynamic setting
+[12/08 11:15:57     32s] -accumulated_small_attacker_threshold 10.01
+[12/08 11:15:57     32s]                                            # float, default=10.01
+[12/08 11:15:57     32s] -attacker_alignment timing_aware_edge      # enums={path path_overlap timing_aware_edge}, default=timing_aware_edge
+[12/08 11:15:57     32s] -clock_delta_delay_threshold -1            # float, default=-1
+[12/08 11:15:57     32s] -clocks synchronous                        # enums={asynchronous synchronous}, default=synchronous
+[12/08 11:15:57     32s] -delay_only false                          # bool, default=false
+[12/08 11:15:57     32s] -delta_delay_annotation_mode arc           # string, default=arc
+[12/08 11:15:57     32s] -delta_delay_threshold -1                  # float, default=-1
+[12/08 11:15:57     32s] -enable_bus_attacker_correlation false     # bool, default=false
+[12/08 11:15:57     32s] -enable_delay_report false                 # bool, default=false
+[12/08 11:15:57     32s] -enable_double_clocking_check false        # enums={true false}, default=false
+[12/08 11:15:57     32s] -enable_drv_with_delta_slew false          # bool, default=false
+[12/08 11:15:57     32s] -enable_glitch_propagation false           # bool, default=false
+[12/08 11:15:57     32s] -enable_glitch_propagation_spice_deck false
+[12/08 11:15:57     32s]                                            # bool, default=false
+[12/08 11:15:57     32s] -enable_glitch_report false                # bool, default=false
+[12/08 11:15:57     32s] -enable_logical_correlation false          # enums={true false}, default=false
+[12/08 11:15:57     32s] -enable_overshoot_undershoot_glitch false
+[12/08 11:15:57     32s]                                            # bool, default=false
+[12/08 11:15:57     32s] -enable_virtual_attacker_constituent_report false
+[12/08 11:15:57     32s]                                            # bool, default=false
+[12/08 11:15:57     32s] -hold_slack -1e-12                         # float, default=-1e-12
+[12/08 11:15:57     32s] -individual_attacker_clock_threshold 0.015
+[12/08 11:15:57     32s]                                            # float, default=0.015
+[12/08 11:15:57     32s] -individual_attacker_simulation_filtering true
+[12/08 11:15:57     32s]                                            # bool, default=true
+[12/08 11:15:57     32s] -individual_attacker_threshold 0.015       # float, default=0.015
+[12/08 11:15:57     32s] -input_glitch_threshold 0.4                # float, default=0.4
+[12/08 11:15:57     32s] -input_glitch_vh_threshold 0.4             # float, default=0.4
+[12/08 11:15:57     32s] -input_glitch_vl_threshold 0.4             # float, default=0.4
+[12/08 11:15:57     32s] -nonlinear_attacker_slew true              # enums={true false}, default=true
+[12/08 11:15:57     32s] -num_si_iteration 2                        # int, default=2
+[12/08 11:15:57     32s] -receiver_clk_peak_limit 0.05              # float, default=0.05
+[12/08 11:15:57     32s] -receiver_latch_peak_limit 0.1             # float, default=0.1
+[12/08 11:15:57     32s] -receiver_peak_limit 0.15                  # float, default=0.15
+[12/08 11:15:57     32s] -report_max_virtual_attacker_constituents 5
+[12/08 11:15:57     32s]                                            # int, default=5
+[12/08 11:15:57     32s] -secondary_attacker_decoupling_factor 1    # float, default=1
+[12/08 11:15:57     32s] -separate_delta_delay_on_data false        # string, default=false
+[12/08 11:15:57     32s] -setup_slack -1e-12                        # float, default=-1e-12
+[12/08 11:15:57     32s] -si_reselection slack                      # enums={delta_delay slack xcap_ratio}, default=slack
+[12/08 11:15:57     32s] -si_reselection_delay_threshold 1e-11      # float, default=1e-11
+[12/08 11:15:57     32s] -skip_noise_model_check {}                 # string, default=""
+[12/08 11:15:57     32s] -skip_tw {}                                # string, default=""
+[12/08 11:15:57     32s] -switch_prob 0.3                           # float, default=0.3
+[12/08 11:15:57     32s] -unconstrained_net_use_inf_tw true         # enums={true false}, default=true
+[12/08 11:15:57     32s] -use_infinite_TW false                     # enums={true false}, default=false
+[12/08 11:15:57     32s] 
+[12/08 11:18:10     51s] <CMD> get_delay_cal_mode
+[12/08 11:18:10     51s] -accurate_receiver_out_load false       # bool, default=false
+[12/08 11:18:10     51s] -advanced_pincap_mode false             # bool, default=false
+[12/08 11:18:10     51s] -combine_mmmc early_late                # enums={none early_late}, default=early_late
+[12/08 11:18:10     51s] -enable_high_fanout false               # bool, default=false
+[12/08 11:18:10     51s] -enable_quiet_receivers_for_hold false  # bool, default=false
+[12/08 11:18:10     51s] -engine aae                             # enums={aae}, default=aae, user setting, private
+[12/08 11:18:10     51s] -equivalent_waveform_model none         # enums={none no_propagation propagation}, default=none
+[12/08 11:18:10     51s] -ewm_type moments                       # enums={moments simulation}, default=moments
+[12/08 11:18:10     51s] -honorSlewPropConstraint true           # bool, default=true
+[12/08 11:18:10     51s] -reportOutBound false                   # bool, default=false
+[12/08 11:18:10     51s] -SIAware false                          # enums={true false}, default=false
+[12/08 11:18:10     51s] -slewOutBoundLimitHigh 3.40282346638529e+38
+[12/08 11:18:10     51s]                                         # float, default=3.40282346638529e+38, min=1, max=3.40282346638529e+38
+[12/08 11:18:10     51s] -slewOutBoundLimitLow 0.5               # float, default=0.5, min=0.001, max=1
+[12/08 11:18:10     51s] -socv_accuracy_mode low                 # enums={low medium}, default=low
+[12/08 11:18:10     51s] -socv_lvf_mode moments                  # enums={moments early_late}, default=moments
+[12/08 11:18:10     51s] -socv_use_lvf_tables all                # string, default=all
+[12/08 11:18:10     51s] 
+[12/08 11:18:33     54s] invalid command name "read_libs"
+[12/08 11:18:33     54s] invalid command name "read_libs"
+[12/08 11:18:33     54s] invalid command name "read_libs"
+[12/08 11:19:40     63s] <CMD> exit
+[12/08 11:19:40     63s] 
+[12/08 11:19:40     63s] *** Memory Usage v#1 (Current mem = 499.059M, initial mem = 220.906M) ***
+[12/08 11:19:40     63s] *** Message Summary: 0 warning(s), 0 error(s)
+[12/08 11:19:40     63s] 
+[12/08 11:19:40     63s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:01:04, real=0:07:57, mem=499.1M) ---

@@ -1,0 +1,1616 @@
+[12/16 12:20:03      0s] 
+[12/16 12:20:03      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[12/16 12:20:03      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[12/16 12:20:03      0s] 
+[12/16 12:20:03      0s] Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+[12/16 12:20:03      0s] Options:	-stylus -files ../scripts/run.tcl 
+[12/16 12:20:03      0s] Date:		Tue Dec 16 12:20:02 2025
+[12/16 12:20:03      0s] Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+[12/16 12:20:03      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[12/16 12:20:03      0s] 
+[12/16 12:20:03      0s] License:
+[12/16 12:20:03      0s] 		tpsxl	Tempus Timing Signoff Solution XL	17.2	checkout succeeded
+[12/16 12:20:03      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[12/16 12:20:12      3s] 
+[12/16 12:20:12      3s] ***************************************************************************************
+[12/16 12:20:12      3s] INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+[12/16 12:20:12      3s]          has only limited customer testing. You are encouraged to work with Cadence directly
+[12/16 12:20:12      3s]          to qualify your usage and make sure it meets your needs before deploying it widely.
+[12/16 12:20:12      3s] ***************************************************************************************
+[12/16 12:20:12      3s] 
+[12/16 12:20:17      6s] @(#)CDS: Tempus Timing Signoff Solution v17.21-s086_1 (64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5)
+[12/16 12:20:17      6s] @(#)CDS: NanoRoute 17.21-s086_1 NR171017-1606/MT (database version 2.30, 408.7.1) {superthreading v1.46}
+[12/16 12:20:17      6s] @(#)CDS: AAE 17.21-s044 (64bit) 03/26/2018 (Linux 2.6.18-194.el5)
+[12/16 12:20:17      6s] @(#)CDS: CTE 17.21-s024_1 () Mar 26 2018 08:55:31 ( )
+[12/16 12:20:17      6s] @(#)CDS: SYNTECH 17.21-s008_1 () Mar 22 2018 10:41:39 ( )
+[12/16 12:20:17      6s] @(#)CDS: CPE v17.21-s032
+[12/16 12:20:17      6s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[12/16 12:20:17      6s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[12/16 12:20:17      6s] @(#)CDS: RCDB 11.12
+[12/16 12:20:17      6s] --- Running on ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB) ---
+[12/16 12:20:17      6s] Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+[12/16 12:20:17      6s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_26854_VXgzgJ'.
+[12/16 12:20:17      6s] environment variable TMPDIR is '/tmp/ssv_tmpdir_26854_VXgzgJ'.
+[12/16 12:20:19      7s] #@ Processing -files option
+[12/16 12:20:19      7s] Sourcing tcl/tk file '../scripts/run.tcl' ...
+[12/16 12:20:19      7s] @tempus 1> source ../scripts/run.tcl
+[12/16 12:20:19      7s] #@ Begin verbose source ../scripts/run.tcl
+[12/16 12:20:19      7s] @file(run.tcl) 4: read_mmmc ../scripts/view_definition.tcl 
+[12/16 12:20:19      7s] #@ Begin verbose source ../scripts/view_definition.tcl
+[12/16 12:20:19      7s] @file(view_definition.tcl) 4: create_library_set -name libset_slow \
+[12/16 12:20:19      7s] -timing \
+[12/16 12:20:19      7s] [list ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib \
+[12/16 12:20:19      7s]     ../../libs/MACRO/LIBERTY/pllclk.lib \
+[12/16 12:20:19      7s]     ../../libs/MACRO/LIBERTY/ram_256x16A.lib \
+[12/16 12:20:19      7s]     ../../libs/MACRO/LIBERTY/rom_512x16A.lib]
+[12/16 12:20:19      7s] @file(view_definition.tcl) 10: create_library_set -name libset_fast \
+[12/16 12:20:19      7s] -timing \
+[12/16 12:20:19      7s] [list ../../libs/liberty/FreePDK45_lib_v1.0_typical.lib \
+[12/16 12:20:19      7s]     ../../libs/MACRO/LIBERTY/pllclk.lib \
+[12/16 12:20:19      7s]     ../../libs/MACRO/LIBERTY/ram_256x16A.lib \
+[12/16 12:20:19      7s]     ../../libs/MACRO/LIBERTY/rom_512x16A.lib]
+[12/16 12:20:19      7s] @file(view_definition.tcl) 17: create_timing_condition -name default_mapping_tc_2\
+[12/16 12:20:19      7s]    -library_sets [list libset_fast]
+[12/16 12:20:19      7s] @file(view_definition.tcl) 19: create_timing_condition -name default_mapping_tc_1\
+[12/16 12:20:19      7s]    -library_sets [list libset_slow]
+[12/16 12:20:19      7s] @file(view_definition.tcl) 24: create_rc_corner -name corner_worst_RCMAX \
+[12/16 12:20:19      7s] -pre_route_res 1.2 \
+[12/16 12:20:19      7s] -post_route_res {1.2 1.2 1.2} \
+[12/16 12:20:19      7s] -pre_route_cap 1.2 \
+[12/16 12:20:19      7s] -post_route_cap {1.2 1.2 1.2} \
+[12/16 12:20:19      7s] -post_route_cross_cap {1.2 1.2 1.2} \
+[12/16 12:20:19      7s] -pre_route_clock_res 0 \
+[12/16 12:20:19      7s] -pre_route_clock_cap 0
+[12/16 12:20:19      7s] @file(view_definition.tcl) 32: create_rc_corner -name corner_worst_RCMIN \
+[12/16 12:20:19      7s] -pre_route_res 0.8 \
+[12/16 12:20:19      7s] -post_route_res {0.8 0.8 0.8} \
+[12/16 12:20:19      7s] -pre_route_cap 0.8 \
+[12/16 12:20:19      7s] -post_route_cap {0.8 0.8 0.8} \
+[12/16 12:20:19      7s] -post_route_cross_cap {0.8 0.8 0.8} \
+[12/16 12:20:19      7s] -pre_route_clock_res 0 \
+[12/16 12:20:19      7s] -pre_route_clock_cap 0
+[12/16 12:20:19      7s] @file(view_definition.tcl) 45: create_delay_corner -name delay_corner_slow_RCMAX -early_timing_condition {default_mapping_tc_1} -late_timing_condition {default_mapping_tc_1} -rc_corner corner_worst_RCMAX
+[12/16 12:20:19      7s] @file(view_definition.tcl) 47: create_delay_corner -name delay_corner_fast_RCMAX -early_timing_condition {default_mapping_tc_2} -late_timing_condition {default_mapping_tc_2} -rc_corner corner_worst_RCMAX
+[12/16 12:20:19      7s] @file(view_definition.tcl) 49: create_delay_corner -name delay_corner_slow_RCMIN\
+[12/16 12:20:19      7s]    -early_timing_condition {default_mapping_tc_1}\
+[12/16 12:20:19      7s]    -late_timing_condition {default_mapping_tc_1}\
+[12/16 12:20:19      7s]    -rc_corner corner_worst_RCMIN
+[12/16 12:20:19      7s] @file(view_definition.tcl) 54: create_delay_corner -name delay_corner_fast_RCMIN\
+[12/16 12:20:19      7s]    -early_timing_condition {default_mapping_tc_2}\
+[12/16 12:20:19      7s]    -late_timing_condition {default_mapping_tc_2}\
+[12/16 12:20:19      7s]    -rc_corner corner_worst_RCMIN
+[12/16 12:20:19      7s] @file(view_definition.tcl) 62: create_constraint_mode -name functional_mode -sdc_files [list ../../design/dtmf_recvr_core.pr.sdc]
+[12/16 12:20:19      7s] @file(view_definition.tcl) 63: create_constraint_mode -name scan_mode        -sdc_files [list ../../design/dtmf_recvr_core.scan.sdc]
+[12/16 12:20:19      7s] @file(view_definition.tcl) 69: create_analysis_view -name func_slow_RCMAX -constraint_mode functional_mode -delay_corner delay_corner_slow_RCMAX
+[12/16 12:20:19      7s] @file(view_definition.tcl) 70: create_analysis_view -name func_fast_RCMAX -constraint_mode functional_mode -delay_corner delay_corner_fast_RCMAX
+[12/16 12:20:19      7s] @file(view_definition.tcl) 71: create_analysis_view -name func_slow_RCMIN -constraint_mode functional_mode -delay_corner delay_corner_slow_RCMIN
+[12/16 12:20:19      7s] @file(view_definition.tcl) 72: create_analysis_view -name func_fast_RCMIN -constraint_mode functional_mode -delay_corner delay_corner_fast_RCMIN
+[12/16 12:20:19      7s] @file(view_definition.tcl) 74: create_analysis_view -name scan_slow_RCMAX -constraint_mode scan_mode -delay_corner delay_corner_slow_RCMAX
+[12/16 12:20:19      7s] @file(view_definition.tcl) 75: create_analysis_view -name scan_fast_RCMAX -constraint_mode scan_mode -delay_corner delay_corner_fast_RCMAX
+[12/16 12:20:19      7s] @file(view_definition.tcl) 76: create_analysis_view -name scan_slow_RCMIN -constraint_mode scan_mode -delay_corner delay_corner_slow_RCMIN
+[12/16 12:20:19      7s] @file(view_definition.tcl) 77: create_analysis_view -name scan_fast_RCMIN -constraint_mode scan_mode -delay_corner delay_corner_fast_RCMIN
+[12/16 12:20:19      7s] @file(view_definition.tcl) 83: set_analysis_view -setup [list  \
+[12/16 12:20:19      7s] func_slow_RCMAX  \
+[12/16 12:20:19      7s] func_fast_RCMAX  \
+[12/16 12:20:19      7s] func_slow_RCMIN  \
+[12/16 12:20:19      7s] func_fast_RCMIN  \
+[12/16 12:20:19      7s] scan_slow_RCMAX  \
+[12/16 12:20:19      7s] scan_fast_RCMAX  \
+[12/16 12:20:19      7s] scan_slow_RCMIN  \
+[12/16 12:20:19      7s] scan_fast_RCMIN  \
+[12/16 12:20:19      7s] ] -hold [list  \
+[12/16 12:20:19      7s] func_slow_RCMAX  \
+[12/16 12:20:19      7s] func_fast_RCMAX  \
+[12/16 12:20:19      7s] func_slow_RCMIN  \
+[12/16 12:20:19      7s] func_fast_RCMIN  \
+[12/16 12:20:19      7s] scan_slow_RCMAX  \
+[12/16 12:20:19      7s] scan_fast_RCMAX  \
+[12/16 12:20:19      7s] scan_slow_RCMIN  \
+[12/16 12:20:19      7s] scan_fast_RCMIN  \
+[12/16 12:20:19      7s] ]
+[12/16 12:20:19      7s] Number of views requested 8 are allowed with the current licenses... continuing with set_analysis_view.
+[12/16 12:20:19      7s] #@ End verbose source ../scripts/view_definition.tcl
+[12/16 12:20:19      7s] Reading libset_slow timing library '/home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib' ...
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[12/16 12:20:19      7s] Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[12/16 12:20:19      7s] Read 113 cells in library 'FreePDK45_lib_v1.0' 
+[12/16 12:20:19      7s] Reading libset_slow timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/pllclk.lib' ...
+[12/16 12:20:19      7s] Read 1 cells in library 'pllclk' 
+[12/16 12:20:19      7s] Reading libset_slow timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/ram_256x16A.lib' ...
+[12/16 12:20:19      7s] Read 1 cells in library 'USERLIB' 
+[12/16 12:20:19      7s] Reading libset_slow timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib' ...
+[12/16 12:20:19      7s] **WARN: (TECHLIB-459):	Appending library 'USERLIB' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib)
+[12/16 12:20:19      7s] Read 1 cells in library 'USERLIB' 
+[12/16 12:20:19      7s] @file(run.tcl) 14: read_netlist ../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz -top dtmf_recvr_core
+[12/16 12:20:19      8s] #% Begin Load netlist data ... (date=12/16 12:20:19, mem=414.9M)
+[12/16 12:20:19      8s] *** Begin netlist parsing (mem=499.9M) ***
+[12/16 12:20:19      8s] Reading verilog netlist '../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz'
+[12/16 12:20:19      8s] 
+[12/16 12:20:19      8s] *** Memory Usage v#1 (Current mem = 519.367M, initial mem = 236.910M) ***
+[12/16 12:20:19      8s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=519.4M) ***
+[12/16 12:20:19      8s] #% End Load netlist data ... (date=12/16 12:20:19, total cpu=0:00:00.2, real=0:00:00.0, peak res=414.9M, current mem=402.0M)
+[12/16 12:20:19      8s] Set top cell to dtmf_recvr_core.
+[12/16 12:20:19      8s] Building hierarchical netlist for Cell dtmf_recvr_core ...
+[12/16 12:20:19      8s] *** Netlist is unique.
+[12/16 12:20:19      8s] ** info: there are 152 modules.
+[12/16 12:20:19      8s] ** info: there are 8234 stdCell insts.
+[12/16 12:20:19      8s] 
+[12/16 12:20:19      8s] *** Memory Usage v#1 (Current mem = 570.418M, initial mem = 236.910M) ***
+[12/16 12:20:19      8s] @file(run.tcl) 19: init_design
+[12/16 12:20:19      8s] Set Default Net Delay as 1000 ps.
+[12/16 12:20:19      8s] Set Default Net Load as 0.5 pF. 
+[12/16 12:20:19      8s] Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Delayed 
+[12/16 12:20:20      8s] Reading libset_fast timing library '/home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_typical.lib' ...
+[12/16 12:20:20      8s] Read 113 cells in library 'FreePDK45_lib_v1.0' 
+[12/16 12:20:20      8s] Reading timing constraints file '../../design/dtmf_recvr_core.pr.sdc' ...
+[12/16 12:20:20      8s] Current (total cpu=0:00:08.6, real=0:00:18.0, peak res=561.7M, current mem=561.7M)
+[12/16 12:20:20      8s] Number of path exceptions in the constraint file = 25
+[12/16 12:20:20      8s] INFO (CTE): Constraints read successfully.
+[12/16 12:20:20      8s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=589.2M, current mem=589.2M)
+[12/16 12:20:20      8s] Current (total cpu=0:00:08.7, real=0:00:18.0, peak res=589.2M, current mem=589.2M)
+[12/16 12:20:20      8s] Reading timing constraints file '../../design/dtmf_recvr_core.scan.sdc' ...
+[12/16 12:20:20      8s] Current (total cpu=0:00:08.7, real=0:00:18.0, peak res=589.2M, current mem=589.2M)
+[12/16 12:20:21      8s] Number of path exceptions in the constraint file = 29
+[12/16 12:20:21      8s] INFO (CTE): Constraints read successfully.
+[12/16 12:20:21      8s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=591.5M, current mem=591.5M)
+[12/16 12:20:21      8s] Current (total cpu=0:00:08.7, real=0:00:19.0, peak res=591.5M, current mem=591.5M)
+[12/16 12:20:21      8s] Creating Cell Server ...(0, 1, 1, 1)
+[12/16 12:20:21      8s] Summary for sequential cells identification: 
+[12/16 12:20:21      8s]   Identified SBFF number: 16
+[12/16 12:20:21      8s]   Identified MBFF number: 0
+[12/16 12:20:21      8s]   Identified SB Latch number: 0
+[12/16 12:20:21      8s]   Identified MB Latch number: 0
+[12/16 12:20:21      8s]   Not identified SBFF number: 0
+[12/16 12:20:21      8s]   Not identified MBFF number: 0
+[12/16 12:20:21      8s]   Not identified SB Latch number: 0
+[12/16 12:20:21      8s]   Not identified MB Latch number: 0
+[12/16 12:20:21      8s]   Number of sequential cells which are not FFs: 4
+[12/16 12:20:21      8s] Total number of combinational cells: 87
+[12/16 12:20:21      8s] Total number of sequential cells: 20
+[12/16 12:20:21      8s] Total number of tristate cells: 0
+[12/16 12:20:21      8s] Total number of level shifter cells: 0
+[12/16 12:20:21      8s] Total number of power gating cells: 0
+[12/16 12:20:21      8s] Total number of isolation cells: 0
+[12/16 12:20:21      8s] Total number of power switch cells: 0
+[12/16 12:20:21      8s] Total number of pulse generator cells: 0
+[12/16 12:20:21      8s] Total number of always on buffers: 0
+[12/16 12:20:21      8s] Total number of retention cells: 0
+[12/16 12:20:21      8s] List of usable buffers: BUF_X1 BUF_X16 BUF_X2 BUF_X32 BUF_X4
+[12/16 12:20:21      8s] Total number of usable buffers: 5
+[12/16 12:20:21      8s] List of unusable buffers:
+[12/16 12:20:21      8s] Total number of unusable buffers: 0
+[12/16 12:20:21      8s] List of usable inverters: INV_X1 INV_X16 INV_X2 INV_X32 INV_X8 INV_X4
+[12/16 12:20:21      8s] Total number of usable inverters: 6
+[12/16 12:20:21      8s] List of unusable inverters:
+[12/16 12:20:21      8s] Total number of unusable inverters: 0
+[12/16 12:20:21      8s] List of identified usable delay cells: BUF_X8
+[12/16 12:20:21      8s] Total number of identified usable delay cells: 1
+[12/16 12:20:21      8s] List of identified unusable delay cells:[12/16 12:20:21      8s]  Visiting view : func_slow_RCMAX
+
+[12/16 12:20:21      8s] Total number of identified unusable delay cells: 0
+[12/16 12:20:21      8s] Extraction setup Started 
+[12/16 12:20:21      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) resistance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[12/16 12:20:21      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) capacitance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[12/16 12:20:21      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) coupling capacitance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[12/16 12:20:21      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) resistance scaling factor 0.8 for corner corner_worst_RCMIN is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[12/16 12:20:21      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) capacitance scaling factor 0.8 for corner corner_worst_RCMIN is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[12/16 12:20:21      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) coupling capacitance scaling factor 0.8 for corner corner_worst_RCMIN is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[12/16 12:20:21      8s] Summary of Active RC-Corners : 
+[12/16 12:20:21      8s]  
+[12/16 12:20:21      8s]  Analysis View: func_slow_RCMAX
+[12/16 12:20:21      8s]     RC-Corner Name        : corner_worst_RCMAX
+[12/16 12:20:21      8s]     RC-Corner Index       : 0
+[12/16 12:20:21      8s]     RC-Corner Temperature : 25 Celsius
+[12/16 12:20:21      8s]     RC-Corner Cap Table   : ''
+[12/16 12:20:21      8s]     RC-Corner PostRoute Res Factor        : 1.2
+[12/16 12:20:21      8s]     RC-Corner PostRoute Cap Factor        : 1.2
+[12/16 12:20:21      8s]     RC-Corner PostRoute XCap Factor       : 1.2
+[12/16 12:20:21      8s]  
+[12/16 12:20:21      8s]  Analysis View: func_fast_RCMAX
+[12/16 12:20:21      8s]     RC-Corner Name        : corner_worst_RCMAX
+[12/16 12:20:21      8s]     RC-Corner Index       : 0
+[12/16 12:20:21      8s]     RC-Corner Temperature : 25 Celsius
+[12/16 12:20:21      8s]     RC-Corner Cap Table   : ''
+[12/16 12:20:21      8s]     RC-Corner PostRoute Res Factor        : 1.2
+[12/16 12:20:21      8s]     RC-Corner PostRoute Cap Factor        : 1.2
+[12/16 12:20:21      8s]     RC-Corner PostRoute XCap Factor       : 1.2
+[12/16 12:20:21      8s]  
+[12/16 12:20:21      8s]  Analysis View: func_slow_RCMIN
+[12/16 12:20:21      8s]     RC-Corner Name        : corner_worst_RCMIN
+[12/16 12:20:21      8s]     RC-Corner Index       : 1
+[12/16 12:20:21      8s]     RC-Corner Temperature : 25 Celsius
+[12/16 12:20:21      8s]     RC-Corner Cap Table   : ''
+[12/16 12:20:21      8s]     RC-Corner PostRoute Res Factor        : 0.8
+[12/16 12:20:21      8s]     RC-Corner PostRoute Cap Factor        : 0.8
+[12/16 12:20:21      8s]     RC-Corner PostRoute XCap Factor       : 0.8
+[12/16 12:20:21      8s]  
+[12/16 12:20:21      8s]  Analysis View: func_fast_RCMIN
+[12/16 12:20:21      8s]     RC-Corner Name        : corner_worst_RCMIN
+[12/16 12:20:21      8s]     RC-Corner Index       : 1
+[12/16 12:20:21      8s]     RC-Corner Temperature : 25 Celsius
+[12/16 12:20:21      8s]     RC-Corner Cap Table   : ''
+[12/16 12:20:21      8s]     RC-Corner PostRoute Res Factor        : 0.8
+[12/16 12:20:21      8s]     RC-Corner PostRoute Cap Factor        : 0.8
+[12/16 12:20:21      8s]     RC-Corner PostRoute XCap Factor       : 0.8
+[12/16 12:20:21      8s]  
+[12/16 12:20:21      8s]  Analysis View: scan_slow_RCMAX
+[12/16 12:20:21      8s]     RC-Corner Name        : corner_worst_RCMAX
+[12/16 12:20:21      8s]     RC-Corner Index       : 0
+[12/16 12:20:21      8s]     RC-Corner Temperature : 25 Celsius
+[12/16 12:20:21      8s]     RC-Corner Cap Table   : ''
+[12/16 12:20:21      8s]     RC-Corner PostRoute Res Factor        : 1.2
+[12/16 12:20:21      8s]     RC-Corner PostRoute Cap Factor        : 1.2
+[12/16 12:20:21      8s]     RC-Corner PostRoute XCap Factor       : 1.2
+[12/16 12:20:21      8s]  
+[12/16 12:20:21      8s]  Analysis View: scan_fast_RCMAX
+[12/16 12:20:21      8s]     RC-Corner Name        : corner_worst_RCMAX
+[12/16 12:20:21      8s]     RC-Corner Index       : 0
+[12/16 12:20:21      8s]     RC-Corner Temperature : 25 Celsius
+[12/16 12:20:21      8s]     RC-Corner Cap Table   : ''
+[12/16 12:20:21      8s]     RC-Corner PostRoute Res Factor        : 1.2
+[12/16 12:20:21      8s]     RC-Corner PostRoute Cap Factor        : 1.2
+[12/16 12:20:21      8s]     RC-Corner PostRoute XCap Factor       : 1.2
+[12/16 12:20:21      8s]  
+[12/16 12:20:21      8s]  Analysis View: scan_slow_RCMIN
+[12/16 12:20:21      8s]     RC-Corner Name        : corner_worst_RCMIN
+[12/16 12:20:21      8s]     RC-Corner Index       : 1
+[12/16 12:20:21      8s]     RC-Corner Temperature : 25 Celsius
+[12/16 12:20:21      8s]     RC-Corner Cap Table   : ''
+[12/16 12:20:21      8s]     RC-Corner PostRoute Res Factor        : 0.8
+[12/16 12:20:21      8s]     RC-Corner PostRoute Cap Factor        : 0.8
+[12/16 12:20:21      8s]     RC-Corner PostRoute XCap Factor       : 0.8
+[12/16 12:20:21      8s]  
+[12/16 12:20:21      8s]  Analysis View: scan_fast_RCMIN
+[12/16 12:20:21      8s]     RC-Corner Name        : corner_worst_RCMIN
+[12/16 12:20:21      8s]     RC-Corner Index       : 1
+[12/16 12:20:21      8s]     RC-Corner Temperature : 25 Celsius
+[12/16 12:20:21      8s]     RC-Corner Cap Table   : ''
+[12/16 12:20:21      8s]     RC-Corner PostRoute Res Factor        : 0.8
+[12/16 12:20:21      8s]     RC-Corner PostRoute Cap Factor        : 0.8
+[12/16 12:20:21      8s]     RC-Corner PostRoute XCap Factor       : 0.8
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = 0
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : func_fast_RCMAX
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = 0
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : func_slow_RCMIN
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = 1
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : func_fast_RCMIN
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = 1
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : scan_slow_RCMAX
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = 0
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : scan_fast_RCMAX
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = 0
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : scan_slow_RCMIN
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = 1
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : scan_fast_RCMIN
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = 1
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : func_slow_RCMAX
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = 0
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : func_fast_RCMAX
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = 0
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : func_slow_RCMIN
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = 1
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : func_fast_RCMIN
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = 1
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : scan_slow_RCMAX
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = 0
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : scan_fast_RCMAX
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = 0
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : scan_slow_RCMIN
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = 1
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Visiting view : scan_fast_RCMIN
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = 1
+[12/16 12:20:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[12/16 12:20:21      8s]  Setting StdDelay to 31.40
+[12/16 12:20:21      8s] Creating Cell Server, finished. 
+[12/16 12:20:21      8s] 
+[12/16 12:20:21      8s] Deleting Cell Server ...
+[12/16 12:20:21      8s] @file(run.tcl) 24: read_spef -rc_corner corner_worst_RCMAX ../../design/SPEF/corner_worst_RCMAX.spef.gz
+[12/16 12:20:21      8s] read_spef Option :  ../../design/SPEF/corner_worst_RCMAX.spef.gz -noStarN -rc_corner corner_worst_RCMAX 
+[12/16 12:20:21      8s] Spef available for 1 corner(s) but not available for 1 corner(s). Spef reading will be triggered only after spef for all active RC Corners are available.
+[12/16 12:20:21      8s] @file(run.tcl) 25: read_spef -rc_corner corner_worst_RCMIN ../../design/SPEF/corner_worst_RCMIN.spef.gz
+[12/16 12:20:21      8s] read_spef Option :  ../../design/SPEF/corner_worst_RCMIN.spef.gz -noStarN -rc_corner corner_worst_RCMIN 
+[12/16 12:20:21      8s] 
+[12/16 12:20:21      8s] SPEF files for RC Corner corner_worst_RCMAX:
+[12/16 12:20:21      8s] Top-level spef file '../../design/SPEF/corner_worst_RCMAX.spef.gz'.
+[12/16 12:20:21      8s] 
+[12/16 12:20:21      8s] SPEF files for RC Corner corner_worst_RCMIN:
+[12/16 12:20:21      8s] Top-level spef file '../../design/SPEF/corner_worst_RCMIN.spef.gz'.
+[12/16 12:20:21      8s] Number of corners: 2
+[12/16 12:20:21      8s] Number of parallel threads processing the nets is: 1
+[12/16 12:20:21      8s] Start spef parsing (MEM=732.578).
+[12/16 12:20:21      8s] Maximum backlog used in parser: 50.
+[12/16 12:20:21      8s] Reading multiple SPEF files in parallel.
+[12/16 12:20:21      8s] RCDB /tmp/ssv_tmpdir_26854_VXgzgJ/dtmf_recvr_core_26854_4zOe9O.rcdb.d/dtmf_recvr_core.rcdb.d Creation Started (CPU Time= 0:00:00.0  MEM= 732.6M)
+[12/16 12:20:21      8s] Creating parasitic data file '/tmp/ssv_tmpdir_26854_VXgzgJ/dtmf_recvr_core_26854_4zOe9O.rcdb.d/dtmf_recvr_core.rcdb.d' for storing RC.
+[12/16 12:20:21      9s] SPEF file ../../design/SPEF/corner_worst_RCMAX.spef.gz.
+[12/16 12:20:21      9s] Number of Resistors     : 132172
+[12/16 12:20:21      9s] Number of Ground Caps   : 140357
+[12/16 12:20:21      9s] Number of Coupling Caps : 31664
+[12/16 12:20:21      9s] 
+[12/16 12:20:21      9s] SPEF file ../../design/SPEF/corner_worst_RCMIN.spef.gz.
+[12/16 12:20:21      9s] Number of Resistors     : 132172
+[12/16 12:20:21      9s] Number of Ground Caps   : 140357
+[12/16 12:20:21      9s] Number of Coupling Caps : 31664
+[12/16 12:20:21      9s] 
+[12/16 12:20:22      9s] RCDB /tmp/ssv_tmpdir_26854_VXgzgJ/dtmf_recvr_core_26854_4zOe9O.rcdb.d/dtmf_recvr_core.rcdb.d Creation Completed (CPU Time= 0:00:00.8  MEM= 775.6M)
+[12/16 12:20:22      9s] End spef parsing (MEM=743.539 CPU=0:00:00.8 REAL=0:00:01.0).
+[12/16 12:20:22      9s] Spef for RC Corner 'corner_worst_RCMAX' was previously specified. Dropping the previous specification.
+[12/16 12:20:22      9s] Spef for RC Corner 'corner_worst_RCMIN' was previously specified. Dropping the previous specification.
+[12/16 12:20:22      9s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=743.539M)
+[12/16 12:20:22      9s] Opening parasitic data file '/tmp/ssv_tmpdir_26854_VXgzgJ/dtmf_recvr_core_26854_4zOe9O.rcdb.d/dtmf_recvr_core.rcdb.d' for reading.
+[12/16 12:20:22      9s] Lumped Parasitic Loading Completed (total cpu=0:00:00.0, real=0:00:00.0, current mem=743.539M)
+[12/16 12:20:22      9s] 3 nets are missing in SPEF file. The names of these nets are saved in ./corner_worst_RCMAX.missing_nets.rpt.
+[12/16 12:20:22      9s] 3 nets are missing in SPEF file. The names of these nets are saved in ./corner_worst_RCMIN.missing_nets.rpt.
+[12/16 12:20:22      9s] @file(run.tcl) 30: set_db delaycal_enable_si true
+[12/16 12:20:22      9s] @file(run.tcl) 31: set_db si_glitch_enable_report true
+[12/16 12:20:22      9s] @file(run.tcl) 36: set_timing_derate -delay_corner delay_corner_slow_RCMAX -cell_delay -data  -early 0.82
+[12/16 12:20:22      9s] @file(run.tcl) 37: set_timing_derate -delay_corner delay_corner_slow_RCMAX -cell_delay -data  -late  1.01
+[12/16 12:20:22      9s] @file(run.tcl) 38: set_timing_derate -delay_corner delay_corner_slow_RCMAX -cell_delay -clock -early 0.9
+[12/16 12:20:22      9s] @file(run.tcl) 39: set_timing_derate -delay_corner delay_corner_slow_RCMAX -cell_delay -clock -late  1.1
+[12/16 12:20:22      9s] @file(run.tcl) 40: set_timing_derate -delay_corner delay_corner_slow_RCMAX -net_delay  -data  -early 0.82
+[12/16 12:20:22      9s] @file(run.tcl) 41: set_timing_derate -delay_corner delay_corner_slow_RCMAX -net_delay  -data  -late  1.01
+[12/16 12:20:22      9s] @file(run.tcl) 42: set_timing_derate -delay_corner delay_corner_slow_RCMAX -net_delay  -clock -early 0.9
+[12/16 12:20:22      9s] @file(run.tcl) 43: set_timing_derate -delay_corner delay_corner_slow_RCMAX -net_delay  -clock -late  1.1
+[12/16 12:20:22      9s] @file(run.tcl) 48: set_db timing_sdf_adjust_negative_setuphold true
+[12/16 12:20:22      9s] @file(run.tcl) 49: update_timing -full
+[12/16 12:20:22      9s] AAE DB initialization (MEM=764.152 CPU=0:00:00.1 REAL=0:00:00.0) 
+[12/16 12:20:22      9s] Starting SI iteration 1 using Infinite Timing Windows
+[12/16 12:20:22      9s] #################################################################################
+[12/16 12:20:22      9s] # Design Name: dtmf_recvr_core
+[12/16 12:20:22      9s] # Design Mode: 65nm
+[12/16 12:20:22      9s] # Analysis Mode: MMMC OCV 
+[12/16 12:20:22      9s] # Parasitics Mode: SPEF/RCDB
+[12/16 12:20:22      9s] # Signoff Settings: SI On 
+[12/16 12:20:22      9s] #################################################################################
+[12/16 12:20:23     10s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:23     10s] Setting infinite Tws ...
+[12/16 12:20:23     10s] First Iteration Infinite Tw... 
+[12/16 12:20:23     10s] Topological Sorting (REAL = 0:00:00.0, MEM = 779.1M, InitMEM = 777.8M)
+[12/16 12:20:23     10s] Start delay calculation (fullDC) (1 T). (MEM=779.082)
+[12/16 12:20:23     10s] Start AAE Lib Loading. (MEM=779.082)
+[12/16 12:20:23     10s] End AAE Lib Loading. (MEM=798.16 CPU=0:00:00.0 Real=0:00:00.0)
+[12/16 12:20:23     10s] End AAE Lib Interpolated Model. (MEM=798.16 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:23     10s] Opening parasitic data file '/tmp/ssv_tmpdir_26854_VXgzgJ/dtmf_recvr_core_26854_4zOe9O.rcdb.d/dtmf_recvr_core.rcdb.d' for reading.
+[12/16 12:20:23     10s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 809.7M)
+[12/16 12:20:23     10s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:23     10s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 819.2M)
+[12/16 12:20:23     10s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:23     10s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 819.2M)
+[12/16 12:20:23     10s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:23     10s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 819.2M)
+[12/16 12:20:23     10s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:23     10s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 819.2M)
+[12/16 12:20:23     10s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN543_FE_OFN407_tdsp_data_out_13_, driver FE_OFCC543_FE_OFN407_tdsp_data_out_13_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[13] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN541_ds_datain_10_, driver FE_OFCC541_ds_datain_10_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[10] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN540_FE_OFN14_tdsp_data_out_12_, driver FE_OFCC540_FE_OFN14_tdsp_data_out_12_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[12] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN537_ds_datain_7_, driver FE_OFCC537_ds_datain_7_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[7] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN534_FE_OFN47_ds_datain_2_, driver FE_OFCC534_FE_OFN47_ds_datain_2_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[2] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN532_ds_datain_14_, driver FE_OFCC532_ds_datain_14_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[14] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN530_p_addrs_5_, driver FE_OFCC530_p_addrs_5_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[5] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN528_p_addrs_6_, driver FE_OFCC528_p_addrs_6_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[6] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN526_p_addrs_7_, driver FE_OFCC526_p_addrs_7_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[7] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN524_p_addrs_8_, driver FE_OFCC524_p_addrs_8_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[8] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net refclk__L2_N0, driver refclk__L2_I0/ZN voltage 0.8 does not match reveiver PLLCLK_INST/refclk voltage 1.98.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net m_ram_clk__L5_N0, driver m_ram_clk__L5_I0/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/CLK voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net m_clk__L3_N0, driver m_clk__L3_I0/ZN voltage 0.8 does not match reveiver ROM_512x16_0_INST/CLK voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net m_dsram_clk__L1_N0, driver m_dsram_clk__L1_I0/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/CLK voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN479_FE_OFN12_tdsp_data_out_10_, driver FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[10] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN475_FE_OFN21_tdsp_data_out_9_, driver FE_OFCC475_FE_OFN21_tdsp_data_out_9_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[9] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN474_FE_OFN30_tdsp_data_out_11_, driver FE_OFCC474_FE_OFN30_tdsp_data_out_11_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[11] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN467_FE_OFN55_tdsp_data_out_1_, driver FE_OFCC467_FE_OFN55_tdsp_data_out_1_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[1] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFCN430_ds_datain_15_, driver FE_OFCC430_ds_datain_15_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[15] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (IMPMSMV-1810):	Net FE_OFN112_n_70, driver FE_OFC112_n_70/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/A[1] voltage 1.2.
+[12/16 12:20:23     10s] **WARN: (EMS-62):	Message <IMPMSMV-1810> has exceeded the default message display limit of 20.
+[12/16 12:20:23     10s] To avoid this warning, increase the display limit per unique message by
+[12/16 12:20:23     10s] using the set_message -limit <number> command.
+[12/16 12:20:23     10s] The message limit can be removed by using the set_message -no_limit command.
+[12/16 12:20:23     10s] Note that setting a very large number using the set_message -limit command
+[12/16 12:20:23     10s] or removing the message limit using the set_message -no_limit command can
+[12/16 12:20:23     10s] significantly increase the log file size.
+[12/16 12:20:23     10s] To suppress a message, use the set_message -suppress command.
+[12/16 12:20:24     11s] **WARN: (IMPESI-3140):	Bumpy transitions may exist in the design which may lead to inaccurate delay computation. To report/analyze the nets having bumpy transition, please enable delay report and use command 'report_noise -bumpy_waveform' after timing analysis. Delay report is enabled by setting 'set_si_mode -enable_delay_report true' before timing analysis.
+[12/16 12:20:25     12s] Total number of fetched objects 8888
+[12/16 12:20:25     12s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:25     12s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:26     13s] Total number of fetched objects 8888
+[12/16 12:20:26     13s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:26     13s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:26     13s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 920.8M)
+[12/16 12:20:26     13s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:28     15s] Total number of fetched objects 8888
+[12/16 12:20:28     15s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:28     15s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:29     16s] Total number of fetched objects 8888
+[12/16 12:20:29     16s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:29     16s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:29     16s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 920.8M)
+[12/16 12:20:29     16s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:30     17s] Total number of fetched objects 8888
+[12/16 12:20:30     17s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:30     17s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:32     19s] Total number of fetched objects 8888
+[12/16 12:20:32     19s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:32     19s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:32     19s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 920.8M)
+[12/16 12:20:32     19s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:33     20s] Total number of fetched objects 8888
+[12/16 12:20:33     20s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:33     20s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:34     21s] Total number of fetched objects 8888
+[12/16 12:20:34     21s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:34     21s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:34     21s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:35     21s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:01.0)
+[12/16 12:20:35     21s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:35     22s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:35     22s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:35     22s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:35     22s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:35     22s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:35     22s] End delay calculation. (MEM=952.812 CPU=0:00:11.4 REAL=0:00:12.0)
+[12/16 12:20:35     22s] End delay calculation (fullDC). (MEM=944.812 CPU=0:00:12.1 REAL=0:00:12.0)
+[12/16 12:20:35     22s] esiiDumpWaveformsThread is successfull 1 
+[12/16 12:20:35     22s] Save waveform /tmp/ssv_tmpdir_26854_VXgzgJ/.AAE_6cOm7N/.AAE_26854/waveform.data in separate thread...
+[12/16 12:20:35     22s] Finish pthread dumping compressed waveforms.
+[12/16 12:20:35     22s] *** CDM Built up (cpu=0:00:12.4  real=0:00:13.0  mem= 942.8M) ***
+[12/16 12:20:35     22s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_slow_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:35     22s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_fast_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:35     22s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_slow_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:35     22s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_fast_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:35     22s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view scan_slow_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:35     22s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view scan_fast_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:35     22s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view scan_slow_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:35     22s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view scan_fast_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:36     22s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 934.4M)
+[12/16 12:20:36     22s] Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 966.4M)
+[12/16 12:20:36     22s] Starting SI iteration 2
+[12/16 12:20:36     23s] Start delay calculation (fullDC) (1 T). (MEM=970.145)
+[12/16 12:20:36     23s] End AAE Lib Interpolated Model. (MEM=970.145 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:36     23s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 972.1M)
+[12/16 12:20:36     23s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:37     23s] Glitch Analysis: View func_slow_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:37     23s] Glitch Analysis: View func_slow_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:37     23s] Total number of fetched objects 8888
+[12/16 12:20:37     23s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:37     23s] AAE_INFO-618: Total number of nets in the design is 8751,  14.4 percent of the nets selected for SI analysis
+[12/16 12:20:37     24s] Glitch Analysis: View func_fast_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:37     24s] Glitch Analysis: View func_fast_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:37     24s] Total number of fetched objects 8888
+[12/16 12:20:37     24s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:37     24s] AAE_INFO-618: Total number of nets in the design is 8751,  6.7 percent of the nets selected for SI analysis
+[12/16 12:20:37     24s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1004.3M)
+[12/16 12:20:37     24s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:37     24s] Glitch Analysis: View func_slow_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:37     24s] Glitch Analysis: View func_slow_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:37     24s] Total number of fetched objects 8888
+[12/16 12:20:37     24s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:37     24s] AAE_INFO-618: Total number of nets in the design is 8751,  5.4 percent of the nets selected for SI analysis
+[12/16 12:20:38     24s] Glitch Analysis: View func_fast_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:38     24s] Glitch Analysis: View func_fast_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:38     24s] Total number of fetched objects 8888
+[12/16 12:20:38     24s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:38     24s] AAE_INFO-618: Total number of nets in the design is 8751,  5.5 percent of the nets selected for SI analysis
+[12/16 12:20:38     24s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1004.3M)
+[12/16 12:20:38     24s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:38     25s] Glitch Analysis: View scan_slow_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:38     25s] Glitch Analysis: View scan_slow_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:38     25s] Total number of fetched objects 8888
+[12/16 12:20:38     25s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:38     25s] AAE_INFO-618: Total number of nets in the design is 8751,  7.9 percent of the nets selected for SI analysis
+[12/16 12:20:39     25s] Glitch Analysis: View scan_fast_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:39     25s] Glitch Analysis: View scan_fast_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:39     25s] Total number of fetched objects 8888
+[12/16 12:20:39     25s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:39     25s] AAE_INFO-618: Total number of nets in the design is 8751,  6.4 percent of the nets selected for SI analysis
+[12/16 12:20:39     25s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1004.3M)
+[12/16 12:20:39     25s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:39     25s] Glitch Analysis: View scan_slow_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:39     25s] Glitch Analysis: View scan_slow_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:39     25s] Total number of fetched objects 8888
+[12/16 12:20:39     25s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:39     25s] AAE_INFO-618: Total number of nets in the design is 8751,  5.1 percent of the nets selected for SI analysis
+[12/16 12:20:39     25s] Glitch Analysis: View scan_fast_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:39     25s] Glitch Analysis: View scan_fast_RCMIN -- Total Number of Nets Analyzed = 8888. 
+[12/16 12:20:39     25s] Total number of fetched objects 8888
+[12/16 12:20:39     25s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:39     25s] AAE_INFO-618: Total number of nets in the design is 8751,  5.2 percent of the nets selected for SI analysis
+[12/16 12:20:39     25s] End delay calculation. (MEM=1004.3 CPU=0:00:02.9 REAL=0:00:03.0)
+[12/16 12:20:39     25s] End delay calculation (fullDC). (MEM=1004.3 CPU=0:00:02.9 REAL=0:00:03.0)
+[12/16 12:20:39     25s] *** CDM Built up (cpu=0:00:02.9  real=0:00:03.0  mem= 1002.3M) ***
+[12/16 12:20:39     26s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_slow_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:39     26s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_fast_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:39     26s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_slow_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:39     26s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_fast_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:39     26s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view scan_slow_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:39     26s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view scan_fast_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:39     26s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view scan_slow_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:39     26s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view scan_fast_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:41     26s] @file(run.tcl) 54: report_resource -start my_report_list
+[12/16 12:20:41     26s] @file(run.tcl) 55: source ../scripts/reports.tcl
+[12/16 12:20:41     26s] #@ Begin verbose source ../scripts/reports.tcl
+[12/16 12:20:41     26s] @file(reports.tcl) 1: set reportDir reports
+[12/16 12:20:41     26s] @file(reports.tcl) 2: file mkdir $reportDir
+[12/16 12:20:41     26s] @file(reports.tcl) 7: check_design  -type timing -out_file        ${reportDir}/check_design.rpt
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name func_slow_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name func_fast_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name func_slow_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name func_fast_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name scan_slow_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name scan_fast_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name scan_slow_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name scan_fast_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name func_slow_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name func_fast_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name func_slow_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name func_fast_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name scan_slow_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name scan_fast_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name scan_slow_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name scan_fast_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_102 has no clock constraint for view name func_slow_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_102 has no clock constraint for view name func_fast_RCMAX.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_102 has no clock constraint for view name func_slow_RCMIN.
+[12/16 12:20:41     26s] **WARN: (CHKTIM-4):	 Clock pin CK of instance spare_102 has no clock constraint for view name func_fast_RCMIN.
+[12/16 12:20:41     26s] **WARN: (EMS-62):	Message <CHKTIM-4> has exceeded the default message display limit of 20.
+[12/16 12:20:41     26s] To avoid this warning, increase the display limit per unique message by
+[12/16 12:20:41     26s] using the set_message -limit <number> command.
+[12/16 12:20:41     26s] The message limit can be removed by using the set_message -no_limit command.
+[12/16 12:20:41     26s] Note that setting a very large number using the set_message -limit command
+[12/16 12:20:41     26s] or removing the message limit using the set_message -no_limit command can
+[12/16 12:20:41     26s] significantly increase the log file size.
+[12/16 12:20:41     26s] To suppress a message, use the set_message -suppress command.
+[12/16 12:20:41     26s] 
+[12/16 12:20:41     26s] *** Summary of all messages that are not suppressed in this session:
+[12/16 12:20:41     26s] Severity  ID               Count  Summary                                  
+[12/16 12:20:41     26s] WARNING   CHKTIM-4           104   Clock pin %s of instance %s has no cloc...
+[12/16 12:20:41     26s] *** Message Summary: 104 warning(s), 0 error(s)
+[12/16 12:20:41     26s] 
+[12/16 12:20:41     26s] @file(reports.tcl) 8: report_annotated_parasitics         > ${reportDir}/annotated.rpt
+[12/16 12:20:41     26s] @file(reports.tcl) 9: report_analysis_coverage            > ${reportDir}/coverage.rpt
+[12/16 12:20:41     26s] @file(reports.tcl) 14: report_clocks                       > ${reportDir}/clocks.rpt
+[12/16 12:20:41     26s] @file(reports.tcl) 15: report_case_analysis                > ${reportDir}/case_analysis.rpt
+[12/16 12:20:41     26s] @file(reports.tcl) 16: report_inactive_arcs                > ${reportDir}/inactive_arcs.rpt
+[12/16 12:20:41     26s] @file(reports.tcl) 21: report_constraint -all_violators                                > ${reportDir}/allviol.rpt
+[12/16 12:20:42     27s] @file(reports.tcl) 22: report_analysis_summary                                         > ${reportDir}/analysis_summary.rpt
+[12/16 12:20:42     27s] @file(reports.tcl) 23: report_timing -path_type endpoint -fields {startpoint launch_clock_edge endpoint capture_data_edge slack view} -late -max_paths 5  > ${reportDir}/start_end_slack.rpt
+[12/16 12:20:42     27s] @file(reports.tcl) 28: report_timing -path_type endpoint -fields {endpoint capture_data_edge slack view} -max_slack 0                     > ${reportDir}/setup_1.rpt
+[12/16 12:20:42     27s] @file(reports.tcl) 29: report_timing -path_type endpoint -fields {endpoint capture_data_edge slack view} -max_slack 0 -early              > ${reportDir}/hold_1.rpt
+[12/16 12:20:42     27s] @file(reports.tcl) 30: report_timing -late  -max_slack 0 -max_paths 100                         > ${reportDir}/setup_100.rpt.gz
+[12/16 12:20:42     27s] @file(reports.tcl) 31: report_timing -early -max_slack 0 -max_paths 100                         > ${reportDir}/hold_100.rpt.gz
+[12/16 12:20:42     27s] @file(reports.tcl) 36: write_sdf -recompute_parallel_arcs    ${reportDir}/out.sdf
+[12/16 12:20:42     27s] *Info: outputing delay to SDF file "reports/out.sdf".
+[12/16 12:20:42     27s] Starting SI iteration 1 using Infinite Timing Windows
+[12/16 12:20:42     27s] #################################################################################
+[12/16 12:20:42     27s] # Design Name: dtmf_recvr_core
+[12/16 12:20:42     27s] # Design Mode: 65nm
+[12/16 12:20:42     27s] # Analysis Mode: MMMC OCV 
+[12/16 12:20:42     27s] # Parasitics Mode: SPEF/RCDB
+[12/16 12:20:42     27s] # Signoff Settings: SI On 
+[12/16 12:20:42     27s] #################################################################################
+[12/16 12:20:42     28s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:42     28s] Setting infinite Tws ...
+[12/16 12:20:42     28s] First Iteration Infinite Tw... 
+[12/16 12:20:42     28s] Topological Sorting (REAL = 0:00:00.0, MEM = 981.8M, InitMEM = 981.8M)
+[12/16 12:20:42     28s] Start delay calculation (fullDC) (1 T). (MEM=981.77)
+[12/16 12:20:43     28s] End AAE Lib Interpolated Model. (MEM=981.77 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:43     28s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 983.8M)
+[12/16 12:20:43     28s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:43     28s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 999.8M)
+[12/16 12:20:43     28s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:43     28s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 999.8M)
+[12/16 12:20:43     28s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:43     28s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 999.8M)
+[12/16 12:20:43     28s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:43     28s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 999.8M)
+[12/16 12:20:43     28s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN543_FE_OFN407_tdsp_data_out_13_, driver FE_OFCC543_FE_OFN407_tdsp_data_out_13_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[13] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN541_ds_datain_10_, driver FE_OFCC541_ds_datain_10_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[10] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN540_FE_OFN14_tdsp_data_out_12_, driver FE_OFCC540_FE_OFN14_tdsp_data_out_12_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[12] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN537_ds_datain_7_, driver FE_OFCC537_ds_datain_7_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[7] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN534_FE_OFN47_ds_datain_2_, driver FE_OFCC534_FE_OFN47_ds_datain_2_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[2] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN532_ds_datain_14_, driver FE_OFCC532_ds_datain_14_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[14] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN530_p_addrs_5_, driver FE_OFCC530_p_addrs_5_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[5] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN528_p_addrs_6_, driver FE_OFCC528_p_addrs_6_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[6] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN526_p_addrs_7_, driver FE_OFCC526_p_addrs_7_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[7] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN524_p_addrs_8_, driver FE_OFCC524_p_addrs_8_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[8] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net refclk__L2_N0, driver refclk__L2_I0/ZN voltage 0.8 does not match reveiver PLLCLK_INST/refclk voltage 1.98.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net m_ram_clk__L5_N0, driver m_ram_clk__L5_I0/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/CLK voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net m_clk__L3_N0, driver m_clk__L3_I0/ZN voltage 0.8 does not match reveiver ROM_512x16_0_INST/CLK voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net m_dsram_clk__L1_N0, driver m_dsram_clk__L1_I0/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/CLK voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN479_FE_OFN12_tdsp_data_out_10_, driver FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[10] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN475_FE_OFN21_tdsp_data_out_9_, driver FE_OFCC475_FE_OFN21_tdsp_data_out_9_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[9] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN474_FE_OFN30_tdsp_data_out_11_, driver FE_OFCC474_FE_OFN30_tdsp_data_out_11_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[11] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN467_FE_OFN55_tdsp_data_out_1_, driver FE_OFCC467_FE_OFN55_tdsp_data_out_1_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[1] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFCN430_ds_datain_15_, driver FE_OFCC430_ds_datain_15_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[15] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (IMPMSMV-1810):	Net FE_OFN112_n_70, driver FE_OFC112_n_70/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/A[1] voltage 1.2.
+[12/16 12:20:43     28s] **WARN: (EMS-62):	Message <IMPMSMV-1810> has exceeded the default message display limit of 20.
+[12/16 12:20:43     28s] To avoid this warning, increase the display limit per unique message by
+[12/16 12:20:43     28s] using the set_message -limit <number> command.
+[12/16 12:20:43     28s] The message limit can be removed by using the set_message -no_limit command.
+[12/16 12:20:43     28s] Note that setting a very large number using the set_message -limit command
+[12/16 12:20:43     28s] or removing the message limit using the set_message -no_limit command can
+[12/16 12:20:43     28s] significantly increase the log file size.
+[12/16 12:20:43     28s] To suppress a message, use the set_message -suppress command.
+[12/16 12:20:45     30s] Total number of fetched objects 8888
+[12/16 12:20:45     30s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:45     30s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:46     31s] Total number of fetched objects 8888
+[12/16 12:20:46     31s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:46     31s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:46     31s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1016.2M)
+[12/16 12:20:46     31s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:48     33s] Total number of fetched objects 8888
+[12/16 12:20:48     33s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:48     33s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:49     34s] Total number of fetched objects 8888
+[12/16 12:20:49     34s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:49     34s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:49     34s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1016.2M)
+[12/16 12:20:49     34s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:50     36s] Total number of fetched objects 8888
+[12/16 12:20:50     36s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:50     36s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:52     37s] Total number of fetched objects 8888
+[12/16 12:20:52     37s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:52     37s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:52     37s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1016.2M)
+[12/16 12:20:52     37s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:53     38s] Total number of fetched objects 8888
+[12/16 12:20:53     38s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:53     38s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:55     40s] Total number of fetched objects 8888
+[12/16 12:20:55     40s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:55     40s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:20:55     40s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:55     40s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:55     40s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:55     40s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:55     40s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:55     40s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:55     40s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:55     40s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:55     40s] End delay calculation. (MEM=1048.17 CPU=0:00:11.8 REAL=0:00:12.0)
+[12/16 12:20:55     40s] End delay calculation (fullDC). (MEM=1048.17 CPU=0:00:12.5 REAL=0:00:13.0)
+[12/16 12:20:55     40s] esiiDumpWaveformsThread is successfull 1 
+[12/16 12:20:55     40s] Save waveform /tmp/ssv_tmpdir_26854_VXgzgJ/.AAE_6cOm7N/.AAE_26854/waveform.data in separate thread...
+[12/16 12:20:55     40s] Finish pthread dumping compressed waveforms.
+[12/16 12:20:55     40s] *** CDM Built up (cpu=0:00:12.8  real=0:00:13.0  mem= 1046.2M) ***
+[12/16 12:20:55     40s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_slow_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:55     40s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_fast_RCMAX at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:55     40s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_slow_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:55     40s] **ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view func_fast_RCMIN at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+[12/16 12:20:55     40s] Message <TA-1014> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[12/16 12:20:56     41s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1029.8M)
+[12/16 12:20:56     41s] Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 1061.8M)
+[12/16 12:20:56     41s] Starting SI iteration 2
+[12/16 12:20:56     41s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:56     41s] Start delay calculation (fullDC) (1 T). (MEM=1007.12)
+[12/16 12:20:56     41s] End AAE Lib Interpolated Model. (MEM=1007.12 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:20:56     41s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1009.1M)
+[12/16 12:20:56     41s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:57     42s] Glitch Analysis: View func_slow_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:57     42s] Glitch Analysis: View func_slow_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:57     42s] Total number of fetched objects 8888
+[12/16 12:20:57     42s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:57     42s] AAE_INFO-618: Total number of nets in the design is 8751,  14.4 percent of the nets selected for SI analysis
+[12/16 12:20:57     42s] Glitch Analysis: View func_fast_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:57     42s] Glitch Analysis: View func_fast_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:57     42s] Total number of fetched objects 8888
+[12/16 12:20:57     42s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:57     42s] AAE_INFO-618: Total number of nets in the design is 8751,  6.7 percent of the nets selected for SI analysis
+[12/16 12:20:57     42s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1041.3M)
+[12/16 12:20:57     42s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:57     42s] Glitch Analysis: View func_slow_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:57     42s] Glitch Analysis: View func_slow_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:57     42s] Total number of fetched objects 8888
+[12/16 12:20:57     42s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:57     42s] AAE_INFO-618: Total number of nets in the design is 8751,  5.4 percent of the nets selected for SI analysis
+[12/16 12:20:58     43s] Glitch Analysis: View func_fast_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:58     43s] Glitch Analysis: View func_fast_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:58     43s] Total number of fetched objects 8888
+[12/16 12:20:58     43s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:58     43s] AAE_INFO-618: Total number of nets in the design is 8751,  5.5 percent of the nets selected for SI analysis
+[12/16 12:20:58     43s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1041.3M)
+[12/16 12:20:58     43s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:58     43s] Glitch Analysis: View scan_slow_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:58     43s] Glitch Analysis: View scan_slow_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:58     43s] Total number of fetched objects 8888
+[12/16 12:20:58     43s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:58     43s] AAE_INFO-618: Total number of nets in the design is 8751,  8.0 percent of the nets selected for SI analysis
+[12/16 12:20:58     44s] Glitch Analysis: View scan_fast_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:58     44s] Glitch Analysis: View scan_fast_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:58     44s] Total number of fetched objects 8888
+[12/16 12:20:58     44s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:58     44s] AAE_INFO-618: Total number of nets in the design is 8751,  6.4 percent of the nets selected for SI analysis
+[12/16 12:20:58     44s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1041.3M)
+[12/16 12:20:58     44s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:20:59     44s] Glitch Analysis: View scan_slow_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:59     44s] Glitch Analysis: View scan_slow_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:20:59     44s] Total number of fetched objects 8888
+[12/16 12:20:59     44s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:59     44s] AAE_INFO-618: Total number of nets in the design is 8751,  5.1 percent of the nets selected for SI analysis
+[12/16 12:20:59     44s] Glitch Analysis: View scan_fast_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:20:59     44s] Glitch Analysis: View scan_fast_RCMIN -- Total Number of Nets Analyzed = 8888. 
+[12/16 12:20:59     44s] Total number of fetched objects 8888
+[12/16 12:20:59     44s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:20:59     44s] AAE_INFO-618: Total number of nets in the design is 8751,  5.2 percent of the nets selected for SI analysis
+[12/16 12:20:59     44s] End delay calculation. (MEM=1041.28 CPU=0:00:03.0 REAL=0:00:03.0)
+[12/16 12:20:59     44s] End delay calculation (fullDC). (MEM=1041.28 CPU=0:00:03.0 REAL=0:00:03.0)
+[12/16 12:20:59     44s] *** CDM Built up (cpu=0:00:03.0  real=0:00:03.0  mem= 1039.3M) ***
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/WEN is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/WEN is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[9] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[8] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[7] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[6] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[5] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[4] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[3] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[2] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[1] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[15] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[14] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[13] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[12] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[11] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[10] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/D[0] is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_128x16_TEST_INST/RAM_128x16_INST/CEN is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] **WARN: (SDF-802):	The sum of the Setup and Hold sides of the SETUPHOLD check on pin RAM_256x16_TEST_INST/RAM_256x16_INST/WEN is negative - which is illegal in SDF V3.0. The negative side of the SETUPHOLD will be postively adjusted so that the resulting sum is zero. This will result in a more conservative analysis of the adjusted check.  Negative SETUPHOLD sums maybe an indication of a characterization problem in your timing libraries. You can set the timing global timing_write_sdf_allow_negative_setuphold_sum to 'true' to loosen this restriction.
+[12/16 12:20:59     44s] Message <SDF-802> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[12/16 12:20:59     44s] #@ End verbose source ../scripts/reports.tcl
+[12/16 12:20:59     44s] #@ End verbose source ../scripts/run.tcl
+[12/16 12:20:59     44s] @tempus 2> report_timing
+###############################################################
+[12/16 12:21:08     45s] #  Generated by:      Cadence Tempus 17.21-s086_1
+[12/16 12:21:08     45s] #  OS:                Linux x86_64(Host ID ra01)
+[12/16 12:21:08     45s] #  Generated on:      Tue Dec 16 12:21:08 2025
+[12/16 12:21:08     45s] #  Design:            dtmf_recvr_core
+[12/16 12:21:08     45s] #  Command:           report_timing
+[12/16 12:21:08     45s] ###############################################################
+[12/16 12:21:08     45s] Starting SI iteration 1 using Infinite Timing Windows
+[12/16 12:21:09     45s] #################################################################################
+[12/16 12:21:09     45s] # Design Name: dtmf_recvr_core
+[12/16 12:21:09     45s] # Design Mode: 65nm
+[12/16 12:21:09     45s] # Analysis Mode: MMMC OCV 
+[12/16 12:21:09     45s] # Parasitics Mode: SPEF/RCDB
+[12/16 12:21:09     45s] # Signoff Settings: SI On 
+[12/16 12:21:09     45s] #################################################################################
+[12/16 12:21:09     45s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:09     45s] Setting infinite Tws ...
+[12/16 12:21:09     45s] First Iteration Infinite Tw... 
+[12/16 12:21:09     45s] Topological Sorting (REAL = 0:00:00.0, MEM = 1022.9M, InitMEM = 1022.9M)
+[12/16 12:21:09     45s] Start delay calculation (fullDC) (1 T). (MEM=1022.88)
+[12/16 12:21:09     45s] End AAE Lib Interpolated Model. (MEM=1022.88 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:09     45s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1024.9M)
+[12/16 12:21:09     45s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:09     45s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1056.9M)
+[12/16 12:21:09     45s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:10     46s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1056.9M)
+[12/16 12:21:10     46s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:10     46s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1056.9M)
+[12/16 12:21:10     46s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:10     46s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1056.9M)
+[12/16 12:21:10     46s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN543_FE_OFN407_tdsp_data_out_13_, driver FE_OFCC543_FE_OFN407_tdsp_data_out_13_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[13] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN541_ds_datain_10_, driver FE_OFCC541_ds_datain_10_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[10] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN540_FE_OFN14_tdsp_data_out_12_, driver FE_OFCC540_FE_OFN14_tdsp_data_out_12_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[12] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN537_ds_datain_7_, driver FE_OFCC537_ds_datain_7_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[7] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN534_FE_OFN47_ds_datain_2_, driver FE_OFCC534_FE_OFN47_ds_datain_2_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[2] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN532_ds_datain_14_, driver FE_OFCC532_ds_datain_14_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[14] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN530_p_addrs_5_, driver FE_OFCC530_p_addrs_5_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[5] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN528_p_addrs_6_, driver FE_OFCC528_p_addrs_6_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[6] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN526_p_addrs_7_, driver FE_OFCC526_p_addrs_7_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[7] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN524_p_addrs_8_, driver FE_OFCC524_p_addrs_8_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[8] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net refclk__L2_N0, driver refclk__L2_I0/ZN voltage 0.8 does not match reveiver PLLCLK_INST/refclk voltage 1.98.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net m_ram_clk__L5_N0, driver m_ram_clk__L5_I0/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/CLK voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net m_clk__L3_N0, driver m_clk__L3_I0/ZN voltage 0.8 does not match reveiver ROM_512x16_0_INST/CLK voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net m_dsram_clk__L1_N0, driver m_dsram_clk__L1_I0/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/CLK voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN479_FE_OFN12_tdsp_data_out_10_, driver FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[10] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN475_FE_OFN21_tdsp_data_out_9_, driver FE_OFCC475_FE_OFN21_tdsp_data_out_9_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[9] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN474_FE_OFN30_tdsp_data_out_11_, driver FE_OFCC474_FE_OFN30_tdsp_data_out_11_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[11] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN467_FE_OFN55_tdsp_data_out_1_, driver FE_OFCC467_FE_OFN55_tdsp_data_out_1_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[1] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFCN430_ds_datain_15_, driver FE_OFCC430_ds_datain_15_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[15] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (IMPMSMV-1810):	Net FE_OFN112_n_70, driver FE_OFC112_n_70/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/A[1] voltage 1.2.
+[12/16 12:21:10     46s] **WARN: (EMS-62):	Message <IMPMSMV-1810> has exceeded the default message display limit of 20.
+[12/16 12:21:10     46s] To avoid this warning, increase the display limit per unique message by
+[12/16 12:21:10     46s] using the set_message -limit <number> command.
+[12/16 12:21:10     46s] The message limit can be removed by using the set_message -no_limit command.
+[12/16 12:21:10     46s] Note that setting a very large number using the set_message -limit command
+[12/16 12:21:10     46s] or removing the message limit using the set_message -no_limit command can
+[12/16 12:21:10     46s] significantly increase the log file size.
+[12/16 12:21:10     46s] To suppress a message, use the set_message -suppress command.
+[12/16 12:21:11     47s] Total number of fetched objects 8888
+[12/16 12:21:11     47s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:11     47s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:21:13     49s] Total number of fetched objects 8888
+[12/16 12:21:13     49s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:13     49s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:21:13     49s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1041.3M)
+[12/16 12:21:13     49s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:14     50s] Total number of fetched objects 8888
+[12/16 12:21:14     50s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:14     50s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:21:15     51s] Total number of fetched objects 8888
+[12/16 12:21:15     51s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:15     51s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:21:15     51s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1041.3M)
+[12/16 12:21:15     51s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:17     53s] Total number of fetched objects 8888
+[12/16 12:21:17     53s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:17     53s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:21:18     54s] Total number of fetched objects 8888
+[12/16 12:21:18     54s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:18     54s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:21:18     54s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1041.3M)
+[12/16 12:21:18     54s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:20     56s] Total number of fetched objects 8888
+[12/16 12:21:20     56s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:20     56s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:21:21     57s] Total number of fetched objects 8888
+[12/16 12:21:21     57s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:21     57s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:21:21     57s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:21     57s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:21     57s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:21     57s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:21     57s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:21     57s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:21     57s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:21     57s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:21     57s] End delay calculation. (MEM=1073.29 CPU=0:00:11.4 REAL=0:00:11.0)
+[12/16 12:21:21     57s] End delay calculation (fullDC). (MEM=1073.29 CPU=0:00:12.0 REAL=0:00:12.0)
+[12/16 12:21:21     57s] esiiDumpWaveformsThread is successfull 1 
+[12/16 12:21:21     57s] Save waveform /tmp/ssv_tmpdir_26854_VXgzgJ/.AAE_6cOm7N/.AAE_26854/waveform.data in separate thread...
+[12/16 12:21:21     57s] Finish pthread dumping compressed waveforms.
+[12/16 12:21:21     57s] *** CDM Built up (cpu=0:00:12.4  real=0:00:12.0  mem= 1071.3M) ***
+[12/16 12:21:22     58s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1054.9M)
+[12/16 12:21:22     58s] Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 1086.9M)
+[12/16 12:21:22     58s] Starting SI iteration 2
+[12/16 12:21:22     58s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:22     58s] Start delay calculation (fullDC) (1 T). (MEM=1047.84)
+[12/16 12:21:22     58s] End AAE Lib Interpolated Model. (MEM=1047.84 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:21:22     58s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1049.8M)
+[12/16 12:21:22     58s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:23     59s] Glitch Analysis: View func_slow_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:21:23     59s] Glitch Analysis: View func_slow_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:21:23     59s] Total number of fetched objects 8888
+[12/16 12:21:23     59s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:23     59s] AAE_INFO-618: Total number of nets in the design is 8751,  14.4 percent of the nets selected for SI analysis
+[12/16 12:21:23     59s] Glitch Analysis: View func_fast_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:21:23     59s] Glitch Analysis: View func_fast_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:21:23     59s] Total number of fetched objects 8888
+[12/16 12:21:23     59s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:23     59s] AAE_INFO-618: Total number of nets in the design is 8751,  6.7 percent of the nets selected for SI analysis
+[12/16 12:21:23     59s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1082.0M)
+[12/16 12:21:23     59s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:23     59s] Glitch Analysis: View func_slow_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:21:23     59s] Glitch Analysis: View func_slow_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:21:23     59s] Total number of fetched objects 8888
+[12/16 12:21:23     59s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:23     59s] AAE_INFO-618: Total number of nets in the design is 8751,  5.4 percent of the nets selected for SI analysis
+[12/16 12:21:24     60s] Glitch Analysis: View func_fast_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:21:24     60s] Glitch Analysis: View func_fast_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:21:24     60s] Total number of fetched objects 8888
+[12/16 12:21:24     60s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:24     60s] AAE_INFO-618: Total number of nets in the design is 8751,  5.5 percent of the nets selected for SI analysis
+[12/16 12:21:24     60s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1082.0M)
+[12/16 12:21:24     60s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:24     60s] Glitch Analysis: View scan_slow_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:21:24     60s] Glitch Analysis: View scan_slow_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:21:24     60s] Total number of fetched objects 8888
+[12/16 12:21:24     60s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:24     60s] AAE_INFO-618: Total number of nets in the design is 8751,  7.9 percent of the nets selected for SI analysis
+[12/16 12:21:24     60s] Glitch Analysis: View scan_fast_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:21:24     60s] Glitch Analysis: View scan_fast_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:21:24     60s] Total number of fetched objects 8888
+[12/16 12:21:24     60s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:24     60s] AAE_INFO-618: Total number of nets in the design is 8751,  6.4 percent of the nets selected for SI analysis
+[12/16 12:21:24     60s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1082.0M)
+[12/16 12:21:24     60s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:21:25     61s] Glitch Analysis: View scan_slow_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:21:25     61s] Glitch Analysis: View scan_slow_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:21:25     61s] Total number of fetched objects 8888
+[12/16 12:21:25     61s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:25     61s] AAE_INFO-618: Total number of nets in the design is 8751,  5.1 percent of the nets selected for SI analysis
+[12/16 12:21:25     61s] Glitch Analysis: View scan_fast_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:21:25     61s] Glitch Analysis: View scan_fast_RCMIN -- Total Number of Nets Analyzed = 8888. 
+[12/16 12:21:25     61s] Total number of fetched objects 8888
+[12/16 12:21:25     61s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:21:25     61s] AAE_INFO-618: Total number of nets in the design is 8751,  5.2 percent of the nets selected for SI analysis
+[12/16 12:21:25     61s] End delay calculation. (MEM=1082 CPU=0:00:02.9 REAL=0:00:03.0)
+[12/16 12:21:25     61s] End delay calculation (fullDC). (MEM=1082 CPU=0:00:03.0 REAL=0:00:03.0)
+[12/16 12:21:25     61s] *** CDM Built up (cpu=0:00:03.0  real=0:00:03.0  mem= 1080.0M) ***
+[12/16 12:21:25     62s] Path 1: VIOLATED (-1.544 ns) Setup Check with Pin RESULTS_CONV_INST/r1477_reg[10]/CK->D
+[12/16 12:21:25     62s]                View: scan_slow_RCMAX
+[12/16 12:21:25     62s]               Group: m_rcc_clk
+[12/16 12:21:25     62s]          Startpoint: (R) TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK
+[12/16 12:21:25     62s]               Clock: (R) m_clk
+[12/16 12:21:25     62s]            Endpoint: (R) RESULTS_CONV_INST/r1477_reg[10]/D
+[12/16 12:21:25     62s]               Clock: (F) m_rcc_clk
+[12/16 12:21:25     62s] 
+[12/16 12:21:25     62s]                        Capture       Launch
+[12/16 12:21:25     62s]          Clock Edge:+   20.000        0.000
+[12/16 12:21:25     62s]         Src Latency:+    0.000        0.000
+[12/16 12:21:25     62s]         Net Latency:+    1.373 (P)    5.935 (P)
+[12/16 12:21:25     62s]             Arrival:=   21.373        5.935
+[12/16 12:21:25     62s] 
+[12/16 12:21:25     62s]               Setup:-    0.801
+[12/16 12:21:25     62s]         Uncertainty:-    0.400
+[12/16 12:21:25     62s]       Required Time:=   20.172
+[12/16 12:21:25     62s]        Launch Clock:=    5.935
+[12/16 12:21:25     62s]           Data Path:+   15.781
+[12/16 12:21:25     62s]               Slack:=   -1.544
+[12/16 12:21:25     62s] 
+[12/16 12:21:25     62s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 12:21:25     62s] # Timing Point                                            Flags  Arc     Edge  Cell       Fanout  Trans   Delay  Arrival  
+[12/16 12:21:25     62s] #                                                                                                  (ns)    (ns)     (ns)  
+[12/16 12:21:25     62s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 12:21:25     62s]   TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK                 -      CK      R     (arrival)       4  0.145       -    5.935  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/DECODE_INST/ir_reg[9]/Q                  -      CK->Q   F     SDFFS_X2        1  0.145   0.694    6.629  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/DECODE_INST/FE_OFC186_port_address_1_/Z  -      A->Z    F     BUF_X16        44  0.146   0.562    7.191  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8211A/ZN            -      A3->ZN  R     NOR3_X1         2  0.485   0.910    8.101  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8090A/ZN            -      A2->ZN  F     NAND2_X1        1  1.138   0.365    8.466  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p6871A/ZN            -      A4->ZN  R     NOR4_X2         2  0.660   1.893   10.359  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7851A6133/ZN        -      A1->ZN  F     NAND2_X4        2  2.748   0.533   10.892  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7333D/ZN            -      A2->ZN  R     NOR2_X4        16  0.942   3.375   14.267  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7551A6117/ZN        -      B1->ZN  F     AOI222_X1       1  3.734   1.491   15.759  
+[12/16 12:21:25     62s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8505A6087/ZN        -      A2->ZN  R     NAND3_X2        2  1.609   2.530   18.288  
+[12/16 12:21:25     62s]   FE_OFC12_tdsp_data_out_10_/Z                            -      A->Z    R     BUF_X16         1  1.663   0.814   19.103  
+[12/16 12:21:25     62s]   FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z                 -      A->Z    R     BUF_X16         5  0.390   0.859   19.961  
+[12/16 12:21:25     62s]   RESULTS_CONV_INST/p7148A29049/ZN                        -      A->ZN   F     INV_X2          1  0.892   0.291   20.252  
+[12/16 12:21:25     62s]   RESULTS_CONV_INST/FE_OFCC480_n_2024/Z                   -      A->Z    F     BUF_X32         6  0.345   0.620   20.872  
+[12/16 12:21:25     62s]   RESULTS_CONV_INST/p7155A28968/ZN                        -      A2->ZN  R     OAI22_X1        1  0.148   0.844   21.716  
+[12/16 12:21:25     62s]   RESULTS_CONV_INST/r1477_reg[10]/D                       -      D       R     SDFF_X2         1  1.733   0.000   21.716  
+[12/16 12:21:25     62s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 12:21:25     62s] 
+[12/16 12:21:25     62s] @tempus 3> get_db *cppr*
+[5C
+[12/16 12:21:45     62s] Object: root:/
+[12/16 12:21:45     62s]   timing_analysis_cppr:  none
+[12/16 12:21:45     62s]   timing_cppr_opposite_edge_mean_scale_factor:  1.0
+[12/16 12:21:45     62s]   timing_cppr_opposite_edge_sigma_scale_factor:  1.0
+[12/16 12:21:45     62s]   timing_cppr_propagate_thru_latches:  false
+[12/16 12:21:45     62s]   timing_cppr_remove_clock_to_data_pessimism:  false
+[12/16 12:21:45     62s]   timing_cppr_self_loop_mode:  true
+[12/16 12:21:45     62s]   timing_cppr_skip_clock_reconvergence:  false
+[12/16 12:21:45     62s]   timing_cppr_skip_clock_reconvergence_for_unmatched_clocks:  false
+[12/16 12:21:45     62s]   timing_cppr_threshold_ps:  20.0
+[12/16 12:21:45     62s]   timing_cppr_transition_sense:  normal
+[12/16 12:21:45     62s]   timing_enable_pessimistic_cppr_for_reconvergent_clock_paths:  false
+[12/16 12:21:45     62s]   timing_enable_report_cppr_clock_style_check_compatibility:  false
+[12/16 12:21:45     62s]   timing_enable_si_cppr:  true
+[12/16 12:21:45     62s]   timing_report_enable_cppr_point:  false
+[12/16 12:21:45     62s] 
+[12/16 12:21:45     62s] @tempus 4> set_db timing_cppr_remove_clock_to_data_pessimism true
+1 true
+[12/16 12:22:37     64s] @tempus 5> set_db timing_analysis_cppr true
+1 both
+[12/16 12:22:54     64s] @tempus 6> set_db timing_analysis_cppr both
+1 both
+[12/16 12:23:01     65s] @tempus 7> set_db timing_report_enable_cppr_point true timing_enable_pessimistic_cppr_for_reconvergent_clock_paths true
+
+[12/16 12:23:22     65s] 
+[12/16 12:23:22     65s] Usage: set_db [-help] <start> [<chain>] <value> [-dbu] [-index <index_list>] [-quiet] [-verbose]
+[12/16 12:23:22     65s] 
+[12/16 12:23:22     65s] **ERROR: (IMPTCM-48):	"true" is not a legal option for command "set_db". Either the current option or an option prior to it is not specified correctly.
+[12/16 12:23:22     65s] 
+[12/16 12:23:22     65s] @tempus 8> set_db timing_report_enable_cppr_point true
+1 true
+[12/16 12:23:26     65s] @tempus 9> set_db timing_enable_pessimistic_cppr_for_reconvergent_clock_paths true
+1 true
+[12/16 12:23:35     66s] @tempus 10> report_timing
+
+[12/16 12:23:39     66s] ###############################################################
+[12/16 12:23:39     66s] #  Generated by:      Cadence Tempus 17.21-s086_1
+[12/16 12:23:39     66s] #  OS:                Linux x86_64(Host ID ra01)
+[12/16 12:23:39     66s] #  Generated on:      Tue Dec 16 12:23:39 2025
+[12/16 12:23:39     66s] #  Design:            dtmf_recvr_core
+[12/16 12:23:39     66s] #  Command:           report_timing
+[12/16 12:23:39     66s] ###############################################################
+[12/16 12:23:39     66s] Starting SI iteration 1 using Infinite Timing Windows
+[12/16 12:23:39     66s] #################################################################################
+[12/16 12:23:39     66s] # Design Name: dtmf_recvr_core
+[12/16 12:23:39     66s] # Design Mode: 65nm
+[12/16 12:23:39     66s] # Analysis Mode: MMMC OCV 
+[12/16 12:23:39     66s] # Parasitics Mode: SPEF/RCDB
+[12/16 12:23:39     66s] # Signoff Settings: SI On 
+[12/16 12:23:39     66s] #################################################################################
+[12/16 12:23:40     67s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:40     67s] Setting infinite Tws ...
+[12/16 12:23:40     67s] First Iteration Infinite Tw... 
+[12/16 12:23:40     67s] Topological Sorting (REAL = 0:00:00.0, MEM = 1063.6M, InitMEM = 1063.6M)
+[12/16 12:23:40     67s] Start delay calculation (fullDC) (1 T). (MEM=1063.6)
+[12/16 12:23:40     67s] End AAE Lib Interpolated Model. (MEM=1063.6 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:40     67s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1065.6M)
+[12/16 12:23:40     67s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:40     67s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1097.6M)
+[12/16 12:23:40     67s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:40     67s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1097.6M)
+[12/16 12:23:40     67s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:40     67s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1097.6M)
+[12/16 12:23:40     67s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:41     67s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1097.6M)
+[12/16 12:23:41     67s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN543_FE_OFN407_tdsp_data_out_13_, driver FE_OFCC543_FE_OFN407_tdsp_data_out_13_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[13] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN541_ds_datain_10_, driver FE_OFCC541_ds_datain_10_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[10] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN540_FE_OFN14_tdsp_data_out_12_, driver FE_OFCC540_FE_OFN14_tdsp_data_out_12_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[12] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN537_ds_datain_7_, driver FE_OFCC537_ds_datain_7_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[7] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN534_FE_OFN47_ds_datain_2_, driver FE_OFCC534_FE_OFN47_ds_datain_2_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[2] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN532_ds_datain_14_, driver FE_OFCC532_ds_datain_14_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[14] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN530_p_addrs_5_, driver FE_OFCC530_p_addrs_5_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[5] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN528_p_addrs_6_, driver FE_OFCC528_p_addrs_6_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[6] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN526_p_addrs_7_, driver FE_OFCC526_p_addrs_7_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[7] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN524_p_addrs_8_, driver FE_OFCC524_p_addrs_8_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[8] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net refclk__L2_N0, driver refclk__L2_I0/ZN voltage 0.8 does not match reveiver PLLCLK_INST/refclk voltage 1.98.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net m_ram_clk__L5_N0, driver m_ram_clk__L5_I0/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/CLK voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net m_clk__L3_N0, driver m_clk__L3_I0/ZN voltage 0.8 does not match reveiver ROM_512x16_0_INST/CLK voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net m_dsram_clk__L1_N0, driver m_dsram_clk__L1_I0/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/CLK voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN479_FE_OFN12_tdsp_data_out_10_, driver FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[10] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN475_FE_OFN21_tdsp_data_out_9_, driver FE_OFCC475_FE_OFN21_tdsp_data_out_9_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[9] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN474_FE_OFN30_tdsp_data_out_11_, driver FE_OFCC474_FE_OFN30_tdsp_data_out_11_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[11] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN467_FE_OFN55_tdsp_data_out_1_, driver FE_OFCC467_FE_OFN55_tdsp_data_out_1_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[1] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFCN430_ds_datain_15_, driver FE_OFCC430_ds_datain_15_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[15] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (IMPMSMV-1810):	Net FE_OFN112_n_70, driver FE_OFC112_n_70/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/A[1] voltage 1.2.
+[12/16 12:23:41     67s] **WARN: (EMS-62):	Message <IMPMSMV-1810> has exceeded the default message display limit of 20.
+[12/16 12:23:41     67s] To avoid this warning, increase the display limit per unique message by
+[12/16 12:23:41     67s] using the set_message -limit <number> command.
+[12/16 12:23:41     67s] The message limit can be removed by using the set_message -no_limit command.
+[12/16 12:23:41     67s] Note that setting a very large number using the set_message -limit command
+[12/16 12:23:41     67s] or removing the message limit using the set_message -no_limit command can
+[12/16 12:23:41     67s] significantly increase the log file size.
+[12/16 12:23:41     67s] To suppress a message, use the set_message -suppress command.
+[12/16 12:23:42     69s] Total number of fetched objects 8888
+[12/16 12:23:42     69s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:42     69s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:23:43     70s] Total number of fetched objects 8888
+[12/16 12:23:43     70s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:43     70s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:23:43     70s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1082.0M)
+[12/16 12:23:43     70s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:45     72s] Total number of fetched objects 8888
+[12/16 12:23:45     72s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:45     72s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:23:46     73s] Total number of fetched objects 8888
+[12/16 12:23:46     73s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:46     73s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:23:46     73s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1082.0M)
+[12/16 12:23:46     73s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:48     74s] Total number of fetched objects 8888
+[12/16 12:23:48     74s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:48     74s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:23:49     76s] Total number of fetched objects 8888
+[12/16 12:23:49     76s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:49     76s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:23:49     76s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1082.0M)
+[12/16 12:23:49     76s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:50     77s] Total number of fetched objects 8888
+[12/16 12:23:50     77s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:50     77s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:23:52     78s] Total number of fetched objects 8888
+[12/16 12:23:52     78s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:52     78s] AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+[12/16 12:23:52     78s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:52     78s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:52     78s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:52     78s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:52     78s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:52     78s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:52     79s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:52     79s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:52     79s] End delay calculation. (MEM=1114 CPU=0:00:11.3 REAL=0:00:11.0)
+[12/16 12:23:52     79s] End delay calculation (fullDC). (MEM=1114 CPU=0:00:11.9 REAL=0:00:12.0)
+[12/16 12:23:52     79s] esiiDumpWaveformsThread is successfull 1 
+[12/16 12:23:52     79s] Save waveform /tmp/ssv_tmpdir_26854_VXgzgJ/.AAE_6cOm7N/.AAE_26854/waveform.data in separate thread...
+[12/16 12:23:52     79s] Finish pthread dumping compressed waveforms.
+[12/16 12:23:52     79s] *** CDM Built up (cpu=0:00:12.3  real=0:00:13.0  mem= 1112.0M) ***
+[12/16 12:23:53     80s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1095.6M)
+[12/16 12:23:53     80s] Loading CTE timing window is completed (CPU = 0:00:00.2, REAL = 0:00:00.0, MEM = 1127.6M)
+[12/16 12:23:53     80s] Starting SI iteration 2
+[12/16 12:23:53     80s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:53     80s] Start delay calculation (fullDC) (1 T). (MEM=1088.42)
+[12/16 12:23:53     80s] End AAE Lib Interpolated Model. (MEM=1088.42 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[12/16 12:23:53     80s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1090.4M)
+[12/16 12:23:53     80s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:54     80s] Glitch Analysis: View func_slow_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:23:54     80s] Glitch Analysis: View func_slow_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:23:54     80s] Total number of fetched objects 8888
+[12/16 12:23:54     80s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:54     80s] AAE_INFO-618: Total number of nets in the design is 8751,  8.7 percent of the nets selected for SI analysis
+[12/16 12:23:54     81s] Glitch Analysis: View func_fast_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:23:54     81s] Glitch Analysis: View func_fast_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:23:54     81s] Total number of fetched objects 8888
+[12/16 12:23:54     81s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:54     81s] AAE_INFO-618: Total number of nets in the design is 8751,  6.7 percent of the nets selected for SI analysis
+[12/16 12:23:54     81s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1122.6M)
+[12/16 12:23:54     81s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:54     81s] Glitch Analysis: View func_slow_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:23:54     81s] Glitch Analysis: View func_slow_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:23:54     81s] Total number of fetched objects 8888
+[12/16 12:23:54     81s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:54     81s] AAE_INFO-618: Total number of nets in the design is 8751,  5.4 percent of the nets selected for SI analysis
+[12/16 12:23:55     81s] Glitch Analysis: View func_fast_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:23:55     81s] Glitch Analysis: View func_fast_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:23:55     81s] Total number of fetched objects 8888
+[12/16 12:23:55     81s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:55     81s] AAE_INFO-618: Total number of nets in the design is 8751,  5.5 percent of the nets selected for SI analysis
+[12/16 12:23:55     81s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1122.6M)
+[12/16 12:23:55     81s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:55     82s] Glitch Analysis: View scan_slow_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:23:55     82s] Glitch Analysis: View scan_slow_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:23:55     82s] Total number of fetched objects 8888
+[12/16 12:23:55     82s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:55     82s] AAE_INFO-618: Total number of nets in the design is 8751,  7.9 percent of the nets selected for SI analysis
+[12/16 12:23:56     82s] Glitch Analysis: View scan_fast_RCMAX -- Total Number of Nets Skipped = 0. 
+[12/16 12:23:56     82s] Glitch Analysis: View scan_fast_RCMAX -- Total Number of Nets Analyzed = 0. 
+[12/16 12:23:56     82s] Total number of fetched objects 8888
+[12/16 12:23:56     82s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:56     82s] AAE_INFO-618: Total number of nets in the design is 8751,  6.4 percent of the nets selected for SI analysis
+[12/16 12:23:56     82s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1122.6M)
+[12/16 12:23:56     82s] AAE_INFO: 1 threads acquired from CTE.
+[12/16 12:23:56     83s] Glitch Analysis: View scan_slow_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:23:56     83s] Glitch Analysis: View scan_slow_RCMIN -- Total Number of Nets Analyzed = 0. 
+[12/16 12:23:56     83s] Total number of fetched objects 8888
+[12/16 12:23:56     83s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:56     83s] AAE_INFO-618: Total number of nets in the design is 8751,  5.1 percent of the nets selected for SI analysis
+[12/16 12:23:56     83s] Glitch Analysis: View scan_fast_RCMIN -- Total Number of Nets Skipped = 0. 
+[12/16 12:23:56     83s] Glitch Analysis: View scan_fast_RCMIN -- Total Number of Nets Analyzed = 8888. 
+[12/16 12:23:56     83s] Total number of fetched objects 8888
+[12/16 12:23:56     83s] AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+[12/16 12:23:56     83s] AAE_INFO-618: Total number of nets in the design is 8751,  5.2 percent of the nets selected for SI analysis
+[12/16 12:23:56     83s] End delay calculation. (MEM=1122.58 CPU=0:00:02.9 REAL=0:00:03.0)
+[12/16 12:23:56     83s] End delay calculation (fullDC). (MEM=1122.58 CPU=0:00:02.9 REAL=0:00:03.0)
+[12/16 12:23:56     83s] *** CDM Built up (cpu=0:00:02.9  real=0:00:03.0  mem= 1120.6M) ***
+[12/16 12:23:57     84s] Path 1: VIOLATED (-1.544 ns) Setup Check with Pin RESULTS_CONV_INST/r1477_reg[10]/CK->D
+[12/16 12:23:57     84s]                View: scan_slow_RCMAX
+[12/16 12:23:57     84s]               Group: m_rcc_clk
+[12/16 12:23:57     84s]          Startpoint: (R) TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK
+[12/16 12:23:57     84s]               Clock: (R) m_clk
+[12/16 12:23:57     84s]            Endpoint: (R) RESULTS_CONV_INST/r1477_reg[10]/D
+[12/16 12:23:57     84s]               Clock: (F) m_rcc_clk
+[12/16 12:23:57     84s] 
+[12/16 12:23:57     84s]                        Capture       Launch
+[12/16 12:23:57     84s]          Clock Edge:+   20.000        0.000
+[12/16 12:23:57     84s]         Src Latency:+    0.000        0.000
+[12/16 12:23:57     84s]         Net Latency:+    1.373 (P)    5.935 (P)
+[12/16 12:23:57     84s]             Arrival:=   21.373        5.935
+[12/16 12:23:57     84s] 
+[12/16 12:23:57     84s]               Setup:-    0.801
+[12/16 12:23:57     84s]         Uncertainty:-    0.400
+[12/16 12:23:57     84s]         Cppr Adjust:+    0.000
+[12/16 12:23:57     84s]       Required Time:=   20.172
+[12/16 12:23:57     84s]        Launch Clock:=    5.935
+[12/16 12:23:57     84s]           Data Path:+   15.781
+[12/16 12:23:57     84s]               Slack:=   -1.544
+[12/16 12:23:57     84s] 
+[12/16 12:23:57     84s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 12:23:57     84s] # Timing Point                                            Flags  Arc     Edge  Cell       Fanout  Trans   Delay  Arrival  
+[12/16 12:23:57     84s] #                                                                                                  (ns)    (ns)     (ns)  
+[12/16 12:23:57     84s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 12:23:57     84s]   TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK                 -      CK      R     (arrival)       4  0.145       -    5.935  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/DECODE_INST/ir_reg[9]/Q                  -      CK->Q   F     SDFFS_X2        1  0.145   0.694    6.629  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/DECODE_INST/FE_OFC186_port_address_1_/Z  -      A->Z    F     BUF_X16        44  0.146   0.562    7.191  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8211A/ZN            -      A3->ZN  R     NOR3_X1         2  0.485   0.910    8.101  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8090A/ZN            -      A2->ZN  F     NAND2_X1        1  1.138   0.365    8.466  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p6871A/ZN            -      A4->ZN  R     NOR4_X2         2  0.660   1.893   10.359  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7851A6133/ZN        -      A1->ZN  F     NAND2_X4        2  2.748   0.533   10.892  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7333D/ZN            -      A2->ZN  R     NOR2_X4        16  0.942   3.375   14.267  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7551A6117/ZN        -      B1->ZN  F     AOI222_X1       1  3.734   1.491   15.759  
+[12/16 12:23:57     84s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8505A6087/ZN        -      A2->ZN  R     NAND3_X2        2  1.609   2.530   18.288  
+[12/16 12:23:57     84s]   FE_OFC12_tdsp_data_out_10_/Z                            -      A->Z    R     BUF_X16         1  1.663   0.814   19.103  
+[12/16 12:23:57     84s]   FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z                 -      A->Z    R     BUF_X16         5  0.390   0.859   19.961  
+[12/16 12:23:57     84s]   RESULTS_CONV_INST/p7148A29049/ZN                        -      A->ZN   F     INV_X2          1  0.892   0.291   20.252  
+[12/16 12:23:57     84s]   RESULTS_CONV_INST/FE_OFCC480_n_2024/Z                   -      A->Z    F     BUF_X32         6  0.345   0.620   20.872  
+[12/16 12:23:57     84s]   RESULTS_CONV_INST/p7155A28968/ZN                        -      A2->ZN  R     OAI22_X1        1  0.148   0.844   21.716  
+[12/16 12:23:57     84s]   RESULTS_CONV_INST/r1477_reg[10]/D                       -      D       R     SDFF_X2         1  1.733   0.000   21.716  
+[12/16 12:23:57     84s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 12:23:57     84s] 
+[12/16 12:23:57     84s] @tempus 11> get_gb *borowing*
+[12/16 12:24:39     86s] invalid command name "get_gb"
+@tempus 12> get_gb *boro*
+[12/16 12:24:47     86s] invalid command name "get_gb"
+@tempus 13> get_gb *bor*
+[12/16 12:24:53     87s] invalid command name "get_gb"
+@tempus 14> get_db *bor*
+[6C
+[12/16 12:24:59     87s] Object: root:/
+[12/16 12:24:59     87s]   timing_use_latch_time_borrow:  true
+[12/16 12:24:59     87s] 
+[12/16 12:24:59     87s] @tempus 15> get_db *delacal*
+Object: root:/
+[12/16 12:25:21     87s] 
+[12/16 12:25:21     87s] @tempus 16> get_db delaycal_*
+
+[12/16 12:25:34     88s] Object: root:/
+[12/16 12:25:34     88s]   delaycal_advanced_pincap_mode:  false
+[12/16 12:25:34     88s]   delaycal_combine_mmmc:  early_late
+[12/16 12:25:34     88s]   delaycal_default_net_delay:  1000ps
+[12/16 12:25:34     88s]   delaycal_default_net_load:  0.5pf
+[12/16 12:25:34     88s]   delaycal_degrade_slew_on_early_nets:  true
+[12/16 12:25:34     88s]   delaycal_enable_auto_wire_load_selection:  true
+[12/16 12:25:34     88s]   delaycal_enable_high_fanout:  false
+[12/16 12:25:34     88s]   delaycal_enable_quiet_receivers_for_hold:  false
+[12/16 12:25:34     88s]   delaycal_enable_si:    true
+[12/16 12:25:34     88s]   delaycal_enable_wire_load_model:  1
+[12/16 12:25:34     88s]   delaycal_equivalent_waveform_model:  none
+[12/16 12:25:34     88s]   delaycal_ewm_type:     moments
+[12/16 12:25:34     88s]   delaycal_honor_slew_prop_constraint:  true
+[12/16 12:25:34     88s]   delaycal_input_transition_delay:  0.1ps
+[12/16 12:25:34     88s]   delaycal_report_out_bound:  false
+[12/16 12:25:34     88s]   delaycal_slew_out_bound_limit_high:  3.40282e+38
+[12/16 12:25:34     88s]   delaycal_slew_out_bound_limit_low:  0.5
+[12/16 12:25:34     88s]   delaycal_socv_accuracy_mode:  low
+[12/16 12:25:34     88s]   delaycal_socv_lvf_mode:  moments
+[12/16 12:25:34     88s]   delaycal_socv_use_lvf_tables:  all
+[12/16 12:25:34     88s]   delaycal_support_output_pin_cap:  true
+[12/16 12:25:34     88s]   delaycal_use_default_delay_limit:  1000
+[12/16 12:25:34     88s] 
+[12/16 12:25:34     88s] @tempus 17> get_db *bor*
+Object: root:/
+[12/16 14:06:31    322s]   timing_use_latch_time_borrow:  true
+[12/16 14:06:31    322s] 
+[12/16 14:06:31    322s] @tempus 18> get_db timing_*
+**WARN: (GLOBAL-100):	Global 'timing_aocv_slack_threshold' has become obsolete. It will be removed in the next release.
+[12/16 14:06:43    322s] **WARN: (IMPUDM-33):	Global variable "timing_disable_parallel_arcs" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[12/16 14:06:43    322s] **WARN: (IMPUDM-33):	Global variable "timing_enable_path_exception_to_pin_compatibility" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[12/16 14:06:43    322s] **WARN: (GLOBAL-100):	Global 'timing_enable_path_exception_to_pin_compatibility' has become obsolete. It will be removed in the next release.
+[12/16 14:06:43    322s] **WARN: (GLOBAL-100):	Global 'timing_library_support_multi_seq_elem' has become obsolete. It will be removed in the next release.
+[12/16 14:06:43    322s] **WARN: (IMPUDM-33):	Global variable "timing_socv_analysis_nsigma_multiplier" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+[12/16 14:06:43    322s] Object: root:/
+[12/16 14:06:43    322s]   timing_all_registers_include_icg_cells:  true
+[12/16 14:06:43    322s]   timing_allow_input_delay_on_clock_source:  false
+[12/16 14:06:43    322s]   timing_analysis_aocv:  false
+[12/16 14:06:43    322s]   timing_analysis_async_checks:  async
+[12/16 14:06:43    322s]   timing_analysis_check_type:  setup
+[12/16 14:06:43    322s]   timing_analysis_clock_gating:  true
+[12/16 14:06:43    322s]   timing_analysis_clock_propagation_mode:  sdc_control
+[12/16 14:06:43    322s]   timing_analysis_clock_source_paths:  true
+[12/16 14:06:43    322s]   timing_analysis_cppr:  both
+[12/16 14:06:43    322s]   timing_analysis_engine:  static
+[12/16 14:06:43    322s]   timing_analysis_self_loops_paths_no_skew:  false
+[12/16 14:06:43    322s]   timing_analysis_socv:  false
+[12/16 14:06:43    322s]   timing_analysis_type:  ocv
+[12/16 14:06:43    322s]   timing_aocv_analysis_mode:  launch_capture
+[12/16 14:06:43    322s]   timing_aocv_chip_size:  1e+30
+[12/16 14:06:43    322s]   timing_aocv_core_size:  1e+30
+[12/16 14:06:43    322s]   timing_aocv_derate_mode:  aocv_multiplicative
+[12/16 14:06:43    322s]   timing_aocv_slack_threshold:  0.0
+[12/16 14:06:43    322s]   timing_aocv_stage_count_update_on_timing_reset:  false
+[12/16 14:06:43    322s]   timing_apply_check_derate_to_external_output_delay:  false
+[12/16 14:06:43    322s]   timing_apply_default_primary_input_assertion:  true
+[12/16 14:06:43    322s]   timing_apply_exceptions_to_data_check_related_pin:  false
+[12/16 14:06:43    322s]   timing_build_all_hierarchical_pins:  false
+[12/16 14:06:43    322s]   timing_cap_unit:       {}
+[12/16 14:06:43    322s]   timing_case_analysis_for_icg_propagation:  false
+[12/16 14:06:43    322s]   timing_case_analysis_for_sequential_propagation:  false
+[12/16 14:06:43    322s]   timing_case_analysis_propagation:  true
+[12/16 14:06:43    322s]   timing_clock_phase_propagation:  both
+[12/16 14:06:43    322s]   timing_clock_sense_incremental_mode:  true
+[12/16 14:06:43    322s]   timing_clock_source_paths_unconstrained_mark_clock_used_as_data:  true
+[12/16 14:06:43    322s]   timing_clock_source_use_driving_cell:  true
+[12/16 14:06:43    322s]   timing_clock_uncertainty_from_to_precedence:  false
+[12/16 14:06:43    322s]   timing_collection_result_display_limit:  100
+[12/16 14:06:43    322s]   timing_collection_variable_assignment_compatibility:  true
+[12/16 14:06:43    322s]   timing_conditions:     timing_condition:default_mapping_tc_2 timing_condition:default_mapping_tc_1
+[12/16 14:06:43    322s]   timing_constraint_disable_min_max_input_delay_worst_casing:  false
+[12/16 14:06:43    322s]   timing_constraint_enable_development_mode:  false
+[12/16 14:06:43    322s]   timing_constraint_enable_logging:  false
+[12/16 14:06:43    322s]   timing_constraint_enable_report_invalid_begin_end_points:  false
+[12/16 14:06:43    322s]   timing_constraint_enable_search_path:  false
+[12/16 14:06:43    322s]   timing_constraint_load_minimal_set_for_automated_eco:  false
+[12/16 14:06:43    322s]   timing_constraints_warning_on_partial_search_match:  true
+[12/16 14:06:43    322s]   timing_continue_on_error:  false
+[12/16 14:06:43    322s]   timing_cppr_opposite_edge_mean_scale_factor:  1.0
+[12/16 14:06:43    322s]   timing_cppr_opposite_edge_sigma_scale_factor:  1.0
+[12/16 14:06:43    322s]   timing_cppr_propagate_thru_latches:  false
+[12/16 14:06:43    322s]   timing_cppr_remove_clock_to_data_pessimism:  true
+[12/16 14:06:43    322s]   timing_cppr_self_loop_mode:  true
+[12/16 14:06:43    322s]   timing_cppr_skip_clock_reconvergence:  false
+[12/16 14:06:43    322s]   timing_cppr_skip_clock_reconvergence_for_unmatched_clocks:  false
+[12/16 14:06:43    322s]   timing_cppr_threshold_ps:  20.0
+[12/16 14:06:43    322s]   timing_cppr_transition_sense:  normal
+[12/16 14:06:43    322s]   timing_create_clock_default_propagated:  false
+[12/16 14:06:43    322s]   timing_default_opcond_per_lib:  true
+[12/16 14:06:43    322s]   timing_defer_mmmc_obj_updates:  false
+[12/16 14:06:43    322s]   timing_derate_aocv_dynamic_delays:  true
+[12/16 14:06:43    322s]   timing_derate_aocv_reference_point:  1
+[12/16 14:06:43    322s]   timing_derate_dynamic_compatibility:  true
+[12/16 14:06:43    322s]   timing_derate_ocv_reference_point:  1
+[12/16 14:06:43    322s]   timing_derate_spatial_distance_unit:  default
+[12/16 14:06:43    322s]   timing_disable_backward_compatible_max_delay_mode:  false
+[12/16 14:06:43    322s]   timing_disable_bus_contention_check:  false
+[12/16 14:06:43    322s]   timing_disable_clock_period_checks:  false
+[12/16 14:06:43    322s]   timing_disable_constant_propagation_for_sequential_cells:  false
+[12/16 14:06:43    322s]   timing_disable_drv_report_on_constant_nets:  false
+[12/16 14:06:43    322s]   timing_disable_floating_bus_check:  false
+[12/16 14:06:43    322s]   timing_disable_genclk_combinational_blocking:  false
+[12/16 14:06:43    322s]   timing_disable_inferred_clock_gating_checks:  false
+[12/16 14:06:43    322s]   timing_disable_inout_output_side_timing_checks:  false
+[12/16 14:06:43    322s]   timing_disable_internal_inout_cell_paths:  true
+[12/16 14:06:43    322s]   timing_disable_internal_inout_net_arcs:  true
+[12/16 14:06:43    322s]   timing_disable_lib_pulse_width_checks:  false
+[12/16 14:06:43    322s]   timing_disable_library_data_to_data_checks:  false
+[12/16 14:06:43    322s]   timing_disable_library_tieoffs:  false
+[12/16 14:06:43    322s]   timing_disable_netlist_constants:  false
+[12/16 14:06:43    322s]   timing_disable_nochange_checks:  false
+[12/16 14:06:43    322s]   timing_disable_non_sequential_checks:  false
+[12/16 14:06:43    322s]   timing_disable_output_as_clock_port:  false
+[12/16 14:06:43    322s]   timing_disable_parallel_arcs:  true
+[12/16 14:06:43    322s]   timing_disable_report_header_info:  false
+[12/16 14:06:43    322s]   timing_disable_retime_clock_path_slew_propagation:  true
+[12/16 14:06:43    322s]   timing_disable_sdf_retain_arc_merging:  false
+[12/16 14:06:43    322s]   timing_disable_skew_checks:  false
+[12/16 14:06:43    322s]   timing_disable_test_signal_arc:  false
+[12/16 14:06:43    322s]   timing_disable_timing_model_latch_inferencing:  true
+[12/16 14:06:43    322s]   timing_disable_tristate_disable_arcs:  false
+[12/16 14:06:43    322s]   timing_disable_user_data_to_data_checks:  false
+[12/16 14:06:43    322s]   timing_driving_cell_override_library:  false
+[12/16 14:06:43    322s]   timing_dynamic_loop_breaking:  false
+[12/16 14:06:43    322s]   timing_enable_aocv_slack_based:  false
+[12/16 14:06:43    322s]   timing_enable_backward_compatible_path_adjust_mode:  false
+[12/16 14:06:43    322s]   timing_enable_backward_compatible_tw_mode:  true
+[12/16 14:06:43    322s]   timing_enable_case_analysis_conflict_warning:  true
+[12/16 14:06:43    322s]   timing_enable_clock2clock_clock_gating_check:  false
+[12/16 14:06:43    322s]   timing_enable_clock_phase_based_rise_fall_derating:  false
+[12/16 14:06:43    322s]   timing_enable_data_through_clock_gating:  true
+[12/16 14:06:43    322s]   timing_enable_derating_for_pulse_width_checks:  false
+[12/16 14:06:43    322s]   timing_enable_early_late_data_slews_for_setuphold_mode_checks:  false
+[12/16 14:06:43    322s]   timing_enable_genclk_divide_by_inherit_parent_duty_cycle:  false
+[12/16 14:06:43    322s]   timing_enable_genclk_source_path_register_limit:  false
+[12/16 14:06:43    322s]   timing_enable_generated_clock_edge_based_source_latency:  true
+[12/16 14:06:43    322s]   timing_enable_get_obj_escaped_name_backward_compatible:  false
+[12/16 14:06:43    322s]   timing_enable_hierarchical_get_nets_support:  false
+[12/16 14:06:43    322s]   timing_enable_latency_through_clock_gating:  true
+[12/16 14:06:43    322s]   timing_enable_minimal_constraints_loading_for_TSO:  false
+[12/16 14:06:43    322s]   timing_enable_minmax_delay_segmentation:  true
+[12/16 14:06:43    322s]   timing_enable_mmmc_loop_breaking:  true
+[12/16 14:06:43    322s]   timing_enable_multi_drive_net_reduction_with_assertions:  none
+[12/16 14:06:43    322s]   timing_enable_multi_frequency_latch_analysis:  false
+[12/16 14:06:43    322s]   timing_enable_multi_threaded_reporting:  true
+[12/16 14:06:43    322s]   timing_enable_multicycle_data_check_compatibility:  false
+[12/16 14:06:43    322s]   timing_enable_path_delay_to_unconstrained_endpoints_compatibility:  false
+[12/16 14:06:43    322s]   timing_enable_path_exception_to_pin_compatibility:  false
+[12/16 14:06:43    322s]   timing_enable_pessimistic_cppr_for_reconvergent_clock_paths:  true
+[12/16 14:06:43    322s]   timing_enable_power_ground_constants:  false
+[12/16 14:06:43    322s]   timing_enable_preset_clear_arcs:  false
+[12/16 14:06:43    322s]   timing_enable_pulse_latch:  true
+[12/16 14:06:43    322s]   timing_enable_report_cppr_clock_style_check_compatibility:  false
+[12/16 14:06:43    322s]   timing_enable_separate_device_slew_effect_sensitivities:  false
+[12/16 14:06:43    322s]   timing_enable_si_cppr:  true
+[12/16 14:06:43    322s]   timing_enable_simultaneous_setup_hold_mode:  true
+[12/16 14:06:43    322s]   timing_enable_ssta_clock_only:  false
+[12/16 14:06:43    322s]   timing_enable_timing_window_pessimism_removal:  false
+[12/16 14:06:43    322s]   timing_enable_tristate_clock_gating:  false
+[12/16 14:06:43    322s]   timing_enable_uncertainty_for_clock_checks:  false
+[12/16 14:06:43    322s]   timing_enable_uncertainty_for_pulse_width_checks:  false
+[12/16 14:06:43    322s]   timing_extract_model_aocv_mode:  none
+[12/16 14:06:43    322s]   timing_extract_model_case_analysis_in_library:  true
+[12/16 14:06:43    322s]   timing_extract_model_check_arcs_as_lvf:  true
+[12/16 14:06:43    322s]   timing_extract_model_consider_design_level_drv:  true
+[12/16 14:06:43    322s]   timing_extract_model_disable_cycle_adjustment:  false
+[12/16 14:06:43    322s]   timing_extract_model_disable_retime_clock_path_slew_propagation:  false
+[12/16 14:06:43    322s]   timing_extract_model_enable_slew_stabilization:  true
+[12/16 14:06:43    322s]   timing_extract_model_enable_worst_slew_propagation:  false
+[12/16 14:06:43    322s]   timing_extract_model_exhaustive_validation_dir:  {}
+[12/16 14:06:43    322s]   timing_extract_model_exhaustive_validation_mode:  false
+[12/16 14:06:43    322s]   timing_extract_model_gating_as_nochange_arc:  true
+[12/16 14:06:43    322s]   timing_extract_model_ideal_clock_latency_arc:  false
+[12/16 14:06:43    322s]   timing_extract_model_include_applied_load_in_characterization_range:  false
+[12/16 14:06:43    322s]   timing_extract_model_include_applied_slew_in_characterization_range:  false
+[12/16 14:06:43    322s]   timing_extract_model_max_feedthrough_characterization_load:  0.0
+[12/16 14:06:43    322s]   timing_extract_model_preserve_clock_name_as_internal_pin:  true
+[12/16 14:06:43    322s]   timing_extract_model_slew_propagation_mode:  worst_slew
+[12/16 14:06:43    322s]   timing_extract_model_use_characterized_generated_clock_latency:  false
+[12/16 14:06:43    322s]   timing_extract_model_write_clock_checks_as_arc:  false
+[12/16 14:06:43    322s]   timing_extract_model_write_clock_checks_as_scalar_tables:  false
+[12/16 14:06:43    322s]   timing_extract_model_write_lvf:  false
+[12/16 14:06:43    322s]   timing_extract_model_write_multiple_master_gen_clock_assertion:  false
+[12/16 14:06:43    322s]   timing_generate_normalized_driver_waveform:  true
+[12/16 14:06:43    322s]   timing_generated_clocks_allow_nested_assertions:  false
+[12/16 14:06:43    322s]   timing_generated_clocks_inherit_ideal_latency:  false
+[12/16 14:06:43    322s]   timing_get_of_objects_hier_compatibility:  false
+[12/16 14:06:43    322s]   timing_hier_obj_name_compatibility:  true
+[12/16 14:06:43    322s]   timing_ignore_lumped_rc_assertions:  false
+[12/16 14:06:43    322s]   timing_inter_power_domain_derate_flow_use_path_segment_delay_difference:  false
+[12/16 14:06:43    322s]   timing_io_use_clock_network_latency:  ideal
+[12/16 14:06:43    322s]   timing_library_build_async_deassert_arc:  true
+[12/16 14:06:43    322s]   timing_library_ccs_receiver_weight_factor:  1.0
+[12/16 14:06:43    322s]   timing_library_convert_async_setuphold_to_recrem:  1
+[12/16 14:06:43    322s]   timing_library_create_statetable_multi_sequential_cells:  true
+[12/16 14:06:43    322s]   timing_library_enable_advanced_capacitance_support:  true
+[12/16 14:06:43    322s]   timing_library_enable_mismatched_arcs:  1
+[12/16 14:06:43    322s]   timing_library_enable_multi_sequential_lib_cell:  false
+[12/16 14:06:43    322s]   timing_library_generated_clock_use_group_name:  false
+[12/16 14:06:43    322s]   timing_library_hold_sigma_multiplier:  0.0
+[12/16 14:06:43    322s]   timing_library_infer_async_pins_from_timing_arcs:  false
+[12/16 14:06:43    322s]   timing_library_infer_cap_range_from_ccs_receiver_model:  false
+[12/16 14:06:43    322s]   timing_library_infer_cap_range_from_ecsm_receiver_model:  false
+[12/16 14:06:43    322s]   timing_library_interpolate_drv_values:  false
+[12/16 14:06:43    322s]   timing_library_merge_worst_case_min_pulse_width_arcs:  true
+[12/16 14:06:43    322s]   timing_library_pg_pins:  all
+[12/16 14:06:43    322s]   timing_library_read_ccs_noise_data:  true
+[12/16 14:06:43    322s]   timing_library_read_ccs_power_data:  false
+[12/16 14:06:43    322s]   timing_library_read_without_ecsm:  false
+[12/16 14:06:43    322s]   timing_library_read_without_power:  true
+[12/16 14:06:43    322s]   timing_library_read_without_sensitivity:  false
+[12/16 14:06:43    322s]   timing_library_scale_aocv_to_socv_to_n_sigma:  3.0
+[12/16 14:06:43    322s]   timing_library_setup_sigma_multiplier:  0.0
+[12/16 14:06:43    322s]   timing_library_sort_non_monotonic_ccs_index:  true
+[12/16 14:06:43    322s]   timing_library_support_multi_sequential_cells:  true
+[12/16 14:06:43    322s]   timing_library_term_voltage_from_lib_pin:  1
+[12/16 14:06:43    322s]   timing_library_zero_negative_timing_check_arcs:  false
+[12/16 14:06:43    322s]   timing_multi_frequency_clock_rounding_factor:  1e-05
+[12/16 14:06:43    322s]   timing_normalized_driver_waveform_clip_linear_part:  false
+[12/16 14:06:43    322s]   timing_normalized_driver_waveform_weight_factor:  0.5
+[12/16 14:06:43    322s]   timing_nsigma_multiplier:  3.0
+[12/16 14:06:43    322s]   timing_null_collection_return_compatibility:  false
+[12/16 14:06:43    322s]   timing_path_based_enable_exhaustive_depth_bounded_by_gba:  true
+[12/16 14:06:43    322s]   timing_path_based_enable_report_launch_clock_path:  true
+[12/16 14:06:43    322s]   timing_path_based_enable_verbose_mode:  1
+[12/16 14:06:43    322s]   timing_path_based_exhaustive_enable_design_coverage:  false
+[12/16 14:06:43    322s]   timing_path_based_exhaustive_max_paths_limit:  20000000
+[12/16 14:06:43    322s]   timing_path_based_retimed_paths_limit:  0
+[12/16 14:06:43    322s]   timing_pba_exhaustive_path_nworst_limit:  10000
+[12/16 14:06:43    322s]   timing_prefix_module_name_with_library_generated_clock:  true
+[12/16 14:06:43    322s]   timing_propagate_latch_data_uncertainty:  false
+[12/16 14:06:43    322s]   timing_recompute_sdf_in_setuphold_mode:  false
+[12/16 14:06:43    322s]   timing_reduce_multi_drive_net_arcs:  true
+[12/16 14:06:43    322s]   timing_reduce_multi_drive_net_arcs_threshold:  10000
+[12/16 14:06:43    322s]   timing_report_backward_compatible_max_paths_reporting:  false
+[12/16 14:06:43    322s]   timing_report_clock_pin_as_begin_point:  false
+[12/16 14:06:43    322s]   timing_report_constraint_enable_extended_drv_format:  false
+[12/16 14:06:43    322s]   timing_report_default_formatting:  stage_delay
+[12/16 14:06:43    322s]   timing_report_enable_capacitance_computation_for_special_nets:  false
+[12/16 14:06:43    322s]   timing_report_enable_cppr_point:  true
+[12/16 14:06:43    322s]   timing_report_enable_efficient_unconstrained_path_processing:  false
+[12/16 14:06:43    322s]   timing_report_enable_flag_field_symbols:  false
+[12/16 14:06:43    322s]   timing_report_enable_markers:  true
+[12/16 14:06:43    322s]   timing_report_enable_max_capacitance_drv_for_constant_nets:  false
+[12/16 14:06:43    322s]   timing_report_enable_max_path_limit_warning:  false
+[12/16 14:06:43    322s]   timing_report_enable_si_debug:  false
+[12/16 14:06:43    322s]   timing_report_enable_unique_pins_multiple_capture_clock_paths:  false
+[12/16 14:06:43    322s]   timing_report_enable_verbose_ssta_mode:  false
+[12/16 14:06:43    322s]   timing_report_fields:  {timing_point flags arc edge cell fanout transition delay arrival}
+[12/16 14:06:43    322s]   timing_report_generated_clock_info:  true
+[12/16 14:06:43    322s]   timing_report_group_based_mode:  false
+[12/16 14:06:43    322s]   timing_report_max_transition_check_using_nsigma_slew:  false
+[12/16 14:06:43    322s]   timing_report_precision:  3
+[12/16 14:06:43    322s]   timing_report_redirect_message_types:  none
+[12/16 14:06:43    322s]   timing_report_retime_formatting_mode:  retime_replace
+[12/16 14:06:43    322s]   timing_report_skip_constraint_loop_check:  false
+[12/16 14:06:43    322s]   timing_report_split_other_end_arrival:  false
+[12/16 14:06:43    322s]   timing_report_timing_header_detail_info:  default
+[12/16 14:06:43    322s]   timing_report_unconstrained_path_early_late_header:  false
+[12/16 14:06:43    322s]   timing_report_unconstrained_paths:  false
+[12/16 14:06:43    322s]   timing_report_use_worst_parallel_cell_arc:  false
+[12/16 14:06:43    322s]   timing_resolve_driver_conflicts:  aggressive
+[12/16 14:06:43    322s]   timing_scaling_for_negative_checks:  default
+[12/16 14:06:43    322s]   timing_scaling_for_negative_delays:  default
+[12/16 14:06:43    322s]   timing_sdf_adjust_negative_setuphold:  true
+[12/16 14:06:43    322s]   timing_sdf_enable_setuphold_scond_ccond:  false
+[12/16 14:06:43    322s]   timing_self_loop_paths_no_skew_max_depth:  10
+[12/16 14:06:43    322s]   timing_self_loop_paths_no_skew_max_slack:  0.0
+[12/16 14:06:43    322s]   timing_set_clock_source_to_output_as_data:  false
+[12/16 14:06:43    322s]   timing_socv_analysis_nsigma_multiplier:  3.0
+[12/16 14:06:43    322s]   timing_socv_rc_variation_mode:  true
+[12/16 14:06:43    322s]   timing_socv_statistical_min_max_mode:  mean_and_three_sigma_bounded
+[12/16 14:06:43    322s]   timing_ssta_report_endpoint_description:  false
+[12/16 14:06:43    322s]   timing_suppress_escape_characters:  true
+[12/16 14:06:43    322s]   timing_suppress_ilm_constraint_mismatches:  false
+[12/16 14:06:43    322s]   timing_time_unit:      none
+[12/16 14:06:43    322s]   timing_use_clock_pin_attribute_for_clock_net_marking:  false
+[12/16 14:06:43    322s]   timing_use_latch_early_launch_edge:  true
+[12/16 14:06:43    322s]   timing_use_latch_time_borrow:  true
+[12/16 14:06:43    322s]   timing_write_sdf_no_escape_backslash:  false
+[12/16 14:06:43    322s] 
+[12/16 14:06:43    322s] @tempus 19> report_timing
+
+[12/16 14:07:07    323s] ###############################################################
+[12/16 14:07:07    323s] #  Generated by:      Cadence Tempus 17.21-s086_1
+[12/16 14:07:07    323s] #  OS:                Linux x86_64(Host ID ra01)
+[12/16 14:07:07    323s] #  Generated on:      Tue Dec 16 14:07:07 2025
+[12/16 14:07:07    323s] #  Design:            dtmf_recvr_core
+[12/16 14:07:07    323s] #  Command:           report_timing
+[12/16 14:07:07    323s] ###############################################################
+[12/16 14:07:07    323s] Path 1: VIOLATED (-1.544 ns) Setup Check with Pin RESULTS_CONV_INST/r1477_reg[10]/CK->D
+[12/16 14:07:07    323s]                View: scan_slow_RCMAX
+[12/16 14:07:07    323s]               Group: m_rcc_clk
+[12/16 14:07:07    323s]          Startpoint: (R) TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK
+[12/16 14:07:07    323s]               Clock: (R) m_clk
+[12/16 14:07:07    323s]            Endpoint: (R) RESULTS_CONV_INST/r1477_reg[10]/D
+[12/16 14:07:07    323s]               Clock: (F) m_rcc_clk
+[12/16 14:07:07    323s] 
+[12/16 14:07:07    323s]                        Capture       Launch
+[12/16 14:07:07    323s]          Clock Edge:+   20.000        0.000
+[12/16 14:07:07    323s]         Src Latency:+    0.000        0.000
+[12/16 14:07:07    323s]         Net Latency:+    1.373 (P)    5.935 (P)
+[12/16 14:07:07    323s]             Arrival:=   21.373        5.935
+[12/16 14:07:07    323s] 
+[12/16 14:07:07    323s]               Setup:-    0.801
+[12/16 14:07:07    323s]         Uncertainty:-    0.400
+[12/16 14:07:07    323s]         Cppr Adjust:+    0.000
+[12/16 14:07:07    323s]       Required Time:=   20.172
+[12/16 14:07:07    323s]        Launch Clock:=    5.935
+[12/16 14:07:07    323s]           Data Path:+   15.781
+[12/16 14:07:07    323s]               Slack:=   -1.544
+[12/16 14:07:07    323s] 
+[12/16 14:07:07    323s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 14:07:07    323s] # Timing Point                                            Flags  Arc     Edge  Cell       Fanout  Trans   Delay  Arrival  
+[12/16 14:07:07    323s] #                                                                                                  (ns)    (ns)     (ns)  
+[12/16 14:07:07    323s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 14:07:07    323s]   TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK                 -      CK      R     (arrival)       4  0.145       -    5.935  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/DECODE_INST/ir_reg[9]/Q                  -      CK->Q   F     SDFFS_X2        1  0.145   0.694    6.629  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/DECODE_INST/FE_OFC186_port_address_1_/Z  -      A->Z    F     BUF_X16        44  0.146   0.562    7.191  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8211A/ZN            -      A3->ZN  R     NOR3_X1         2  0.485   0.910    8.101  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8090A/ZN            -      A2->ZN  F     NAND2_X1        1  1.138   0.365    8.466  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p6871A/ZN            -      A4->ZN  R     NOR4_X2         2  0.660   1.893   10.359  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7851A6133/ZN        -      A1->ZN  F     NAND2_X4        2  2.748   0.533   10.892  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7333D/ZN            -      A2->ZN  R     NOR2_X4        16  0.942   3.375   14.267  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7551A6117/ZN        -      B1->ZN  F     AOI222_X1       1  3.734   1.491   15.759  
+[12/16 14:07:07    323s]   TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8505A6087/ZN        -      A2->ZN  R     NAND3_X2        2  1.609   2.530   18.288  
+[12/16 14:07:07    323s]   FE_OFC12_tdsp_data_out_10_/Z                            -      A->Z    R     BUF_X16         1  1.663   0.814   19.103  
+[12/16 14:07:07    323s]   FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z                 -      A->Z    R     BUF_X16         5  0.390   0.859   19.961  
+[12/16 14:07:07    323s]   RESULTS_CONV_INST/p7148A29049/ZN                        -      A->ZN   F     INV_X2          1  0.892   0.291   20.252  
+[12/16 14:07:07    323s]   RESULTS_CONV_INST/FE_OFCC480_n_2024/Z                   -      A->Z    F     BUF_X32         6  0.345   0.620   20.872  
+[12/16 14:07:07    323s]   RESULTS_CONV_INST/p7155A28968/ZN                        -      A2->ZN  R     OAI22_X1        1  0.148   0.844   21.716  
+[12/16 14:07:07    323s]   RESULTS_CONV_INST/r1477_reg[10]/D                       -      D       R     SDFF_X2         1  1.733   0.000   21.716  
+[12/16 14:07:07    323s] #-----------------------------------------------------------------------------------------------------------------------
+[12/16 14:07:07    323s] 
+[12/16 14:07:07    323s] @tempus 20> exit
+
+[12/16 14:07:32    324s] 
+[12/16 14:07:32    324s] *** Memory Usage v#1 (Current mem = 1066.023M, initial mem = 236.910M) ***
+[12/16 14:07:32    324s] 
+[12/16 14:07:32    324s] *** Summary of all messages that are not suppressed in this session:
+[12/16 14:07:32    324s] Severity  ID               Count  Summary                                  
+[12/16 14:07:32    324s] WARNING   IMPMSMV-1810      3872  Net %s, driver %s voltage %g does not ma...
+[12/16 14:07:32    324s] WARNING   IMPEXT-3570          6  PostRoute (EffortLevel high) %s scaling ...
+[12/16 14:07:32    324s] WARNING   IMPESI-3140          1  Bumpy transitions may exist in the desig...
+[12/16 14:07:32    324s] WARNING   CHKTIM-4           104   Clock pin %s of instance %s has no cloc...
+[12/16 14:07:32    324s] ERROR     IMPTCM-48            1  "%s" is not a legal option for command "...
+[12/16 14:07:32    324s] WARNING   IMPUDM-33            3  Global variable "%s" is obsolete and wil...
+[12/16 14:07:32    324s] ERROR     TA-1014             20  Detected a missing clock arrival for one...
+[12/16 14:07:32    324s] WARNING   GLOBAL-100           3  Global '%s' has become obsolete. It will...
+[12/16 14:07:32    324s] WARNING   SDF-802             20  The sum of the Setup and Hold sides of t...
+[12/16 14:07:32    324s] WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+[12/16 14:07:32    324s] WARNING   TECHLIB-459          1  Appending library '%s' to the previously...
+[12/16 14:07:32    324s] *** Message Summary: 4030 warning(s), 21 error(s)
+[12/16 14:07:32    324s] 
+[12/16 14:07:32    324s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:05:25, real=1:47:30, mem=1066.0M) ---

@@ -1,0 +1,1421 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+Options:	-stylus 
+Date:		Mon Dec  8 11:19:53 2025
+Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	17.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+***************************************************************************************
+INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+         has only limited customer testing. You are encouraged to work with Cadence directly
+         to qualify your usage and make sure it meets your needs before deploying it widely.
+***************************************************************************************
+
+Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_4388_3EjAsp'.
+set_layer_preference instanceCell -is_visible 1
+@tempus 2> set_layer_preference instanceCell -is_selectable 1
+@tempus 3> set_layer_preference instanceFunction -is_visible 1
+@tempus 4> set_layer_preference instanceFunction -is_selectable 1
+@tempus 5> set_layer_preference instanceStatus -is_visible 1
+@tempus 6> set_layer_preference instanceStatus -is_selectable 1
+@tempus 7> set_layer_preference layerBlk -is_visible 1
+@tempus 8> set_layer_preference layerBlk -is_selectable 1
+@tempus 9> set_layer_preference groupmain_Congestion -is_visible 1
+@tempus 10> set_layer_preference groupmain_Congestion -is_selectable 1
+@tempus 11> get_si_mode
+invalid command name "get_si_mode"
+@tempus 12> get_db
+
+
+Usage: get_db [-help] [-expr <expression>] {[<start> [<chain>] [<pattern>] [-if <expression>] [-dbu ] [-foreach <tcl_body>] [-index <index_name value ...>] [-invert ] [-regexp ] [-match_hier ] [-unique ] [-computed ]] [-category <category>]}
+
+**ERROR: (IMPTCM-32):	Wrong number of arguments specified for command "get_db".
+
+@tempus 13> get_db analysis_views 
+
+@tempus 14> get_db *
+
+**ERROR: (IMPCCOPT-2004):	Cannot run get_db clock_spines as no clock trees are defined.
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**WARN: (GLOBAL-100):	Global 'timing_aocv_slack_threshold' has become obsolete. It will be removed in the next release.
+**WARN: (IMPUDM-33):	Global variable "timing_disable_parallel_arcs" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+**WARN: (IMPUDM-33):	Global variable "timing_enable_path_exception_to_pin_compatibility" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+**WARN: (GLOBAL-100):	Global 'timing_enable_path_exception_to_pin_compatibility' has become obsolete. It will be removed in the next release.
+**WARN: (GLOBAL-100):	Global 'timing_library_support_multi_seq_elem' has become obsolete. It will be removed in the next release.
+**WARN: (IMPUDM-33):	Global variable "timing_socv_analysis_nsigma_multiplier" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+Object: root:/
+  add_fillers_cells:     {}
+  add_fillers_prefix:    {}
+  add_fillers_with_drc:  true
+  add_route_vias_auto:   false
+  add_route_vias_ndr_only:  false
+  add_tieoffs_cells:     {}
+  add_tieoffs_create_hports:  false
+  add_tieoffs_honor_dont_touch:  false
+  add_tieoffs_honor_dont_use:  false
+  add_tieoffs_max_distance:  0.0
+  add_tieoffs_max_fanout:  0
+  add_tieoffs_prefix:    {}
+  add_tieoffs_report_hports:  false
+  analysis_views:        
+  attributes:            attribute:obj_type/accept_user_defined_attributes attribute:obj_type/attributes attribute:obj_type/help attribute:obj_type/name attribute:obj_type/obj_type attribute:design/analysis_views attribute:design/area 
+                         attribute:design/bbox attribute:design/boundaries attribute:design/boundary ... (total length 2784)
+  auto_file_dir:         ./
+  auto_file_prefix:      {}
+  base_cells:            
+  base_pins:             {}
+  bumps:                 {}
+  busses:                {}
+  categories:            {add_fillers add_route_vias add_tieoffs cts delaycal design eco extract_rc flow get_db ilm init metric oa_read_write opt opt_signoff partition place power power_intent program read_physical route route_special 
+                         si system tech timing write_db write_def write_netlist}
+  clock_spines:          {}
+  clock_tree_source_groups:  {}
+  clock_trees:           {}
+  clocks:                
+  cmd_file:              tempus.cmd1
+  constraint_modes:      
+  current_design:        {}
+  delay_corners:         
+  delaycal_advanced_pincap_mode:  false
+  delaycal_combine_mmmc:  early_late
+  delaycal_default_net_delay:  1000ps
+  delaycal_default_net_load:  0.5pf
+  delaycal_degrade_slew_on_early_nets:  true
+  delaycal_enable_auto_wire_load_selection:  true
+  delaycal_enable_high_fanout:  false
+  delaycal_enable_quiet_receivers_for_hold:  false
+  delaycal_enable_si:    false
+  delaycal_enable_wire_load_model:  1
+  delaycal_equivalent_waveform_model:  none
+  delaycal_ewm_type:     moments
+  delaycal_honor_slew_prop_constraint:  true
+  delaycal_input_transition_delay:  0ps
+  delaycal_report_out_bound:  false
+  delaycal_slew_out_bound_limit_high:  3.40282e+38
+  delaycal_slew_out_bound_limit_low:  0.5
+  delaycal_socv_accuracy_mode:  low
+  delaycal_socv_lvf_mode:  moments
+  delaycal_socv_use_lvf_tables:  all
+  delaycal_support_output_pin_cap:  true
+  delaycal_use_default_delay_limit:  1000
+  design_cong_effort:    auto
+  design_early_clock_flow:  false
+  design_process_node:   65
+  designs:               
+  distributed_mmmc_disable_reports_auto_redirection:  0
+  distributed_sync_master_client:  true
+  eco_batch_mode:        false
+  eco_check_logical_equivalence:  true
+  eco_client_tempus_executable:  {}
+  eco_def_file_list:     {}
+  eco_hold_view_list:    {}
+  eco_honor_dont_touch:  true
+  eco_honor_dont_use:    true
+  eco_honor_fixed_status:  true
+  eco_honor_fixed_wires:  true
+  eco_lef_file_list:     {}
+  eco_prefix:            ECO
+  eco_setup_view_list:   {}
+  eco_si_effort:         low
+  eco_update_timing:     true
+  extend_2D_cell_shapes:  NULL
+  extract_rc_cap_filter_mode:  relative_and_coupling
+  extract_rc_compress_rcdb:  false
+  extract_rc_coupled:    true
+  extract_rc_coupling_cap_threshold:  0.1
+  extract_rc_lef_tech_file_map:  {}
+  extract_rc_qrc_cmd_file:  {}
+  extract_rc_qrc_cmd_type:  auto
+  extract_rc_qrc_run_mode:  concurrent
+  extract_rc_relative_cap_threshold:  1.0
+  extract_rc_shrink_factor:  1.0
+  extract_rc_total_cap_threshold:  0.0
+  extract_rc_turbo_reduce:  auto
+  flexible_htrees:       {}
+  flow_branch:           {}
+  flow_caller_data:      {}
+  flow_cla_enabled_features:  {}
+  flow_cla_inject_tcl:   {}
+  flow_current:          {}
+  flow_database_directory:  dbs
+  flow_edit_wildcard_end_steps:  {}
+  flow_edit_wildcard_start_steps:  {}
+  flow_error_errorinfo:  {}
+  flow_error_message:    {}
+  flow_exit_when_done:   false
+  flow_footer_tcl:       {}
+  flow_header_tcl:       {}
+  flow_hier_path:        {}
+  flow_history:          {}
+  flow_init_footer_tcl:  {}
+  flow_init_header_tcl:  {}
+  flow_log_directory:    logs
+  flow_log_prefix_generator:  {
+      set logPrefix $start_step
+      # Work out the subset of steps we are running
+      set startPath [split $start_step "."]
+      set endPath [split $end_step "."]
+      for {set i 0} {$i < [llength 
+                              $startPath]} {incr i} {
+        if {[lindex $startPath $i] ne [lindex $endPath $i]} {
+          if {$subflow_start_step && $subflow_end_step} {
+            set logPrefix [join [lrange $startPath 0 [expr $i 
+                              - 1]] "."]
+          } else {
+            set logPrefix $start_step
+            if {$i < [llength $endPath]} {
+              set logPrefix "${logPrefix}-[join [lrange $endPath $i end] "."]"
+            }
+   
+                                     }
+          break
+        }
+      }
+      # Add the branch name
+      if {$branch ne {}} {
+        if {$logPrefix eq {}} {
+          set logPrefix $branch
+        } else {
+          set logPrefix 
+                              "$branch.$logPrefix"
+        }
+      }
+      # Add the top-level flow to the prefix
+      if {$logPrefix eq {}} {
+        set logPrefix [string range $flow 5 end]
+      } else {
+        set logPrefix 
+                              "[string range $flow 5 end].$logPrefix"
+      }
+      # Fall back to tool name
+      if {$logPrefix eq {}} {
+        set logPrefix $tool
+      }
+      # Add the flow log directory
+      set logPrefix [file 
+                              join $flow_log_directory $logPrefix]
+      return $logPrefix
+    }
+  flow_mail_on_error:    false
+  flow_mail_to:          {}
+  flow_metrics_file:     {}
+  flow_metrics_snapshot_parent_uuid:  {}
+  flow_metrics_snapshot_uuid:  {}
+  flow_overwrite_database:  false
+  flow_plugin_names:     {
+      Cadence.plugin.place.pre
+      Cadence.plugin.place.post
+      Cadence.plugin.prects.pre
+      Cadence.plugin.prects.exp.mbff
+      Cadence.plugin.prects.post
+      Cadence.plugin.cts.pre
+      
+                         Cadence.plugin.cts.post
+      Cadence.plugin.postcts.pre
+      Cadence.plugin.postcts.post
+      Cadence.plugin.postcts.hold.pre
+      Cadence.plugin.postcts.hold.post
+      Cadence.plugin.route.pre
+      
+                         Cadence.plugin.route.trackopt.pre
+      Cadence.plugin.route.trackopt.hold.pre
+      Cadence.plugin.route.trackopt.hold.post
+      Cadence.plugin.route.trackopt.post
+      Cadence.plugin.route.post
+      
+                         Cadence.plugin.postroute.pre
+      Cadence.plugin.postroute.hold.pre
+      Cadence.plugin.postroute.hold.post
+      Cadence.plugin.postroute.eco_route.pre
+      Cadence.plugin.postroute.eco_route.post
+      
+                         Cadence.plugin.postroute.recovery.pre
+      Cadence.plugin.postroute.recovery.hold.pre
+      Cadence.plugin.postroute.recovery.hold.post
+      Cadence.plugin.postroute.recovery.eco_route.pre
+      
+                         Cadence.plugin.postroute.recovery.eco_route.post
+      Cadence.plugin.postroute.recovery.post
+      Cadence.plugin.postroute.post
+      Cadence.plugin.flowkit.snapshot
+    }
+  flow_plugin_steps:     {}
+  flow_report_directory:  reports
+  flow_reset_time_after_flow_init:  false
+  flow_run_tag:          {}
+  flow_schedule:         {}
+  flow_starting_db:      {}
+  flow_status_file:      {}
+  flow_step_begin_tcl:   {}
+  flow_step_canonical_current:  {}
+  flow_step_check_tcl:   {}
+  flow_step_current:     {}
+  flow_step_end_tcl:     {}
+  flow_step_last:        {}
+  flow_step_last_msg:    {}
+  flow_step_last_status:  not_run
+  flow_step_next:        {}
+  flow_steps:            {}
+  flow_summary_tcl:      {}
+  flow_template_feature_definition:  {}
+  flow_template_type:    {}
+  flow_template_version:  {}
+  flow_user_templates:   {}
+  flow_verbose:          true
+  flow_working_directory:  .
+  flows:                 {}
+  foreign_cells:         
+  get_db_display_limit:  10
+  groups:                {}
+  hinsts:                {}
+  hnets:                 {}
+  hpins:                 {}
+  hports:                {}
+  ilm_filter_internal_path:  false
+  ilm_keep_async:        false
+  ilm_keep_flatten:      true
+  ilm_keep_high_fanout_ports:  true
+  ilm_keep_loopback:     false
+  init_check_error_for_undefined:  false
+  init_check_netlist:    false
+  init_check_power_ground:  false
+  init_delete_floating_netlist_net:  true
+  init_keep_empty_modules:  false
+  init_lib_search_path:  {}
+  init_power_intent_files:  {1801 {}}
+  init_read_netlist_allow_port_mismatch:  false
+  init_read_netlist_allow_undefined_cells:  false
+  init_sync_relative_path:  false
+  init_timing_enabled:   true
+  insts:                 {}
+  io_constraints:        {}
+  layers:                
+  lib_arcs:              {}
+  lib_cells:             {}
+  lib_pins:              {}
+  libraries:             {}
+  library_sets:          
+  log_file:              tempus.log1
+  logv_file:             tempus.logv1
+  messages:              message:ANLSEMS-1 message:ASN-1 message:CHKCTS-1 message:CHKCTS-10 message:CHKCTS-12 message:CHKCTS-13 message:CHKCTS-14 message:CHKCTS-15 message:CHKCTS-16 message:CHKCTS-18 ... (total length 46723)
+  metric_advanced_url_endpoint:  {}
+  metric_capture_depth:  0
+  metric_capture_design_image:  true
+  metric_capture_max_drc_markers:  100000
+  metric_capture_min_count:  1000
+  metric_capture_overwrite:  false
+  metric_capture_per_view:  true
+  metric_capture_timing_paths:  10
+  metric_capture_tns_histogram:  true
+  metric_capture_tns_histogram_buckets:  50
+  metric_capture_tns_histogram_paths:  10000
+  metric_category_default:  design
+  metric_current_run_id:  {}
+  metric_page_cfg:       {}
+  metric_summary_metrics:  {flow.cputime flow.realtime timing.setup.tns timing.setup.wns}
+  modules:               
+  net_groups:            {}
+  nets:                  {}
+  oa_allow_analysis_only:  false
+  oa_allow_bit_connection:  false
+  oa_allow_tech_update:  true
+  oa_bindkey_file:       {}
+  oa_cell_view_dir:      {}
+  oa_convert_diagonal_path_to:  polygon
+  oa_cut_rows:           false
+  oa_display_resource_file:  {}
+  oa_display_resource_file_in_library:  false
+  oa_full_layer_list:    true
+  oa_full_path:          false
+  oa_inst_placed_if_none:  true
+  oa_lib_create_mode:    reference
+  oa_lock:               false
+  oa_logic_only_import:  false
+  oa_new_lib_compress_level:  1
+  oa_pin_purpose:        false
+  oa_push_pin_constraint:  false
+  oa_save_mask_data_locked:  false
+  oa_silently_ignore_unsupported_vias:  false
+  oa_text_purpose:       drawing
+  oa_tie_net:            {}
+  oa_update_mode:        false
+  oa_use_virtuoso_bindkey:  false
+  oa_use_virtuoso_color:  false
+  oa_view_sub_type:      vxl
+  oa_write_net_voltage:  false
+  oa_write_relative_path:  true
+  obj_type:              root
+  obj_types:             obj_type:obj_type obj_type:design obj_type:base_cell obj_type:module obj_type:inst obj_type:root obj_type:net obj_type:port obj_type:base_pin obj_type:pg_base_pin ... (total length 93)
+  opconds:               {}
+  opt_hier_add_antenna_cell:  false
+  opt_hier_opt_stage:    unset
+  opt_hier_trial_route_honor_read_only:  false
+  opt_rcp_all_endpoints:  true
+  opt_rcp_delay_corner:  {}
+  opt_rcp_generate_report:  true
+  opt_rcp_input_dir:     {}
+  opt_rcp_keep_tmp_dir:  false
+  opt_rcp_local_cpu:     1
+  opt_rcp_log_dir:       {}
+  opt_rcp_output_dir:    {}
+  opt_rcp_post_synthesis_tcl:  {}
+  opt_rcp_pre_read_db_tcl:  {}
+  opt_rcp_pre_synthesis_tcl:  {}
+  opt_rcp_report_dir:    {}
+  opt_rcp_synthesis_tcl:  {}
+  opt_signoff_add_inst:  true
+  opt_signoff_add_load:  false
+  opt_signoff_allow_multiple_incremental:  false
+  opt_signoff_allow_skewing:  false
+  opt_signoff_along_route_buffering:  false
+  opt_signoff_block_scope_name:  {}
+  opt_signoff_buffer_cell_list:  {}
+  opt_signoff_check_drv_from_hold_views:  false
+  opt_signoff_check_type:  both
+  opt_signoff_clock_cell_list:  {}
+  opt_signoff_delete_inst:  true
+  opt_signoff_disable_geometry_checks:  false
+  opt_signoff_drv_margin:  0.0
+  opt_signoff_eco_file_prefix:  {}
+  opt_signoff_fix_clock_drv:  false
+  opt_signoff_fix_glitch:  false
+  opt_signoff_fix_hold_allow_setup_optimization:  false
+  opt_signoff_fix_hold_allow_setup_tns_degrade:  false
+  opt_signoff_fix_hold_with_margin:  0.0
+  opt_signoff_fix_max_cap:  true
+  opt_signoff_fix_max_tran:  true
+  opt_signoff_fix_si_slew:  false
+  opt_signoff_fix_xtalk:  false
+  opt_signoff_hold_target_slack:  0.0
+  opt_signoff_hold_xtalk_delta_threshold:  0.3
+  opt_signoff_hold_xtalk_slack_threshold:  1000.0
+  opt_signoff_ignore_drv_checks:  false
+  opt_signoff_keep_temp_files:  false
+  opt_signoff_legal_only:  true
+  opt_signoff_load_cell_list:  {}
+  opt_signoff_max_cap_margin:  0.0
+  opt_signoff_max_paths:  -1
+  opt_signoff_max_runtime:  0
+  opt_signoff_max_slack:  0.0
+  opt_signoff_max_tran_margin:  0.0
+  opt_signoff_nworst:    -1
+  opt_signoff_optimize_core_only:  false
+  opt_signoff_optimize_replicated_modules:  false
+  opt_signoff_optimize_sequential_cells:  true
+  opt_signoff_partition_list_file:  {}
+  opt_signoff_pba_effort:  medium
+  opt_signoff_post_sta_tcl:  {}
+  opt_signoff_power_opt_focus:  total
+  opt_signoff_pre_sta_tcl:  {}
+  opt_signoff_prefix:    ESO
+  opt_signoff_read_eco_opt_db:  {}
+  opt_signoff_resize_inst:  true
+  opt_signoff_retime:    none
+  opt_signoff_routing_congestion_aware:  false
+  opt_signoff_select_hold_endpoints:  {}
+  opt_signoff_select_net_list:  {}
+  opt_signoff_select_setup_endpoints:  {}
+  opt_signoff_setup_recovery:  false
+  opt_signoff_setup_target_slack:  0.0
+  opt_signoff_setup_xtalk_delta_threshold:  0.3
+  opt_signoff_setup_xtalk_slack_threshold:  1000.0
+  opt_signoff_specify_hold_endpoints_margin:  {}
+  opt_signoff_specify_setup_endpoints_margin:  {}
+  opt_signoff_swap_inst:  true
+  opt_signoff_verbose:   false
+  opt_signoff_write_eco_opt_db:  ecoTimingDB
+  opt_useful_skew_all_negative_end_points:  false
+  opt_useful_skew_cells:  {}
+  opt_useful_skew_delay_pre_cts:  true
+  opt_useful_skew_eco_route:  false
+  opt_useful_skew_macro_only:  false
+  opt_useful_skew_max_allowed_delay:  1.0
+  opt_useful_skew_max_skew:  false
+  opt_useful_skew_min_allowed_delay:  0.0
+  opt_useful_skew_no_boundary:  false
+  package_objects:       
+  partition_keep_special_pin:  0
+  partitions:            {}
+  pg_base_pins:          
+  pg_nets:               {}
+  pg_pins:               {}
+  phys_insts:            {}
+  pin_blockages:         {}
+  pin_groups:            {}
+  pin_guides:            {}
+  pins:                  {}
+  place_blockages:       {}
+  place_cell_edge_spacing:  {}
+  place_detail_m3_stripe_push_down:  -1
+  place_detail_m3_stripe_shrink:  0
+  port_shapes:           {}
+  ports:                 {}
+  power_analysis_temperature:  {}
+  power_average_rise_fall_cap:  false
+  power_bulk_pins:       {}
+  power_clock_source_as_clock:  false
+  power_compatible_internal_power:  true
+  power_constant_override:  false
+  power_corner:          {}
+  power_create_driver_db:  false
+  power_current_generation_method:  avg
+  power_db_name:         {}
+  power_decap_cell_list:  {}
+  power_default_frequency:  -1.0
+  power_default_slew:    {}
+  power_default_supply_voltage:  {}
+  power_disable_clock_gate_clipping:  true
+  power_disable_ecsm_interpolation:  false
+  power_disable_leakage_scaling:  false
+  power_disable_static:  false
+  power_distributed_setup:  {}
+  power_domain_based_clipping:  false
+  power_domains:         {}
+  power_dynamic_power_view:  {}
+  power_dynamic_vectorless_ranking_methods:  {}
+  power_enable_auto_mapping:  false
+  power_enable_duty_propagation_with_global_activity:  false
+  power_enable_dynamic_scaling:  false
+  power_enable_generated_clock:  true
+  power_enable_input_net_power:  false
+  power_enable_rtl_dynamic_vector_based:  false
+  power_enable_state_propagation:  false
+  power_enhanced_blackbox_avg:  false
+  power_enhanced_blackbox_max:  false
+  power_fanout_limit:    -1
+  power_from_x_transition_factor:  0.5
+  power_from_z_transition_factor:  0.25
+  power_generate_current_for_rail:  {}
+  power_generate_static_report_from_state_propagation:  false
+  power_grid_libraries:  {}
+  power_handle_glitch:   false
+  power_handle_tri_state:  false
+  power_hier_delimiter:  {}
+  power_honor_combinational_logic_on_clock_net:  true
+  power_honor_negative_energy:  true
+  power_ignore_control_signals:  true
+  power_ignore_end_toggles_in_profile:  false
+  power_ignore_glitches_at_same_time_stamp:  false
+  power_ignore_inout_pin_cap:  false
+  power_include_file:    {}
+  power_include_initial_x_transitions:  true
+  power_include_sequential_clock_pin_power:  false
+  power_leakage_power_view:  {}
+  power_leakage_scale_factor_for_temperature:  1.0
+  power_lib_files:       {}
+  power_library_preference:  voltage
+  power_match_state_for_logic_x:  0
+  power_mbff_toggle_behavior:  independent
+  power_merge_switched_net_currents:  false
+  power_method:          static
+  power_modes:           {}
+  power_off_pg_nets:     {}
+  power_output_current_data_prefix:  {}
+  power_output_dir:      {}
+  power_partition_twf:   false
+  power_pin_based_twf:   false
+  power_precision:       8
+  power_quit_on_activity_coverage_threshold:  1.0
+  power_read_rcdb:       false
+  power_report_black_boxes:  false
+  power_report_idle_instances:  false
+  power_report_instance_switching_info:  none
+  power_report_instance_switching_list:  {}
+  power_report_missing_bulk_connectivity:  false
+  power_report_missing_input:  false
+  power_report_missing_nets:  false
+  power_report_scan_chain_stats:  false
+  power_report_statistics:  false
+  power_report_twf_attributes:  {}
+  power_scale_to_sdc_clock_frequency:  false
+  power_scan_control_file:  {}
+  power_scan_multi_bit_flop_chain_type:  liberty
+  power_settling_buffer:  {}
+  power_split_bus_power:  false
+  power_start_time_alignment:  true
+  power_state_dependent_leakage:  true
+  power_static_netlist:  verilog
+  power_thermal_input_file:  {}
+  power_to_x_transition_factor:  0.5
+  power_to_z_transition_factor:  0.25
+  power_transition_time_method:  max
+  power_twf_delay_annotation:  avg
+  power_twf_load_cap:    max
+  power_use_cell_leakage_power_density:  true
+  power_use_fastest_clock_for_dynamic_scheduling:  false
+  power_use_lef_for_missing_cells:  false
+  power_use_zero_delay_vector_file:  false
+  power_vector_based_multithread:  true
+  power_view:            {}
+  power_worst_case_vector_activity:  false
+  power_write_db:        false
+  power_write_default_pti_files:  true
+  power_write_static_currents:  false
+  power_x_transition_factor:  0.5
+  power_z_transition_factor:  0.25
+  power_zero_delay_vector_toggle_shift:  {}
+  preferred_cell_stripes:  {}
+  program_name:          {Tempus Timing Signoff Solution}
+  program_short_name:    tempus
+  program_version:       17.21-s086_1
+  rc_corners:            
+  read_db_version:       {}
+  read_parasitics_annotate_pin_locations:  0
+  resize_blockages:      {}
+  route_blockages:       {}
+  route_design_adjust_auto_via_weight:  true
+  route_design_allow_inst_overlaps:  true
+  route_design_allow_pin_as_feedthru:  true
+  route_design_antenna_cell_name:  {}
+  route_design_antenna_diode_insertion:  false
+  route_design_antenna_pin_limit:  1000
+  route_design_bottom_routing_layer:  0
+  route_design_concurrent_minimize_via_count_effort:  medium
+  route_design_connect_to_bumps:  false
+  route_design_detail_antenna_eco_list_file:  {}
+  route_design_detail_auto_stop:  true
+  route_design_detail_end_iteration:  0
+  route_design_detail_fix_antenna:  true
+  route_design_detail_mask_only_on_layer:  false
+  route_design_detail_min_length_for_spread_wire:  0
+  route_design_detail_min_length_for_widen_wire:  1.0
+  route_design_detail_min_slack_for_opt_wire:  0.0
+  route_design_detail_no_taper_in_layers:  {}
+  route_design_detail_no_taper_on_output_pin:  false
+  route_design_detail_on_grid_only:  none
+  route_design_detail_post_route_litho_repair:  false
+  route_design_detail_post_route_spread_wire:  auto
+  route_design_detail_post_route_swap_via:  false
+  route_design_detail_post_route_wire_widen:  none
+  route_design_detail_post_route_wire_widen_rule:  {}
+  route_design_detail_postroute_via_priority:  auto
+  route_design_detail_search_and_repair:  true
+  route_design_detail_signoff_effort:  high
+  route_design_detail_use_multi_cut_via_effort:  low
+  route_design_diode_insertion_for_clock_nets:  false
+  route_design_extra_via_enclosure:  0.0
+  route_design_fix_clock_nets:  false
+  route_design_fix_top_layer_antenna:  true
+  route_design_high_freq_constraint_file:  {}
+  route_design_high_freq_constraint_groups:  {}
+  route_design_high_freq_match_report_file:  {}
+  route_design_high_freq_num_reserved_layers:  1
+  route_design_high_freq_remove_floating_shield:  false
+  route_design_high_freq_search_repair:  auto
+  route_design_high_freq_shield_trim_length:  0.0
+  route_design_honor_power_domain:  false
+  route_design_ignore_antenna_top_cell_pin:  true
+  route_design_ignore_follow_pin_shapes:  false
+  route_design_number_fail_limit:  0
+  route_design_number_thread:  1
+  route_design_number_warning_limit:  0
+  route_design_process_node:  {}
+  route_design_rc_extraction_corner:  {}
+  route_design_relaxed_route_rule_spacing_to_pg_nets:  none
+  route_design_reserve_space_for_multi_cut:  false
+  route_design_reverse_direction:  {}
+  route_design_route_clock_nets_first:  true
+  route_design_selected_net_only:  false
+  route_design_shield_crosstie_offset:  {}
+  route_design_skip_analog:  false
+  route_design_strict_honor_route_rule:  false
+  route_design_stripe_layer_range:  {}
+  route_design_third_party_data:  false
+  route_design_tie_net_to_shape:  auto
+  route_design_top_routing_layer:  0
+  route_design_trim_pull_back_distance_from_boundary:  {}
+  route_design_trunk_with_cluster_target_size:  1
+  route_design_unconnected_ports:  false
+  route_design_use_auto_via:  auto
+  route_design_via_weight:  {}
+  route_design_with_eco:  false
+  route_design_with_litho_driven:  false
+  route_design_with_si_driven:  false
+  route_design_with_timing_driven:  false
+  route_design_with_trim_metal:  {}
+  route_design_with_via_in_pin:  false
+  route_design_with_via_in_pin_single_mask:  false
+  route_design_with_via_only_for_lib_cell_pin:  false
+  route_rules:           
+  route_special_allow_non_preferred_direction_route:  false
+  route_special_avoid_over_core_row_layer:  {max layer of standard cell pin}
+  route_special_block_pin_connect_ring_pin_corners:  false
+  route_special_block_pin_route_with_pin_width:  false
+  route_special_connect_broken_core_pin:  false
+  route_special_core_pin_ignore_obs:  none
+  route_special_core_pin_length:  0.0
+  route_special_core_pin_length_as_inst:  false
+  route_special_core_pin_max_via_scale:  {}
+  route_special_core_pin_merge_limit:  0.0
+  route_special_core_pin_refer_to_M1:  false
+  route_special_core_pin_reference_macro:  {}
+  route_special_core_pin_snap_to:  m1_pin
+  route_special_endcap_as_core:  false
+  route_special_extend_nearest_target:  false
+  route_special_jog_threshold_ratio:  10.0
+  route_special_layer_non_preferred_direction_cost:  {}
+  route_special_layer_preferred_direction_cost:  {}
+  route_special_pad_pin_min_via_size:  20.0
+  route_special_pad_pin_split:  {}
+  route_special_pad_ring_use_lef:  true
+  route_special_pg_pin_as_signal:  {}
+  route_special_secondary_pin_max_gap:  0.0
+  route_special_secondary_pin_rail_width:  0.0
+  route_special_signal_pin_as_pg:  false
+  route_special_split_long_via:  {0 0 -1 -1}
+  route_special_target_number:  0
+  route_special_target_search_distance:  0.0
+  route_special_time_limit:  0.0
+  route_special_via_connect_to_shape:  padring ring stripe blockring blockpin coverpin noshape blockwire corewire followpin ... (total length 11)
+  route_special_via_through_to_closest_ring:  false
+  route_types:           
+  rows:                  {}
+  script_search_path:    .
+  selected:              
+  set_db_verbose:        false
+  si_accumulated_small_aggressor_factor:  1.0
+  si_accumulated_small_aggressor_mode:  cap
+  si_accumulated_small_aggressor_threshold:  10.01
+  si_aggressor_alignment:  timing_aware_edge
+  si_clock_synchronicity:  synchronous
+  si_delay_clock_delta_threshold:  -1.0
+  si_delay_delta_annotation_mode:  arc
+  si_delay_delta_threshold:  -1.0
+  si_delay_enable_double_clocking_check:  false
+  si_delay_enable_logical_correlation:  false
+  si_delay_enable_report:  false
+  si_delay_only:         false
+  si_delay_separate_on_data:  false
+  si_enable_bus_attacker_correlation:  false
+  si_enable_drv_with_delta_slew:  false
+  si_enable_glitch_overshoot_undershoot:  false
+  si_enable_glitch_propagation:  false
+  si_enable_glitch_propagation_spice_deck:  false
+  si_enable_virtual_attacker_constituent_report:  false
+  si_glitch_enable_report:  false
+  si_glitch_input_threshold:  0.4
+  si_glitch_input_voltage_high_threshold:  0.4
+  si_glitch_input_voltage_low_threshold:  0.4
+  si_glitch_receiver_clock_peak_limit:  0.05
+  si_glitch_receiver_latch_peak_limit:  0.1
+  si_glitch_receiver_peak_limit:  0.15
+  si_individual_aggressor_clock_threshold:  0.015
+  si_individual_aggressor_simulation_filter:  true
+  si_individual_aggressor_threshold:  0.015
+  si_max_virtual_attacker_constituents:  5
+  si_nonlinear_aggressor_slew:  true
+  si_num_iteration:      2
+  si_reselection:        slack
+  si_reselection_delay_threshold:  1e-11
+  si_reselection_hold_slack:  -1e-12
+  si_reselection_setup_slack:  -1e-12
+  si_secondary_attacker_decoupling_factor:  1.0
+  si_skip_noise_model_check:  {}
+  si_skip_timing_window:  {}
+  si_switch_probability:  0.3
+  si_unconstrained_net_use_infinite_timing_window:  true
+  si_use_infinite_timing_window:  false
+  sites:                 
+  skew_groups:           {}
+  soft_stack_size_limit:  15
+  source_continue_on_error:  false
+  source_echo_filename:  false
+  tech_db_units:         1000
+  tech_finfet_grid_direction:  vertical
+  tech_finfet_grid_offset:  0.0
+  tech_finfet_grid_pitch:  0.0
+  tech_inst_mask_shift_layers:  {}
+  tech_mfg_grid:         0.0
+  timing_all_registers_include_icg_cells:  true
+  timing_allow_input_delay_on_clock_source:  false
+  timing_analysis_aocv:  false
+  timing_analysis_async_checks:  async
+  timing_analysis_check_type:  setup
+  timing_analysis_clock_gating:  true
+  timing_analysis_clock_propagation_mode:  sdc_control
+  timing_analysis_clock_source_paths:  true
+  timing_analysis_cppr:  none
+  timing_analysis_engine:  static
+  timing_analysis_self_loops_paths_no_skew:  false
+  timing_analysis_socv:  false
+  timing_analysis_type:  ocv
+  timing_aocv_analysis_mode:  launch_capture
+  timing_aocv_chip_size:  1e+30
+  timing_aocv_core_size:  1e+30
+  timing_aocv_derate_mode:  aocv_multiplicative
+  timing_aocv_slack_threshold:  0.0
+  timing_aocv_stage_count_update_on_timing_reset:  false
+  timing_apply_check_derate_to_external_output_delay:  false
+  timing_apply_default_primary_input_assertion:  true
+  timing_apply_exceptions_to_data_check_related_pin:  false
+  timing_build_all_hierarchical_pins:  false
+  timing_cap_unit:       {}
+  timing_case_analysis_for_icg_propagation:  false
+  timing_case_analysis_for_sequential_propagation:  false
+  timing_case_analysis_propagation:  true
+  timing_clock_phase_propagation:  both
+  timing_clock_sense_incremental_mode:  true
+  timing_clock_source_paths_unconstrained_mark_clock_used_as_data:  true
+  timing_clock_source_use_driving_cell:  true
+  timing_clock_uncertainty_from_to_precedence:  false
+  timing_collection_result_display_limit:  100
+  timing_collection_variable_assignment_compatibility:  true
+  timing_conditions:     
+  timing_constraint_disable_min_max_input_delay_worst_casing:  false
+  timing_constraint_enable_development_mode:  false
+  timing_constraint_enable_logging:  false
+  timing_constraint_enable_report_invalid_begin_end_points:  false
+  timing_constraint_enable_search_path:  false
+  timing_constraint_load_minimal_set_for_automated_eco:  false
+  timing_constraints_warning_on_partial_search_match:  true
+  timing_continue_on_error:  false
+  timing_cppr_opposite_edge_mean_scale_factor:  1.0
+  timing_cppr_opposite_edge_sigma_scale_factor:  1.0
+  timing_cppr_propagate_thru_latches:  false
+  timing_cppr_remove_clock_to_data_pessimism:  false
+  timing_cppr_self_loop_mode:  true
+  timing_cppr_skip_clock_reconvergence:  false
+  timing_cppr_skip_clock_reconvergence_for_unmatched_clocks:  false
+  timing_cppr_threshold_ps:  20.0
+  timing_cppr_transition_sense:  normal
+  timing_create_clock_default_propagated:  false
+  timing_default_opcond_per_lib:  true
+  timing_defer_mmmc_obj_updates:  false
+  timing_derate_aocv_dynamic_delays:  true
+  timing_derate_aocv_reference_point:  1
+  timing_derate_dynamic_compatibility:  true
+  timing_derate_ocv_reference_point:  1
+  timing_derate_spatial_distance_unit:  default
+  timing_disable_backward_compatible_max_delay_mode:  false
+  timing_disable_bus_contention_check:  false
+  timing_disable_clock_period_checks:  false
+  timing_disable_constant_propagation_for_sequential_cells:  false
+  timing_disable_drv_report_on_constant_nets:  false
+  timing_disable_floating_bus_check:  false
+  timing_disable_genclk_combinational_blocking:  false
+  timing_disable_inferred_clock_gating_checks:  false
+  timing_disable_inout_output_side_timing_checks:  false
+  timing_disable_internal_inout_cell_paths:  true
+  timing_disable_internal_inout_net_arcs:  true
+  timing_disable_lib_pulse_width_checks:  false
+  timing_disable_library_data_to_data_checks:  false
+  timing_disable_library_tieoffs:  false
+  timing_disable_netlist_constants:  false
+  timing_disable_nochange_checks:  false
+  timing_disable_non_sequential_checks:  false
+  timing_disable_output_as_clock_port:  false
+  timing_disable_parallel_arcs:  true
+  timing_disable_report_header_info:  false
+  timing_disable_retime_clock_path_slew_propagation:  true
+  timing_disable_sdf_retain_arc_merging:  false
+  timing_disable_skew_checks:  false
+  timing_disable_test_signal_arc:  false
+  timing_disable_timing_model_latch_inferencing:  true
+  timing_disable_tristate_disable_arcs:  false
+  timing_disable_user_data_to_data_checks:  false
+  timing_driving_cell_override_library:  false
+  timing_dynamic_loop_breaking:  false
+  timing_enable_aocv_slack_based:  false
+  timing_enable_backward_compatible_path_adjust_mode:  false
+  timing_enable_backward_compatible_tw_mode:  true
+  timing_enable_case_analysis_conflict_warning:  true
+  timing_enable_clock2clock_clock_gating_check:  false
+  timing_enable_clock_phase_based_rise_fall_derating:  false
+  timing_enable_data_through_clock_gating:  true
+  timing_enable_derating_for_pulse_width_checks:  false
+  timing_enable_early_late_data_slews_for_setuphold_mode_checks:  false
+  timing_enable_genclk_divide_by_inherit_parent_duty_cycle:  false
+  timing_enable_genclk_source_path_register_limit:  false
+  timing_enable_generated_clock_edge_based_source_latency:  true
+  timing_enable_get_obj_escaped_name_backward_compatible:  false
+  timing_enable_hierarchical_get_nets_support:  false
+  timing_enable_latency_through_clock_gating:  true
+  timing_enable_minimal_constraints_loading_for_TSO:  false
+  timing_enable_minmax_delay_segmentation:  true
+  timing_enable_mmmc_loop_breaking:  true
+  timing_enable_multi_drive_net_reduction_with_assertions:  none
+  timing_enable_multi_frequency_latch_analysis:  false
+  timing_enable_multi_threaded_reporting:  true
+  timing_enable_multicycle_data_check_compatibility:  false
+  timing_enable_path_delay_to_unconstrained_endpoints_compatibility:  false
+  timing_enable_path_exception_to_pin_compatibility:  false
+  timing_enable_pessimistic_cppr_for_reconvergent_clock_paths:  false
+  timing_enable_power_ground_constants:  false
+  timing_enable_preset_clear_arcs:  false
+  timing_enable_pulse_latch:  true
+  timing_enable_report_cppr_clock_style_check_compatibility:  false
+  timing_enable_separate_device_slew_effect_sensitivities:  false
+  timing_enable_si_cppr:  true
+  timing_enable_simultaneous_setup_hold_mode:  true
+  timing_enable_ssta_clock_only:  false
+  timing_enable_timing_window_pessimism_removal:  false
+  timing_enable_tristate_clock_gating:  false
+  timing_enable_uncertainty_for_clock_checks:  false
+  timing_enable_uncertainty_for_pulse_width_checks:  false
+  timing_extract_model_aocv_mode:  none
+  timing_extract_model_case_analysis_in_library:  true
+  timing_extract_model_check_arcs_as_lvf:  true
+  timing_extract_model_consider_design_level_drv:  true
+  timing_extract_model_disable_cycle_adjustment:  false
+  timing_extract_model_disable_retime_clock_path_slew_propagation:  false
+  timing_extract_model_enable_slew_stabilization:  true
+  timing_extract_model_enable_worst_slew_propagation:  false
+  timing_extract_model_exhaustive_validation_dir:  {}
+  timing_extract_model_exhaustive_validation_mode:  false
+  timing_extract_model_gating_as_nochange_arc:  true
+  timing_extract_model_ideal_clock_latency_arc:  false
+  timing_extract_model_include_applied_load_in_characterization_range:  false
+  timing_extract_model_include_applied_slew_in_characterization_range:  false
+  timing_extract_model_max_feedthrough_characterization_load:  0.0
+  timing_extract_model_preserve_clock_name_as_internal_pin:  true
+  timing_extract_model_slew_propagation_mode:  worst_slew
+  timing_extract_model_use_characterized_generated_clock_latency:  false
+  timing_extract_model_write_clock_checks_as_arc:  false
+  timing_extract_model_write_clock_checks_as_scalar_tables:  false
+  timing_extract_model_write_lvf:  false
+  timing_extract_model_write_multiple_master_gen_clock_assertion:  false
+  timing_generate_normalized_driver_waveform:  true
+  timing_generated_clocks_allow_nested_assertions:  false
+  timing_generated_clocks_inherit_ideal_latency:  false
+  timing_get_of_objects_hier_compatibility:  false
+  timing_hier_obj_name_compatibility:  true
+  timing_ignore_lumped_rc_assertions:  false
+  timing_inter_power_domain_derate_flow_use_path_segment_delay_difference:  false
+  timing_io_use_clock_network_latency:  ideal
+  timing_library_build_async_deassert_arc:  true
+  timing_library_ccs_receiver_weight_factor:  1.0
+  timing_library_convert_async_setuphold_to_recrem:  1
+  timing_library_create_statetable_multi_sequential_cells:  true
+  timing_library_enable_advanced_capacitance_support:  true
+  timing_library_enable_mismatched_arcs:  1
+  timing_library_enable_multi_sequential_lib_cell:  false
+  timing_library_generated_clock_use_group_name:  false
+  timing_library_hold_sigma_multiplier:  0.0
+  timing_library_infer_async_pins_from_timing_arcs:  false
+  timing_library_infer_cap_range_from_ccs_receiver_model:  false
+  timing_library_infer_cap_range_from_ecsm_receiver_model:  false
+  timing_library_interpolate_drv_values:  false
+  timing_library_merge_worst_case_min_pulse_width_arcs:  true
+  timing_library_pg_pins:  all
+  timing_library_read_ccs_noise_data:  true
+  timing_library_read_ccs_power_data:  false
+  timing_library_read_without_ecsm:  false
+  timing_library_read_without_power:  true
+  timing_library_read_without_sensitivity:  false
+  timing_library_scale_aocv_to_socv_to_n_sigma:  3.0
+  timing_library_setup_sigma_multiplier:  0.0
+  timing_library_sort_non_monotonic_ccs_index:  true
+  timing_library_support_multi_sequential_cells:  true
+  timing_library_term_voltage_from_lib_pin:  1
+  timing_library_zero_negative_timing_check_arcs:  false
+  timing_multi_frequency_clock_rounding_factor:  1e-05
+  timing_normalized_driver_waveform_clip_linear_part:  false
+  timing_normalized_driver_waveform_weight_factor:  0.5
+  timing_nsigma_multiplier:  3.0
+  timing_null_collection_return_compatibility:  false
+  timing_path_based_enable_exhaustive_depth_bounded_by_gba:  true
+  timing_path_based_enable_report_launch_clock_path:  true
+  timing_path_based_enable_verbose_mode:  1
+  timing_path_based_exhaustive_enable_design_coverage:  false
+  timing_path_based_exhaustive_max_paths_limit:  20000000
+  timing_path_based_retimed_paths_limit:  0
+  timing_pba_exhaustive_path_nworst_limit:  10000
+  timing_prefix_module_name_with_library_generated_clock:  true
+  timing_propagate_latch_data_uncertainty:  false
+  timing_recompute_sdf_in_setuphold_mode:  false
+  timing_reduce_multi_drive_net_arcs:  true
+  timing_reduce_multi_drive_net_arcs_threshold:  10000
+  timing_report_backward_compatible_max_paths_reporting:  false
+  timing_report_clock_pin_as_begin_point:  false
+  timing_report_constraint_enable_extended_drv_format:  false
+  timing_report_default_formatting:  stage_delay
+  timing_report_enable_capacitance_computation_for_special_nets:  false
+  timing_report_enable_cppr_point:  false
+  timing_report_enable_efficient_unconstrained_path_processing:  false
+  timing_report_enable_flag_field_symbols:  false
+  timing_report_enable_markers:  true
+  timing_report_enable_max_capacitance_drv_for_constant_nets:  false
+  timing_report_enable_max_path_limit_warning:  false
+  timing_report_enable_si_debug:  false
+  timing_report_enable_unique_pins_multiple_capture_clock_paths:  false
+  timing_report_enable_verbose_ssta_mode:  false
+  timing_report_fields:  {timing_point flags arc edge cell fanout transition delay arrival}
+  timing_report_generated_clock_info:  true
+  timing_report_group_based_mode:  false
+  timing_report_max_transition_check_using_nsigma_slew:  false
+  timing_report_precision:  3
+  timing_report_redirect_message_types:  none
+  timing_report_retime_formatting_mode:  retime_replace
+  timing_report_skip_constraint_loop_check:  false
+  timing_report_split_other_end_arrival:  false
+  timing_report_timing_header_detail_info:  default
+  timing_report_unconstrained_path_early_late_header:  false
+  timing_report_unconstrained_paths:  false
+  timing_report_use_worst_parallel_cell_arc:  false
+  timing_resolve_driver_conflicts:  aggressive
+  timing_scaling_for_negative_checks:  default
+  timing_scaling_for_negative_delays:  default
+  timing_sdf_adjust_negative_setuphold:  false
+  timing_sdf_enable_setuphold_scond_ccond:  false
+  timing_self_loop_paths_no_skew_max_depth:  10
+  timing_self_loop_paths_no_skew_max_slack:  0.0
+  timing_set_clock_source_to_output_as_data:  false
+  timing_socv_analysis_nsigma_multiplier:  3.0
+  timing_socv_rc_variation_mode:  true
+  timing_socv_statistical_min_max_mode:  mean_and_three_sigma_bounded
+  timing_ssta_report_endpoint_description:  false
+  timing_suppress_escape_characters:  true
+  timing_suppress_ilm_constraint_mismatches:  false
+  timing_time_unit:      none
+  timing_use_clock_pin_attribute_for_clock_net_marking:  false
+  timing_use_latch_early_launch_edge:  true
+  timing_use_latch_time_borrow:  true
+  timing_write_sdf_no_escape_backslash:  false
+  ui_precision:          3
+  ui_precision_capacitance:  3
+  ui_precision_derating:  3
+  ui_precision_power:    3
+  ui_precision_sensitivities:  3
+  ui_precision_timing:   3
+  via_def_rules:         
+  via_defs:              {}
+  write_db_cmd_file_limit:  10
+  write_db_create_read_file:  false
+  write_db_include_metal_fill_rules:  0
+  write_db_portable:     true
+  write_def_lef_out_version:  5.8
+  write_netlist_full_pin_out:  false
+  write_netlist_port_association_style:  false
+
+@tempus 15> get_db timing_analysis_type 
+
+ocv
+@tempus 16> get_db delaycal_enable_si 
+
+false
+@tempus 17> man delaycal_enable_si
+
+@tempus 18> delaycal_enable_si -help
+invalid command name "delaycal_enable_si"
+@tempus 19> man set_db delaycal_enable_si
+
+@tempus 20> set_db delaycal_enable_si -help
+**ERROR: (IMPDBTCL-259):	Invalid value '-help' is provided for attribute 'delaycal_enable_si'. The value must be a 'enum' type. The legal enum values are 'true false'.
+
+@tempus 21> read_libs     ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib
+Scheduling  timing library file(s) ' ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib' to be loaded when the init_design command is issued
+@tempus 22> read_libs     ../../libs/MACRO/LIBERTY/pllclk.lib
+read_libs     ../../libs/MACRO/LIBERTY/pllclk.lib
+Scheduling  timing library file(s) ' ../../libs/MACRO/LIBERTY/pllclk.lib' to be loaded when the init_design command is issued
+@tempus 23> read_libs     ../../libs/MACRO/LIBERTY/ram_256x16A.lib   ../../libs/MACRO/LIBERTY/rom_512x16A.liread_libs     ../../libs/MACRO/LIBERTY/ram_256x16A.lib   ../../libs/MACRO/LIBERTY/rom_512x16A.lib
+b
+Scheduling  timing library file(s) ' ../../libs/MACRO/LIBERTY/ram_256x16A.lib ../../libs/MACRO/LIBERTY/rom_512x16A.lib' to be loaded when the init_design command is issued
+@tempus 24> read_netlist "../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz" -top dtmf_recvr_core
+Scheduling netlist file(s) '../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz' to be loaded when the init_design command is issued
+'no files matched glob pattern "../../libs/liberty/FreePDK45_lib_v1.0_worst.lib"'.
+
+@tempus 25> init_design 
+**ERROR: (IMPIMEX-12):	Cannot perform initialization step 'init_design', current initialization state is 'timing_initialized', it needs to be in 'design_initialized or power_initialized or floorplan_initialized' state to perform required step, check and correct your initialization steps.
+
+@tempus 26> pwd
+/home/shadab/shadab/tempus_labs_CUI/basic_sta
+@tempus 27> cd work/
+
+@tempus 28> read_libs     ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib
+Scheduling  timing library file(s) ' ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib' to be loaded when the init_design command is issued
+**WARN: (UI-235):	The  timing library file ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib has already been scheduled for reading, skip this specification for this read_lib command.
+@tempus 29> read_libs     ../../libs/MACRO/LIBERTY/pllclk.lib
+Scheduling  timing library file(s) ' ../../libs/MACRO/LIBERTY/pllclk.lib' to be loaded when the init_design command is issued
+**WARN: (UI-235):	The  timing library file ../../libs/MACRO/LIBERTY/pllclk.lib has already been scheduled for reading, skip this specification for this read_lib command.
+@tempus 30> read_libs     ../../libs/MACRO/LIBERTY/ram_256x16A.lib   ../../libs/MACRO/LIBERTY/rom_512x16A.lib
+
+Scheduling  timing library file(s) ' ../../libs/MACRO/LIBERTY/ram_256x16A.lib ../../libs/MACRO/LIBERTY/rom_512x16A.lib' to be loaded when the init_design command is issued
+**WARN: (UI-235):	The  timing library file ../../libs/MACRO/LIBERTY/ram_256x16A.lib has already been scheduled for reading, skip this specification for this read_lib command.
+**WARN: (UI-235):	The  timing library file ../../libs/MACRO/LIBERTY/rom_512x16A.lib has already been scheduled for reading, skip this specification for this read_lib command.
+@tempus 31> read_netlist "../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz" -top dtmf_recvr_core
+
+Scheduling netlist file(s) '../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz' to be loaded when the init_design command is issued
+#@ Begin verbose source .ssv_emulate_view_definition_4388.tcl
+@file(ssv_emulate_view_definition_4388.tcl) 1: create_library_set -name default_emulate_libset_max -timing [list ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib ../../libs/MACRO/LIBERTY/pllclk.lib ../../libs/MACRO/LIBERTY/ram_256x16A.lib ../../libs/MACRO/LIBERTY/rom_512x16A.lib]
+@file(ssv_emulate_view_definition_4388.tcl) 2: create_library_set -name default_emulate_libset_min -timing [list ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib ../../libs/MACRO/LIBERTY/pllclk.lib ../../libs/MACRO/LIBERTY/ram_256x16A.lib ../../libs/MACRO/LIBERTY/rom_512x16A.lib]
+@file(ssv_emulate_view_definition_4388.tcl) 3: create_constraint_mode -name default_emulate_constraint_mode -sdc_files [list /dev/null]
+@file(ssv_emulate_view_definition_4388.tcl) 4: create_timing_condition -name default_mapping_tc_2 -library_sets [list default_emulate_libset_min]
+@file(ssv_emulate_view_definition_4388.tcl) 5: create_timing_condition -name default_mapping_tc_1 -library_sets [list default_emulate_libset_max]
+@file(ssv_emulate_view_definition_4388.tcl) 6: create_rc_corner -name default_emulate_early_rc_corner 
+@file(ssv_emulate_view_definition_4388.tcl) 7: create_rc_corner -name default_emulate_late_rc_corner 
+@file(ssv_emulate_view_definition_4388.tcl) 8: create_rc_corner -name default_emulate_rc_corner 
+@file(ssv_emulate_view_definition_4388.tcl) 9: create_delay_corner -name default_emulate_delay_corner -early_timing_condition {default_mapping_tc_2} -late_timing_condition {default_mapping_tc_1} -rc_corner default_emulate_rc_corner
+@file(ssv_emulate_view_definition_4388.tcl) 10: create_delay_corner -name default_emulate_delay_corner_max -timing_condition {default_mapping_tc_1} -rc_corner default_emulate_rc_corner
+@file(ssv_emulate_view_definition_4388.tcl) 11: create_delay_corner -name default_emulate_delay_corner_min -timing_condition {default_mapping_tc_2} -rc_corner default_emulate_rc_corner
+@file(ssv_emulate_view_definition_4388.tcl) 12: create_analysis_view -name default_emulate_view -constraint_mode default_emulate_constraint_mode -delay_corner default_emulate_delay_corner
+@file(ssv_emulate_view_definition_4388.tcl) 13: set_analysis_view -setup [list default_emulate_view] -hold [list default_emulate_view]
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#@ End verbose source .ssv_emulate_view_definition_4388.tcl
+Reading default_emulate_libset_max timing library '/home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 113 cells in library 'FreePDK45_lib_v1.0' 
+Reading default_emulate_libset_max timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/pllclk.lib' ...
+Read 1 cells in library 'pllclk' 
+Reading default_emulate_libset_max timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/ram_256x16A.lib' ...
+Read 1 cells in library 'USERLIB' 
+Reading default_emulate_libset_max timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib' ...
+**WARN: (TECHLIB-459):	Appending library 'USERLIB' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib)
+Read 1 cells in library 'USERLIB' 
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+Loading view definition file from .ssv_emulate_view_definition_4388.tcl
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=1.66min, fe_real=11.05min, fe_mem=554.0M) ***
+#% Begin Load netlist data ... (date=12/08 11:30:56, mem=443.9M)
+*** Begin netlist parsing (mem=554.0M) ***
+Reading verilog netlist '../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz'
+
+*** Memory Usage v#1 (Current mem = 571.465M, initial mem = 228.910M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=571.5M) ***
+#% End Load netlist data ... (date=12/08 11:30:56, total cpu=0:00:00.2, real=0:00:00.0, peak res=443.9M, current mem=431.4M)
+Set top cell to dtmf_recvr_core.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell dtmf_recvr_core ...
+*** Netlist is unique.
+** info: there are 152 modules.
+** info: there are 8234 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 621.516M, initial mem = 228.910M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+default_emulate_view
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:01:40, real=0:11:04, peak res=573.6M, current mem=573.6M)
+Total number of combinational cells: 87
+Total number of sequential cells: 20
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X1 BUF_X16 BUF_X2 BUF_X32 BUF_X4
+Total number of usable buffers: 5
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X1 INV_X16 INV_X2 INV_X32 INV_X8 INV_X4
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: BUF_X8
+Total number of identified usable delay cells: 1
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+default_emulate_view
+default_emulate_view
+default_emulate_view
+default_emulate_constraint_mode
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+default_emulate_libset_max default_emulate_libset_min
+0
+@tempus 32> Loading  (dtmf_recvr_core)
+Traverse HInst (dtmf_recvr_core)
+[12D            [12D@tempus 32> init_design 
+
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+0
+@tempus 33> report_timing
+###############################################################
+#  Generated by:      Cadence Tempus 17.21-s086_1
+#  OS:                Linux x86_64(Host ID ra01)
+#  Generated on:      Mon Dec  8 11:31:10 2025
+#  Design:            dtmf_recvr_core
+#  Command:           report_timing
+###############################################################
+#################################################################################
+# Design Name: dtmf_recvr_core
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=744.383)
+AAE DB initialization (MEM=763.461 CPU=0:00:00.1 REAL=0:00:00.0) 
+**WARN: (IMPMSMV-1810):	Net FE_OFCN543_FE_OFN407_tdsp_data_out_13_, driver FE_OFCC543_FE_OFN407_tdsp_data_out_13_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[13] voltage 1.2.
+/dev/null
+**WARN: (IMPMSMV-1810):	Net FE_OFCN541_ds_datain_10_, driver FE_OFCC541_ds_datain_10_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[10] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN540_FE_OFN14_tdsp_data_out_12_, driver FE_OFCC540_FE_OFN14_tdsp_data_out_12_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[12] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN537_ds_datain_7_, driver FE_OFCC537_ds_datain_7_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[7] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN534_FE_OFN47_ds_datain_2_, driver FE_OFCC534_FE_OFN47_ds_datain_2_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[2] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN532_ds_datain_14_, driver FE_OFCC532_ds_datain_14_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[14] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN530_p_addrs_5_, driver FE_OFCC530_p_addrs_5_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[5] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN528_p_addrs_6_, driver FE_OFCC528_p_addrs_6_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[6] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN526_p_addrs_7_, driver FE_OFCC526_p_addrs_7_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[7] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN524_p_addrs_8_, driver FE_OFCC524_p_addrs_8_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[8] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net refclk__L2_N0, driver refclk__L2_I0/ZN voltage 0.8 does not match reveiver PLLCLK_INST/refclk voltage 1.98.
+**WARN: (IMPMSMV-1810):	Net m_ram_clk__L5_N0, driver m_ram_clk__L5_I0/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/CLK voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net m_clk__L3_N0, driver m_clk__L3_I0/ZN voltage 0.8 does not match reveiver ROM_512x16_0_INST/CLK voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net m_dsram_clk__L1_N0, driver m_dsram_clk__L1_I0/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/CLK voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN479_FE_OFN12_tdsp_data_out_10_, driver FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[10] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN475_FE_OFN21_tdsp_data_out_9_, driver FE_OFCC475_FE_OFN21_tdsp_data_out_9_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[9] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN474_FE_OFN30_tdsp_data_out_11_, driver FE_OFCC474_FE_OFN30_tdsp_data_out_11_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[11] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN467_FE_OFN55_tdsp_data_out_1_, driver FE_OFCC467_FE_OFN55_tdsp_data_out_1_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[1] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN430_ds_datain_15_, driver FE_OFCC430_ds_datain_15_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[15] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFN112_n_70, driver FE_OFC112_n_70/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/A[1] voltage 1.2.
+**WARN: (EMS-62):	Message <IMPMSMV-1810> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+End delay calculation. (MEM=866.371 CPU=0:00:00.9 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=858.371 CPU=0:00:01.3 REAL=0:00:01.0)
+No constrained timing paths found.
+Design may not be constrained or  library is missing timing information.
+
+@tempus 34> report_timing
+
+###############################################################
+#  Generated by:      Cadence Tempus 17.21-s086_1
+#  OS:                Linux x86_64(Host ID ra01)
+#  Generated on:      Mon Dec  8 11:31:16 2025
+#  Design:            dtmf_recvr_core
+#  Command:           report_timing
+###############################################################
+No constrained timing paths found.
+Design may not be constrained or  library is missing timing information.
+
+9
+@tempus 35> set cellCnt [sizeof_collection [get_cells -hierarchical *]]
+8269
+@tempus 36> puts "Your design has: $cellCnt instances"
+puts "Your design has: $cellCnt instances"
+Your design has: 8269 instances
+@tempus 37> get_cells 
+
+FE_SIG_C674_t_addrs_4_ FE_SIG_C671_FE_OFCN486_ds_data_6_ FE_SIG_C663_port_pad_data_out_13_ FE_SIG_C662_scan_out1 FE_SIG_C660_ds_datain_11_ FE_SIG_C654_port_pad_data_out_9_ FE_SIG_C651_FE_OFN228_n_167 FE_SIG_C648_FE_OFCN485_ds_data_4_ FE_SIG_C643_ds_data_7_ FE_SIG_C642_ds_data_5_ FE_SIG_C640_FE_OFCN321_ds_data_9_ FE_SIG_C639_ds_data_0_ FE_SIG_C638_ds_data_2_ FE_SIG_C636_ds_data_8_ FE_SIG_C627_FE_OFN232_digit_4_ FE_SIG_C626_ds_data_1_ FE_SIG_C625_digit_6_ FE_SIG_C624_ds_data_10_ FE_SIG_C622_FE_OFCN517_digit_2_ FE_SIG_C621_FE_OFN236_digit_0_ FE_SIG_C620_FE_OFN229_digit_7_ FE_SIG_C619_ds_data_3_ FE_SIG_C618_FE_OFN240_flag_out FE_SIG_C615_port_pad_data_out_14_ FE_SIG_C614_port_pad_data_out_12_ FE_SIG_C613_dflag FE_SIG_C611_port_pad_data_out_10_ FE_SIG_C609_digit_1_ FE_SIG_C607_FE_OFN231_digit_5_ FE_SIG_C605_digit_3_ FE_SIG_C584_t_addrs_1_ FE_SIG_C583_FE_OFCN533_tdsp_data_out_1_ FE_SIG_C581_tdsp_data_out_4_ FE_SIG_C579_tdsp_data_out_9_ FE_SIG_C578_tdsp_data_out_11_ FE_OFCC543_FE_OFN407_tdsp_data_out_13_ FE_OFCC541_ds_datain_10_ FE_OFCC540_FE_OFN14_tdsp_data_out_12_ FE_OFCC539_tdsp_data_out_0_ FE_OFCC537_ds_datain_7_ FE_OFCC534_FE_OFN47_ds_datain_2_ FE_OFCC533_tdsp_data_out_1_ FE_OFCC532_ds_datain_14_ FE_OFCC530_p_addrs_5_ FE_OFCC528_p_addrs_6_ FE_OFCC526_p_addrs_7_ FE_OFCC524_p_addrs_8_ FE_OFCC517_digit_2_ FE_OFCC509_t_grant FE_OFCC491_tdigit_1_ FE_OFCC490_tdigit_0_ m_clk__I10 m_clk__I9 m_clk__I8 m_clk__I7 m_clk__I6 m_clk__I5 m_clk__I4 m_spi_clk__I1 m_spi_clk__I0 refclk__L2_I0 refclk__L1_I0 spi_clk__Exclude_0 m_rcc_clk__L6_I3 m_rcc_clk__L6_I2 m_rcc_clk__L6_I1 m_rcc_clk__L6_I0 m_rcc_clk__L5_I3 m_rcc_clk__L5_I2 m_rcc_clk__L5_I1 m_rcc_clk__L5_I0 m_rcc_clk__L4_I0 m_rcc_clk__L2_I1 m_rcc_clk__L2_I0 m_rcc_clk__L1_I0 m_ram_clk__L5_I0 m_ram_clk__L4_I0 m_ram_clk__L3_I0 m_ram_clk__L2_I0 m_ram_clk__L1_I0 m_clk__L19_I100 m_clk__L19_I99 m_clk__L19_I98 m_clk__L19_I97 m_clk__L19_I96 m_clk__L19_I95 m_clk__L19_I94 m_clk__L19_I93 m_clk__L19_I92 m_clk__L19_I91 m_clk__L19_I90 m_clk__L19_I89 m_clk__L19_I88 m_clk__L19_I87 m_clk__L19_I86 m_clk__L19_I85 m_clk__L19_I84 m_clk__L19_I83 m_clk__L19_I82 m_clk__L19_I81 ...
+0x4
+@tempus 38> sizeof_collection [get_cells]
+421
+@tempus 39> sizeof_collection [get_cells -hierarchical ]
+[1C
+8269
+@tempus 40> sizeof_collection [get_cells -hierarchical *]
+8269
+@tempus 41> read_spef  ../../design/SPEF/corner_worst_CMAX.spef.gz
+
+SPEF files for RC Corner default_emulate_rc_corner:
+Top-level spef file '../../design/SPEF/corner_worst_CMAX.spef.gz'.
+Start spef parsing (MEM=850.301).
+SPEF file ../../design/SPEF/corner_worst_CMAX.spef.gz.
+Number of Resistors     : 132172
+Number of Ground Caps   : 140357
+Number of Coupling Caps : 31664
+
+End spef parsing (MEM=768.848 CPU=0:00:00.4 REAL=0:00:01.0).
+3 nets are missing in SPEF file. The names of these nets are saved in ./default_emulate_rc_corner.missing_nets.rpt.
+../../design/SPEF/corner_worst_CMAX.spef.gz
+@tempus 42> read_sdc ../../design/dtmf_recvr_core.pr.sdc
+Current (total cpu=0:01:56, real=0:12:55, peak res=626.4M, current mem=626.4M)
+Number of path exceptions in the constraint file = 7
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=626.4M, current mem=615.5M)
+Current (total cpu=0:01:56, real=0:12:55, peak res=626.4M, current mem=615.5M)
+@tempus 43> report_timing
+
+###############################################################
+#  Generated by:      Cadence Tempus 17.21-s086_1
+#  OS:                Linux x86_64(Host ID ra01)
+#  Generated on:      Mon Dec  8 12:22:57 2025
+#  Design:            dtmf_recvr_core
+#  Command:           report_timing
+###############################################################
+#################################################################################
+# Design Name: dtmf_recvr_core
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=811.305)
+AAE DB initialization (MEM=830.383 CPU=0:00:00.1 REAL=0:00:00.0) 
+**WARN: (IMPMSMV-1810):	Net FE_OFCN543_FE_OFN407_tdsp_data_out_13_, driver FE_OFCC543_FE_OFN407_tdsp_data_out_13_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[13] voltage 1.2.
+/dev/null
+**WARN: (IMPMSMV-1810):	Net FE_OFCN541_ds_datain_10_, driver FE_OFCC541_ds_datain_10_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[10] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN540_FE_OFN14_tdsp_data_out_12_, driver FE_OFCC540_FE_OFN14_tdsp_data_out_12_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[12] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN537_ds_datain_7_, driver FE_OFCC537_ds_datain_7_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[7] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN534_FE_OFN47_ds_datain_2_, driver FE_OFCC534_FE_OFN47_ds_datain_2_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[2] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN532_ds_datain_14_, driver FE_OFCC532_ds_datain_14_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[14] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN530_p_addrs_5_, driver FE_OFCC530_p_addrs_5_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[5] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN528_p_addrs_6_, driver FE_OFCC528_p_addrs_6_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[6] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN526_p_addrs_7_, driver FE_OFCC526_p_addrs_7_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[7] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN524_p_addrs_8_, driver FE_OFCC524_p_addrs_8_/Z voltage 0.8 does not match reveiver ROM_512x16_0_INST/A[8] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net refclk__L2_N0, driver refclk__L2_I0/ZN voltage 0.8 does not match reveiver PLLCLK_INST/refclk voltage 1.98.
+**WARN: (IMPMSMV-1810):	Net m_ram_clk__L5_N0, driver m_ram_clk__L5_I0/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/CLK voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net m_clk__L3_N0, driver m_clk__L3_I0/ZN voltage 0.8 does not match reveiver ROM_512x16_0_INST/CLK voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net m_dsram_clk__L1_N0, driver m_dsram_clk__L1_I0/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/CLK voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN479_FE_OFN12_tdsp_data_out_10_, driver FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[10] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN475_FE_OFN21_tdsp_data_out_9_, driver FE_OFCC475_FE_OFN21_tdsp_data_out_9_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[9] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN474_FE_OFN30_tdsp_data_out_11_, driver FE_OFCC474_FE_OFN30_tdsp_data_out_11_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[11] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN467_FE_OFN55_tdsp_data_out_1_, driver FE_OFCC467_FE_OFN55_tdsp_data_out_1_/Z voltage 0.8 does not match reveiver RAM_128x16_TEST_INST/RAM_128x16_INST/D[1] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFCN430_ds_datain_15_, driver FE_OFCC430_ds_datain_15_/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/D[15] voltage 1.2.
+**WARN: (IMPMSMV-1810):	Net FE_OFN112_n_70, driver FE_OFC112_n_70/Z voltage 0.8 does not match reveiver RAM_256x16_TEST_INST/RAM_256x16_INST/A[1] voltage 1.2.
+**WARN: (EMS-62):	Message <IMPMSMV-1810> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+End delay calculation. (MEM=908.684 CPU=0:00:00.9 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=900.684 CPU=0:00:01.2 REAL=0:00:01.0)
+**ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view default_emulate_view at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin.
+Path 1: MET (1.049 ns) Setup Check with Pin RESULTS_CONV_INST/r1477_reg[10]/CK->D
+              Group: m_rcc_clk
+         Startpoint: (R) TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK
+              Clock: (R) m_clk
+           Endpoint: (R) RESULTS_CONV_INST/r1477_reg[10]/D
+              Clock: (F) m_rcc_clk
+
+                       Capture       Launch
+         Clock Edge:+   20.000        0.000
+        Src Latency:+    0.000        0.000
+        Net Latency:+    1.518 (P)    5.302 (P)
+            Arrival:=   21.518        5.302
+
+              Setup:-    0.801
+        Uncertainty:-    0.400
+      Required Time:=   20.317
+       Launch Clock:=    5.302
+          Data Path:+   13.966
+              Slack:=    1.049
+
+#-----------------------------------------------------------------------------------------------------------------------
+# Timing Point                                            Flags  Arc     Edge  Cell       Fanout  Trans   Delay  Arrival  
+#                                                                                                  (ns)    (ns)     (ns)  
+#-----------------------------------------------------------------------------------------------------------------------
+  TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK                 -      CK      R     (arrival)       4  0.145       -    5.302  
+  TDSP_CORE_INST/DECODE_INST/ir_reg[9]/Q                  -      CK->Q   F     SDFFS_X2        1  0.145   0.687    5.989  
+  TDSP_CORE_INST/DECODE_INST/FE_OFC186_port_address_1_/Z  -      A->Z    F     BUF_X16        44  0.146   0.557    6.546  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8211A/ZN            -      A3->ZN  R     NOR3_X1         2  0.481   0.899    7.445  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8090A/ZN            -      A2->ZN  F     NAND2_X1        1  1.137   0.361    7.806  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p6871A/ZN            -      A4->ZN  R     NOR4_X2         2  0.660   1.874    9.680  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7851A6133/ZN        -      A1->ZN  F     NAND2_X4        2  2.748   0.528   10.208  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7333D/ZN            -      A2->ZN  R     NOR2_X4        16  0.942   2.574   12.781  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7551A6117/ZN        -      B1->ZN  F     AOI222_X1       1  3.732   1.476   14.257  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8505A6087/ZN        -      A2->ZN  R     NAND3_X2        2  1.608   1.850   16.108  
+  FE_OFC12_tdsp_data_out_10_/Z                            -      A->Z    R     BUF_X16         1  1.654   0.729   16.837  
+  FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z                 -      A->Z    R     BUF_X16         5  0.383   0.693   17.529  
+  RESULTS_CONV_INST/p7148A29049/ZN                        -      A->ZN   F     INV_X2          1  0.890   0.288   17.817  
+  RESULTS_CONV_INST/FE_OFCC480_n_2024/Z                   -      A->Z    F     BUF_X32         6  0.344   0.615   18.432  
+  RESULTS_CONV_INST/p7155A28968/ZN                        -      A2->ZN  R     OAI22_X1        1  0.148   0.836   19.268  
+  RESULTS_CONV_INST/r1477_reg[10]/D                       -      D       R     SDFF_X2         1  1.735   0.000   19.268  
+#-----------------------------------------------------------------------------------------------------------------------
+
+@tempus 44> exit
+
+*** Memory Usage v#1 (Current mem = 857.980M, initial mem = 228.910M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPMSMV-1810       242  Net %s, driver %s voltage %g does not ma...
+ERROR     IMPDBTCL-259         1  Invalid value '%s' is provided for attri...
+WARNING   UI-235               4  The %s file %s has already been schedule...
+ERROR     IMPCCOPT-2004        1  Cannot run %s as no clock trees are defi...
+ERROR     IMPTCM-32            1  Wrong number of arguments specified for ...
+WARNING   IMPUDM-33            3  Global variable "%s" is obsolete and wil...
+ERROR     IMPIMEX-12           1  Cannot perform initialization step '%s',...
+ERROR     TA-1014              1  Detected a missing clock arrival for one...
+WARNING   GLOBAL-100           3  Global '%s' has become obsolete. It will...
+WARNING   TCLCMD-513           4  The software could not find a matching o...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+WARNING   TECHLIB-459          1  Appending library '%s' to the previously...
+*** Message Summary: 277 warning(s), 5 error(s)
+
+--- Ending "Tempus Timing Signoff Solution" (totcpu=0:34:17, real=6:28:59, mem=858.0M) ---

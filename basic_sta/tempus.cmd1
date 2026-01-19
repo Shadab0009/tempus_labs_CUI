@@ -1,0 +1,52 @@
+#######################################################
+#                                                     
+#  Tempus Timing Signoff Solution Command Logging File                     
+#  Created on Mon Dec  8 11:20:04 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Tempus Timing Signoff Solution v17.21-s086_1 (64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.21-s086_1 NR171017-1606/MT (database version 2.30, 408.7.1) {superthreading v1.46}
+#@(#)CDS: AAE 17.21-s044 (64bit) 03/26/2018 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.21-s024_1 () Mar 26 2018 08:55:31 ( )
+#@(#)CDS: SYNTECH 17.21-s008_1 () Mar 22 2018 10:41:39 ( )
+#@(#)CDS: CPE v17.21-s032
+
+set_layer_preference instanceCell -is_visible 1
+set_layer_preference instanceCell -is_selectable 1
+set_layer_preference instanceFunction -is_visible 1
+set_layer_preference instanceFunction -is_selectable 1
+set_layer_preference instanceStatus -is_visible 1
+set_layer_preference instanceStatus -is_selectable 1
+set_layer_preference layerBlk -is_visible 1
+set_layer_preference layerBlk -is_selectable 1
+set_layer_preference groupmain_Congestion -is_visible 1
+set_layer_preference groupmain_Congestion -is_selectable 1
+man delaycal_enable_si
+man set_db delaycal_enable_si
+set_db delaycal_enable_si -help
+read_libs ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib
+read_libs ../../libs/MACRO/LIBERTY/pllclk.lib
+read_libs ../../libs/MACRO/LIBERTY/ram_256x16A.lib ../../libs/MACRO/LIBERTY/rom_512x16A.lib
+read_netlist ../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz -top dtmf_recvr_core
+init_design
+read_libs ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib
+read_libs ../../libs/MACRO/LIBERTY/pllclk.lib
+read_libs ../../libs/MACRO/LIBERTY/ram_256x16A.lib ../../libs/MACRO/LIBERTY/rom_512x16A.lib
+read_netlist ../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz -top dtmf_recvr_core
+init_design
+report_timing
+report_timing
+get_cells -hierarchical *
+sizeof_collection [get_cells -hierarchical *]
+get_cells 
+get_cells
+sizeof_collection [get_cells]
+get_cells -hierarchical 
+sizeof_collection [get_cells -hierarchical ]
+get_cells -hierarchical *
+sizeof_collection [get_cells -hierarchical *]
+read_spef ../../design/SPEF/corner_worst_CMAX.spef.gz
+read_sdc ../../design/dtmf_recvr_core.pr.sdc
+report_timing
+exit
