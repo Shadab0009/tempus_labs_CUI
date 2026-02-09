@@ -1,0 +1,1383 @@
+VERSION {1.0}
+PTDEF {instance} {pin} {cell} {edge} {clock_edge} {clock} {phase}
+BANNER
+  {Module} {dtmf_recvr_core}
+  {Timing} {LATE}
+  {Slew Propagation} {WORST}
+  {Operating Condition} {WCCOM}
+  {PVT Mode} {max}
+  {Tree Type} {balanced}
+  {Process} {1.000}
+  {Voltage} {1.080}
+  {Temperature} {125.000}
+  {time unit} {1.000 ns}
+  {capacitance unit} {1.000 pF}
+  {resistance unit} {1.000 kOhm}
+  {TOOL} {v17.21-s086_1 ((64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5))}
+  {DATE} {February 09, 2026}
+END_BANNER
+PATH 1
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {} {tdsp_sel} {} {F} {leading} {@} {@(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.560}
+    {=} {Slack Time} {-0.525}
+  END_SLK_CLC
+  SLK -0.525
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {tdsp_sel} {F} {} {} {tdsp_sel} {} {} {} {0.004} {0.021} { 0.000} {-0.525} {} {1} {(630.00,318.00) } 
+    NET {} {} {} {} {} {tdsp_sel} {} { 0.004} { 0.000} {0.007} {0.021} { 0.004} {-0.521} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g506} {A} {F} {Y} {R} {} {INVX2MTR} { 0.614} { 0.000} {1.286} {} { 0.618} { 0.094} {} {12} {(509.00,316.00) (509.00,315.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_8} {} { 0.016} { 0.000} {1.287} {0.094} { 0.634} { 0.110} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g505} {A} {R} {Y} {F} {} {INVX4MTR} { 0.655} { 0.000} {0.792} {} { 1.289} { 0.765} {} {27} {(473.00,319.00) (472.00,318.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_7} {} { 0.075} { 0.000} {0.803} {0.105} { 1.365} { 0.840} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g516} {A} {F} {Y} {R} {} {INVX2MTR} { 1.023} { 0.000} {1.328} {} { 2.388} { 1.863} {} {15} {(310.00,194.00) (310.00,194.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_2} {} { 0.003} { 0.000} {1.328} {0.096} { 2.391} { 1.867} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g497} {A1} {R} {Y} {R} {} {AO22X2MTR} { 1.029} { 0.000} {1.493} {} { 3.421} { 2.896} {} {11} {(318.00,189.00) (318.00,190.00)} 
+    NET {} {} {} {} {} {tdsp_data_out[15]} {} { 0.006} { 0.000} {1.493} {0.112} { 3.427} { 2.902} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {A1N} {R} {Y} {R} {} {OAI2B1X2MTR} { 0.891} { 0.000} {1.318} {} { 4.318} { 3.793} {} {2} {(281.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 4.321} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.557} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.560} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.869} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.869} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 1
+PATH 2
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {ARB_INST/tdsp_grant_reg} {CK}
+  ENDPT {ARB_INST/tdsp_grant_reg} {D} {SDFFRQX1MTR} {F} {leading} {m_clk} {m_clk(C)(P) *}
+  BEGINPT {} {tdsp_sel} {} {R} {leading} {@} {@(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {4.175}
+    {-} {Setup} {0.161}
+    {=} {Required Time} {4.014}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.157}
+    {=} {Slack Time} {-0.143}
+  END_SLK_CLC
+  SLK -0.143
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {tdsp_sel} {R} {} {} {tdsp_sel} {} {} {} {0.004} {0.021} { 0.000} {-0.143} {} {1} {(630.00,318.00) } 
+    NET {} {} {} {} {} {tdsp_sel} {} { 0.004} { 0.000} {0.007} {0.021} { 0.004} {-0.139} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g506} {A} {R} {Y} {F} {} {INVX2MTR} { 0.410} { 0.000} {0.845} {} { 0.414} { 0.271} {} {12} {(509.00,316.00) (509.00,315.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_8} {} { 0.016} { 0.000} {0.846} {0.093} { 0.430} { 0.287} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g505} {A} {F} {Y} {R} {} {INVX4MTR} { 0.702} { 0.000} {0.862} {} { 1.133} { 0.990} {} {27} {(473.00,319.00) (472.00,318.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_7} {} { 0.076} { 0.000} {0.873} {0.105} { 1.208} { 1.065} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g516} {A} {R} {Y} {F} {} {INVX2MTR} { 0.826} { 0.000} {0.962} {} { 2.035} { 1.891} {} {15} {(310.00,194.00) (310.00,194.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_2} {} { 0.022} { 0.000} {0.964} {0.095} { 2.056} { 1.913} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g462} {A1} {F} {Y} {F} {} {AO22XLMTR} { 0.595} { 0.000} {0.300} {} { 2.652} { 2.508} {} {4} {(316.00,234.00) (315.00,235.00)} 
+    NET {} {} {} {} {} {t_addrs[7]} {} { 0.002} { 0.000} {0.300} {0.015} { 2.654} { 2.511} {} {} {} 
+    INST {TDSP_DS_CS_INST/g302} {AN} {F} {Y} {F} {} {NAND2BXLMTR} { 0.364} { 0.000} {0.358} {} { 3.018} { 2.875} {} {3} {(312.00,266.00) (313.00,266.00)} 
+    NET {} {} {} {} {} {TDSP_DS_CS_INST/n_0} {} { 0.000} { 0.000} {0.358} {0.010} { 3.019} { 2.876} {} {} {} 
+    INST {TDSP_DS_CS_INST/g293} {B} {F} {Y} {R} {} {NOR2BX2MTR} { 0.392} { 0.000} {0.467} {} { 3.411} { 3.268} {} {4} {(316.00,272.00) (316.00,273.00)} 
+    NET {} {} {} {} {} {t_breq_st} {} { 0.002} { 0.000} {0.467} {0.016} { 3.413} { 3.270} {} {} {} 
+    INST {ARB_INST/g372} {A1N} {R} {Y} {R} {} {OAI2B2XLMTR} { 0.209} { 0.000} {0.200} {} { 3.622} { 3.479} {} {1} {(320.00,317.00) (321.00,317.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_17} {} { 0.000} { 0.000} {0.200} {0.003} { 3.623} { 3.479} {} {} {} 
+    INST {ARB_INST/g370} {B} {R} {Y} {F} {} {NAND2X2MTR} { 0.156} { 0.000} {0.161} {} { 3.779} { 3.635} {} {4} {(314.00,316.00) (313.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_25} {} { 0.000} { 0.000} {0.161} {0.008} { 3.779} { 3.636} {} {} {} 
+    INST {ARB_INST/g277} {A0} {F} {Y} {F} {} {AO2B2BXLMTR} { 0.230} { 0.000} {0.088} {} { 4.009} { 3.865} {} {1} {(307.00,317.00) (306.00,317.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_6} {} { 0.000} { 0.000} {0.088} {0.002} { 4.009} { 3.865} {} {} {} 
+    INST {ARB_INST/g276} {B} {F} {Y} {F} {} {AND2X1MTR} { 0.148} { 0.000} {0.087} {} { 4.157} { 4.014} {} {1} {(306.00,316.00) (307.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_7} {} { 0.000} { 0.000} {0.087} {0.003} { 4.157} { 4.014} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} { 0.143} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} { 0.143} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.274} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.044} { 0.000} {0.187} {0.203} { 0.175} { 0.318} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 2
+PATH 3
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {ARB_INST/tdsp_grant_reg} {CK}
+  ENDPT {ARB_INST/tdsp_grant_reg} {D} {SDFFRQX1MTR} {R} {leading} {m_clk} {m_clk(C)(P) *}
+  BEGINPT {} {tdsp_sel} {} {R} {leading} {@} {@(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {4.175}
+    {-} {Setup} {0.160}
+    {=} {Required Time} {4.015}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.115}
+    {=} {Slack Time} {-0.100}
+  END_SLK_CLC
+  SLK -0.100
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {tdsp_sel} {R} {} {} {tdsp_sel} {} {} {} {0.004} {0.021} { 0.000} {-0.100} {} {1} {(630.00,318.00) } 
+    NET {} {} {} {} {} {tdsp_sel} {} { 0.004} { 0.000} {0.007} {0.021} { 0.004} {-0.096} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g506} {A} {R} {Y} {F} {} {INVX2MTR} { 0.410} { 0.000} {0.845} {} { 0.414} { 0.314} {} {12} {(509.00,316.00) (509.00,315.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_8} {} { 0.016} { 0.000} {0.846} {0.093} { 0.430} { 0.331} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g505} {A} {F} {Y} {R} {} {INVX4MTR} { 0.702} { 0.000} {0.862} {} { 1.133} { 1.033} {} {27} {(473.00,319.00) (472.00,318.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_7} {} { 0.076} { 0.000} {0.873} {0.105} { 1.208} { 1.108} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g516} {A} {R} {Y} {F} {} {INVX2MTR} { 0.826} { 0.000} {0.962} {} { 2.035} { 1.935} {} {15} {(310.00,194.00) (310.00,194.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_2} {} { 0.022} { 0.000} {0.964} {0.095} { 2.056} { 1.957} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g462} {A1} {F} {Y} {F} {} {AO22XLMTR} { 0.595} { 0.000} {0.300} {} { 2.652} { 2.552} {} {4} {(316.00,234.00) (315.00,235.00)} 
+    NET {} {} {} {} {} {t_addrs[7]} {} { 0.002} { 0.000} {0.300} {0.015} { 2.654} { 2.554} {} {} {} 
+    INST {TDSP_DS_CS_INST/g302} {AN} {F} {Y} {F} {} {NAND2BXLMTR} { 0.364} { 0.000} {0.358} {} { 3.018} { 2.919} {} {3} {(312.00,266.00) (313.00,266.00)} 
+    NET {} {} {} {} {} {TDSP_DS_CS_INST/n_0} {} { 0.000} { 0.000} {0.358} {0.010} { 3.019} { 2.919} {} {} {} 
+    INST {TDSP_DS_CS_INST/g293} {B} {F} {Y} {R} {} {NOR2BX2MTR} { 0.392} { 0.000} {0.467} {} { 3.411} { 3.311} {} {4} {(316.00,272.00) (316.00,273.00)} 
+    NET {} {} {} {} {} {t_breq_st} {} { 0.002} { 0.000} {0.467} {0.016} { 3.413} { 3.313} {} {} {} 
+    INST {ARB_INST/g372} {A1N} {R} {Y} {R} {} {OAI2B2XLMTR} { 0.209} { 0.000} {0.200} {} { 3.622} { 3.523} {} {1} {(320.00,317.00) (321.00,317.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_17} {} { 0.000} { 0.000} {0.200} {0.003} { 3.623} { 3.523} {} {} {} 
+    INST {ARB_INST/g370} {B} {R} {Y} {F} {} {NAND2X2MTR} { 0.156} { 0.000} {0.161} {} { 3.779} { 3.679} {} {4} {(314.00,316.00) (313.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_25} {} { 0.000} { 0.000} {0.161} {0.008} { 3.779} { 3.679} {} {} {} 
+    INST {ARB_INST/g277} {B1N} {F} {Y} {R} {} {AO2B2BXLMTR} { 0.215} { 0.000} {0.085} {} { 3.994} { 3.895} {} {1} {(308.00,317.00) (306.00,317.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_6} {} { 0.000} { 0.000} {0.085} {0.002} { 3.995} { 3.895} {} {} {} 
+    INST {ARB_INST/g276} {B} {R} {Y} {R} {} {AND2X1MTR} { 0.120} { 0.000} {0.075} {} { 4.114} { 4.014} {} {1} {(306.00,316.00) (307.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_7} {} { 0.000} { 0.000} {0.075} {0.003} { 4.115} { 4.015} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} { 0.100} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} { 0.100} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.231} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.044} { 0.000} {0.187} {0.203} { 0.175} { 0.274} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 3
+PATH 4
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {ARB_INST/tdsp_grant_reg} {CK}
+  ENDPT {ARB_INST/tdsp_grant_reg} {D} {SDFFRQX1MTR} {F} {leading} {m_clk} {m_clk(C)(P) *}
+  BEGINPT {} {tdsp_sel} {} {R} {leading} {@} {@(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {4.175}
+    {-} {Setup} {0.161}
+    {=} {Required Time} {4.014}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.102}
+    {=} {Slack Time} {-0.088}
+  END_SLK_CLC
+  SLK -0.088
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {tdsp_sel} {R} {} {} {tdsp_sel} {} {} {} {0.004} {0.021} { 0.000} {-0.088} {} {1} {(630.00,318.00) } 
+    NET {} {} {} {} {} {tdsp_sel} {} { 0.004} { 0.000} {0.007} {0.021} { 0.004} {-0.084} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g506} {A} {R} {Y} {F} {} {INVX2MTR} { 0.410} { 0.000} {0.845} {} { 0.414} { 0.326} {} {12} {(509.00,316.00) (509.00,315.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_8} {} { 0.016} { 0.000} {0.846} {0.093} { 0.430} { 0.342} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g505} {A} {F} {Y} {R} {} {INVX4MTR} { 0.702} { 0.000} {0.862} {} { 1.133} { 1.045} {} {27} {(473.00,319.00) (472.00,318.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_7} {} { 0.076} { 0.000} {0.873} {0.105} { 1.208} { 1.120} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g516} {A} {R} {Y} {F} {} {INVX2MTR} { 0.826} { 0.000} {0.962} {} { 2.035} { 1.946} {} {15} {(310.00,194.00) (310.00,194.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_2} {} { 0.022} { 0.000} {0.964} {0.095} { 2.057} { 1.968} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g462} {A1} {F} {Y} {F} {} {AO22XLMTR} { 0.595} { 0.000} {0.300} {} { 2.652} { 2.563} {} {4} {(316.00,234.00) (315.00,235.00)} 
+    NET {} {} {} {} {} {t_addrs[7]} {} { 0.002} { 0.000} {0.300} {0.015} { 2.654} { 2.566} {} {} {} 
+    INST {TDSP_DS_CS_INST/g302} {AN} {F} {Y} {F} {} {NAND2BXLMTR} { 0.364} { 0.000} {0.358} {} { 3.018} { 2.930} {} {3} {(312.00,266.00) (313.00,266.00)} 
+    NET {} {} {} {} {} {TDSP_DS_CS_INST/n_0} {} { 0.000} { 0.000} {0.358} {0.010} { 3.019} { 2.931} {} {} {} 
+    INST {TDSP_DS_CS_INST/g293} {B} {F} {Y} {R} {} {NOR2BX2MTR} { 0.392} { 0.000} {0.467} {} { 3.411} { 3.323} {} {4} {(316.00,272.00) (316.00,273.00)} 
+    NET {} {} {} {} {} {t_breq_st} {} { 0.002} { 0.000} {0.467} {0.016} { 3.413} { 3.325} {} {} {} 
+    INST {ARB_INST/g373} {B0} {R} {Y} {F} {} {OAI2BB2X2MTR} { 0.134} { 0.000} {0.122} {} { 3.547} { 3.459} {} {1} {(318.00,317.00) (317.00,318.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_16} {} { 0.000} { 0.000} {0.122} {0.002} { 3.547} { 3.459} {} {} {} 
+    INST {ARB_INST/g371} {B0} {F} {Y} {R} {} {OAI31X2MTR} { 0.130} { 0.000} {0.484} {} { 3.677} { 3.588} {} {4} {(317.00,319.00) (317.00,319.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_24} {} { 0.000} { 0.000} {0.484} {0.009} { 3.677} { 3.589} {} {} {} 
+    INST {ARB_INST/g277} {A1N} {R} {Y} {F} {} {AO2B2BXLMTR} { 0.276} { 0.000} {0.088} {} { 3.954} { 3.865} {} {1} {(306.00,317.00) (306.00,317.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_6} {} { 0.000} { 0.000} {0.088} {0.002} { 3.954} { 3.865} {} {} {} 
+    INST {ARB_INST/g276} {B} {F} {Y} {F} {} {AND2X1MTR} { 0.148} { 0.000} {0.087} {} { 4.102} { 4.014} {} {1} {(306.00,316.00) (307.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_7} {} { 0.000} { 0.000} {0.087} {0.003} { 4.102} { 4.014} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} { 0.088} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} { 0.088} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.219} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.044} { 0.000} {0.187} {0.203} { 0.175} { 0.263} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 4
+PATH 5
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {ARB_INST/tdsp_grant_reg} {CK}
+  ENDPT {ARB_INST/tdsp_grant_reg} {D} {SDFFRQX1MTR} {F} {leading} {m_clk} {m_clk(C)(P) *}
+  BEGINPT {} {tdsp_sel} {} {R} {leading} {@} {@(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {4.175}
+    {-} {Setup} {0.161}
+    {=} {Required Time} {4.014}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.095}
+    {=} {Slack Time} {-0.081}
+  END_SLK_CLC
+  SLK -0.081
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {tdsp_sel} {R} {} {} {tdsp_sel} {} {} {} {0.004} {0.021} { 0.000} {-0.081} {} {1} {(630.00,318.00) } 
+    NET {} {} {} {} {} {tdsp_sel} {} { 0.004} { 0.000} {0.007} {0.021} { 0.004} {-0.077} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g506} {A} {R} {Y} {F} {} {INVX2MTR} { 0.410} { 0.000} {0.845} {} { 0.414} { 0.333} {} {12} {(509.00,316.00) (509.00,315.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_8} {} { 0.016} { 0.000} {0.846} {0.093} { 0.430} { 0.350} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g505} {A} {F} {Y} {R} {} {INVX4MTR} { 0.702} { 0.000} {0.862} {} { 1.133} { 1.052} {} {27} {(473.00,319.00) (472.00,318.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_7} {} { 0.076} { 0.000} {0.873} {0.105} { 1.208} { 1.127} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g516} {A} {R} {Y} {F} {} {INVX2MTR} { 0.826} { 0.000} {0.962} {} { 2.035} { 1.954} {} {15} {(310.00,194.00) (310.00,194.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_2} {} { 0.022} { 0.000} {0.964} {0.095} { 2.056} { 1.976} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g462} {A1} {F} {Y} {F} {} {AO22XLMTR} { 0.595} { 0.000} {0.300} {} { 2.652} { 2.571} {} {4} {(316.00,234.00) (315.00,235.00)} 
+    NET {} {} {} {} {} {t_addrs[7]} {} { 0.002} { 0.000} {0.300} {0.015} { 2.654} { 2.573} {} {} {} 
+    INST {TDSP_DS_CS_INST/g302} {AN} {F} {Y} {F} {} {NAND2BXLMTR} { 0.364} { 0.000} {0.358} {} { 3.018} { 2.938} {} {3} {(312.00,266.00) (313.00,266.00)} 
+    NET {} {} {} {} {} {TDSP_DS_CS_INST/n_0} {} { 0.000} { 0.000} {0.358} {0.010} { 3.019} { 2.938} {} {} {} 
+    INST {TDSP_DS_CS_INST/g293} {B} {F} {Y} {R} {} {NOR2BX2MTR} { 0.392} { 0.000} {0.467} {} { 3.411} { 3.330} {} {4} {(316.00,272.00) (316.00,273.00)} 
+    NET {} {} {} {} {} {t_breq_st} {} { 0.002} { 0.000} {0.467} {0.016} { 3.413} { 3.332} {} {} {} 
+    INST {ARB_INST/g374} {A0} {R} {Y} {R} {} {AO21XLMTR} { 0.186} { 0.000} {0.081} {} { 3.600} { 3.519} {} {1} {(319.00,316.00) (318.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_15} {} { 0.000} { 0.000} {0.081} {0.002} { 3.600} { 3.519} {} {} {} 
+    INST {ARB_INST/g370} {A} {R} {Y} {F} {} {NAND2X2MTR} { 0.116} { 0.000} {0.161} {} { 3.716} { 3.635} {} {4} {(314.00,316.00) (313.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_25} {} { 0.000} { 0.000} {0.161} {0.008} { 3.716} { 3.636} {} {} {} 
+    INST {ARB_INST/g277} {A0} {F} {Y} {F} {} {AO2B2BXLMTR} { 0.230} { 0.000} {0.088} {} { 3.946} { 3.865} {} {1} {(307.00,317.00) (306.00,317.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_6} {} { 0.000} { 0.000} {0.088} {0.002} { 3.946} { 3.865} {} {} {} 
+    INST {ARB_INST/g276} {B} {F} {Y} {F} {} {AND2X1MTR} { 0.148} { 0.000} {0.087} {} { 4.095} { 4.014} {} {1} {(306.00,316.00) (307.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_7} {} { 0.000} { 0.000} {0.087} {0.003} { 4.095} { 4.014} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} { 0.081} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} { 0.081} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.212} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.044} { 0.000} {0.187} {0.203} { 0.175} { 0.255} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 5
+PATH 6
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.104}
+    {=} {Slack Time} {-0.069}
+  END_SLK_CLC
+  SLK -0.069
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.069} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.069} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.062} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.104} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.267} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.268} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.520} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.507} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.271} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.442} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.641} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.642} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1073} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.130} { 0.000} {0.148} {} { 1.840} { 1.772} {} {1} {(319.00,175.00) (319.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_1} {} { 0.000} { 0.000} {0.148} {0.002} { 1.841} { 1.772} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {B0} {R} {Y} {F} {} {OAI21X2MTR} { 0.110} { 0.000} {0.320} {} { 1.951} { 1.882} {} {2} {(318.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.320} {0.004} { 1.951} { 1.882} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1008} {B} {F} {Y} {R} {} {NAND2XLMTR} { 0.198} { 0.000} {0.211} {} { 2.149} { 2.081} {} {2} {(319.00,172.00) (319.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_33} {} { 0.000} { 0.000} {0.211} {0.006} { 2.149} { 2.081} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_95_0} {B0} {R} {Y} {F} {} {OAI2BB1X4MTR} { 0.091} { 0.000} {0.080} {} { 2.240} { 2.172} {} {1} {(314.00,173.00) (314.00,173.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_52_0} {} { 0.000} { 0.000} {0.080} {0.004} { 2.241} { 2.172} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_94_0} {A} {F} {Y} {R} {} {CLKNAND2X4MTR} { 0.063} { 0.000} {0.132} {} { 2.303} { 2.235} {} {1} {(314.00,167.00) (314.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_51_0} {} { 0.000} { 0.000} {0.132} {0.006} { 2.303} { 2.235} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_93_0} {A} {R} {Y} {F} {} {CLKNAND2X8MTR} { 0.089} { 0.000} {0.123} {} { 2.392} { 2.324} {} {4} {(318.00,168.00) (317.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_54} {} { 0.001} { 0.000} {0.123} {0.014} { 2.393} { 2.324} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_27_0} {A0} {F} {Y} {R} {} {OAI21X3MTR} { 0.152} { 0.000} {0.183} {} { 2.545} { 2.477} {} {3} {(308.00,160.00) (308.00,160.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_11_0} {} { 0.000} { 0.000} {0.183} {0.007} { 2.546} { 2.477} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_28_0} {A} {R} {Y} {R} {} {AND3X6MTR} { 0.165} { 0.000} {0.107} {} { 2.710} { 2.642} {} {5} {(306.00,161.00) (307.00,161.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_75} {} { 0.001} { 0.000} {0.107} {0.018} { 2.711} { 2.643} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g956} {B} {R} {Y} {F} {} {NAND4BX4MTR} { 0.119} { 0.000} {0.143} {} { 2.831} { 2.762} {} {2} {(304.00,168.00) (304.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_79} {} { 0.000} { 0.000} {0.143} {0.003} { 2.831} { 2.762} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g949} {B} {F} {Y} {R} {} {NOR2X2MTR} { 0.202} { 0.000} {0.260} {} { 3.033} { 2.964} {} {5} {(301.00,168.00) (301.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_85} {} { 0.000} { 0.000} {0.260} {0.008} { 3.033} { 2.964} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g946} {B0} {R} {Y} {R} {} {AO21X2MTR} { 0.164} { 0.000} {0.104} {} { 3.197} { 3.128} {} {3} {(298.00,168.00) (297.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_88} {} { 0.000} { 0.000} {0.104} {0.006} { 3.197} { 3.128} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_163_0} {B} {R} {Y} {F} {} {NOR2X4MTR} { 0.069} { 0.000} {0.107} {} { 3.266} { 3.198} {} {1} {(299.00,169.00) (300.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_95_0} {} { 0.001} { 0.000} {0.107} {0.008} { 3.267} { 3.199} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {A0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.097} { 0.000} {0.178} {} { 3.365} { 3.296} {} {1} {(316.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.366} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.482} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.482} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.861} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.865} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.100} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.104} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.413} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.413} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 6
+PATH 7
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[12]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {} {tdsp_sel} {} {F} {leading} {@} {@(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.404}
+    {=} {Required Time} {3.940}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.006}
+    {=} {Slack Time} {-0.066}
+  END_SLK_CLC
+  SLK -0.066
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {tdsp_sel} {F} {} {} {tdsp_sel} {} {} {} {0.004} {0.021} { 0.000} {-0.066} {} {1} {(630.00,318.00) } 
+    NET {} {} {} {} {} {tdsp_sel} {} { 0.004} { 0.000} {0.007} {0.021} { 0.004} {-0.062} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g506} {A} {F} {Y} {R} {} {INVX2MTR} { 0.614} { 0.000} {1.286} {} { 0.618} { 0.552} {} {12} {(509.00,316.00) (509.00,315.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_8} {} { 0.016} { 0.000} {1.287} {0.094} { 0.634} { 0.568} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g505} {A} {R} {Y} {F} {} {INVX4MTR} { 0.655} { 0.000} {0.792} {} { 1.289} { 1.223} {} {27} {(473.00,319.00) (472.00,318.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_7} {} { 0.075} { 0.000} {0.803} {0.105} { 1.365} { 1.298} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g515} {A} {F} {Y} {R} {} {INVX2MTR} { 0.951} { 0.000} {1.210} {} { 2.316} { 2.249} {} {16} {(313.00,194.00) (313.00,194.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_0} {} { 0.002} { 0.000} {1.210} {0.086} { 2.318} { 2.252} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g470} {A1} {R} {Y} {R} {} {AO22X2MTR} { 1.097} { 0.000} {1.682} {} { 3.415} { 3.349} {} {11} {(317.00,194.00) (317.00,194.00)} 
+    NET {} {} {} {} {} {tdsp_data_out[12]} {} { 0.011} { 0.000} {1.682} {0.124} { 3.426} { 3.360} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g301} {B0} {R} {Y} {R} {} {AO22X4MTR} { 0.574} { 0.000} {0.420} {} { 4.000} { 3.934} {} {2} {(297.00,172.00) (296.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[12]} {} { 0.006} { 0.000} {0.517} {0.059} { 4.006} { 3.940} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.410} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.410} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 7
+PATH 8
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.094}
+    {=} {Slack Time} {-0.059}
+  END_SLK_CLC
+  SLK -0.059
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.059} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.059} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.071} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.113} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.276} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.277} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.529} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.516} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.280} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.451} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.650} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.651} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1073} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.130} { 0.000} {0.148} {} { 1.840} { 1.781} {} {1} {(319.00,175.00) (319.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_1} {} { 0.000} { 0.000} {0.148} {0.002} { 1.841} { 1.781} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {B0} {R} {Y} {F} {} {OAI21X2MTR} { 0.110} { 0.000} {0.320} {} { 1.951} { 1.891} {} {2} {(318.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.320} {0.004} { 1.951} { 1.891} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1007} {B} {F} {Y} {R} {} {CLKNAND2X2MTR} { 0.143} { 0.000} {0.150} {} { 2.094} { 2.034} {} {1} {(317.00,170.00) (318.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_34} {} { 0.000} { 0.000} {0.150} {0.004} { 2.094} { 2.035} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1002} {B} {R} {Y} {F} {} {NAND2X4MTR} { 0.097} { 0.000} {0.126} {} { 2.191} { 2.132} {} {2} {(317.00,165.00) (317.00,166.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_39} {} { 0.000} { 0.000} {0.126} {0.007} { 2.192} { 2.132} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g993} {B} {F} {Y} {R} {} {NAND2X6MTR} { 0.099} { 0.000} {0.155} {} { 2.291} { 2.231} {} {3} {(314.00,156.00) (314.00,156.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_48} {} { 0.001} { 0.000} {0.155} {0.014} { 2.291} { 2.232} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g976} {A} {R} {Y} {F} {} {NAND3X12MTR} { 0.090} { 0.000} {0.099} {} { 2.381} { 2.322} {} {4} {(311.00,152.00) (308.00,153.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_62} {} { 0.000} { 0.000} {0.099} {0.010} { 2.382} { 2.322} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_27_0} {A1} {F} {Y} {R} {} {OAI21X3MTR} { 0.154} { 0.000} {0.183} {} { 2.536} { 2.477} {} {3} {(308.00,161.00) (308.00,160.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_11_0} {} { 0.000} { 0.000} {0.183} {0.007} { 2.536} { 2.477} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_28_0} {A} {R} {Y} {R} {} {AND3X6MTR} { 0.165} { 0.000} {0.107} {} { 2.701} { 2.642} {} {5} {(306.00,161.00) (307.00,161.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_75} {} { 0.001} { 0.000} {0.107} {0.018} { 2.702} { 2.643} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g956} {B} {R} {Y} {F} {} {NAND4BX4MTR} { 0.119} { 0.000} {0.143} {} { 2.821} { 2.762} {} {2} {(304.00,168.00) (304.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_79} {} { 0.000} { 0.000} {0.143} {0.003} { 2.822} { 2.762} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g949} {B} {F} {Y} {R} {} {NOR2X2MTR} { 0.202} { 0.000} {0.260} {} { 3.023} { 2.964} {} {5} {(301.00,168.00) (301.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_85} {} { 0.000} { 0.000} {0.260} {0.008} { 3.024} { 2.964} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g946} {B0} {R} {Y} {R} {} {AO21X2MTR} { 0.164} { 0.000} {0.104} {} { 3.188} { 3.128} {} {3} {(298.00,168.00) (297.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_88} {} { 0.000} { 0.000} {0.104} {0.006} { 3.188} { 3.128} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_163_0} {B} {R} {Y} {F} {} {NOR2X4MTR} { 0.069} { 0.000} {0.107} {} { 3.257} { 3.198} {} {1} {(299.00,169.00) (300.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_95_0} {} { 0.001} { 0.000} {0.107} {0.008} { 3.258} { 3.199} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {A0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.097} { 0.000} {0.178} {} { 3.356} { 3.296} {} {1} {(316.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.357} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.472} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.473} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.852} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.856} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.091} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.094} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.403} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.403} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 8
+PATH 9
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[6]} {CK} {SDFFHQNX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.094}
+    {=} {Slack Time} {-0.059}
+  END_SLK_CLC
+  SLK -0.059
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.059} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.059} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.071} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.113} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.276} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.337} { 0.278} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[6]} {CK} {R} {QN} {R} {} {SDFFHQNX4MTR} { 0.293} { 0.000} {0.193} {} { 0.630} { 0.570} {} {2} {(471.00,319.00) (466.00,318.00)} 
+    NET {} {} {} {} {} {upcm[6]} {} {-0.013} { 0.000} {0.148} {0.026} { 0.616} { 0.557} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__315} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.663} { 0.000} {1.068} {} { 1.280} { 1.220} {} {2} {(460.00,178.00) (460.00,178.00)} 
+    NET {} {} {} {} {} {upcm_feed[6]} {} { 0.141} { 0.000} {1.586} {0.050} { 1.421} { 1.361} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1042} {A} {R} {Y} {F} {} {INVX4MTR} { 0.308} { 0.000} {0.460} {} { 1.729} { 1.669} {} {9} {(313.00,165.00) (313.00,165.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_12} {} { 0.002} { 0.000} {0.460} {0.021} { 1.731} { 1.671} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1039} {A} {F} {Y} {R} {} {INVX2MTR} { 0.412} { 0.000} {0.467} {} { 2.142} { 2.083} {} {10} {(312.00,161.00) (312.00,161.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_13} {} { 0.000} { 0.000} {0.467} {0.030} { 2.142} { 2.083} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_40_0} {A} {R} {Y} {F} {} {INVXLMTR} { 0.170} { 0.000} {0.207} {} { 2.313} { 2.253} {} {1} {(312.00,161.00) (313.00,161.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_19_0} {} { 0.000} { 0.000} {0.207} {0.004} { 2.313} { 2.254} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_39_0} {B} {F} {Y} {R} {} {NAND2BX4MTR} { 0.088} { 0.000} {0.092} {} { 2.401} { 2.342} {} {1} {(311.00,167.00) (311.00,166.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_18_0} {} { 0.000} { 0.000} {0.092} {0.003} { 2.401} { 2.342} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_38_0} {A} {R} {Y} {F} {} {CLKNAND2X4MTR} { 0.071} { 0.000} {0.077} {} { 2.472} { 2.413} {} {3} {(307.00,168.00) (307.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_17_0} {} { 0.000} { 0.000} {0.077} {0.005} { 2.472} { 2.413} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_46_0} {A} {F} {Y} {R} {} {INVXLMTR} { 0.061} { 0.000} {0.062} {} { 2.533} { 2.474} {} {1} {(306.00,168.00) (306.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_24_0} {} { 0.000} { 0.000} {0.062} {0.002} { 2.533} { 2.474} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_45_0} {A} {R} {Y} {F} {} {CLKNAND2X2MTR} { 0.076} { 0.000} {0.087} {} { 2.609} { 2.549} {} {2} {(305.00,167.00) (305.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_23_0} {} { 0.000} { 0.000} {0.087} {0.004} { 2.609} { 2.550} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_50_0} {A} {F} {Y} {R} {} {INVXLMTR} { 0.084} { 0.000} {0.092} {} { 2.693} { 2.634} {} {1} {(306.00,167.00) (306.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_2} {} { 0.000} { 0.000} {0.092} {0.004} { 2.693} { 2.634} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g956} {D} {R} {Y} {F} {} {NAND4BX4MTR} { 0.128} { 0.000} {0.143} {} { 2.821} { 2.762} {} {2} {(303.00,168.00) (304.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_79} {} { 0.000} { 0.000} {0.143} {0.003} { 2.822} { 2.762} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g949} {B} {F} {Y} {R} {} {NOR2X2MTR} { 0.202} { 0.000} {0.260} {} { 3.023} { 2.964} {} {5} {(301.00,168.00) (301.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_85} {} { 0.000} { 0.000} {0.260} {0.008} { 3.024} { 2.964} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g946} {B0} {R} {Y} {R} {} {AO21X2MTR} { 0.164} { 0.000} {0.104} {} { 3.188} { 3.128} {} {3} {(298.00,168.00) (297.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_88} {} { 0.000} { 0.000} {0.104} {0.006} { 3.188} { 3.128} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_163_0} {B} {R} {Y} {F} {} {NOR2X4MTR} { 0.069} { 0.000} {0.107} {} { 3.257} { 3.198} {} {1} {(299.00,169.00) (300.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_95_0} {} { 0.001} { 0.000} {0.107} {0.008} { 3.258} { 3.199} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {A0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.097} { 0.000} {0.178} {} { 3.356} { 3.296} {} {1} {(316.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.357} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.472} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.473} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.852} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.856} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.091} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.094} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.403} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.403} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 9
+PATH 10
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[3]} {CK} {SDFFQX1MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.088}
+    {=} {Slack Time} {-0.053}
+  END_SLK_CLC
+  SLK -0.053
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.053} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.053} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.078} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.119} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.283} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.283} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[3]} {CK} {R} {Q} {R} {} {SDFFQX1MTR} { 0.415} { 0.000} {0.394} {} { 0.751} { 0.698} {} {2} {(452.00,317.00) (455.00,318.00)} 
+    NET {} {} {} {} {} {upcm[3]} {} {-0.034} { 0.000} {0.306} {0.024} { 0.718} { 0.664} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__318} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.825} { 0.000} {1.291} {} { 1.542} { 1.489} {} {2} {(461.00,191.00) (462.00,190.00)} 
+    NET {} {} {} {} {} {upcm_feed[3]} {} { 0.170} { 0.000} {1.916} {0.061} { 1.713} { 1.660} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1025} {B} {R} {Y} {R} {} {OR2X2MTR} { 0.281} { 0.000} {0.140} {} { 1.994} { 1.941} {} {1} {(315.00,176.00) (315.00,177.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_18} {} { 0.000} { 0.000} {0.140} {0.003} { 1.994} { 1.941} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1019} {A} {R} {Y} {F} {} {NAND2X4MTR} { 0.081} { 0.000} {0.088} {} { 2.075} { 2.022} {} {3} {(311.00,175.00) (310.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_22} {} { 0.000} { 0.000} {0.088} {0.006} { 2.076} { 2.023} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1005} {A1} {F} {Y} {R} {} {AOI22X2MTR} { 0.176} { 0.000} {0.285} {} { 2.251} { 2.198} {} {2} {(308.00,173.00) (307.00,174.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_36} {} { 0.000} { 0.000} {0.285} {0.007} { 2.252} { 2.199} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g986} {A1} {R} {Y} {R} {} {OA22X2MTR} { 0.266} { 0.000} {0.178} {} { 2.518} { 2.465} {} {5} {(307.00,159.00) (306.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_55} {} { 0.001} { 0.000} {0.178} {0.011} { 2.519} { 2.466} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_28_0} {C} {R} {Y} {R} {} {AND3X6MTR} { 0.176} { 0.000} {0.107} {} { 2.695} { 2.642} {} {5} {(305.00,161.00) (307.00,161.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_75} {} { 0.001} { 0.000} {0.107} {0.018} { 2.696} { 2.643} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g956} {B} {R} {Y} {F} {} {NAND4BX4MTR} { 0.119} { 0.000} {0.143} {} { 2.815} { 2.762} {} {2} {(304.00,168.00) (304.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_79} {} { 0.000} { 0.000} {0.143} {0.003} { 2.815} { 2.762} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g949} {B} {F} {Y} {R} {} {NOR2X2MTR} { 0.202} { 0.000} {0.260} {} { 3.017} { 2.964} {} {5} {(301.00,168.00) (301.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_85} {} { 0.000} { 0.000} {0.260} {0.008} { 3.017} { 2.964} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g946} {B0} {R} {Y} {R} {} {AO21X2MTR} { 0.164} { 0.000} {0.104} {} { 3.181} { 3.128} {} {3} {(298.00,168.00) (297.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_88} {} { 0.000} { 0.000} {0.104} {0.006} { 3.182} { 3.128} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_163_0} {B} {R} {Y} {F} {} {NOR2X4MTR} { 0.069} { 0.000} {0.107} {} { 3.251} { 3.198} {} {1} {(299.00,169.00) (300.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_95_0} {} { 0.001} { 0.000} {0.107} {0.008} { 3.252} { 3.199} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {A0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.097} { 0.000} {0.178} {} { 3.349} { 3.296} {} {1} {(316.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.351} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.466} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.466} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.846} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.849} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.085} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.088} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.397} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.397} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 10
+PATH 11
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[9]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {} {tdsp_sel} {} {F} {leading} {@} {@(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.375}
+    {=} {Required Time} {3.969}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.022}
+    {=} {Slack Time} {-0.053}
+  END_SLK_CLC
+  SLK -0.053
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {tdsp_sel} {F} {} {} {tdsp_sel} {} {} {} {0.004} {0.021} { 0.000} {-0.053} {} {1} {(630.00,318.00) } 
+    NET {} {} {} {} {} {tdsp_sel} {} { 0.004} { 0.000} {0.007} {0.021} { 0.004} {-0.049} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g506} {A} {F} {Y} {R} {} {INVX2MTR} { 0.614} { 0.000} {1.286} {} { 0.618} { 0.565} {} {12} {(509.00,316.00) (509.00,315.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_8} {} { 0.016} { 0.000} {1.287} {0.094} { 0.634} { 0.581} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g505} {A} {R} {Y} {F} {} {INVX4MTR} { 0.655} { 0.000} {0.792} {} { 1.289} { 1.237} {} {27} {(473.00,319.00) (472.00,318.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_7} {} { 0.075} { 0.000} {0.803} {0.105} { 1.365} { 1.312} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g516} {A} {F} {Y} {R} {} {INVX2MTR} { 1.023} { 0.000} {1.328} {} { 2.388} { 2.335} {} {15} {(310.00,194.00) (310.00,194.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_2} {} { 0.004} { 0.000} {1.328} {0.096} { 2.392} { 2.339} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g481} {A1} {R} {Y} {R} {} {AO22X2MTR} { 1.096} { 0.000} {1.672} {} { 3.488} { 3.435} {} {11} {(313.00,162.00) (312.00,162.00)} 
+    NET {} {} {} {} {} {tdsp_data_out[9]} {} { 0.007} { 0.000} {1.672} {0.123} { 3.495} { 3.442} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g286} {B0} {R} {Y} {R} {} {AO22X4MTR} { 0.523} { 0.000} {0.327} {} { 4.018} { 3.965} {} {2} {(304.00,162.00) (302.00,162.00)} 
+    NET {} {} {} {} {} {ds_datain[9]} {} { 0.004} { 0.000} {0.406} {0.044} { 4.022} { 3.969} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.397} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.397} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 11
+PATH 12
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.079}
+    {=} {Slack Time} {-0.044}
+  END_SLK_CLC
+  SLK -0.044
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.044} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.044} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.087} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.128} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.292} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.292} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.544} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.531} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.295} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.466} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.666} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.667} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1073} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.130} { 0.000} {0.148} {} { 1.840} { 1.796} {} {1} {(319.00,175.00) (319.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_1} {} { 0.000} { 0.000} {0.148} {0.002} { 1.841} { 1.796} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {B0} {R} {Y} {F} {} {OAI21X2MTR} { 0.110} { 0.000} {0.320} {} { 1.951} { 1.906} {} {2} {(318.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.320} {0.004} { 1.951} { 1.907} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1007} {B} {F} {Y} {R} {} {CLKNAND2X2MTR} { 0.143} { 0.000} {0.150} {} { 2.094} { 2.050} {} {1} {(317.00,170.00) (318.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_34} {} { 0.000} { 0.000} {0.150} {0.004} { 2.094} { 2.050} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1002} {B} {R} {Y} {F} {} {NAND2X4MTR} { 0.097} { 0.000} {0.126} {} { 2.191} { 2.147} {} {2} {(317.00,165.00) (317.00,166.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_39} {} { 0.000} { 0.000} {0.126} {0.007} { 2.192} { 2.148} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1001} {A} {F} {Y} {R} {} {INVXLMTR} { 0.088} { 0.000} {0.091} {} { 2.280} { 2.236} {} {1} {(312.00,154.00) (312.00,155.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_40} {} { 0.000} { 0.000} {0.091} {0.003} { 2.280} { 2.236} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g986} {B1} {R} {Y} {R} {} {OA22X2MTR} { 0.229} { 0.000} {0.178} {} { 2.509} { 2.465} {} {5} {(306.00,159.00) (306.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_55} {} { 0.001} { 0.000} {0.178} {0.011} { 2.510} { 2.466} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_28_0} {C} {R} {Y} {R} {} {AND3X6MTR} { 0.176} { 0.000} {0.107} {} { 2.686} { 2.642} {} {5} {(305.00,161.00) (307.00,161.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_75} {} { 0.001} { 0.000} {0.107} {0.018} { 2.687} { 2.643} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g956} {B} {R} {Y} {F} {} {NAND4BX4MTR} { 0.119} { 0.000} {0.143} {} { 2.806} { 2.762} {} {2} {(304.00,168.00) (304.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_79} {} { 0.000} { 0.000} {0.143} {0.003} { 2.806} { 2.762} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g949} {B} {F} {Y} {R} {} {NOR2X2MTR} { 0.202} { 0.000} {0.260} {} { 3.008} { 2.964} {} {5} {(301.00,168.00) (301.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_85} {} { 0.000} { 0.000} {0.260} {0.008} { 3.008} { 2.964} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g946} {B0} {R} {Y} {R} {} {AO21X2MTR} { 0.164} { 0.000} {0.104} {} { 3.172} { 3.128} {} {3} {(298.00,168.00) (297.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_88} {} { 0.000} { 0.000} {0.104} {0.006} { 3.173} { 3.128} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_163_0} {B} {R} {Y} {F} {} {NOR2X4MTR} { 0.069} { 0.000} {0.107} {} { 3.242} { 3.198} {} {1} {(299.00,169.00) (300.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_95_0} {} { 0.001} { 0.000} {0.107} {0.008} { 3.243} { 3.199} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {A0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.097} { 0.000} {0.178} {} { 3.340} { 3.296} {} {1} {(316.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.342} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.457} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.457} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.837} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.840} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.076} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.079} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.388} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.388} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 12
+PATH 13
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {ARB_INST/tdsp_grant_reg} {CK}
+  ENDPT {ARB_INST/tdsp_grant_reg} {D} {SDFFRQX1MTR} {R} {leading} {m_clk} {m_clk(C)(P) *}
+  BEGINPT {} {tdsp_sel} {} {R} {leading} {@} {@(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {4.175}
+    {-} {Setup} {0.160}
+    {=} {Required Time} {4.015}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.052}
+    {=} {Slack Time} {-0.037}
+  END_SLK_CLC
+  SLK -0.037
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    PORT {} {tdsp_sel} {R} {} {} {tdsp_sel} {} {} {} {0.004} {0.021} { 0.000} {-0.037} {} {1} {(630.00,318.00) } 
+    NET {} {} {} {} {} {tdsp_sel} {} { 0.004} { 0.000} {0.007} {0.021} { 0.004} {-0.034} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g506} {A} {R} {Y} {F} {} {INVX2MTR} { 0.410} { 0.000} {0.845} {} { 0.414} { 0.377} {} {12} {(509.00,316.00) (509.00,315.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_8} {} { 0.016} { 0.000} {0.846} {0.093} { 0.430} { 0.393} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g505} {A} {F} {Y} {R} {} {INVX4MTR} { 0.702} { 0.000} {0.862} {} { 1.133} { 1.095} {} {27} {(473.00,319.00) (472.00,318.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_7} {} { 0.076} { 0.000} {0.873} {0.105} { 1.208} { 1.171} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g516} {A} {R} {Y} {F} {} {INVX2MTR} { 0.826} { 0.000} {0.962} {} { 2.035} { 1.997} {} {15} {(310.00,194.00) (310.00,194.00)} 
+    NET {} {} {} {} {} {TDSP_CORE_MUX_INST/n_2} {} { 0.022} { 0.000} {0.964} {0.095} { 2.056} { 2.019} {} {} {} 
+    INST {TDSP_CORE_MUX_INST/g462} {A1} {F} {Y} {F} {} {AO22XLMTR} { 0.595} { 0.000} {0.300} {} { 2.652} { 2.614} {} {4} {(316.00,234.00) (315.00,235.00)} 
+    NET {} {} {} {} {} {t_addrs[7]} {} { 0.002} { 0.000} {0.300} {0.015} { 2.654} { 2.616} {} {} {} 
+    INST {TDSP_DS_CS_INST/g302} {AN} {F} {Y} {F} {} {NAND2BXLMTR} { 0.364} { 0.000} {0.358} {} { 3.018} { 2.981} {} {3} {(312.00,266.00) (313.00,266.00)} 
+    NET {} {} {} {} {} {TDSP_DS_CS_INST/n_0} {} { 0.000} { 0.000} {0.358} {0.010} { 3.019} { 2.981} {} {} {} 
+    INST {TDSP_DS_CS_INST/g293} {B} {F} {Y} {R} {} {NOR2BX2MTR} { 0.392} { 0.000} {0.467} {} { 3.411} { 3.374} {} {4} {(316.00,272.00) (316.00,273.00)} 
+    NET {} {} {} {} {} {t_breq_st} {} { 0.002} { 0.000} {0.467} {0.016} { 3.413} { 3.376} {} {} {} 
+    INST {ARB_INST/g374} {A0} {R} {Y} {R} {} {AO21XLMTR} { 0.186} { 0.000} {0.081} {} { 3.600} { 3.562} {} {1} {(319.00,316.00) (318.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_15} {} { 0.000} { 0.000} {0.081} {0.002} { 3.600} { 3.562} {} {} {} 
+    INST {ARB_INST/g370} {A} {R} {Y} {F} {} {NAND2X2MTR} { 0.116} { 0.000} {0.161} {} { 3.716} { 3.679} {} {4} {(314.00,316.00) (313.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_25} {} { 0.000} { 0.000} {0.161} {0.008} { 3.716} { 3.679} {} {} {} 
+    INST {ARB_INST/g277} {B1N} {F} {Y} {R} {} {AO2B2BXLMTR} { 0.215} { 0.000} {0.085} {} { 3.932} { 3.895} {} {1} {(308.00,317.00) (306.00,317.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_6} {} { 0.000} { 0.000} {0.085} {0.002} { 3.932} { 3.895} {} {} {} 
+    INST {ARB_INST/g276} {B} {R} {Y} {R} {} {AND2X1MTR} { 0.120} { 0.000} {0.075} {} { 4.052} { 4.014} {} {1} {(306.00,316.00) (307.00,315.00)} 
+    NET {} {} {} {} {} {ARB_INST/n_7} {} { 0.000} { 0.000} {0.075} {0.003} { 4.052} { 4.015} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} { 0.037} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} { 0.037} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.168} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.044} { 0.000} {0.187} {0.203} { 0.175} { 0.212} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 13
+PATH 14
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[3]} {CK} {SDFFQX1MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.072}
+    {=} {Slack Time} {-0.037}
+  END_SLK_CLC
+  SLK -0.037
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.037} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.037} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.094} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.135} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.299} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.300} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[3]} {CK} {R} {Q} {R} {} {SDFFQX1MTR} { 0.415} { 0.000} {0.394} {} { 0.751} { 0.714} {} {2} {(452.00,317.00) (455.00,318.00)} 
+    NET {} {} {} {} {} {upcm[3]} {} {-0.034} { 0.000} {0.306} {0.024} { 0.718} { 0.681} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__318} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.825} { 0.000} {1.291} {} { 1.542} { 1.505} {} {2} {(461.00,191.00) (462.00,190.00)} 
+    NET {} {} {} {} {} {upcm_feed[3]} {} { 0.170} { 0.000} {1.916} {0.061} { 1.713} { 1.676} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1025} {B} {R} {Y} {R} {} {OR2X2MTR} { 0.281} { 0.000} {0.140} {} { 1.994} { 1.957} {} {1} {(315.00,176.00) (315.00,177.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_18} {} { 0.000} { 0.000} {0.140} {0.003} { 1.994} { 1.957} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1019} {A} {R} {Y} {F} {} {NAND2X4MTR} { 0.081} { 0.000} {0.088} {} { 2.076} { 2.039} {} {3} {(311.00,175.00) (310.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_22} {} { 0.000} { 0.000} {0.088} {0.006} { 2.076} { 2.039} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1005} {A1} {F} {Y} {R} {} {AOI22X2MTR} { 0.176} { 0.000} {0.285} {} { 2.252} { 2.215} {} {2} {(308.00,173.00) (307.00,174.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_36} {} { 0.000} { 0.000} {0.285} {0.007} { 2.252} { 2.215} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g986} {A1} {R} {Y} {R} {} {OA22X2MTR} { 0.266} { 0.000} {0.178} {} { 2.518} { 2.481} {} {5} {(307.00,159.00) (306.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_55} {} { 0.001} { 0.000} {0.178} {0.011} { 2.519} { 2.482} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g963} {A} {R} {Y} {F} {} {CLKNAND2X2MTR} { 0.131} { 0.000} {0.145} {} { 2.650} { 2.613} {} {3} {(301.00,159.00) (301.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_74} {} { 0.000} { 0.000} {0.145} {0.006} { 2.650} { 2.613} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g960} {B0} {F} {Y} {F} {} {OA21X1MTR} { 0.206} { 0.000} {0.155} {} { 2.857} { 2.820} {} {4} {(299.00,159.00) (298.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_76} {} { 0.000} { 0.000} {0.155} {0.007} { 2.857} { 2.820} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_30_0} {A} {F} {Y} {F} {} {AND4X4MTR} { 0.147} { 0.000} {0.060} {} { 3.004} { 2.967} {} {3} {(302.00,151.00) (303.00,151.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_94} {} { 0.000} { 0.000} {0.060} {0.007} { 3.005} { 2.968} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g931} {AN} {F} {Y} {F} {} {NOR2BX8MTR} { 0.088} { 0.000} {0.071} {} { 3.092} { 3.055} {} {3} {(298.00,157.00) (299.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_102} {} { 0.001} { 0.000} {0.071} {0.009} { 3.093} { 3.056} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g927} {A} {F} {Y} {F} {} {AND4X4MTR} { 0.131} { 0.000} {0.078} {} { 3.224} { 3.188} {} {2} {(305.00,172.00) (307.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_106} {} { 0.000} { 0.000} {0.078} {0.013} { 3.225} { 3.188} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {B0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.108} { 0.000} {0.178} {} { 3.333} { 3.296} {} {1} {(314.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.334} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.450} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.450} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.830} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.833} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.069} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.072} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.381} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.381} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 14
+PATH 15
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {F} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.292}
+    {=} {Required Time} {4.052}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.086}
+    {=} {Slack Time} {-0.034}
+  END_SLK_CLC
+  SLK -0.034
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.034} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.034} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.097} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.138} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.302} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.303} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.555} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.541} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.305} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.476} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.676} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.677} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {A0} {F} {Y} {R} {} {OAI21X2MTR} { 0.238} { 0.000} {0.269} {} { 1.949} { 1.915} {} {2} {(317.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.269} {0.004} { 1.949} { 1.915} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1007} {B} {R} {Y} {F} {} {CLKNAND2X2MTR} { 0.133} { 0.000} {0.152} {} { 2.082} { 2.048} {} {1} {(317.00,170.00) (318.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_34} {} { 0.000} { 0.000} {0.152} {0.004} { 2.082} { 2.048} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1002} {B} {F} {Y} {R} {} {NAND2X4MTR} { 0.099} { 0.000} {0.169} {} { 2.181} { 2.148} {} {2} {(317.00,165.00) (317.00,166.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_39} {} { 0.000} { 0.000} {0.169} {0.008} { 2.182} { 2.148} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1001} {A} {R} {Y} {F} {} {INVXLMTR} { 0.093} { 0.000} {0.097} {} { 2.275} { 2.242} {} {1} {(312.00,154.00) (312.00,155.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_40} {} { 0.000} { 0.000} {0.097} {0.003} { 2.276} { 2.242} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g986} {B1} {F} {Y} {F} {} {OA22X2MTR} { 0.253} { 0.000} {0.147} {} { 2.528} { 2.495} {} {5} {(306.00,159.00) (306.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_55} {} { 0.001} { 0.000} {0.147} {0.011} { 2.529} { 2.495} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g963} {A} {F} {Y} {R} {} {CLKNAND2X2MTR} { 0.111} { 0.000} {0.116} {} { 2.640} { 2.606} {} {3} {(301.00,159.00) (301.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_74} {} { 0.000} { 0.000} {0.116} {0.006} { 2.640} { 2.607} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g960} {B0} {R} {Y} {R} {} {OA21X1MTR} { 0.167} { 0.000} {0.130} {} { 2.808} { 2.774} {} {4} {(299.00,159.00) (298.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_76} {} { 0.000} { 0.000} {0.130} {0.007} { 2.808} { 2.774} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_30_0} {A} {R} {Y} {R} {} {AND4X4MTR} { 0.138} { 0.000} {0.080} {} { 2.946} { 2.912} {} {3} {(302.00,151.00) (303.00,151.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_94} {} { 0.000} { 0.000} {0.080} {0.007} { 2.946} { 2.912} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g931} {AN} {R} {Y} {R} {} {NOR2BX8MTR} { 0.117} { 0.000} {0.103} {} { 3.063} { 3.029} {} {3} {(298.00,157.00) (299.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_102} {} { 0.001} { 0.000} {0.103} {0.009} { 3.064} { 3.030} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g927} {A} {R} {Y} {R} {} {AND4X4MTR} { 0.158} { 0.000} {0.119} {} { 3.222} { 3.189} {} {2} {(305.00,172.00) (307.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_106} {} { 0.000} { 0.000} {0.119} {0.013} { 3.223} { 3.189} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {B0} {R} {Y} {F} {} {OAI2B2X8MTR} { 0.089} { 0.000} {0.162} {} { 3.312} { 3.278} {} {1} {(314.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.162} {0.008} { 3.313} { 3.280} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.109} { 0.000} {0.128} {} { 3.423} { 3.389} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.128} {0.005} { 3.423} { 3.389} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {R} {Y} {F} {} {OAI2B1X2MTR} { 0.446} { 0.000} {0.831} {} { 3.869} { 3.835} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {0.831} {0.044} { 3.873} { 3.839} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {F} {Y} {F} {} {CLKBUFX16MTR} { 0.210} { 0.000} {0.092} {} { 4.082} { 4.049} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.113} {0.019} { 4.086} { 4.052} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.378} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.378} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 15
+PATH 16
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.063}
+    {=} {Slack Time} {-0.028}
+  END_SLK_CLC
+  SLK -0.028
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.028} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.028} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.103} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.144} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.307} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.308} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.560} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.547} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.311} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.482} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.682} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.683} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1073} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.130} { 0.000} {0.148} {} { 1.840} { 1.812} {} {1} {(319.00,175.00) (319.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_1} {} { 0.000} { 0.000} {0.148} {0.002} { 1.841} { 1.812} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {B0} {R} {Y} {F} {} {OAI21X2MTR} { 0.110} { 0.000} {0.320} {} { 1.951} { 1.922} {} {2} {(318.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.320} {0.004} { 1.951} { 1.923} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1008} {B} {F} {Y} {R} {} {NAND2XLMTR} { 0.198} { 0.000} {0.211} {} { 2.149} { 2.121} {} {2} {(319.00,172.00) (319.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_33} {} { 0.000} { 0.000} {0.211} {0.006} { 2.149} { 2.121} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_96_0} {B0} {R} {Y} {F} {} {OAI2BB1X4MTR} { 0.083} { 0.000} {0.073} {} { 2.233} { 2.204} {} {1} {(316.00,173.00) (316.00,173.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_37} {} { 0.000} { 0.000} {0.073} {0.003} { 2.233} { 2.205} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1003} {A} {F} {Y} {R} {} {CLKINVX2MTR} { 0.057} { 0.000} {0.058} {} { 2.290} { 2.261} {} {1} {(309.00,172.00) (309.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_38} {} { 0.000} { 0.000} {0.058} {0.003} { 2.290} { 2.262} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_39_0} {AN} {R} {Y} {R} {} {NAND2BX4MTR} { 0.080} { 0.000} {0.092} {} { 2.370} { 2.342} {} {1} {(311.00,167.00) (311.00,166.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_18_0} {} { 0.000} { 0.000} {0.092} {0.003} { 2.370} { 2.342} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_38_0} {A} {R} {Y} {F} {} {CLKNAND2X4MTR} { 0.071} { 0.000} {0.077} {} { 2.441} { 2.413} {} {3} {(307.00,168.00) (307.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_17_0} {} { 0.000} { 0.000} {0.077} {0.005} { 2.441} { 2.413} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_46_0} {A} {F} {Y} {R} {} {INVXLMTR} { 0.061} { 0.000} {0.062} {} { 2.502} { 2.474} {} {1} {(306.00,168.00) (306.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_24_0} {} { 0.000} { 0.000} {0.062} {0.002} { 2.502} { 2.474} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_45_0} {A} {R} {Y} {F} {} {CLKNAND2X2MTR} { 0.076} { 0.000} {0.087} {} { 2.578} { 2.549} {} {2} {(305.00,167.00) (305.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_23_0} {} { 0.000} { 0.000} {0.087} {0.004} { 2.578} { 2.550} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_50_0} {A} {F} {Y} {R} {} {INVXLMTR} { 0.084} { 0.000} {0.092} {} { 2.662} { 2.634} {} {1} {(306.00,167.00) (306.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_2} {} { 0.000} { 0.000} {0.092} {0.004} { 2.662} { 2.634} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g956} {D} {R} {Y} {F} {} {NAND4BX4MTR} { 0.128} { 0.000} {0.143} {} { 2.790} { 2.762} {} {2} {(303.00,168.00) (304.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_79} {} { 0.000} { 0.000} {0.143} {0.003} { 2.790} { 2.762} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g949} {B} {F} {Y} {R} {} {NOR2X2MTR} { 0.202} { 0.000} {0.260} {} { 2.992} { 2.964} {} {5} {(301.00,168.00) (301.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_85} {} { 0.000} { 0.000} {0.260} {0.008} { 2.993} { 2.964} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g946} {B0} {R} {Y} {R} {} {AO21X2MTR} { 0.164} { 0.000} {0.104} {} { 3.156} { 3.128} {} {3} {(298.00,168.00) (297.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_88} {} { 0.000} { 0.000} {0.104} {0.006} { 3.157} { 3.128} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_163_0} {B} {R} {Y} {F} {} {NOR2X4MTR} { 0.069} { 0.000} {0.107} {} { 3.226} { 3.198} {} {1} {(299.00,169.00) (300.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_95_0} {} { 0.001} { 0.000} {0.107} {0.008} { 3.227} { 3.199} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {A0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.097} { 0.000} {0.178} {} { 3.324} { 3.296} {} {1} {(316.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.326} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.441} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.441} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.821} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.825} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.060} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.063} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.372} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.372} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 16
+PATH 17
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.063}
+    {=} {Slack Time} {-0.028}
+  END_SLK_CLC
+  SLK -0.028
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.028} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.028} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.103} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.144} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.308} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.308} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.560} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.547} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.311} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.482} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.682} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.683} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1073} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.130} { 0.000} {0.148} {} { 1.840} { 1.812} {} {1} {(319.00,175.00) (319.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_1} {} { 0.000} { 0.000} {0.148} {0.002} { 1.841} { 1.813} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {B0} {R} {Y} {F} {} {OAI21X2MTR} { 0.110} { 0.000} {0.320} {} { 1.951} { 1.923} {} {2} {(318.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.320} {0.004} { 1.951} { 1.923} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1008} {B} {F} {Y} {R} {} {NAND2XLMTR} { 0.198} { 0.000} {0.211} {} { 2.149} { 2.121} {} {2} {(319.00,172.00) (319.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_33} {} { 0.000} { 0.000} {0.211} {0.006} { 2.149} { 2.121} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_95_0} {B0} {R} {Y} {F} {} {OAI2BB1X4MTR} { 0.091} { 0.000} {0.080} {} { 2.240} { 2.212} {} {1} {(314.00,173.00) (314.00,173.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_52_0} {} { 0.000} { 0.000} {0.080} {0.004} { 2.241} { 2.213} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_94_0} {A} {F} {Y} {R} {} {CLKNAND2X4MTR} { 0.063} { 0.000} {0.132} {} { 2.303} { 2.275} {} {1} {(314.00,167.00) (314.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_51_0} {} { 0.000} { 0.000} {0.132} {0.006} { 2.303} { 2.275} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_93_0} {A} {R} {Y} {F} {} {CLKNAND2X8MTR} { 0.089} { 0.000} {0.123} {} { 2.392} { 2.364} {} {4} {(318.00,168.00) (317.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_54} {} { 0.001} { 0.000} {0.123} {0.014} { 2.393} { 2.365} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_29_0} {A0} {F} {Y} {R} {} {OAI21X3MTR} { 0.126} { 0.000} {0.139} {} { 2.518} { 2.490} {} {2} {(310.00,160.00) (310.00,160.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_69} {} { 0.000} { 0.000} {0.139} {0.004} { 2.519} { 2.491} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g963} {B} {R} {Y} {F} {} {CLKNAND2X2MTR} { 0.123} { 0.000} {0.145} {} { 2.641} { 2.613} {} {3} {(301.00,159.00) (301.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_74} {} { 0.000} { 0.000} {0.145} {0.006} { 2.641} { 2.613} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g960} {B0} {F} {Y} {F} {} {OA21X1MTR} { 0.206} { 0.000} {0.155} {} { 2.848} { 2.820} {} {4} {(299.00,159.00) (298.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_76} {} { 0.000} { 0.000} {0.155} {0.007} { 2.848} { 2.820} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_30_0} {A} {F} {Y} {F} {} {AND4X4MTR} { 0.147} { 0.000} {0.060} {} { 2.995} { 2.967} {} {3} {(302.00,151.00) (303.00,151.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_94} {} { 0.000} { 0.000} {0.060} {0.007} { 2.996} { 2.968} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g931} {AN} {F} {Y} {F} {} {NOR2BX8MTR} { 0.088} { 0.000} {0.071} {} { 3.083} { 3.055} {} {3} {(298.00,157.00) (299.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_102} {} { 0.001} { 0.000} {0.071} {0.009} { 3.084} { 3.056} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g927} {A} {F} {Y} {F} {} {AND4X4MTR} { 0.131} { 0.000} {0.078} {} { 3.216} { 3.188} {} {2} {(305.00,172.00) (307.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_106} {} { 0.000} { 0.000} {0.078} {0.013} { 3.216} { 3.188} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {B0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.108} { 0.000} {0.178} {} { 3.324} { 3.296} {} {1} {(314.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.326} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.441} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.441} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.821} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.824} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.060} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.063} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.372} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.372} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 17
+PATH 18
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.063}
+    {=} {Slack Time} {-0.028}
+  END_SLK_CLC
+  SLK -0.028
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.028} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.028} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.103} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.144} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.308} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.309} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.561} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.547} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.311} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.482} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.682} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.683} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1073} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.130} { 0.000} {0.148} {} { 1.840} { 1.813} {} {1} {(319.00,175.00) (319.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_1} {} { 0.000} { 0.000} {0.148} {0.002} { 1.841} { 1.813} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {B0} {R} {Y} {F} {} {OAI21X2MTR} { 0.110} { 0.000} {0.320} {} { 1.951} { 1.923} {} {2} {(318.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.320} {0.004} { 1.951} { 1.923} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1007} {B} {F} {Y} {R} {} {CLKNAND2X2MTR} { 0.143} { 0.000} {0.150} {} { 2.094} { 2.066} {} {1} {(317.00,170.00) (318.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_34} {} { 0.000} { 0.000} {0.150} {0.004} { 2.094} { 2.066} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1002} {B} {R} {Y} {F} {} {NAND2X4MTR} { 0.097} { 0.000} {0.126} {} { 2.191} { 2.163} {} {2} {(317.00,165.00) (317.00,166.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_39} {} { 0.000} { 0.000} {0.126} {0.007} { 2.192} { 2.164} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1001} {A} {F} {Y} {R} {} {INVXLMTR} { 0.088} { 0.000} {0.091} {} { 2.280} { 2.252} {} {1} {(312.00,154.00) (312.00,155.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_40} {} { 0.000} { 0.000} {0.091} {0.003} { 2.280} { 2.252} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g986} {B1} {R} {Y} {R} {} {OA22X2MTR} { 0.229} { 0.000} {0.178} {} { 2.509} { 2.481} {} {5} {(306.00,159.00) (306.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_55} {} { 0.001} { 0.000} {0.178} {0.011} { 2.510} { 2.482} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g963} {A} {R} {Y} {F} {} {CLKNAND2X2MTR} { 0.131} { 0.000} {0.145} {} { 2.641} { 2.613} {} {3} {(301.00,159.00) (301.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_74} {} { 0.000} { 0.000} {0.145} {0.006} { 2.641} { 2.613} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g960} {B0} {F} {Y} {F} {} {OA21X1MTR} { 0.206} { 0.000} {0.155} {} { 2.848} { 2.820} {} {4} {(299.00,159.00) (298.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_76} {} { 0.000} { 0.000} {0.155} {0.007} { 2.848} { 2.820} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_30_0} {A} {F} {Y} {F} {} {AND4X4MTR} { 0.147} { 0.000} {0.060} {} { 2.995} { 2.967} {} {3} {(302.00,151.00) (303.00,151.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_94} {} { 0.000} { 0.000} {0.060} {0.007} { 2.996} { 2.968} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g931} {AN} {F} {Y} {F} {} {NOR2BX8MTR} { 0.088} { 0.000} {0.071} {} { 3.083} { 3.055} {} {3} {(298.00,157.00) (299.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_102} {} { 0.001} { 0.000} {0.071} {0.009} { 3.084} { 3.056} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g927} {A} {F} {Y} {F} {} {AND4X4MTR} { 0.131} { 0.000} {0.078} {} { 3.215} { 3.188} {} {2} {(305.00,172.00) (307.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_106} {} { 0.000} { 0.000} {0.078} {0.013} { 3.216} { 3.188} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {B0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.108} { 0.000} {0.178} {} { 3.324} { 3.296} {} {1} {(314.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.325} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.441} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.441} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.821} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.824} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.060} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.063} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.372} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.372} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 18
+PATH 19
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.055}
+    {=} {Slack Time} {-0.019}
+  END_SLK_CLC
+  SLK -0.019
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.019} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.019} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.111} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.153} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.316} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.317} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.589} { 0.569} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.556} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.320} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.491} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.690} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.691} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1073} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.130} { 0.000} {0.148} {} { 1.841} { 1.821} {} {1} {(319.00,175.00) (319.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_1} {} { 0.000} { 0.000} {0.148} {0.002} { 1.841} { 1.821} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {B0} {R} {Y} {F} {} {OAI21X2MTR} { 0.110} { 0.000} {0.320} {} { 1.951} { 1.931} {} {2} {(318.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.320} {0.004} { 1.951} { 1.931} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1007} {B} {F} {Y} {R} {} {CLKNAND2X2MTR} { 0.143} { 0.000} {0.150} {} { 2.094} { 2.074} {} {1} {(317.00,170.00) (318.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_34} {} { 0.000} { 0.000} {0.150} {0.004} { 2.094} { 2.075} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1002} {B} {R} {Y} {F} {} {NAND2X4MTR} { 0.097} { 0.000} {0.126} {} { 2.191} { 2.172} {} {2} {(317.00,165.00) (317.00,166.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_39} {} { 0.000} { 0.000} {0.126} {0.007} { 2.192} { 2.172} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g993} {B} {F} {Y} {R} {} {NAND2X6MTR} { 0.099} { 0.000} {0.155} {} { 2.291} { 2.271} {} {3} {(314.00,156.00) (314.00,156.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_48} {} { 0.001} { 0.000} {0.155} {0.014} { 2.292} { 2.272} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g976} {A} {R} {Y} {F} {} {NAND3X12MTR} { 0.090} { 0.000} {0.099} {} { 2.381} { 2.362} {} {4} {(311.00,152.00) (308.00,153.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_62} {} { 0.000} { 0.000} {0.099} {0.010} { 2.382} { 2.362} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_29_0} {A1} {F} {Y} {R} {} {OAI21X3MTR} { 0.128} { 0.000} {0.139} {} { 2.510} { 2.490} {} {2} {(310.00,161.00) (310.00,160.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_69} {} { 0.000} { 0.000} {0.139} {0.004} { 2.510} { 2.491} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g963} {B} {R} {Y} {F} {} {CLKNAND2X2MTR} { 0.123} { 0.000} {0.145} {} { 2.633} { 2.613} {} {3} {(301.00,159.00) (301.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_74} {} { 0.000} { 0.000} {0.145} {0.006} { 2.633} { 2.613} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g960} {B0} {F} {Y} {F} {} {OA21X1MTR} { 0.206} { 0.000} {0.155} {} { 2.839} { 2.820} {} {4} {(299.00,159.00) (298.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_76} {} { 0.000} { 0.000} {0.155} {0.007} { 2.840} { 2.820} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_30_0} {A} {F} {Y} {F} {} {AND4X4MTR} { 0.147} { 0.000} {0.060} {} { 2.987} { 2.967} {} {3} {(302.00,151.00) (303.00,151.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_94} {} { 0.000} { 0.000} {0.060} {0.007} { 2.987} { 2.968} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g931} {AN} {F} {Y} {F} {} {NOR2BX8MTR} { 0.088} { 0.000} {0.071} {} { 3.075} { 3.055} {} {3} {(298.00,157.00) (299.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_102} {} { 0.001} { 0.000} {0.071} {0.009} { 3.076} { 3.056} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g927} {A} {F} {Y} {F} {} {AND4X4MTR} { 0.131} { 0.000} {0.078} {} { 3.207} { 3.188} {} {2} {(305.00,172.00) (307.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_106} {} { 0.000} { 0.000} {0.078} {0.013} { 3.208} { 3.188} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {B0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.108} { 0.000} {0.178} {} { 3.316} { 3.296} {} {1} {(314.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.317} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.433} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.433} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.812} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.816} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.051} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.055} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.363} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.363} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 19
+PATH 20
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {R} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[3]} {CK} {SDFFQX1MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.309}
+    {=} {Required Time} {4.035}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.053}
+    {=} {Slack Time} {-0.018}
+  END_SLK_CLC
+  SLK -0.018
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.018} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.018} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.113} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.154} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.318} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.318} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[3]} {CK} {R} {Q} {R} {} {SDFFQX1MTR} { 0.415} { 0.000} {0.394} {} { 0.751} { 0.733} {} {2} {(452.00,317.00) (455.00,318.00)} 
+    NET {} {} {} {} {} {upcm[3]} {} {-0.034} { 0.000} {0.306} {0.024} { 0.718} { 0.699} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__318} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.825} { 0.000} {1.291} {} { 1.542} { 1.524} {} {2} {(461.00,191.00) (462.00,190.00)} 
+    NET {} {} {} {} {} {upcm_feed[3]} {} { 0.170} { 0.000} {1.916} {0.061} { 1.713} { 1.695} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1025} {B} {R} {Y} {R} {} {OR2X2MTR} { 0.281} { 0.000} {0.140} {} { 1.994} { 1.976} {} {1} {(315.00,176.00) (315.00,177.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_18} {} { 0.000} { 0.000} {0.140} {0.003} { 1.994} { 1.976} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1019} {A} {R} {Y} {F} {} {NAND2X4MTR} { 0.081} { 0.000} {0.088} {} { 2.076} { 2.057} {} {3} {(311.00,175.00) (310.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_22} {} { 0.000} { 0.000} {0.088} {0.006} { 2.076} { 2.058} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_95_0} {A0N} {F} {Y} {F} {} {OAI2BB1X4MTR} { 0.114} { 0.000} {0.080} {} { 2.190} { 2.172} {} {1} {(313.00,173.00) (314.00,173.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_52_0} {} { 0.000} { 0.000} {0.080} {0.004} { 2.190} { 2.172} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_94_0} {A} {F} {Y} {R} {} {CLKNAND2X4MTR} { 0.063} { 0.000} {0.132} {} { 2.253} { 2.235} {} {1} {(314.00,167.00) (314.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_51_0} {} { 0.000} { 0.000} {0.132} {0.006} { 2.253} { 2.235} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_93_0} {A} {R} {Y} {F} {} {CLKNAND2X8MTR} { 0.089} { 0.000} {0.123} {} { 2.342} { 2.324} {} {4} {(318.00,168.00) (317.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_54} {} { 0.001} { 0.000} {0.123} {0.014} { 2.342} { 2.324} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_27_0} {A0} {F} {Y} {R} {} {OAI21X3MTR} { 0.152} { 0.000} {0.183} {} { 2.495} { 2.477} {} {3} {(308.00,160.00) (308.00,160.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_11_0} {} { 0.000} { 0.000} {0.183} {0.007} { 2.495} { 2.477} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_28_0} {A} {R} {Y} {R} {} {AND3X6MTR} { 0.165} { 0.000} {0.107} {} { 2.660} { 2.642} {} {5} {(306.00,161.00) (307.00,161.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_75} {} { 0.001} { 0.000} {0.107} {0.018} { 2.661} { 2.643} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g956} {B} {R} {Y} {F} {} {NAND4BX4MTR} { 0.119} { 0.000} {0.143} {} { 2.780} { 2.762} {} {2} {(304.00,168.00) (304.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_79} {} { 0.000} { 0.000} {0.143} {0.003} { 2.780} { 2.762} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g949} {B} {F} {Y} {R} {} {NOR2X2MTR} { 0.202} { 0.000} {0.260} {} { 2.982} { 2.964} {} {5} {(301.00,168.00) (301.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_85} {} { 0.000} { 0.000} {0.260} {0.008} { 2.982} { 2.964} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g946} {B0} {R} {Y} {R} {} {AO21X2MTR} { 0.164} { 0.000} {0.104} {} { 3.146} { 3.128} {} {3} {(298.00,168.00) (297.00,168.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_88} {} { 0.000} { 0.000} {0.104} {0.006} { 3.147} { 3.128} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_163_0} {B} {R} {Y} {F} {} {NOR2X4MTR} { 0.069} { 0.000} {0.107} {} { 3.216} { 3.198} {} {1} {(299.00,169.00) (300.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_95_0} {} { 0.001} { 0.000} {0.107} {0.008} { 3.217} { 3.199} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {A0} {F} {Y} {R} {} {OAI2B2X8MTR} { 0.097} { 0.000} {0.178} {} { 3.314} { 3.296} {} {1} {(316.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.178} {0.008} { 3.316} { 3.298} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {R} {Y} {F} {} {NAND2BX2MTR} { 0.116} { 0.000} {0.151} {} { 3.431} { 3.413} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.151} {0.005} { 3.431} { 3.413} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {F} {Y} {R} {} {OAI2B1X2MTR} { 0.380} { 0.000} {1.318} {} { 3.811} { 3.793} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {1.318} {0.044} { 3.814} { 3.796} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {R} {Y} {R} {} {CLKBUFX16MTR} { 0.235} { 0.000} {0.122} {} { 4.050} { 4.032} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.150} {0.019} { 4.053} { 4.035} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.362} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.362} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 20
+PATH 21
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {F} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.292}
+    {=} {Required Time} {4.052}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.069}
+    {=} {Slack Time} {-0.017}
+  END_SLK_CLC
+  SLK -0.017
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.017} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.017} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.114} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.155} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.319} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.320} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.572} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.559} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.322} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.494} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.693} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.694} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {A0} {F} {Y} {R} {} {OAI21X2MTR} { 0.238} { 0.000} {0.269} {} { 1.949} { 1.932} {} {2} {(317.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.269} {0.004} { 1.949} { 1.933} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1008} {B} {R} {Y} {F} {} {NAND2XLMTR} { 0.220} { 0.000} {0.243} {} { 2.169} { 2.152} {} {2} {(319.00,172.00) (319.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_33} {} { 0.000} { 0.000} {0.243} {0.006} { 2.169} { 2.152} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_95_0} {B0} {F} {Y} {R} {} {OAI2BB1X4MTR} { 0.102} { 0.000} {0.107} {} { 2.271} { 2.254} {} {1} {(314.00,173.00) (314.00,173.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_52_0} {} { 0.000} { 0.000} {0.107} {0.004} { 2.271} { 2.255} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_94_0} {A} {R} {Y} {F} {} {CLKNAND2X4MTR} { 0.076} { 0.000} {0.141} {} { 2.347} { 2.330} {} {1} {(314.00,167.00) (314.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_51_0} {} { 0.000} { 0.000} {0.141} {0.006} { 2.347} { 2.330} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_93_0} {A} {F} {Y} {R} {} {CLKNAND2X8MTR} { 0.088} { 0.000} {0.166} {} { 2.435} { 2.419} {} {4} {(318.00,168.00) (317.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_54} {} { 0.001} { 0.000} {0.166} {0.014} { 2.436} { 2.419} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_29_0} {A0} {R} {Y} {F} {} {OAI21X3MTR} { 0.096} { 0.000} {0.085} {} { 2.532} { 2.516} {} {2} {(310.00,160.00) (310.00,160.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_69} {} { 0.000} { 0.000} {0.085} {0.004} { 2.533} { 2.516} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g963} {B} {F} {Y} {R} {} {CLKNAND2X2MTR} { 0.090} { 0.000} {0.116} {} { 2.623} { 2.606} {} {3} {(301.00,159.00) (301.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_74} {} { 0.000} { 0.000} {0.116} {0.006} { 2.623} { 2.607} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g960} {B0} {R} {Y} {R} {} {OA21X1MTR} { 0.167} { 0.000} {0.130} {} { 2.790} { 2.774} {} {4} {(299.00,159.00) (298.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_76} {} { 0.000} { 0.000} {0.130} {0.007} { 2.791} { 2.774} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_30_0} {A} {R} {Y} {R} {} {AND4X4MTR} { 0.138} { 0.000} {0.080} {} { 2.928} { 2.912} {} {3} {(302.00,151.00) (303.00,151.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_94} {} { 0.000} { 0.000} {0.080} {0.007} { 2.929} { 2.912} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g931} {AN} {R} {Y} {R} {} {NOR2BX8MTR} { 0.117} { 0.000} {0.103} {} { 3.046} { 3.029} {} {3} {(298.00,157.00) (299.00,158.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_102} {} { 0.001} { 0.000} {0.103} {0.009} { 3.047} { 3.030} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g927} {A} {R} {Y} {R} {} {AND4X4MTR} { 0.158} { 0.000} {0.119} {} { 3.205} { 3.189} {} {2} {(305.00,172.00) (307.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_106} {} { 0.000} { 0.000} {0.119} {0.013} { 3.206} { 3.189} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {B0} {R} {Y} {F} {} {OAI2B2X8MTR} { 0.089} { 0.000} {0.162} {} { 3.295} { 3.278} {} {1} {(314.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.162} {0.008} { 3.296} { 3.280} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.109} { 0.000} {0.128} {} { 3.405} { 3.389} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.128} {0.005} { 3.406} { 3.389} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {R} {Y} {F} {} {OAI2B1X2MTR} { 0.446} { 0.000} {0.831} {} { 3.852} { 3.835} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {0.831} {0.044} { 3.855} { 3.839} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {F} {Y} {F} {} {CLKBUFX16MTR} { 0.210} { 0.000} {0.092} {} { 4.065} { 4.049} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.113} {0.019} { 4.069} { 4.052} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.361} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.361} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 21
+PATH 22
+  VIEW  default
+  CHECK_TYPE {Setup Check}
+  REF {RAM_256x16_TEST_INST/RAM_256x16_INST} {CLK}
+  ENDPT {RAM_256x16_TEST_INST/RAM_256x16_INST} {D[15]} {sram_sp_metro} {F} {leading} {m_dsram_clk} {m_dsram_clk(C)(P) *}
+  BEGINPT {SPI_INST/dout_reg[4]} {CK} {SDFFRHQX4MTR} {R} {leading} {m_clk} {m_clk(D)(P) }
+  REQ_CLC
+    {} {Other End Arrival Time} {4.344}
+    {-} {Setup} {0.292}
+    {=} {Required Time} {4.052}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {4.058}
+    {=} {Slack Time} {-0.006}
+  END_SLK_CLC
+  SLK -0.006
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.000} {-0.006} {} {} {} 
+    NET {} {} {} {} {} {m_clk} {} { 0.000} { 0.000} {0.086} {0.011} { 0.000} {-0.006} {} {} {} 
+    INST {m_clk__L1_I0} {A} {R} {Y} {R} {} {CLKBUFX40MTR} { 0.131} { 0.000} {0.164} {} { 0.131} { 0.125} {} {31} {(383.00,359.00) (386.00,359.00)} 
+    NET {} {} {} {} {} {m_clk__L1_N0} {} { 0.041} { 0.000} {0.181} {0.203} { 0.172} { 0.166} {} {} {} 
+    INST {SPI_INST/RC_CG_HIER_INST24/RC_CGIC_INST} {CK} {R} {ECK} {R} {} {TLATNTSCAX12MTR} { 0.164} { 0.000} {0.079} {} { 0.336} { 0.330} {} {8} {(449.00,320.00) (451.00,320.00)} 
+    NET {} {} {} {} {} {SPI_INST/rc_gclk_1176} {} { 0.001} { 0.000} {0.079} {0.021} { 0.336} { 0.331} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {SPI_INST/dout_reg[4]} {CK} {R} {Q} {R} {} {SDFFRHQX4MTR} { 0.252} { 0.000} {0.175} {} { 0.588} { 0.583} {} {2} {(449.00,319.00) (458.00,319.00)} 
+    NET {} {} {} {} {} {upcm[4]} {} {-0.013} { 0.000} {0.137} {0.023} { 0.575} { 0.570} {} {} {} 
+    INST {TDSP_CORE_INST0/buf_dummy__317} {A} {R} {Y} {R} {} {BUFGX2MTR} { 0.764} { 0.000} {1.276} {} { 1.339} { 1.333} {} {5} {(462.00,194.00) (463.00,194.00)} 
+    NET {} {} {} {} {} {upcm_feed[4]} {} { 0.171} { 0.000} {1.898} {0.060} { 1.510} { 1.505} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1055} {A} {R} {Y} {F} {} {INVX8MTR} { 0.200} { 0.000} {0.439} {} { 1.710} { 1.704} {} {9} {(317.00,181.00) (317.00,181.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_8} {} { 0.001} { 0.000} {0.439} {0.023} { 1.711} { 1.705} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1073} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.130} { 0.000} {0.148} {} { 1.840} { 1.835} {} {1} {(319.00,175.00) (319.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_1} {} { 0.000} { 0.000} {0.148} {0.002} { 1.841} { 1.835} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1017} {B0} {R} {Y} {F} {} {OAI21X2MTR} { 0.110} { 0.000} {0.320} {} { 1.951} { 1.945} {} {2} {(318.00,175.00) (318.00,175.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_24} {} { 0.000} { 0.000} {0.320} {0.004} { 1.951} { 1.945} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g1008} {B} {F} {Y} {R} {} {NAND2XLMTR} { 0.198} { 0.000} {0.211} {} { 2.149} { 2.144} {} {2} {(319.00,172.00) (319.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_33} {} { 0.000} { 0.000} {0.211} {0.006} { 2.149} { 2.144} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_95_0} {B0} {R} {Y} {F} {} {OAI2BB1X4MTR} { 0.091} { 0.000} {0.080} {} { 2.240} { 2.235} {} {1} {(314.00,173.00) (314.00,173.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_52_0} {} { 0.000} { 0.000} {0.080} {0.004} { 2.241} { 2.235} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_94_0} {A} {F} {Y} {R} {} {CLKNAND2X4MTR} { 0.063} { 0.000} {0.132} {} { 2.303} { 2.298} {} {1} {(314.00,167.00) (314.00,167.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_51_0} {} { 0.000} { 0.000} {0.132} {0.006} { 2.303} { 2.298} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_93_0} {A} {R} {Y} {F} {} {CLKNAND2X8MTR} { 0.089} { 0.000} {0.123} {} { 2.392} { 2.386} {} {4} {(318.00,168.00) (317.00,169.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_54} {} { 0.001} { 0.000} {0.123} {0.014} { 2.393} { 2.387} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_27_0} {A0} {F} {Y} {R} {} {OAI21X3MTR} { 0.152} { 0.000} {0.183} {} { 2.545} { 2.540} {} {3} {(308.00,160.00) (308.00,160.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_11_0} {} { 0.000} { 0.000} {0.183} {0.007} { 2.546} { 2.540} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_28_0} {A} {R} {Y} {R} {} {AND3X6MTR} { 0.165} { 0.000} {0.107} {} { 2.710} { 2.705} {} {5} {(306.00,161.00) (307.00,161.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_75} {} { 0.001} { 0.000} {0.107} {0.018} { 2.711} { 2.705} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_141_0} {A} {R} {Y} {F} {} {CLKNAND2X4MTR} { 0.068} { 0.000} {0.073} {} { 2.779} { 2.773} {} {2} {(306.00,164.00) (306.00,163.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_81} {} { 0.000} { 0.000} {0.073} {0.004} { 2.779} { 2.773} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_134_0} {B} {F} {Y} {R} {} {CLKNAND2X2MTR} { 0.065} { 0.000} {0.068} {} { 2.844} { 2.838} {} {1} {(303.00,165.00) (303.00,165.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/FE_RN_77_0} {} { 0.000} { 0.000} {0.068} {0.003} { 2.844} { 2.838} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_133_0} {B0} {R} {Y} {F} {} {OAI2B1X4MTR} { 0.085} { 0.000} {0.098} {} { 2.929} { 2.923} {} {4} {(305.00,165.00) (304.00,166.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_93} {} { 0.000} { 0.000} {0.098} {0.009} { 2.929} { 2.924} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_136_0} {B0} {F} {Y} {R} {} {AOI21X8MTR} { 0.087} { 0.000} {0.092} {} { 3.016} { 3.011} {} {2} {(309.00,164.00) (307.00,164.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_100} {} { 0.000} { 0.000} {0.092} {0.006} { 3.016} { 3.011} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/g927} {D} {R} {Y} {R} {} {AND4X4MTR} { 0.178} { 0.000} {0.119} {} { 3.194} { 3.189} {} {2} {(305.00,172.00) (307.00,171.00)} 
+    NET {} {} {} {} {} {ULAW_LIN_CONV_INST/n_106} {} { 0.000} { 0.000} {0.119} {0.013} { 3.195} { 3.189} {} {} {} 
+    INST {ULAW_LIN_CONV_INST/FE_RC_161_0} {B0} {R} {Y} {F} {} {OAI2B2X8MTR} { 0.089} { 0.000} {0.162} {} { 3.284} { 3.278} {} {1} {(314.00,178.00) (314.00,179.00)} 
+    NET {} {} {} {} {} {lpcm[15]} {} { 0.001} { 0.000} {0.162} {0.008} { 3.285} { 3.280} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g2} {B} {F} {Y} {R} {} {NAND2BX2MTR} { 0.109} { 0.000} {0.128} {} { 3.394} { 3.389} {} {2} {(286.00,172.00) (286.00,172.00)} 
+    NET {} {} {} {} {} {DATA_SAMPLE_MUX_INST/n_0} {} { 0.000} { 0.000} {0.128} {0.005} { 3.395} { 3.389} {} {} {} 
+    INST {DATA_SAMPLE_MUX_INST/g279} {B0} {R} {Y} {F} {} {OAI2B1X2MTR} { 0.446} { 0.000} {0.831} {} { 3.841} { 3.835} {} {2} {(282.00,172.00) (282.00,172.00)} 
+    NET {} {} {} {} {} {ds_datain[15]} {} { 0.003} { 0.000} {0.831} {0.044} { 3.844} { 3.839} {} {} {} 
+    INST {RAM_256x16_TEST_INST/FE_RC_76_0} {A} {F} {Y} {F} {} {CLKBUFX16MTR} { 0.210} { 0.000} {0.092} {} { 4.054} { 4.049} {} {1} {(151.00,172.00) (152.00,171.00)} 
+    NET {} {} {} {} {} {RAM_256x16_TEST_INST/FE_OFN1_ds_datain_15_} {} { 0.003} { 0.000} {0.113} {0.019} { 4.058} { 4.052} {} {} {} 
+  END_DATA_PATH
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    HPIN {TEST_CONTROL_INST} {m_dsram_clk} {R} {} {} {} {test_control} {} {} {} {} { 0.344} { 0.350} {} {} {} 
+    NET {} {} {} {} {} {m_dsram_clk} {} { 0.000} { 0.000} {0.511} {0.104} { 0.344} { 0.350} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 22
+

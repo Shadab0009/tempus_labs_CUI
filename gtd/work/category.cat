@@ -1,0 +1,6 @@
+######################################################
+# Tempus Timing Debug Categories Definitions.
+######################################################
+create_path_category -name REG->OUT -not_from_port * -to_port * -comment {Basic Path Analysis}
+create_path_category -name REG->REG -not_from_port * -not_to_port * -comment {Basic Path Analysis}
+create_path_category -name IN->REG -from_port * -not_to_port * -comment {Basic Path Analysis}
