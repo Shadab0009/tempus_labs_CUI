@@ -1,0 +1,2 @@
+# this noise report is for GUI with following format:
+# <receiver_pin_name> {<victim_net_name>} <Voltage_level> <voltage_value> <column5> <column6> <column7> bas <baseline_value> | cpl <value> <aggressor_net_name> | cpl <value> ... |

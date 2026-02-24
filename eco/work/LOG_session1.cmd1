@@ -1,0 +1,23 @@
+#######################################################
+#                                                     
+#  Tempus Timing Signoff Solution Command Logging File                     
+#  Created on Tue Feb 24 16:34:19 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Tempus Timing Signoff Solution v17.21-s086_1 (64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 17.21-s086_1 NR171017-1606/MT (database version 2.30, 408.7.1) {superthreading v1.46}
+#@(#)CDS: AAE 17.21-s044 (64bit) 03/26/2018 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 17.21-s024_1 () Mar 26 2018 08:55:31 ( )
+#@(#)CDS: SYNTECH 17.21-s008_1 () Mar 22 2018 10:41:39 ( )
+#@(#)CDS: CPE v17.21-s032
+
+set_multi_cpu_usage -local_cpu 2 -cpu_per_remote_host 2 -remote_host 2
+set_distributed_hosts -local
+set_multi_cpu_usage -local_cpu 8 -remote_host 2
+distribute_read_design -design_script ../scripts/loadDesign_DMMMC.tcl -out_dir sta
+distribute_views -views {func_slow_RCMAX func_fast_RCMAX func_slow_RCMIN func_fast_RCMIN scan_slow_RCMAX scan_fast_RCMAX scan_slow_RCMIN scan_fast_RCMIN test_slow_RCMAX test_fast_RCMAX test_slow_RCMIN test_fast_RCMIN} -script ../scripts/sta.tcl
+gui_show
+report_timing
+report_annotated_parasitics
+distribute_read_design -design_script ../scripts/loadDesign_DMMMC.tcl -out_dir sta

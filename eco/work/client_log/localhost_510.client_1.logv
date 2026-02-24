@@ -1,0 +1,21 @@
+#################  nanoroute  ################
+[02/24 17:06:24] [00:00:00] #Copyright (c) 1999 - 2010
+[02/24 17:06:24] [00:00:00] #Cadence Design Systems, Inc.
+[02/24 17:06:24] [00:00:00] #All rights reserved. This work may not be copied, modified, 
+[02/24 17:06:24] [00:00:00] #re-published, uploaded, executed, or distributed in any way, 
+[02/24 17:06:24] [00:00:00] #in any medium, whether in whole or in part, without prior 
+[02/24 17:06:24] [00:00:00] #written permission from Cadence Design Systems, Inc.
+[02/24 17:06:24] [00:00:00] #http://www.cadence.com
+[02/24 17:06:24] [00:00:00] #
+[02/24 17:06:24] [00:00:00] #Product Version : 21.15-s110_1 NR220912-2004/21_15-UB
+[02/24 17:06:24] [00:00:00] #Database Version : 18.20 {superthreading v2.17}
+[02/24 17:06:24] [00:00:00] #Checkout Date : 09/12/2022:20:04:43 from 21_15
+[02/24 17:06:24] [00:00:00] #Compiled Date : 09/23/2022 12:41:38 using tools-
+[02/24 17:06:24] [00:00:00] #Hostname : ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64 Core_i5  4.00GHz 6Core 12CPU 12MB cache 8GB)
+[02/24 17:06:24] [00:00:00] #Current Working Directory : /home/shadab/shadab/tempus_labs_CUI/eco/work
+[02/24 17:06:24] [00:00:00] #nanoroute Executable : /home/install/INNOVUS211/tools.lnx86/plato/bin/64bit/nanoroute
+[02/24 17:06:24] [00:00:00] #Current Date and Time : Tue Feb 24 17:06:24 2026
+#
+[02/24 17:06:25] [00:00:00] #number of cpu = 8.
+[02/24 17:06:25] [00:00:00] #client index = 1771933232.
+[02/24 17:16:25] [00:00:00] #WARNING (NRDR-67) Register client: socket read timeout.

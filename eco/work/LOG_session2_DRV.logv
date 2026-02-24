@@ -1,0 +1,1106 @@
+[02/24 16:54:07      0s] 
+[02/24 16:54:07      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[02/24 16:54:07      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/24 16:54:07      0s] 
+[02/24 16:54:07      0s] Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+[02/24 16:54:07      0s] Options:	-stylus -eco -files ../scripts/run_session2_DRV.tcl -log LOG_session2_DRV.log 
+[02/24 16:54:07      0s] Date:		Tue Feb 24 16:54:06 2026
+[02/24 16:54:07      0s] Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+[02/24 16:54:07      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[02/24 16:54:07      0s] 
+[02/24 16:54:07      0s] License:
+[02/24 16:54:07      0s] 		tpsxl	Tempus Timing Signoff Solution XL	17.2	checkout succeeded
+[02/24 16:54:07      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[02/24 16:54:21      3s] 
+[02/24 16:54:21      3s] ***************************************************************************************
+[02/24 16:54:21      3s] INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+[02/24 16:54:21      3s]          has only limited customer testing. You are encouraged to work with Cadence directly
+[02/24 16:54:21      3s]          to qualify your usage and make sure it meets your needs before deploying it widely.
+[02/24 16:54:21      3s] ***************************************************************************************
+[02/24 16:54:21      3s] 
+[02/24 16:54:34      7s] @(#)CDS: Tempus Timing Signoff Solution v17.21-s086_1 (64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5)
+[02/24 16:54:34      7s] @(#)CDS: NanoRoute 17.21-s086_1 NR171017-1606/MT (database version 2.30, 408.7.1) {superthreading v1.46}
+[02/24 16:54:34      7s] @(#)CDS: AAE 17.21-s044 (64bit) 03/26/2018 (Linux 2.6.18-194.el5)
+[02/24 16:54:34      7s] @(#)CDS: CTE 17.21-s024_1 () Mar 26 2018 08:55:31 ( )
+[02/24 16:54:34      7s] @(#)CDS: SYNTECH 17.21-s008_1 () Mar 22 2018 10:41:39 ( )
+[02/24 16:54:34      7s] @(#)CDS: CPE v17.21-s032
+[02/24 16:54:34      7s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[02/24 16:54:34      7s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/24 16:54:34      7s] @(#)CDS: RCDB 11.12
+[02/24 16:54:34      7s] --- Running on ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB) ---
+[02/24 16:54:34      7s] Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+[02/24 16:54:35      7s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_28605_EVbczw'.
+[02/24 16:54:35      7s] environment variable TMPDIR is '/tmp/ssv_tmpdir_28605_EVbczw'.
+[02/24 16:54:39      8s] #@ Processing -files option
+[02/24 16:54:39      8s] Sourcing tcl/tk file '../scripts/run_session2_DRV.tcl' ...
+[02/24 16:54:39      8s] @tempus 1> source ../scripts/run_session2_DRV.tcl
+[02/24 16:54:39      8s] #@ Begin verbose source ../scripts/run_session2_DRV.tcl
+[02/24 16:54:39      8s] @file(run_session2_DRV.tcl) 1: source ../scripts/loadDesign_DMMMC.tcl
+[02/24 16:54:39      8s] #@ Begin verbose source ../scripts/loadDesign_DMMMC.tcl
+[02/24 16:54:39      8s] @file(loadDesign_DMMMC.tcl) 1: read_mmmc ../../design/viewDefinition.tcl
+[02/24 16:54:40      8s] #@ Begin verbose source ../../design/viewDefinition.tcl
+[02/24 16:54:40      8s] @file(viewDefinition.tcl) 4: create_library_set -name libset_slow \
+[02/24 16:54:40      8s] -timing \
+[02/24 16:54:40      8s] [list ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib \
+[02/24 16:54:40      8s]     ../../libs/MACRO/LIBERTY/pllclk.lib \
+[02/24 16:54:40      8s]     ../../libs/MACRO/LIBERTY/ram_256x16A.lib \
+[02/24 16:54:40      8s]     ../../libs/MACRO/LIBERTY/rom_512x16A.lib]
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 10: create_library_set -name libset_fast \
+[02/24 16:54:42      8s] -timing \
+[02/24 16:54:42      8s] [list ../../libs/liberty/FreePDK45_lib_v1.0_typical.lib \
+[02/24 16:54:42      8s]     ../../libs/MACRO/LIBERTY/pllclk.lib \
+[02/24 16:54:42      8s]     ../../libs/MACRO/LIBERTY/ram_256x16A.lib \
+[02/24 16:54:42      8s]     ../../libs/MACRO/LIBERTY/rom_512x16A.lib]
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 21: create_timing_condition -name default_mapping_tc_2 -library_sets [list libset_fast]
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 22: create_timing_condition -name default_mapping_tc_1 -library_sets [list libset_slow]
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 27: create_rc_corner -name corner_worst_RCMAX \
+[02/24 16:54:42      8s] -pre_route_res 1.2 \
+[02/24 16:54:42      8s] -post_route_res {1.2 1.2 1.2} \
+[02/24 16:54:42      8s] -pre_route_cap 1.2 \
+[02/24 16:54:42      8s] -post_route_cap {1.2 1.2 1.2} \
+[02/24 16:54:42      8s] -post_route_cross_cap {1.2 1.2 1.2} \
+[02/24 16:54:42      8s] -pre_route_clock_res 0 \
+[02/24 16:54:42      8s] -pre_route_clock_cap 0
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 35: create_rc_corner -name corner_worst_RCMIN \
+[02/24 16:54:42      8s] -pre_route_res 0.8 \
+[02/24 16:54:42      8s] -post_route_res {0.8 0.8 0.8} \
+[02/24 16:54:42      8s] -pre_route_cap 0.8 \
+[02/24 16:54:42      8s] -post_route_cap {0.8 0.8 0.8} \
+[02/24 16:54:42      8s] -post_route_cross_cap {0.8 0.8 0.8} \
+[02/24 16:54:42      8s] -pre_route_clock_res 0 \
+[02/24 16:54:42      8s] -pre_route_clock_cap 0
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 48: create_delay_corner -name delay_corner_slow_RCMAX -early_timing_condition {default_mapping_tc_1} -late_timing_condition {default_mapping_tc_1} -rc_corner corner_worst_RCMAX
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 49: create_delay_corner -name delay_corner_fast_RCMAX -early_timing_condition {default_mapping_tc_2} -late_timing_condition {default_mapping_tc_2} -rc_corner corner_worst_RCMAX
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 50: create_delay_corner -name delay_corner_slow_RCMIN -early_timing_condition {default_mapping_tc_1} -late_timing_condition {default_mapping_tc_1} -rc_corner corner_worst_RCMIN
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 51: create_delay_corner -name delay_corner_fast_RCMIN -early_timing_condition {default_mapping_tc_2} -late_timing_condition {default_mapping_tc_2} -rc_corner corner_worst_RCMIN
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 56: create_constraint_mode -name functional_mode -sdc_files [list ../../design/dtmf_recvr_core.pr.sdc]
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 57: create_constraint_mode -name scan_mode -sdc_files [list ../../design/dtmf_recvr_core.scan.sdc]
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 58: create_constraint_mode -name test_mode -sdc_files [list ../../design/dtmf_recvr_core.test.sdc]
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 64: create_analysis_view -name func_slow_RCMAX -constraint_mode functional_mode -delay_corner delay_corner_slow_RCMAX
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 65: create_analysis_view -name func_fast_RCMAX -constraint_mode functional_mode -delay_corner delay_corner_fast_RCMAX
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 66: create_analysis_view -name func_slow_RCMIN -constraint_mode functional_mode -delay_corner delay_corner_slow_RCMIN
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 67: create_analysis_view -name func_fast_RCMIN -constraint_mode functional_mode -delay_corner delay_corner_fast_RCMIN
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 69: create_analysis_view -name scan_slow_RCMAX -constraint_mode scan_mode -delay_corner delay_corner_slow_RCMAX
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 70: create_analysis_view -name scan_fast_RCMAX -constraint_mode scan_mode -delay_corner delay_corner_fast_RCMAX
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 71: create_analysis_view -name scan_slow_RCMIN -constraint_mode scan_mode -delay_corner delay_corner_slow_RCMIN
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 72: create_analysis_view -name scan_fast_RCMIN -constraint_mode scan_mode -delay_corner delay_corner_fast_RCMIN
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 74: create_analysis_view -name test_slow_RCMAX -constraint_mode test_mode -delay_corner delay_corner_slow_RCMAX
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 75: create_analysis_view -name test_fast_RCMAX -constraint_mode test_mode -delay_corner delay_corner_fast_RCMAX
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 76: create_analysis_view -name test_slow_RCMIN -constraint_mode test_mode -delay_corner delay_corner_slow_RCMIN
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 77: create_analysis_view -name test_fast_RCMIN -constraint_mode test_mode -delay_corner delay_corner_fast_RCMIN
+[02/24 16:54:42      8s] @file(viewDefinition.tcl) 82: set_analysis_view -setup [list func_slow_RCMAX func_fast_RCMAX func_slow_RCMIN func_fast_RCMIN scan_slow_RCMAX scan_fast_RCMAX scan_slow_RCMIN scan_fast_RCMIN test_slow_RCMAX test_fast_RCMAX test_slow_RCMIN test_fast_RCMIN] -hold [list func_slow_RCMAX func_fast_RCMAX func_slow_RCMIN func_fast_RCMIN scan_slow_RCMAX scan_fast_RCMAX scan_slow_RCMIN scan_fast_RCMIN test_slow_RCMAX test_fast_RCMAX test_slow_RCMIN test_fast_RCMIN]
+[02/24 16:54:42      8s] 1 more Tempus_Timing_Signoff_XL 17.2 license (total 1 copies) checkout succeeded.
+[02/24 16:54:42      8s] 		Maximum number of analysis views allowed: 12.
+[02/24 16:54:42      8s] Number of views requested 12 are allowed with the current licenses... continuing with set_analysis_view.
+[02/24 16:54:42      8s] #@ End verbose source ../../design/viewDefinition.tcl
+[02/24 16:54:42      8s] Reading libset_slow timing library '/home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib' ...
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 16:54:42      8s] Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[02/24 16:54:43      8s] Read 113 cells in library 'FreePDK45_lib_v1.0' 
+[02/24 16:54:43      8s] Reading libset_slow timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/pllclk.lib' ...
+[02/24 16:54:43      8s] Read 1 cells in library 'pllclk' 
+[02/24 16:54:43      8s] Reading libset_slow timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/ram_256x16A.lib' ...
+[02/24 16:54:43      8s] Read 1 cells in library 'USERLIB' 
+[02/24 16:54:43      8s] Reading libset_slow timing library '/home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib' ...
+[02/24 16:54:43      8s] **WARN: (TECHLIB-459):	Appending library 'USERLIB' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib)
+[02/24 16:54:43      8s] Read 1 cells in library 'USERLIB' 
+[02/24 16:54:43      8s] @file(loadDesign_DMMMC.tcl) 3: read_physical -lef {../../libs/lef/FreePDK45_lib_v1.0.lef ../../libs/MACRO/LEF/pllclk.lef ../../libs/MACRO/LEF/ram_256X16A.lef ../../libs/MACRO/LEF/rom_512x16A.lef}
+[02/24 16:54:43      8s] 
+[02/24 16:54:43      8s] Loading LEF file ../../libs/lef/FreePDK45_lib_v1.0.lef ...
+[02/24 16:54:43      8s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 33.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 205.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 207.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 208.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 212.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 214.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 215.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 219.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 221.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 222.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 226.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 228.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/24 16:54:43      8s] The LEF parser will ignore this statement.
+[02/24 16:54:43      8s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 229.
+[02/24 16:54:43      8s] Set DBUPerIGU to M2 pitch 380.
+[02/24 16:54:43      8s] 
+[02/24 16:54:43      8s] Loading LEF file ../../libs/MACRO/LEF/pllclk.lef ...
+[02/24 16:54:43      8s] 
+[02/24 16:54:43      8s] Loading LEF file ../../libs/MACRO/LEF/ram_256X16A.lef ...
+[02/24 16:54:43      8s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[02/24 16:54:43      8s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[02/24 16:54:43      8s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../../libs/MACRO/LEF/ram_256X16A.lef at line 1530.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[02/24 16:54:43      8s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[02/24 16:54:43      8s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../../libs/MACRO/LEF/ram_256X16A.lef at line 1530.
+[02/24 16:54:43      8s] 
+[02/24 16:54:43      8s] Loading LEF file ../../libs/MACRO/LEF/rom_512x16A.lef ...
+[02/24 16:54:43      8s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[02/24 16:54:43      8s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[02/24 16:54:43      8s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../../libs/MACRO/LEF/rom_512x16A.lef at line 1008.
+[02/24 16:54:43      8s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[02/24 16:54:43      8s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[02/24 16:54:43      8s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../../libs/MACRO/LEF/rom_512x16A.lef at line 1008.
+[02/24 16:54:43      8s] 
+[02/24 16:54:43      8s] viaInitial starts at Tue Feb 24 16:54:43 2026
+[02/24 16:54:43      8s] viaInitial ends at Tue Feb 24 16:54:43 2026
+[02/24 16:54:43      8s] @file(loadDesign_DMMMC.tcl) 5: read_netlist "../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz" -top dtmf_recvr_core
+[02/24 16:54:43      8s] #% Begin Load netlist data ... (date=02/24 16:54:43, mem=419.9M)
+[02/24 16:54:43      8s] *** Begin netlist parsing (mem=506.7M) ***
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XNOR2_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XNOR2_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XNOR2_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XNOR2_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFF_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFF_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFF_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFF_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFFS_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFFS_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFFS_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFFS_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFFR_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFFR_X2' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFFR_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFFR_X1' is defined in LEF but not in the timing library.
+[02/24 16:54:43      8s] **WARN: (EMS-62):	Message <IMPVL-159> has exceeded the default message display limit of 20.
+[02/24 16:54:43      8s] To avoid this warning, increase the display limit per unique message by
+[02/24 16:54:43      8s] using the set_message -limit <number> command.
+[02/24 16:54:43      8s] The message limit can be removed by using the set_message -no_limit command.
+[02/24 16:54:43      8s] Note that setting a very large number using the set_message -limit command
+[02/24 16:54:43      8s] or removing the message limit using the set_message -no_limit command can
+[02/24 16:54:43      8s] significantly increase the log file size.
+[02/24 16:54:43      8s] To suppress a message, use the set_message -suppress command.
+[02/24 16:54:44      8s] Reading verilog netlist '../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz'
+[02/24 16:54:44      8s] 
+[02/24 16:54:44      8s] *** Memory Usage v#1 (Current mem = 529.469M, initial mem = 236.910M) ***
+[02/24 16:54:44      8s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:01.0, mem=529.5M) ***
+[02/24 16:54:44      8s] #% End Load netlist data ... (date=02/24 16:54:44, total cpu=0:00:00.2, real=0:00:01.0, peak res=419.9M, current mem=417.1M)
+[02/24 16:54:44      8s] Set top cell to dtmf_recvr_core.
+[02/24 16:54:44      8s] Building hierarchical netlist for Cell dtmf_recvr_core ...
+[02/24 16:54:44      8s] *** Netlist is unique.
+[02/24 16:54:44      8s] ** info: there are 152 modules.
+[02/24 16:54:44      8s] ** info: there are 8230 stdCell insts.
+[02/24 16:54:44      8s] ** info: there are 4 macros.
+[02/24 16:54:44      8s] 
+[02/24 16:54:44      8s] *** Memory Usage v#1 (Current mem = 580.520M, initial mem = 236.910M) ***
+[02/24 16:54:44      8s] @file(loadDesign_DMMMC.tcl) 6: init_design 
+[02/24 16:54:44      8s] Set Default Net Delay as 1000 ps.
+[02/24 16:54:44      8s] Set Default Net Load as 0.5 pF. 
+[02/24 16:54:44      8s] Set Default Input Pin Transition as 0.1 ps.
+[02/24 16:54:45      8s] Horizontal Layer M1 offset = 140 (guessed)
+[02/24 16:54:45      8s] Vertical Layer M2 offset = 190 (derived)
+[02/24 16:54:45      8s] Suggestion: specify LAYER OFFSET in LEF file
+[02/24 16:54:45      8s] Reason: hard to extract LAYER OFFSET from standard cells
+[02/24 16:54:45      8s] Generated pitch 0.19 in M4 is different from 0.14 defined in technology file in preferred direction.
+Extraction setup Delayed 
+[02/24 16:54:48      8s] Reading libset_fast timing library '/home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_typical.lib' ...
+[02/24 16:54:48      8s] Read 113 cells in library 'FreePDK45_lib_v1.0' 
+[02/24 16:54:49      9s] Reading timing constraints file '../../design/dtmf_recvr_core.test.sdc' ...
+[02/24 16:54:50      9s] Current (total cpu=0:00:09.1, real=0:00:44.0, peak res=535.2M, current mem=535.2M)
+[02/24 16:54:52      9s] Number of path exceptions in the constraint file = 25
+[02/24 16:54:52      9s] INFO (CTE): Constraints read successfully.
+[02/24 16:54:52      9s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:02.0, peak res=535.2M, current mem=503.8M)
+[02/24 16:54:53      9s] Current (total cpu=0:00:09.2, real=0:00:46.0, peak res=535.2M, current mem=503.8M)
+[02/24 16:54:53      9s] Reading timing constraints file '../../design/dtmf_recvr_core.pr.sdc' ...
+[02/24 16:54:53      9s] Current (total cpu=0:00:09.2, real=0:00:47.0, peak res=535.2M, current mem=503.9M)
+[02/24 16:54:53      9s] Number of path exceptions in the constraint file = 25
+[02/24 16:54:53      9s] INFO (CTE): Constraints read successfully.
+[02/24 16:54:53      9s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=504.6M, current mem=504.6M)
+[02/24 16:54:53      9s] Current (total cpu=0:00:09.2, real=0:00:47.0, peak res=535.2M, current mem=504.6M)
+[02/24 16:54:53      9s] Reading timing constraints file '../../design/dtmf_recvr_core.scan.sdc' ...
+[02/24 16:54:53      9s] Current (total cpu=0:00:09.2, real=0:00:47.0, peak res=535.2M, current mem=504.6M)
+[02/24 16:54:53      9s] Number of path exceptions in the constraint file = 29
+[02/24 16:54:53      9s] INFO (CTE): Constraints read successfully.
+[02/24 16:54:53      9s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=504.6M, current mem=502.7M)
+[02/24 16:54:53      9s] Current (total cpu=0:00:09.3, real=0:00:47.0, peak res=535.2M, current mem=502.8M)
+[02/24 16:54:53      9s] Creating Cell Server ...(0, 1, 1, 1)
+[02/24 16:54:54      9s] Summary for sequential cells identification: 
+[02/24 16:54:55      9s]   Identified SBFF number: 16
+[02/24 16:54:55      9s]   Identified MBFF number: 0
+[02/24 16:54:55      9s]   Identified SB Latch number: 0
+[02/24 16:54:55      9s]   Identified MB Latch number: 0
+[02/24 16:54:55      9s]   Not identified SBFF number: 0
+[02/24 16:54:55      9s]   Not identified MBFF number: 0
+[02/24 16:54:55      9s]   Not identified SB Latch number: 0
+[02/24 16:54:55      9s]   Not identified MB Latch number: 0
+[02/24 16:54:55      9s]   Number of sequential cells which are not FFs: 4
+[02/24 16:54:55      9s] Total number of combinational cells: 93
+[02/24 16:54:55      9s] Total number of sequential cells: 20
+[02/24 16:54:55      9s] Total number of tristate cells: 0
+[02/24 16:54:55      9s] Total number of level shifter cells: 0
+[02/24 16:54:55      9s] Total number of power gating cells: 0
+[02/24 16:54:55      9s] Total number of isolation cells: 0
+[02/24 16:54:55      9s] Total number of power switch cells: 0
+[02/24 16:54:55      9s] Total number of pulse generator cells: 0
+[02/24 16:54:55      9s] Total number of always on buffers: 0
+[02/24 16:54:55      9s] Total number of retention cells: 0
+[02/24 16:54:55      9s] List of usable buffers: BUF_X2 BUF_X1 BUF_X16 BUF_X32 BUF_X4
+[02/24 16:54:55      9s] Total number of usable buffers: 5
+[02/24 16:54:55      9s] List of unusable buffers:
+[02/24 16:54:55      9s] Total number of unusable buffers: 0
+[02/24 16:54:55      9s] List of usable inverters: INV_X2 INV_X1 INV_X16 INV_X32 INV_X4 INV_X8
+[02/24 16:54:55      9s] Total number of usable inverters: 6
+[02/24 16:54:55      9s] List of unusable inverters:
+[02/24 16:54:55      9s] Total number of unusable inverters: 0
+[02/24 16:54:55      9s] List of identified usable delay cells: BUF_X8
+[02/24 16:54:55      9s] Total number of identified usable delay cells: 1
+[02/24 16:54:55      9s] List of identified unusable delay cells:
+[02/24 16:54:55      9s] Total number of identified unusable delay cells: 0
+[02/24 16:54:55      9s]  Visiting view : func_slow_RCMAX
+[02/24 16:54:56      9s] Extraction setup Started 
+[02/24 16:54:57      9s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) resistance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 16:54:57      9s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) capacitance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 16:54:57      9s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) coupling capacitance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 16:54:57      9s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) resistance scaling factor 0.8 for corner corner_worst_RCMIN is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 16:54:57      9s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) capacitance scaling factor 0.8 for corner corner_worst_RCMIN is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 16:54:57      9s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) coupling capacitance scaling factor 0.8 for corner corner_worst_RCMIN is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 16:54:57      9s] **WARN: (IMPEXT-2773):	The via resistance between layers POLY and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[02/24 16:54:57      9s] **WARN: (IMPEXT-2773):	The via resistance between layers POLY and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[02/24 16:54:57      9s] Summary of Active RC-Corners : 
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: func_slow_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Index       : 0
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 1.2
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: func_fast_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Index       : 0
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 1.2
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: func_slow_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Index       : 1
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 0.8
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: func_fast_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Index       : 1
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 0.8
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: scan_slow_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Index       : 0
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 1.2
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: scan_fast_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Index       : 0
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 1.2
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: scan_slow_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Index       : 1
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 0.8
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: scan_fast_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Index       : 1
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 0.8
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: test_slow_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Index       : 0
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 1.2
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: test_fast_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMAX
+[02/24 16:54:57      9s]     RC-Corner Index       : 0
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 1.2
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 1.2
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: test_slow_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Index       : 1
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 0.8
+[02/24 16:54:57      9s]  
+[02/24 16:54:57      9s]  Analysis View: test_fast_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Name        : corner_worst_RCMIN
+[02/24 16:54:57      9s]     RC-Corner Index       : 1
+[02/24 16:54:57      9s]     RC-Corner Temperature : 25 Celsius
+[02/24 16:54:57      9s]     RC-Corner Cap Table   : ''
+[02/24 16:54:57      9s]     RC-Corner PostRoute Res Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute Cap Factor        : 0.8
+[02/24 16:54:57      9s]     RC-Corner PostRoute XCap Factor       : 0.8
+[02/24 16:54:57      9s] Warning: getNanoRouteMode is ignored by Tempus Timing Signoff Solution.
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : func_fast_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : func_slow_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : func_fast_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : scan_slow_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : scan_fast_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : scan_slow_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : scan_fast_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : test_slow_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : test_fast_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : test_slow_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : test_fast_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : func_slow_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : func_fast_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : func_slow_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : func_fast_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : scan_slow_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : scan_fast_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : scan_slow_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : scan_fast_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : test_slow_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : test_fast_RCMAX
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : test_slow_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Visiting view : test_fast_RCMIN
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:54:58      9s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:54:58      9s]  Setting StdDelay to 85.20
+[02/24 16:54:58      9s] Creating Cell Server, finished. 
+[02/24 16:54:58      9s] 
+[02/24 16:54:58      9s] Deleting Cell Server ...
+[02/24 16:55:00      9s] @file(loadDesign_DMMMC.tcl) 8: read_def "../../design/full.def"
+[02/24 16:55:00      9s] Reading DEF file '../../design/full.def', current time is Tue Feb 24 16:55:00 2026 ...
+[02/24 16:55:01      9s] --- DIVIDERCHAR '/'
+[02/24 16:55:01      9s] --- UnitsPerDBU = 1.0000
+[02/24 16:55:01      9s] Horizontal Layer M1 offset = 140 (guessed)
+[02/24 16:55:01      9s] Vertical Layer M2 offset = 190 (derived)
+[02/24 16:55:01      9s] Suggestion: specify LAYER OFFSET in LEF file
+[02/24 16:55:01      9s] Reason: hard to extract LAYER OFFSET from standard cells
+[02/24 16:55:01      9s] Generated pitch 0.19 in M4 is different from 0.14 defined in technology file in preferred direction.
+[02/24 16:55:01      9s] --- DIEAREA (0 0) (920000 820000)
+[02/24 16:55:02      9s] defIn read 10000 lines...
+[02/24 16:55:03      9s] Extracting standard cell pins and blockage ...... 
+[02/24 16:55:03      9s] Pin and blockage extraction finished
+[02/24 16:55:03      9s] Extracting macro/IO cell pins and blockage ...... 
+[02/24 16:55:03      9s] Pin and blockage extraction finished
+[02/24 16:55:04      9s] defIn read 20000 lines...
+[02/24 16:55:04      9s] defIn read 30000 lines...
+[02/24 16:55:04      9s] defIn read 40000 lines...
+[02/24 16:55:04      9s] defIn read 50000 lines...
+[02/24 16:55:04      9s] defIn read 60000 lines...
+[02/24 16:55:04      9s] defIn read 70000 lines...
+[02/24 16:55:04      9s] defIn read 80000 lines...
+[02/24 16:55:04      9s] defIn read 90000 lines...
+[02/24 16:55:04      9s] defIn read 100000 lines...
+[02/24 16:55:04      9s] defIn read 110000 lines...
+[02/24 16:55:04      9s] defIn read 120000 lines...
+[02/24 16:55:05      9s] defIn read 130000 lines...
+[02/24 16:55:05      9s] defIn read 140000 lines...
+[02/24 16:55:05      9s] defIn read 150000 lines...
+[02/24 16:55:05      9s] DEF file '../../design/full.def' is parsed, current time is Tue Feb 24 16:55:05 2026.
+[02/24 16:55:06      9s] Updating the floorplan ...
+[02/24 16:55:08      9s] #@ End verbose source ../scripts/loadDesign_DMMMC.tcl
+[02/24 16:55:08      9s] @file(run_session2_DRV.tcl) 2: source ../scripts/spef.tcl
+[02/24 16:55:08      9s] #@ Begin verbose source ../scripts/spef.tcl
+[02/24 16:55:08      9s] @file(spef.tcl) 1: read_spef -rc_corner corner_worst_RCMAX ../../design/SPEF/corner_worst_RCMAX.spef.gz
+[02/24 16:55:09      9s] read_spef Option :  ../../design/SPEF/corner_worst_RCMAX.spef.gz -noStarN -rc_corner corner_worst_RCMAX 
+[02/24 16:55:12      9s] Spef available for 1 corner(s) but not available for 1 corner(s). Spef reading will be triggered only after spef for all active RC Corners are available.
+[02/24 16:55:12      9s] @file(spef.tcl) 2: read_spef -rc_corner corner_worst_RCMIN ../../design/SPEF/corner_worst_RCMIN.spef.gz
+[02/24 16:55:12      9s] read_spef Option :  ../../design/SPEF/corner_worst_RCMIN.spef.gz -noStarN -rc_corner corner_worst_RCMIN 
+[02/24 16:55:17      9s] 
+[02/24 16:55:17      9s] SPEF files for RC Corner corner_worst_RCMAX:
+[02/24 16:55:17      9s] Top-level spef file '../../design/SPEF/corner_worst_RCMAX.spef.gz'.
+[02/24 16:55:17      9s] 
+[02/24 16:55:17      9s] SPEF files for RC Corner corner_worst_RCMIN:
+[02/24 16:55:17      9s] Top-level spef file '../../design/SPEF/corner_worst_RCMIN.spef.gz'.
+[02/24 16:55:17      9s] Start spef parsing (MEM=750.68).
+[02/24 16:55:17      9s] Number of corners: 2
+[02/24 16:55:17      9s] Number of parallel threads processing the nets is: 1
+[02/24 16:55:17      9s] Maximum backlog used in parser: 50.
+[02/24 16:55:17      9s] Reading multiple SPEF files in parallel.
+[02/24 16:55:18      9s] RCDB /tmp/ssv_tmpdir_28605_EVbczw/dtmf_recvr_core_28605_GOCutN.rcdb.d/dtmf_recvr_core.rcdb.d Creation Started (CPU Time= 0:00:00.0  MEM= 752.7M)
+[02/24 16:55:18      9s] Creating parasitic data file '/tmp/ssv_tmpdir_28605_EVbczw/dtmf_recvr_core_28605_GOCutN.rcdb.d/dtmf_recvr_core.rcdb.d' for storing RC.
+[02/24 16:55:19     10s] SPEF file ../../design/SPEF/corner_worst_RCMAX.spef.gz.
+[02/24 16:55:19     10s] Number of Resistors     : 132172
+[02/24 16:55:19     10s] Number of Ground Caps   : 140357
+[02/24 16:55:19     10s] Number of Coupling Caps : 31664
+[02/24 16:55:19     10s] 
+[02/24 16:55:20     10s] SPEF file ../../design/SPEF/corner_worst_RCMIN.spef.gz.
+[02/24 16:55:20     10s] Number of Resistors     : 132172
+[02/24 16:55:20     10s] Number of Ground Caps   : 140357
+[02/24 16:55:20     10s] Number of Coupling Caps : 31664
+[02/24 16:55:20     10s] 
+[02/24 16:55:20     10s] RCDB /tmp/ssv_tmpdir_28605_EVbczw/dtmf_recvr_core_28605_GOCutN.rcdb.d/dtmf_recvr_core.rcdb.d Creation Completed (CPU Time= 0:00:00.8  MEM= 800.7M)
+[02/24 16:55:20     10s] End spef parsing (MEM=768.594 CPU=0:00:00.8 REAL=0:00:03.0).
+[02/24 16:55:20     10s] Spef for RC Corner 'corner_worst_RCMAX' was previously specified. Dropping the previous specification.
+[02/24 16:55:20     10s] Spef for RC Corner 'corner_worst_RCMIN' was previously specified. Dropping the previous specification.
+[02/24 16:55:20     10s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=768.594M)
+[02/24 16:55:20     10s] Opening parasitic data file '/tmp/ssv_tmpdir_28605_EVbczw/dtmf_recvr_core_28605_GOCutN.rcdb.d/dtmf_recvr_core.rcdb.d' for reading.
+[02/24 16:55:21     10s] Lumped Parasitic Loading Completed (total cpu=0:00:00.0, real=0:00:01.0, current mem=768.594M)
+[02/24 16:55:21     10s] 3 nets are missing in SPEF file. The names of these nets are saved in ./corner_worst_RCMAX.missing_nets.rpt.
+[02/24 16:55:21     10s] 3 nets are missing in SPEF file. The names of these nets are saved in ./corner_worst_RCMIN.missing_nets.rpt.
+[02/24 16:55:21     10s] #@ End verbose source ../scripts/spef.tcl
+[02/24 16:55:21     10s] @file(run_session2_DRV.tcl) 3: set_db delaycal_enable_si true
+[02/24 16:55:22     10s] @file(run_session2_DRV.tcl) 5: set_db opt_signoff_verbose true
+[02/24 16:55:22     10s] @file(run_session2_DRV.tcl) 6: set_db opt_signoff_read_eco_opt_db ecoTimingDB
+[02/24 16:55:22     10s] @file(run_session2_DRV.tcl) 7: set_db opt_signoff_resize_inst true
+[02/24 16:55:22     10s] @file(run_session2_DRV.tcl) 9: opt_signoff -drv 
+[02/24 16:55:24     10s] This command "opt_signoff -drv" required an extra checkout of license tpstso.
+[02/24 16:55:24     10s] Additional license(s) checked out: 1 'Tempus_Timing_Signoff_TSO' license(s)
+[02/24 16:55:25     10s] Unfixed 0 ViaPillar Nets
+[02/24 16:55:26     10s] AAE DB initialization (MEM=787.672 CPU=0:00:00.1 REAL=0:00:00.0) 
+[02/24 16:55:27     10s] AAE DB initialization (MEM=787.672 CPU=0:00:00.1 REAL=0:00:00.0) 
+[02/24 16:55:29     10s] #@ Begin verbose source ecoTimingDB/dtmf_recvr_core_func_slow_RCMAX/aae.settings
+[02/24 16:55:29     10s] #@ End verbose source ecoTimingDB/dtmf_recvr_core_func_slow_RCMAX/aae.settings
+[02/24 16:55:29     10s] Start AAE Lib Loading. (MEM=806.75)
+[02/24 16:55:31     10s] End AAE Lib Loading. (MEM=825.828 CPU=0:00:00.0 Real=0:00:02.0)
+[02/24 16:55:31     10s] End AAE Lib Interpolated Model. (MEM=825.828 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/24 16:55:40     11s] Opening parasitic data file '/tmp/ssv_tmpdir_28605_EVbczw/dtmf_recvr_core_28605_GOCutN.rcdb.d/dtmf_recvr_core.rcdb.d' for reading.
+[02/24 16:55:42     11s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:03.0  MEM= 837.4M)
+[02/24 16:55:45     11s] 
+[02/24 16:55:45     11s] *info: Start reporting annotated parasitics ... : (mem=837.4M)
+[02/24 16:55:45     11s] 
+[02/24 16:55:46     11s] 
+[02/24 16:55:46     11s] *info: Annotated Parasitics for view corresponding to RC Corner corner_worst_RCMAX ...
+[02/24 16:55:46     11s] ####################################################################
+[02/24 16:55:46     11s] # report_annotated_parasitics: Tue Feb 24 16:55:46 2026
+[02/24 16:55:46     11s] #   view: func_slow_RCMAX
+[02/24 16:55:46     11s] #   -list_not_annotated
+[02/24 16:55:46     11s] ####################################################################
+[02/24 16:55:46     11s] 
+[02/24 16:55:46     11s] # Summary of Annotated Parasitics:
+[02/24 16:55:46     11s] +------------------------------------------------------------------------------+
+[02/24 16:55:46     11s] |    Net Type         |    Count   |   Annotated (%)     | Not Annotated (%)   |
+[02/24 16:55:46     11s] +---------------------+------------+---------------------+---------------------+
+[02/24 16:55:46     11s] | total               |       8414 |       8408  99.9%   |          6   0.1%   |
+[02/24 16:55:46     11s] +---------------------+------------+---------------------+---------------------+
+[02/24 16:55:46     11s] | 0-term:floating (*) |          1 |          0   0.0%   |          1 100.0%   |
+[02/24 16:55:46     11s] | 1-term:no load      |          5 |          0   0.0%   |          5 100.0%   |
+[02/24 16:55:46     11s] | real net (complete) |       8408 |       8408 100.0%   |          0   0.0%   |
+[02/24 16:55:46     11s] | real net (broken)   |          0 |          0   0.0%   |          0   0.0%   |
+[02/24 16:55:46     11s] +------------------------------------------------------------------------------+
+[02/24 16:55:46     11s] Note for Net Types marked "(*)":  Such nets are never timed, but reported here for informational purpose.
+[02/24 16:55:46     11s] 
+[02/24 16:55:46     11s] +-----------------------------------------------------------------+
+[02/24 16:55:46     11s] | Annotated |    Res (KOhm)   |    Cap (pF)     |    XCap (pF)    |
+[02/24 16:55:46     11s] +-----------+-----------------+-----------------+-----------------+
+[02/24 16:55:46     11s] | Count     |        132172   |        140357   |         31664   |
+[02/24 16:55:46     11s] | Value     |      730.4969   |       22.7070   |        6.2433   |
+[02/24 16:55:46     11s] +-----------------------------------------------------------------+
+[02/24 16:55:46     11s] 
+[02/24 16:55:46     11s] *info: Annotated Parasitics for view corresponding to RC Corner corner_worst_RCMIN ...
+[02/24 16:55:46     11s] ####################################################################
+[02/24 16:55:46     11s] # report_annotated_parasitics: Tue Feb 24 16:55:46 2026
+[02/24 16:55:46     11s] #   view: func_slow_RCMIN
+[02/24 16:55:46     11s] #   -list_not_annotated
+[02/24 16:55:46     11s] ####################################################################
+[02/24 16:55:46     11s] 
+[02/24 16:55:46     11s] # Summary of Annotated Parasitics:
+[02/24 16:55:46     11s] +------------------------------------------------------------------------------+
+[02/24 16:55:46     11s] |    Net Type         |    Count   |   Annotated (%)     | Not Annotated (%)   |
+[02/24 16:55:46     11s] +---------------------+------------+---------------------+---------------------+
+[02/24 16:55:46     11s] | total               |       8414 |       8408  99.9%   |          6   0.1%   |
+[02/24 16:55:46     11s] +---------------------+------------+---------------------+---------------------+
+[02/24 16:55:46     11s] | 0-term:floating (*) |          1 |          0   0.0%   |          1 100.0%   |
+[02/24 16:55:46     11s] | 1-term:no load      |          5 |          0   0.0%   |          5 100.0%   |
+[02/24 16:55:46     11s] | real net (complete) |       8408 |       8408 100.0%   |          0   0.0%   |
+[02/24 16:55:46     11s] | real net (broken)   |          0 |          0   0.0%   |          0   0.0%   |
+[02/24 16:55:46     11s] +------------------------------------------------------------------------------+
+[02/24 16:55:46     11s] Note for Net Types marked "(*)":  Such nets are never timed, but reported here for informational purpose.
+[02/24 16:55:46     11s] 
+[02/24 16:55:46     11s] +-----------------------------------------------------------------+
+[02/24 16:55:46     11s] | Annotated |    Res (KOhm)   |    Cap (pF)     |    XCap (pF)    |
+[02/24 16:55:46     11s] +-----------+-----------------+-----------------+-----------------+
+[02/24 16:55:46     11s] | Count     |        132172   |        140357   |         31664   |
+[02/24 16:55:46     11s] | Value     |      486.9979   |       14.7108   |        4.1622   |
+[02/24 16:55:46     11s] +-----------------------------------------------------------------+
+[02/24 16:55:46     11s] 
+[02/24 16:55:46     11s] *info: Finished reporting annotated parasitics: (totcpu=0:00:00.0, real=0:00:01.0, totCommandReal=0:00:21.0, mem=837.4M) 
+[02/24 16:55:46     11s] 
+[02/24 16:55:47     11s] Creating Cell Server ...(0, 0, 0, 0)
+[02/24 16:55:48     11s] Summary for sequential cells identification: 
+[02/24 16:55:48     11s]   Identified SBFF number: 16
+[02/24 16:55:48     11s]   Identified MBFF number: 0
+[02/24 16:55:48     11s]   Identified SB Latch number: 0
+[02/24 16:55:48     11s]   Identified MB Latch number: 0
+[02/24 16:55:48     11s]   Not identified SBFF number: 0
+[02/24 16:55:48     11s]   Not identified MBFF number: 0
+[02/24 16:55:48     11s]   Not identified SB Latch number: 0
+[02/24 16:55:48     11s]   Not identified MB Latch number: 0
+[02/24 16:55:48     11s]   Number of sequential cells which are not FFs: 4
+[02/24 16:55:49     11s]  Visiting view : func_slow_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : func_fast_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : func_slow_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : func_fast_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : scan_slow_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : scan_fast_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : scan_slow_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : scan_fast_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : test_slow_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : test_fast_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : test_slow_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : test_fast_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : func_slow_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : func_fast_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : func_slow_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : func_fast_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : scan_slow_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : scan_fast_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : scan_slow_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : scan_fast_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : test_slow_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : test_fast_RCMAX
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 0
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : test_slow_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Visiting view : test_fast_RCMIN
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 62.00 (1.000) with rcCorner = 1
+[02/24 16:55:49     11s]    : PowerDomain = none : Weighted F : unweighted  = 24.60 (1.000) with rcCorner = -1
+[02/24 16:55:49     11s]  Setting StdDelay to 85.20
+[02/24 16:55:49     11s] Creating Cell Server, finished. 
+[02/24 16:55:49     11s] 
+[02/24 16:55:52     11s] 
+[02/24 16:55:52     11s] *info: Opening ckd/tgd files for reading ... : ( MEM = 873.4M )
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_func_slow_RCMAX.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_func_slow_RCMAX.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_func_fast_RCMAX.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_func_fast_RCMAX.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_func_slow_RCMIN.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_func_slow_RCMIN.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_func_fast_RCMIN.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_func_fast_RCMIN.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_scan_slow_RCMAX.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_scan_slow_RCMAX.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_scan_fast_RCMAX.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_scan_fast_RCMAX.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_scan_slow_RCMIN.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_scan_slow_RCMIN.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_scan_fast_RCMIN.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_scan_fast_RCMIN.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_test_slow_RCMAX.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_test_slow_RCMAX.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_test_fast_RCMAX.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_test_fast_RCMAX.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_test_slow_RCMIN.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_test_slow_RCMIN.ckd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_test_fast_RCMIN.tgd
+[02/24 16:55:53     11s] *info: found ecoTimingDB/dtmf_recvr_core_test_fast_RCMIN.ckd
+[02/24 16:55:53     11s] 
+[02/24 16:55:53     11s] 
+[02/24 16:55:53     11s] *info: Reading clockNet info ... : (mem=873.4M)
+[02/24 16:55:53     11s] 
+[02/24 16:55:53     11s] *info: reading ignored-nets info from dtmf_recvr_core_func_slow_RCMAX.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_func_fast_RCMAX.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_func_slow_RCMIN.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_func_fast_RCMIN.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_scan_slow_RCMAX.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_scan_fast_RCMAX.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_scan_slow_RCMIN.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_scan_fast_RCMIN.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_test_slow_RCMAX.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_test_fast_RCMAX.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_test_slow_RCMIN.ckd
+[02/24 16:55:54     11s] *info: reading ignored-nets info from dtmf_recvr_core_test_fast_RCMIN.ckd
+[02/24 16:55:54     11s] 
+[02/24 16:55:54     11s] *info: Finished reading clockNet info: (totcpu=0:00:00.0, real=0:00:01.0, totCommandReal=0:00:29.0, mem=873.5M) 
+[02/24 16:55:54     11s] 
+[02/24 16:55:54     11s] 
+[02/24 16:55:54     11s] *info: Reading eco timing DB ... : (mem=873.5M)
+[02/24 16:55:54     11s] 
+[02/24 16:56:00     12s] 
+[02/24 16:56:00     12s] *info: Finished reading eco timing DB totalNodes=29097 loadedNodes=29097 <timing DB Mem> = 6M: (totcpu=0:00:01.0, real=0:00:06.0, totCommandReal=0:00:35.0, mem=873.5M) 
+[02/24 16:56:00     12s] 
+[02/24 16:56:01     12s] 
+[02/24 16:56:01     12s] *info: Normalizing TG levels ... : (mem=873.4M)
+[02/24 16:56:01     12s] 
+[02/24 16:56:01     12s] 
+[02/24 16:56:01     12s] *info: Finished normalizing TG levels: (totcpu=0:00:00.0, real=0:00:00.0, totCommandReal=0:00:36.0, mem=873.4M) 
+[02/24 16:56:01     12s] 
+[02/24 16:56:01     12s] 
+[02/24 16:56:01     12s] *info: Creating timer for setup with 30261 nodes ... : (mem=873.4M)
+[02/24 16:56:01     12s] 
+[02/24 16:56:03     13s] 
+[02/24 16:56:03     13s] *info: Finished creating timer for setup with 30261 nodes: (totcpu=0:00:00.9, real=0:00:02.0, totCommandReal=0:00:38.0, mem=2033.5M) 
+[02/24 16:56:03     13s] 
+[02/24 16:56:03     13s] *info: 342 clock nets excluded from opt_signoff operation.
+[02/24 16:56:03     13s] *info: 337 pwr/gnd nets excluded from IPO operation.
+[02/24 16:56:04     13s] PhyDesignGrid: maxLocalDensity 0.98
+[02/24 16:56:04     13s] ### Creating PhyDesignMc. totSessionCpu=0:00:13.7 mem=2033.5M
+[02/24 16:56:07     13s] Core basic site is Free_OMC_Si2_PDK45nm
+[02/24 16:56:07     13s] SiteArray: one-level site array dimensions = 292 x 2421
+[02/24 16:56:07     13s] SiteArray: use 2,827,728 bytes
+[02/24 16:56:07     13s] SiteArray: current memory after site array memory allocatiion 2033.5M
+[02/24 16:56:08     13s] Estimated cell power/ground rail width = 0.197 um
+[02/24 16:56:08     13s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[02/24 16:56:08     13s] Mark StBox On SiteArr starts
+[02/24 16:56:08     13s] Mark StBox On SiteArr ends
+[02/24 16:56:08     13s] spiAuditVddOnBottomForRows for llg="default" starts
+[02/24 16:56:08     13s] spiAuditVddOnBottomForRows ends
+[02/24 16:56:08     13s] [CPU] DPlace-Init (cpu=0:00:00.0, real=0:00:04.0, mem=2033.5MB).
+[02/24 16:56:09     13s] ### Creating PhyDesignMc, finished. totSessionCpu=0:00:13.8 mem=2033.5M
+[02/24 16:56:22     13s] <esoDRV>: using drv scale factor 1.000
+[02/24 16:56:22     13s] *** Starting DRV fixing
+[02/24 16:56:22     13s] 
+[02/24 16:56:22     13s] *** opt_signoff -drv ***
+[02/24 16:56:22     13s] *info: Mode : Physical
+[02/24 16:56:22     13s] *info: Timing Mode : GBA
+[02/24 16:56:22     13s] *info: Analysis Mode : SI
+[02/24 16:56:22     13s] *info: Buffer Footprint List = { BUF_X4 BUF_X2 BUF_X1 BUF_X16 BUF_X32 BUF_X8 }
+[02/24 16:56:22     13s] 
+[02/24 16:56:23     13s] 
+[02/24 16:56:23     13s] *info: Reporting Initial summary ... : (mem=2062.1M)
+[02/24 16:56:23     13s] 
+[02/24 16:56:24     13s] --------------------------------------------------- 
+[02/24 16:56:24     13s]    Setup Timing Summary  - Initial 
+[02/24 16:56:24     13s] --------------------------------------------------- 
+[02/24 16:56:24     13s] View: func_slow_RCMAX 
+[02/24 16:56:24     13s] 	WNS: 0.004 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:24     13s] View: func_fast_RCMAX 
+[02/24 16:56:24     13s] 	WNS: 2.071 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:24     13s] View: func_slow_RCMIN 
+[02/24 16:56:24     13s] 	WNS: 1.905 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:24     13s] View: func_fast_RCMIN 
+[02/24 16:56:24     13s] 	WNS: 4.358 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:24     13s] View: scan_slow_RCMAX 
+[02/24 16:56:24     13s] 	WNS: -0.565 
+[02/24 16:56:24     13s] 	TNS: -6.472 
+[02/24 16:56:24     13s] 	VP: 20 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1200_reg[12]/D 
+[02/24 16:56:24     13s] View: scan_fast_RCMAX 
+[02/24 16:56:24     13s] 	WNS: 2.071 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:24     13s] View: scan_slow_RCMIN 
+[02/24 16:56:24     13s] 	WNS: 1.905 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:24     13s] View: scan_fast_RCMIN 
+[02/24 16:56:24     13s] 	WNS: 4.358 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:24     13s] View: test_slow_RCMAX 
+[02/24 16:56:24     13s] 	WNS: 0.173 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:24     13s] View: test_fast_RCMAX 
+[02/24 16:56:24     13s] 	WNS: 3.979 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:24     13s] View: test_slow_RCMIN 
+[02/24 16:56:24     13s] 	WNS: 3.665 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:24     13s] View: test_fast_RCMIN 
+[02/24 16:56:24     13s] 	WNS: 6.301 
+[02/24 16:56:24     13s] 	TNS: 0.000 
+[02/24 16:56:24     13s] 	VP: 0 
+[02/24 16:56:24     13s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:24     13s] <esoSlackStats>:Initial:SetupWNS:-0.565:SetupTNS:-6.472:SetupVP:20:SetupWorstEndPt:RESULTS_CONV_INST/r1200_reg[12]/D
+[02/24 16:56:24     13s] 
+[02/24 16:56:24     13s] ------------------------------------------------------------
+[02/24 16:56:24     13s]          Initial Setup Summary                             
+[02/24 16:56:24     13s] ------------------------------------------------------------
+[02/24 16:56:24     13s] 
+[02/24 16:56:24     13s] +--------------------+-----------+
+[02/24 16:56:24     13s] |     Setup mode     |    all    |
+[02/24 16:56:24     13s] +--------------------+-----------+
+[02/24 16:56:24     13s] |           WNS (ns):|    -0.565 |
+[02/24 16:56:24     13s] |           TNS (ns):|    -6.472 |
+[02/24 16:56:24     13s] |    Violating Paths:|        20 |
+[02/24 16:56:24     13s] +--------------------+-----------+
+[02/24 16:56:24     13s] 
+[02/24 16:56:24     13s] +----------------+-------------------------------+-----------------------------+
+[02/24 16:56:24     13s] |                |          Signal nets          |          Clock nets         |
+[02/24 16:56:24     13s] |    DRVs        +------------------+------------+----------------+------------+
+[02/24 16:56:24     13s] |                |  Nr nets(terms)  | Worst Vio  | Nr nets(terms) | Worst Vio  |
+[02/24 16:56:24     13s] +----------------+------------------+------------+----------------+------------+
+[02/24 16:56:24     13s] |   max_cap      |      1 (      1) |     -0.001 |     0 (     0) |      0.000 |
+[02/24 16:56:24     13s] |   max_tran     |     18 (     18) |     -0.436 |     3 (     3) |     -2.776 |
+[02/24 16:56:24     13s] +----------------+-------------------------------+----------------+------------+
+[02/24 16:56:24     13s] 
+[02/24 16:56:24     13s] ------------------------------------------------------------
+[02/24 16:56:24     13s] 
+[02/24 16:56:24     13s] Density: 38.371%
+[02/24 16:56:24     13s] 
+[02/24 16:56:24     13s] ------------------------------------------------------------
+[02/24 16:56:24     13s] 
+[02/24 16:56:24     13s] *info: Finished reporting Initial summary: (totcpu=0:00:00.0, real=0:00:01.0, totCommandReal=0:00:59.0, mem=2062.1M) 
+[02/24 16:56:24     13s] 
+[02/24 16:56:25     13s] *info: Fixing DRV violations
+[02/24 16:56:25     13s] 
+[02/24 16:56:25     13s] *info: Starting DRV Fixing (Resize) Iter 1 :: Violating nodes: 22 ... : (mem=2062.1M)
+[02/24 16:56:25     13s] 
+[02/24 16:56:25     13s] *info: total Tran vio = 0.000, total Cap Vio = 0.000, total FanoutLoad vio = 0.000
+[02/24 16:56:35     14s] *info: Active Nodes: 19 Nodes attempted: 19 Moves Generated: 8  Committed: 8
+[02/24 16:56:35     14s] 
+[02/24 16:56:35     14s] *info: Finished DRV Fixing (Resize) Iter 1: (totcpu=0:00:00.2, real=0:00:10.0, totCommandReal=0:01:10, mem=2153.8M) 
+[02/24 16:56:35     14s] 
+[02/24 16:56:35     14s] 
+[02/24 16:56:35     14s] *info: Starting DRV Fixing (Resize) Iter 2 :: Violating nodes: 14 ... : (mem=2153.8M)
+[02/24 16:56:35     14s] 
+[02/24 16:56:35     14s] *info: total Tran vio = 0.000, total Cap Vio = 0.000, total FanoutLoad vio = 0.000
+[02/24 16:56:35     14s] *info: Active Nodes: 11 Nodes attempted: 11 Moves Generated: 0  Committed: 0
+[02/24 16:56:35     14s] 
+[02/24 16:56:35     14s] *info: Finished DRV Fixing (Resize) Iter 2: (totcpu=0:00:00.0, real=0:00:00.0, totCommandReal=0:01:10, mem=2153.8M) 
+[02/24 16:56:35     14s] 
+[02/24 16:56:35     14s] 
+[02/24 16:56:35     14s] *info: Starting DRV Fixing (Add buffer) Iter 1 :: Violating nodes: 14 ... : (mem=2153.8M)
+[02/24 16:56:35     14s] 
+[02/24 16:56:35     14s] *info: total Tran vio = 0.000, total Cap Vio = 0.000, total FanoutLoad vio = 0.000
+[02/24 16:56:41     14s] *info: Active Nodes: 11 Nodes attempted: 11 Moves Generated: 5  Committed: 5
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info: Finished DRV Fixing (Add buffer) Iter 1: (totcpu=0:00:00.2, real=0:00:06.0, totCommandReal=0:01:16, mem=2172.4M) 
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info: Starting DRV Fixing (Add buffer) Iter 2 :: Violating nodes: 10 ... : (mem=2172.4M)
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info: total Tran vio = 0.000, total Cap Vio = 0.000, total FanoutLoad vio = 0.000
+[02/24 16:56:41     14s] *info: Active Nodes: 7 Nodes attempted: 7 Moves Generated: 0  Committed: 0
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info: Finished DRV Fixing (Add buffer) Iter 2: (totcpu=0:00:00.0, real=0:00:00.0, totCommandReal=0:01:16, mem=2172.4M) 
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info: Reporting Final summary ... : (mem=2172.4M)
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] --------------------------------------------------- 
+[02/24 16:56:41     14s]    Setup Timing Summary  - Final 
+[02/24 16:56:41     14s] --------------------------------------------------- 
+[02/24 16:56:41     14s] View: func_slow_RCMAX 
+[02/24 16:56:41     14s] 	WNS: 0.072 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r941_reg[14]/D 
+[02/24 16:56:41     14s] View: func_fast_RCMAX 
+[02/24 16:56:41     14s] 	WNS: 2.075 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] View: func_slow_RCMIN 
+[02/24 16:56:41     14s] 	WNS: 1.959 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] View: func_fast_RCMIN 
+[02/24 16:56:41     14s] 	WNS: 4.358 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] View: scan_slow_RCMAX 
+[02/24 16:56:41     14s] 	WNS: -0.439 
+[02/24 16:56:41     14s] 	TNS: -3.568 
+[02/24 16:56:41     14s] 	VP: 18 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r941_reg[14]/D 
+[02/24 16:56:41     14s] View: scan_fast_RCMAX 
+[02/24 16:56:41     14s] 	WNS: 2.075 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] View: scan_slow_RCMIN 
+[02/24 16:56:41     14s] 	WNS: 1.959 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] View: scan_fast_RCMIN 
+[02/24 16:56:41     14s] 	WNS: 4.358 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] View: test_slow_RCMAX 
+[02/24 16:56:41     14s] 	WNS: 0.403 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r1477_reg[10]/D 
+[02/24 16:56:41     14s] View: test_fast_RCMAX 
+[02/24 16:56:41     14s] 	WNS: 3.983 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] View: test_slow_RCMIN 
+[02/24 16:56:41     14s] 	WNS: 3.719 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] View: test_fast_RCMIN 
+[02/24 16:56:41     14s] 	WNS: 6.301 
+[02/24 16:56:41     14s] 	TNS: 0.000 
+[02/24 16:56:41     14s] 	VP: 0 
+[02/24 16:56:41     14s] 	Worst setup path end point:RESULTS_CONV_INST/r852_reg[11]/D 
+[02/24 16:56:41     14s] <esoSlackStats>:Final:SetupWNS:-0.439:SetupTNS:-3.568:SetupVP:18:SetupWorstEndPt:RESULTS_CONV_INST/r941_reg[14]/D
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] ------------------------------------------------------------
+[02/24 16:56:41     14s]          Final Setup Summary                             
+[02/24 16:56:41     14s] ------------------------------------------------------------
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] +--------------------+-----------+
+[02/24 16:56:41     14s] |     Setup mode     |    all    |
+[02/24 16:56:41     14s] +--------------------+-----------+
+[02/24 16:56:41     14s] |           WNS (ns):|    -0.439 |
+[02/24 16:56:41     14s] |           TNS (ns):|    -3.568 |
+[02/24 16:56:41     14s] |    Violating Paths:|        18 |
+[02/24 16:56:41     14s] +--------------------+-----------+
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] +----------------+-------------------------------+-----------------------------+
+[02/24 16:56:41     14s] |                |          Signal nets          |          Clock nets         |
+[02/24 16:56:41     14s] |    DRVs        +------------------+------------+----------------+------------+
+[02/24 16:56:41     14s] |                |  Nr nets(terms)  | Worst Vio  | Nr nets(terms) | Worst Vio  |
+[02/24 16:56:41     14s] +----------------+------------------+------------+----------------+------------+
+[02/24 16:56:41     14s] |   max_cap      |      0 (      0) |      0.000 |     0 (     0) |      0.000 |
+[02/24 16:56:41     14s] |   max_tran     |      7 (      7) |     -0.436 |     3 (     3) |     -2.776 |
+[02/24 16:56:41     14s] +----------------+-------------------------------+----------------+------------+
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] ------------------------------------------------------------
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] Density: 38.421%
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] ------------------------------------------------------------
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info: Finished reporting Final summary: (totcpu=0:00:00.1, real=0:00:00.0, totCommandReal=0:01:16, mem=2172.4M) 
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info:
+[02/24 16:56:41     14s] *info: Added a total of 5 cells on 5 nets to fix/reduce drv violation
+[02/24 16:56:41     14s] *info:          including 5 term buffering (4 driver buffering and 1 sink buffering)
+[02/24 16:56:41     14s] *info: Summary: 
+[02/24 16:56:41     14s] *info:            3 cells of type 'BUF_X32' (area=2.7,total_area=8.0) used
+[02/24 16:56:41     14s] *info:            1 cell  of type 'BUF_X8' (area=1.1,total_area=1.1) used
+[02/24 16:56:41     14s] *info:            1 cell  of type 'BUF_X4' (area=0.8,total_area=0.8) used
+[02/24 16:56:41     14s] *info:       total area used=9.8
+[02/24 16:56:41     14s] *info:
+[02/24 16:56:41     14s] *info:    Total 8 instances resized or VT-Swapped
+[02/24 16:56:41     14s] *info:
+[02/24 16:56:41     14s] *summary:      8 cell type changes
+[02/24 16:56:41     14s] *	:      5 instances changed cell type from 'BUF_X16' to 'BUF_X32'
+[02/24 16:56:41     14s] *	:      2 instances changed cell type from 'BUF_X4' to 'BUF_X16'
+[02/24 16:56:41     14s] *	:      1 instance  changed cell type from 'INV_X8' to 'INV_X16'
+[02/24 16:56:41     14s] *info:       total area used=7.4
+[02/24 16:56:41     14s] ---------------------------------------------------
+[02/24 16:56:41     14s]    ECO DRV Fixing Violated Nets Summary
+[02/24 16:56:41     14s] ---------------------------------------------------
+[02/24 16:56:41     14s] *info: Total 10 net(s) have violated drvs
+[02/24 16:56:41     14s] *info:      3 net(s): Could not be fixed because they are clock nets.
+[02/24 16:56:41     14s] *info:                The tool is not allowed to insert a buffer on a clock net.
+[02/24 16:56:41     14s]       m_ram_clk__L5_N0
+[02/24 16:56:41     14s]       m_clk__L3_N0
+[02/24 16:56:41     14s]       m_dsram_clk__L1_N0
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info:      7 net(s): Could not be fixed because no max_tran violation improving moves were found.
+[02/24 16:56:41     14s] *info:                These nets have DRV but inserting a buffer would further degrade the max_tran violation.
+[02/24 16:56:41     14s] *info:                You should check the topology of those nets and probably enlarge the list of
+[02/24 16:56:41     14s] *info:                available buffer/delay cells that are allowed to be used.
+[02/24 16:56:41     14s]       FE_OFCN530_p_addrs_5_
+[02/24 16:56:41     14s]       FE_OFCN467_FE_OFN55_tdsp_data_out_1_
+[02/24 16:56:41     14s]       FE_OFN24_tdsp_data_out_8_
+[02/24 16:56:41     14s]       p_addrs[1]
+[02/24 16:56:41     14s]       p_addrs[2]
+[02/24 16:56:41     14s]       t_addrs[5]
+[02/24 16:56:41     14s]       tdsp_data_out[7]
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] ---------------------------------------------------
+[02/24 16:56:41     14s] 
+[02/24 16:56:41     14s] *info: Finish ECO DRV Fixing: (totcpu=0:00:00.5, real=0:00:19.0, totCommandReal=0:01:16, mem=2172.4M) 
+[02/24 16:56:41     14s] 
+[02/24 16:56:42     14s] Deleting Cell Server ...
+[02/24 16:56:47     14s] UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+[02/24 16:56:47     14s] UM:          14.6            160         -3.568 ns         -0.439 ns  signoff_opt_design
+[02/24 16:56:47     14s] 
+[02/24 16:56:47     14s] *info: Ending opt_signoff: (totcpu=0:00:03.9, real=0:01:22, mem=2151.3M) 
+[02/24 16:56:47     14s] 
+[02/24 16:56:47     14s] @file(run_session2_DRV.tcl) 11: select_obj [get_db insts *ESOC*]
+[02/24 16:56:47     14s] #@ End verbose source ../scripts/run_session2_DRV.tcl
+[02/24 16:56:47     14s] @tempus 2> exit
+
+[02/24 16:56:52     14s] *** Memory Usage v#1 (Current mem = 893.887M, initial mem = 236.910M) ***
+[02/24 16:56:52     14s] 
+[02/24 16:56:52     14s] *** Summary of all messages that are not suppressed in this session:
+[02/24 16:56:52     14s] Severity  ID               Count  Summary                                  
+[02/24 16:56:53     14s] WARNING   IMPEXT-2773          2  The via resistance between layers %s and...
+[02/24 16:56:53     14s] WARNING   IMPEXT-3570          6  PostRoute (EffortLevel high) %s scaling ...
+[02/24 16:56:53     14s] WARNING   IMPVL-159          232  Pin '%s' of cell '%s' is defined in LEF ...
+[02/24 16:56:53     14s] WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+[02/24 16:56:53     14s] WARNING   TECHLIB-459          1  Appending library '%s' to the previously...
+[02/24 16:56:53     14s] *** Message Summary: 261 warning(s), 0 error(s)
+[02/24 16:56:53     14s] 
+[02/24 16:56:53     14s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:14.7, real=0:02:47, mem=893.9M) ---

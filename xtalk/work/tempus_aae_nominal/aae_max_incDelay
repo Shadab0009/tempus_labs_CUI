@@ -1,0 +1,2 @@
+# this max. incDelay report is for GUI with following format:
+# <receiver_pin_name> {<victim_net_name>} <rise/fall> <incr-delay value> | cpl <value> <aggressor_net_name> | cpl <value> ... |

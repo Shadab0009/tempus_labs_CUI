@@ -7,6 +7,6 @@ report_analysis_coverage > rep.coverage
 report_timing -path_type endpoint -fields {endpoint capture_data_edge slack view} -max_slack 0 > setup.rpt
 report_timing -path_type endpoint -fields {endpoint capture_data_edge slack view} -max_slack 0 -early > hold.rpt
 
-report_timing_summary > timing_summary
+#report_timing_summary > timing_summary
 
 write_eco_opt_db

@@ -1,0 +1,133 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+Options:	-stylus -files ../scripts/run_session1.tcl -log LOG_session1.log 
+Date:		Tue Feb 24 16:34:04 2026
+Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	17.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+***************************************************************************************
+INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+         has only limited customer testing. You are encouraged to work with Cadence directly
+         to qualify your usage and make sure it meets your needs before deploying it widely.
+***************************************************************************************
+
+Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_21794_Fhd3FE'.
+#@ Processing -files option
+Sourcing tcl/tk file '../scripts/run_session1.tcl' ...
+@tempus 1> source ../scripts/run_session1.tcl
+#@ Begin verbose source ../scripts/run_session1.tcl
+@file(run_session1.tcl) 8: set_multi_cpu_usage -local_cpu 2 -cpu_per_remote_host 2 -remote_host 2
+@file(run_session1.tcl) 9: set_distributed_hosts -local
+The timeout for a remote job to respond is 30 seconds.
+Submit command for task runs will be: local
+@file(run_session1.tcl) 11: set_multi_cpu_usage -local_cpu 8 -remote_host 2
+@file(run_session1.tcl) 13: distribute_read_design -design_script ../scripts/loadDesign_DMMMC.tcl -out_dir sta
+Started resource monitoring for client processes; see ./host-monitor.log1 for details.
+/home/shadab/shadab/tempus_labs_CUI/eco/work
+/home/shadab/shadab/tempus_labs_CUI/eco/work
+Connected to ra01 38549 0 ( PID=21931 )
+Connected to ra01 36640 1 ( PID=21930 )
+Refer to child logfile 'sta/21794_1.log' for details.
+Refer to child logfile 'sta/21794_0.log' for details.
+@file(run_session1.tcl) 15: distribute_views -views [list func_slow_RCMAX func_fast_RCMAX func_slow_RCMIN func_fast_RCMIN scan_slow_RCMAX scan_fast_RCMAX scan_slow_RCMIN scan_fast_RCMIN test_slow_RCMAX test_fast_RCMAX test_slow_RCMIN test_fast_RCMIN] -script ../scripts/sta.tcl
+Batch mode processing for view/jobset 'func_fast_RCMAX' finished successfully. Number of views/jobsets remaining for further analysis is '11'.
+Refer to child logfile 'sta/21794_1.log' for details.
+Batch mode processing for view/jobset 'func_slow_RCMAX' finished successfully. Number of views/jobsets remaining for further analysis is '10'.
+Refer to child logfile 'sta/21794_0.log' for details.
+Batch mode processing for view/jobset 'func_slow_RCMIN' finished successfully. Number of views/jobsets remaining for further analysis is '9'.
+Refer to child logfile 'sta/21794_0.log' for details.
+Batch mode processing for view/jobset 'func_fast_RCMIN' finished successfully. Number of views/jobsets remaining for further analysis is '8'.
+Refer to child logfile 'sta/21794_1.log' for details.
+Batch mode processing for view/jobset 'scan_fast_RCMAX' finished successfully. Number of views/jobsets remaining for further analysis is '7'.
+Refer to child logfile 'sta/21794_1.log' for details.
+Batch mode processing for view/jobset 'scan_slow_RCMAX' finished successfully. Number of views/jobsets remaining for further analysis is '6'.
+Refer to child logfile 'sta/21794_0.log' for details.
+Batch mode processing for view/jobset 'scan_slow_RCMIN' finished successfully. Number of views/jobsets remaining for further analysis is '5'.
+Refer to child logfile 'sta/21794_1.log' for details.
+Batch mode processing for view/jobset 'scan_fast_RCMIN' finished successfully. Number of views/jobsets remaining for further analysis is '4'.
+Refer to child logfile 'sta/21794_0.log' for details.
+Batch mode processing for view/jobset 'test_slow_RCMAX' finished successfully. Number of views/jobsets remaining for further analysis is '3'.
+Refer to child logfile 'sta/21794_1.log' for details.
+Batch mode processing for view/jobset 'test_fast_RCMAX' finished successfully. Number of views/jobsets remaining for further analysis is '2'.
+Refer to child logfile 'sta/21794_0.log' for details.
+Batch mode processing for view/jobset 'test_slow_RCMIN' finished successfully. Number of views/jobsets remaining for further analysis is '1'.
+Refer to child logfile 'sta/21794_1.log' for details.
+Batch mode processing for view/jobset 'test_fast_RCMIN' finished successfully. Number of views/jobsets remaining for further analysis is '0'.
+Refer to child logfile 'sta/21794_0.log' for details.
+#@ End verbose source ../scripts/run_session1.tcl
+@tempus 2> gui_show
+@tempus 3> report_timing
+Path 1: MET (3.665 ns) Setup Check with Pin RESULTS_CONV_INST/r1477_reg[10]/CK->D
+               View: test_slow_RCMIN
+              Group: m_rcc_clk
+         Startpoint: (R) TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK
+              Clock: (R) m_clk
+           Endpoint: (R) RESULTS_CONV_INST/r1477_reg[10]/D
+              Clock: (F) m_rcc_clk
+
+                       Capture       Launch
+         Clock Edge:+   22.000        0.000
+        Src Latency:+    0.000        0.000
+        Net Latency:+    1.026 (P)    4.971 (P)
+            Arrival:=   23.026        4.971
+
+              Setup:-    0.775
+        Uncertainty:-    0.400
+      Required Time:=   21.850
+       Launch Clock:=    4.971
+          Data Path:+   13.214
+              Slack:=    3.665
+
+#-----------------------------------------------------------------------------------------------------------------------
+# Timing Point                                            Flags  Arc     Edge  Cell       Fanout  Trans   Delay  Arrival  
+#                                                                                                  (ns)    (ns)     (ns)  
+#-----------------------------------------------------------------------------------------------------------------------
+  TDSP_CORE_INST/DECODE_INST/ir_reg[9]/CK                 -      CK      R     (arrival)       4  0.130       -    4.971  
+  TDSP_CORE_INST/DECODE_INST/ir_reg[9]/Q                  -      CK->Q   F     SDFFS_X2        1  0.130   0.661    5.633  
+  TDSP_CORE_INST/DECODE_INST/FE_OFC186_port_address_1_/Z  -      A->Z    F     BUF_X16        44  0.137   0.493    6.126  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8211A/ZN            -      A3->ZN  R     NOR3_X1         2  0.372   0.776    6.902  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8090A/ZN            -      A2->ZN  F     NAND2_X1        1  0.986   0.325    7.226  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p6871A/ZN            -      A4->ZN  R     NOR4_X2         2  0.528   1.647    8.873  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7851A6133/ZN        -      A1->ZN  F     NAND2_X4        2  2.422   0.459    9.332  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7333D/ZN            -      A2->ZN  R     NOR2_X4        16  0.825   2.615   11.947  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p7551A6117/ZN        -      B1->ZN  F     AOI222_X1       1  2.914   1.196   13.143  
+  TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p8505A6087/ZN        -      A2->ZN  R     NAND3_X2        2  1.279   2.160   15.303  
+  FE_OFC12_tdsp_data_out_10_/Z                            -      A->Z    R     BUF_X16         1  1.298   0.685   15.989  
+  FE_OFCC479_FE_OFN12_tdsp_data_out_10_/Z                 -      A->Z    R     BUF_X16         5  0.283   0.698   16.687  
+  RESULTS_CONV_INST/p7148A29049/ZN                        -      A->ZN   F     INV_X2          1  0.629   0.222   16.909  
+  RESULTS_CONV_INST/FE_OFCC480_n_2024/Z                   -      A->Z    F     BUF_X32         6  0.247   0.532   17.440  
+  RESULTS_CONV_INST/p7155A28968/ZN                        -      A2->ZN  R     OAI22_X1        1  0.133   0.745   18.185  
+  RESULTS_CONV_INST/r1477_reg[10]/D                       -      D       R     SDFF_X2         1  1.574   0.000   18.185  
+#-----------------------------------------------------------------------------------------------------------------------
+
+	---------------------------------------------------------------------------------------------------------------------------------------
+0
+@tempus 4> report_annotated_parasitics 
+**ERROR: (IMPEXT-6159):	The annotated parasitics can not be reported because the command report_annotated_parasitics is issued before the design is loaded. Load the design before issuing report_annotated_parasitics.
+
+@tempus 5> distribute_read_design -design_script ../scripts/loadDesign_DMMMC.tcl -out_dir sta
+Started resource monitoring for client processes; see ./host-monitor.log1 for details.
+/home/shadab/shadab/tempus_labs_CUI/eco/work
+/home/shadab/shadab/tempus_labs_CUI/eco/work
+**WARN: (PRL-38):	Task ID 0 did not come up within the specified timeout period (30 seconds) on [02/24 16:38:01]. First ensure that there is available license, for that you can try running the tool in standalone from the shell. Otherwise, use set_distributed_hosts -time_out to change the value. This error may be due to incorrect or incomplete platform/machine specification provided via set_distributed_hosts to your distributed resource management system (LSF/Sun Grid Engine etc.). If running locally (set_distributed_hosts -local), the current machine may be overloaded with too many jobs and swapping (check free memory and CPUs using the top command). For local runs, consider reducing the number of CPUs you are using via the set_multi_cpu_usage command, or free up some memory by killing other memory intensive processes.
+**WARN: (PRL-38):	Task ID 1 did not come up within the specified timeout period (30 seconds) on [02/24 16:38:01]. First ensure that there is available license, for that you can try running the tool in standalone from the shell. Otherwise, use set_distributed_hosts -time_out to change the value. This error may be due to incorrect or incomplete platform/machine specification provided via set_distributed_hosts to your distributed resource management system (LSF/Sun Grid Engine etc.). If running locally (set_distributed_hosts -local), the current machine may be overloaded with too many jobs and swapping (check free memory and CPUs using the top command). For local runs, consider reducing the number of CPUs you are using via the set_multi_cpu_usage command, or free up some memory by killing other memory intensive processes.
+**ERROR: (DMMMC-232):	Unable to acquire or load design successfully on any Tempus client for DMMMC analysis. Exiting. Check previously issued PRL message(s).
+
+*** Memory Usage v#1 (Current mem = 550.102M, initial mem = 228.910M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPEXT-6159          1  The annotated parasitics can not be repo...
+ERROR     DMMMC-232            1  Unable to acquire or load design success...
+WARNING   PRL-38               2  Task ID %d did not come up within the sp...
+*** Message Summary: 2 warning(s), 2 error(s)
+
+--- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:17.9, real=0:04:00, mem=550.1M) ---

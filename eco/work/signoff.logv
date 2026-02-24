@@ -1,0 +1,65 @@
+[02/24 17:08:17      0s] 
+[02/24 17:08:17      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[02/24 17:08:17      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/24 17:08:17      0s] 
+[02/24 17:08:17      0s] Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+[02/24 17:08:17      0s] Options:	-stylus -files ../scripts/run_signoff_.tcl -log signoff.log 
+[02/24 17:08:17      0s] Date:		Tue Feb 24 17:08:11 2026
+[02/24 17:08:17      0s] Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+[02/24 17:08:17      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[02/24 17:08:17      0s] 
+[02/24 17:08:17      0s] License:
+[02/24 17:08:17      0s] 		tpsxl	Tempus Timing Signoff Solution XL	17.2	checkout succeeded
+[02/24 17:08:17      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[02/24 17:08:28      3s] 
+[02/24 17:08:28      3s] ***************************************************************************************
+[02/24 17:08:28      3s] INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+[02/24 17:08:28      3s]          has only limited customer testing. You are encouraged to work with Cadence directly
+[02/24 17:08:28      3s]          to qualify your usage and make sure it meets your needs before deploying it widely.
+[02/24 17:08:28      3s] ***************************************************************************************
+[02/24 17:08:28      3s] 
+[02/24 17:08:34      7s] @(#)CDS: Tempus Timing Signoff Solution v17.21-s086_1 (64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5)
+[02/24 17:08:34      7s] @(#)CDS: NanoRoute 17.21-s086_1 NR171017-1606/MT (database version 2.30, 408.7.1) {superthreading v1.46}
+[02/24 17:08:34      7s] @(#)CDS: AAE 17.21-s044 (64bit) 03/26/2018 (Linux 2.6.18-194.el5)
+[02/24 17:08:34      7s] @(#)CDS: CTE 17.21-s024_1 () Mar 26 2018 08:55:31 ( )
+[02/24 17:08:34      7s] @(#)CDS: SYNTECH 17.21-s008_1 () Mar 22 2018 10:41:39 ( )
+[02/24 17:08:34      7s] @(#)CDS: CPE v17.21-s032
+[02/24 17:08:34      7s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[02/24 17:08:34      7s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/24 17:08:34      7s] @(#)CDS: RCDB 11.12
+[02/24 17:08:34      7s] --- Running on ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB) ---
+[02/24 17:08:34      7s] Change the soft stacksize limit to 0.2%RAM (15 mbytes). Set global soft_stack_size_limit to change the value.
+[02/24 17:08:35      7s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_6523_AanDGW'.
+[02/24 17:08:35      7s] environment variable TMPDIR is '/tmp/ssv_tmpdir_6523_AanDGW'.
+[02/24 17:08:36      8s] #@ Processing -files option
+[02/24 17:08:36      8s] Sourcing tcl/tk file '../scripts/run_signoff_.tcl' ...
+[02/24 17:08:36      8s] @tempus 1> source ../scripts/run_signoff_.tcl
+[02/24 17:08:36      8s] #@ Begin verbose source ../scripts/run_signoff_.tcl
+[02/24 17:08:36      8s] @file(run_signoff_.tcl) 1: set_distributed_hosts -local
+[02/24 17:08:36      8s] The timeout for a remote job to respond is 30 seconds.
+[02/24 17:08:36      8s] Submit command for task runs will be: local
+[02/24 17:08:36      8s] @file(run_signoff_.tcl) 2: set_multi_cpu_usage -local_cpu 8 -cpu_per_remote_host 8 -remote_host 2
+[02/24 17:08:36      8s] @file(run_signoff_.tcl) 4: distribute_read_design -design_script ../scripts/loadDesign_DMMMC_postECO.tcl -out_dir sta_postECO
+[02/24 17:08:36      8s] Started resource monitoring for client processes; see ./host-monitor.log2 for details.
+[02/24 17:08:37      8s] /home/shadab/shadab/tempus_labs_CUI/eco/work
+[02/24 17:08:37      8s] /home/shadab/shadab/tempus_labs_CUI/eco/work
+[02/24 17:08:45      8s] Connected to ra01 38527 1 ( PID=6682 )
+[02/24 17:08:45      8s] Connected to ra01 38982 0 ( PID=6681 )
+[02/24 17:09:25     10s] Refer to child logfile 'sta_postECO/6523_0.log' for details.
+[02/24 17:09:25     10s] Refer to child logfile 'sta_postECO/6523_1.log' for details.
+[02/24 17:09:28     10s] @file(run_signoff_.tcl) 7: distribute_views -views [list func_slow_CMAX func_slow_RCMAX func_fast_RCMAX func_slow_RMAX func_fast_RMAX func_slow_CMIN func_fast_CMIN func_slow_RCMIN func_fast_RCMIN func_slow_RMIN func_fast_RMIN scan_slow_CMAX scan_fast_CMAX scan_slow_RCMAX scan_fast_RCMAX scan_slow_RMAX scan_fast_RMAX scan_slow_CMIN scan_fast_CMIN scan_slow_RCMIN scan_fast_RCMIN scan_slow_RMIN scan_fast_RMIN test_slow_CMAX test_fast_CMAX test_slow_RCMAX test_fast_RCMAX test_slow_RMAX test_fast_RMAX test_slow_CMIN test_fast_CMIN test_slow_RCMIN test_fast_RCMIN test_slow_RMIN test_fast_RMIN] -script ../scripts/sta_postECO_signoff.tcl
+[02/24 17:13:02     20s] **ERROR: (PRL-405):	Task 0 had errors. Error: invalid command name "report_timing_summary".
+[02/24 17:13:02     20s] Data from this task should not be relied upon. Check errors in the log file named "sta_postECO/6523_0.log" in your working directory and contact Cadence Support.
+[02/24 17:13:32     20s] **ERROR: (PRL-405):	Task 1 had errors. Error: invalid command name "report_timing_summary".
+[02/24 17:13:32     20s] Data from this task should not be relied upon. Check errors in the log file named "sta_postECO/6523_1.log" in your working directory and contact Cadence Support.
+[02/24 17:13:32     20s] **WARN: (DMMMC-217):	Distributed analysis did not complete for views 'func_fast_CMIN func_fast_RCMAX func_fast_RCMIN func_fast_RMAX func_fast_RMIN func_slow_CMAX func_slow_CMIN func_slow_RCMAX func_slow_RCMIN func_slow_RMAX func_slow_RMIN scan_fast_CMAX scan_fast_CMIN scan_fast_RCMAX scan_fast_RCMIN scan_fast_RMAX scan_fast_RMIN scan_slow_CMAX scan_slow_CMIN scan_slow_RCMAX scan_slow_RCMIN scan_slow_RMAX scan_slow_RMIN test_fast_CMAX test_fast_CMIN test_fast_RCMAX test_fast_RCMIN test_fast_RMAX test_fast_RMIN test_slow_CMAX test_slow_CMIN test_slow_RCMAX test_slow_RCMIN test_slow_RMAX test_slow_RMIN'. These view(s) will not be available for interactive analysis or report merging. See client log file(s) for details.
+[02/24 17:13:32     20s] #@ End verbose source ../scripts/run_signoff_.tcl
+[02/24 17:13:32     20s] @tempus 2> gvim ../scripts/run_signoff_.tcl
+@tempus 3> report_analysis_summary 
+**ERROR: (TCLCMD-119):	No module selected
+
+[02/24 17:14:59     23s] @tempus 4> report_timing'
+[02/24 17:15:02     23s] invalid command name "report_timing'"
+@tempus 5> 
+@tempus 5> report_timing

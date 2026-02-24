@@ -1,0 +1,9 @@
+# glitch violation net for ECO
+
+ Glitch Violations Summary : 
+-------------------------- 
+Number of DC tolerance violations (VH + VL) =  0 
+Number of Receiver Output Peak violations (VH + VL) =  2 
+Number of total problem noise nets =  1 
+ 
+modify_net {ds_datain[14]}

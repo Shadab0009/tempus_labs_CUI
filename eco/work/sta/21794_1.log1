@@ -1,0 +1,29 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+Options:	-edpEnvFile sta/.21794_tcl_env_slave_1 -log sta/21794_1.log -wait 1 -common_ui -execute  set_distribute_master_mode 2;  -nowin -tpsl -tpsxl -vdst -init sta/.21794_ets_slave_1 
+Date:		Tue Feb 24 16:37:50 2026
+Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		tpsl	Tempus Timing Signoff Solution L	17.2	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+***************************************************************************************
+INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+         has only limited customer testing. You are encouraged to work with Cadence directly
+         to qualify your usage and make sure it meets your needs before deploying it widely.
+***************************************************************************************
+
+The soft stacksize limit is either up to the hard limit or larger than 0.2%RAM. No change is needed.
+**ERROR: (IMPSYT-6689):	Invalid return code while sourcing "sta/.21794_tcl_env_slave_1". Check and correct your Tcl script regarding below message:
+ couldn't read file "sta/.21794_tcl_env_slave_1": no such file or directory
+environment variable TMPDIR is '/tmp/ssv_tmpdir_24813_FpJMwG'.
+#@ Processing -execute option
+@tempus 1>  set_distribute_master_mode 2; 
+#@ Processing -files option
+**ERROR: (UI-97):	Initfile "sta/.21794_ets_slave_1" does not exist. Remove "-init tclFileName" option or specify correct tclFileName and rerun. 
+@tempus 2> 

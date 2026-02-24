@@ -1,0 +1,4 @@
+eval_legacy {
+setMultiCpuUsage -localCpu 8
+startEdpSlave 1 ra01 37307
+}

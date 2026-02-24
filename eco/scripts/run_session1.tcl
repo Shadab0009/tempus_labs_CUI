@@ -1,14 +1,14 @@
 ### Change these settings if needed based on your machine setup.
 
 ##This is for LSF using bsub
-set_multi_cpu_usage -local_cpu 2 -cpu_per_remote_host 2 -remote_host 2
-set_distributed_hosts -lsf
+#set_multi_cpu_usage -local_cpu 2 -cpu_per_remote_host 2 -remote_host 2
+#set_distributed_hosts -lsf
 
 ## Use this if you are using local machines only.
-#set_multi_cpu_usage -local_cpu 2 -cpu_per_remote_host 2 -remote_host 2
-#set_distributed_hosts -local
+set_multi_cpu_usage -local_cpu 2 -cpu_per_remote_host 2 -remote_host 2
+set_distributed_hosts -local
 
-#set_multi_cpu_usage -local_cpu 8 -remote_host 2
+set_multi_cpu_usage -local_cpu 8 -remote_host 2
 
 distribute_read_design -design_script ../scripts/loadDesign_DMMMC.tcl -out_dir sta
 

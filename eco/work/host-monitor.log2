@@ -1,0 +1,36 @@
+Status keys: E excellent, G good, B bad, T terrible.
+Memory values:
+  total = Real memory of host
+  progs = Real memory used by processes, including swappable cache
+  used =  Real memory used by processes, excluding swappable cache
+Started at: 26/02/24 17:08:36
+ra01(0)      TMPDIR is : /tmp/ssv_tmpdir_6523_AanDGW
+
+==========  ========  ========================  ========================
+Host        CPU         Memory (GB)             TMPDIR (GB)      (Mb/s)
+name(id)    util %    total progs used  %used   total    avail    rate
+==========  ========  ===== ===== ===== ======  ========================
+17:08:36
+ra01(0)         23 E      7     7     7  100 T  903.12   194.86 E  N/A
+17:09:36
+ra01(0)         31 E      7     7     7  100 T  903.12   194.27 E  243 G
+ra01(1)         31 E      7     7     7  100 T  903.12   194.27 E  119 B
+ra01(2)         31 E      7     7     7  100 T  903.12   194.27 E  137 G
+17:10:37
+ra01(0)         44 E      7     7     7  100 T  903.12   194.48 E  243 G
+ra01(1)         44 E      7     7     7  100 T  903.12   194.48 E  119 B
+ra01(2)         44 E      7     7     7  100 T  903.12   194.48 E  137 G
+17:11:37
+ra01(0)         67 E      7     7     7  100 T  903.12   194.39 E  243 G
+ra01(1)         67 E      7     7     7  100 T  903.12   194.39 E  119 B
+ra01(2)         67 E      7     7     7  100 T  903.12   194.39 E  137 G
+17:12:39
+ra01(0)         57 E      7     7     7  100 T  903.12   194.44 E  243 G
+ra01(1)         57 E      7     7     7  100 T  903.12   194.44 E  119 B
+ra01(2)         57 E      7     7     7  100 T  903.12   194.44 E  137 G
+17:14:09
+ra01(0)         24 E      7     6     6   85 B  903.12   195.08 E  281 E
+17:15:09
+ra01(0)         15 E      7     6     6   85 B  903.12   195.08 E  281 E
+17:16:09
+ra01(0)         14 E      7     6     6   85 B  903.12   195.08 E  281 E

@@ -1,0 +1,40 @@
+[02/24 16:37:52      0s] 
+[02/24 16:37:52      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[02/24 16:37:52      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/24 16:37:52      0s] 
+[02/24 16:37:52      0s] Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+[02/24 16:37:52      0s] Options:	-edpEnvFile sta/.21794_tcl_env_slave_0 -log sta/21794_0.log -wait 1 -common_ui -execute  set_distribute_master_mode 2;  -nowin -tpsl -tpsxl -vdst -init sta/.21794_ets_slave_0 
+[02/24 16:37:52      0s] Date:		Tue Feb 24 16:37:50 2026
+[02/24 16:37:52      0s] Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+[02/24 16:37:52      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[02/24 16:37:52      0s] 
+[02/24 16:37:52      0s] License:
+[02/24 16:37:52      0s] 		tpsl	Tempus Timing Signoff Solution L	17.2	checkout succeeded
+[02/24 16:37:52      0s] 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[02/24 16:38:59      3s] 
+[02/24 16:38:59      3s] ***************************************************************************************
+[02/24 16:38:59      3s] INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+[02/24 16:38:59      3s]          has only limited customer testing. You are encouraged to work with Cadence directly
+[02/24 16:38:59      3s]          to qualify your usage and make sure it meets your needs before deploying it widely.
+[02/24 16:38:59      3s] ***************************************************************************************
+[02/24 16:38:59      3s] 
+[02/24 16:39:17      7s] @(#)CDS: Tempus Timing Signoff Solution v17.21-s086_1 (64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5)
+[02/24 16:39:17      7s] @(#)CDS: NanoRoute 17.21-s086_1 NR171017-1606/MT (database version 2.30, 408.7.1) {superthreading v1.46}
+[02/24 16:39:17      7s] @(#)CDS: AAE 17.21-s044 (64bit) 03/26/2018 (Linux 2.6.18-194.el5)
+[02/24 16:39:17      7s] @(#)CDS: CTE 17.21-s024_1 () Mar 26 2018 08:55:31 ( )
+[02/24 16:39:17      7s] @(#)CDS: SYNTECH 17.21-s008_1 () Mar 22 2018 10:41:39 ( )
+[02/24 16:39:17      7s] @(#)CDS: CPE v17.21-s032
+[02/24 16:39:17      7s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[02/24 16:39:17      7s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/24 16:39:17      7s] @(#)CDS: RCDB 11.12
+[02/24 16:39:17      7s] --- Running on ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB) ---
+[02/24 16:39:17      7s] The soft stacksize limit is either up to the hard limit or larger than 0.2%RAM. No change is needed.
+[02/24 16:39:20      7s] **ERROR: (IMPSYT-6689):	Invalid return code while sourcing "sta/.21794_tcl_env_slave_0". Check and correct your Tcl script regarding below message:
+[02/24 16:39:20      7s]  couldn't read file "sta/.21794_tcl_env_slave_0": no such file or directory
+[02/24 16:39:20      7s] **INFO: (TMPDIR-1001): Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_24812_0mCMwG'.
+[02/24 16:39:20      7s] environment variable TMPDIR is '/tmp/ssv_tmpdir_24812_0mCMwG'.
+[02/24 16:39:23      7s] #@ Processing -execute option
+[02/24 16:39:23      7s] @tempus 1>  set_distribute_master_mode 2; 
+[02/24 16:39:23      7s] #@ Processing -files option
+[02/24 16:39:23      7s] **ERROR: (UI-97):	Initfile "sta/.21794_ets_slave_0" does not exist. Remove "-init tclFileName" option or specify correct tclFileName and rerun. 
+[02/24 16:39:23      7s] @tempus 2> 

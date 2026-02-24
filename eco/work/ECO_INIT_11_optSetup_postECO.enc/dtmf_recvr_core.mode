@@ -1,0 +1,48 @@
+catch { setAnalysisMode -analysisType single }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -skew true }
+catch { setAnalysisMode -virtualIPO false }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -effort high }
+catch { setOptMode -setupTargetSlack 0 }
+catch { setExtractRCMode  -effortLevel low -engine postRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 -nrNetInMemory 103336 -minNetTermNrToBeInMem 50 }
+catch {setNanoRouteMode -quiet -drouteAntennaFactor 1.000000}
+catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "auto"}
+catch {setNanoRouteMode -quiet -drouteStartIteration 0}
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+catch {setNanoRouteMode -quiet -routeExpSignatureEco false}
+catch {setNanoRouteMode -quiet -routeFillerInstPrefix "FILLER_"}
+catch {setNanoRouteMode -quiet -routeWithEco true}
+catch {setNanoRouteMode -quiet -routeWithSiDriven false}
+catch {setNanoRouteMode -quiet -routeWithSiPostRouteFix false}
+catch {setNanoRouteMode -quiet -routeWithTimingDriven false}
+
+catch { setPlaceMode -place_detail_selective_blockage false }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { setActiveLogicViewMode -keepHighFanoutCriticalInsts false }
+catch { setDelayCalMode -betaEngine sgs2 }
+catch { setDelayCalMode -engine aae }
+catch { setTrialRouteMode -handlePreroute true }
+catch { setImportMode -config true }
+catch { setImportMode -discardFloatingVNets false }
+catch { setImportMode -keepEmptyModule true }
+catch { setImportMode -treatUndefinedCellAsBbox false }
+catch { setImportMode -useLefDef56 true }
+catch { setSIMode -ignoreWarnings true }
+catch { setSIMode -report_si_slew_max_transition false }
+catch { setSIMode -runRouteWithEco true }
+catch { setSIMode -runRoutingFix true }
+catch { setFillerMode -corePrefix FILLER_ }
+catch { setEcoMode -batchMode false }
+catch { setEcoMode -honorDontTouch true }
+catch { setEcoMode -honorDontUse true }
+catch { setEcoMode -honorFixedNetWire true }
+catch { setEcoMode -honorFixedStatus true }
+catch { setEcoMode -refinePlace true }
+catch { setEcoMode -updateTiming true }
+catch { setFPlanMode -defaultTechSite Free_OMC_Si2_PDK45nm }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -place_check_ignore_fixed_cell_list {} }
+catch { setFPlanMode -powerRailLayer {} }

@@ -1,0 +1,657 @@
+[02/24 17:08:38      0s] 
+[02/24 17:08:38      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[02/24 17:08:38      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/24 17:08:38      0s] 
+[02/24 17:08:38      0s] Version:	v17.21-s086_1, built Mon Mar 26 19:23:45 PDT 2018
+[02/24 17:08:38      0s] Options:	-edpEnvFile sta_postECO/.6523_tcl_env_slave_1 -log sta_postECO/6523_1.log -wait 1 -common_ui -execute  set_distribute_master_mode 2;  -nowin -tpsl -tpsxl -vdst -init sta_postECO/.6523_ets_slave_1 
+[02/24 17:08:38      0s] Date:		Tue Feb 24 17:08:38 2026
+[02/24 17:08:38      0s] Host:		ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB)
+[02/24 17:08:38      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[02/24 17:08:38      0s] 
+[02/24 17:08:38      0s] License:
+[02/24 17:08:38      0s] 		tpsl	Tempus Timing Signoff Solution L	17.2	checkout succeeded
+[02/24 17:08:38      0s] 		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[02/24 17:08:41      2s] 
+[02/24 17:08:41      2s] ***************************************************************************************
+[02/24 17:08:41      2s] INFO:    You have enabled the Common UI that has been internally qualified at Cadence but
+[02/24 17:08:41      2s]          has only limited customer testing. You are encouraged to work with Cadence directly
+[02/24 17:08:41      2s]          to qualify your usage and make sure it meets your needs before deploying it widely.
+[02/24 17:08:41      2s] ***************************************************************************************
+[02/24 17:08:41      2s] 
+[02/24 17:08:44      6s] @(#)CDS: Tempus Timing Signoff Solution v17.21-s086_1 (64bit) 03/26/2018 19:23 (Linux 2.6.18-194.el5)
+[02/24 17:08:44      6s] @(#)CDS: NanoRoute 17.21-s086_1 NR171017-1606/MT (database version 2.30, 408.7.1) {superthreading v1.46}
+[02/24 17:08:44      6s] @(#)CDS: AAE 17.21-s044 (64bit) 03/26/2018 (Linux 2.6.18-194.el5)
+[02/24 17:08:44      6s] @(#)CDS: CTE 17.21-s024_1 () Mar 26 2018 08:55:31 ( )
+[02/24 17:08:44      6s] @(#)CDS: SYNTECH 17.21-s008_1 () Mar 22 2018 10:41:39 ( )
+[02/24 17:08:44      6s] @(#)CDS: CPE v17.21-s032
+[02/24 17:08:44      6s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[02/24 17:08:44      6s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/24 17:08:44      6s] @(#)CDS: RCDB 11.12
+[02/24 17:08:44      6s] --- Running on ra01 (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (6cores*12cpus*Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz 12288KB) ---
+[02/24 17:08:44      6s] The soft stacksize limit is either up to the hard limit or larger than 0.2%RAM. No change is needed.
+[02/24 17:08:44      6s] **INFO: (TMPDIR-1001): Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_6682_MlqAGX'.
+[02/24 17:08:44      6s] environment variable TMPDIR is '/tmp/ssv_tmpdir_6682_MlqAGX'.
+[02/24 17:08:45      6s] #@ Processing -execute option
+[02/24 17:08:45      6s] @tempus 1>  set_distribute_master_mode 2; 
+[02/24 17:08:45      6s] #@ Processing -files option
+[02/24 17:08:45      6s] Sourcing tcl/tk file 'sta_postECO/.6523_ets_slave_1' ...
+[02/24 17:08:45      6s] @tempus 2> source sta_postECO/.6523_ets_slave_1
+[02/24 17:08:45      6s] #@ Begin verbose source sta_postECO/.6523_ets_slave_1
+[02/24 17:08:45      6s] @file(.6523_ets_slave_1) 1: eval_legacy {
+[02/24 17:08:45      6s] setMultiCpuUsage -localCpu 8
+[02/24 17:08:45      6s] startEdpSlave 1 ra01 37307
+[02/24 17:08:45      6s] }
+[02/24 17:08:45      6s] master Info: ra01 37307 1
+[02/24 17:08:45      6s] Server is up on ra01:38527 ( PID=6682 )
+[02/24 17:08:45      6s] opening socket to client ra01 37307
+[02/24 17:08:45      6s] socket opened sock7f072a7ded10
+[02/24 17:08:45      6s] sending server data to client ra01 38527 1 6682
+[02/24 17:08:45      6s] Accepted connection from 127.0.0.1 at Tue Feb 24 17:08:45 IST 2026
+[02/24 17:08:45      6s] EDP_DBG: accept: sock sock7f072a7df210, addr 127.0.0.1, port 35297
+[02/24 17:08:45      6s] Accepted connection from 127.0.0.1 at Tue Feb 24 17:08:45 IST 2026
+[02/24 17:08:45      6s] EDP_DBG: accept: sock sock7f072a7df290, addr 127.0.0.1, port 35940
+[02/24 17:08:45      6s] #@ Begin verbose source /dev/null
+[02/24 17:08:45      6s] #@ End verbose source /dev/null
+[02/24 17:08:45      6s] #@ Begin verbose source .dmmc.init.6523
+[02/24 17:08:45      6s] @file(dmmc.init.6523) 1: if { $::DistMMMC::distribute_read_design_completed == 0 } { enable_distributed_processing_wrappers 0;              set_global _timing_use_distinct_timing_info_log_file true;              set _view_temp_dir sta_postECO ; set _active_setupview_name {} ; set _active_holdview_name {} ;setMultiCpuUsage -localCpu 8 ;
+[02/24 17:08:45      6s] set ::DistMMMC::timing_master_pid 6523;eval_common_ui { source ../scripts/loadDesign_DMMMC_postECO.tcl
+[02/24 17:08:45      6s]  };set ::DistMMMC::distribute_read_design_completed 1;disable_distributed_processing_wrappers }
+[02/24 17:08:45      6s] #@ Begin verbose source ../scripts/loadDesign_DMMMC_postECO.tcl
+[02/24 17:08:45      6s] @file(loadDesign_DMMMC_postECO.tcl) 1: read_mmmc ECO_INIT_11_optSetup_postECO.enc/viewDefinition.tcl
+[02/24 17:08:45      6s] #@ Begin verbose source ECO_INIT_11_optSetup_postECO.enc/viewDefinition.tcl
+[02/24 17:08:45      6s] @file(viewDefinition.tcl) 1: if {![namespace exists ::IMEX]} { namespace eval ::IMEX {} }
+[02/24 17:08:45      6s] @file(viewDefinition.tcl) 2: set ::IMEX::dataVar [file dirname [file normalize [info script]]]
+[02/24 17:08:45      6s] @file(viewDefinition.tcl) 3: set ::IMEX::libVar ${::IMEX::dataVar}/libs
+[02/24 17:08:45      6s] @file(viewDefinition.tcl) 5: create_library_set -name libset_fast\
+[02/24 17:08:45      6s]    -timing\
+[02/24 17:08:45      6s]     [list ${::IMEX::libVar}/mmmc/FreePDK45_lib_v1.0_typical.lib\
+[02/24 17:08:45      6s]     ${::IMEX::libVar}/mmmc/pllclk.lib\
+[02/24 17:08:45      6s]     ${::IMEX::libVar}/mmmc/ram_256x16A.lib\
+[02/24 17:08:45      6s]     ${::IMEX::libVar}/mmmc/rom_512x16A.lib]
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 11: create_library_set -name libset_slow\
+[02/24 17:08:47      7s]    -timing\
+[02/24 17:08:47      7s]     [list ${::IMEX::libVar}/mmmc/FreePDK45_lib_v1.0_worst.lib\
+[02/24 17:08:47      7s]     ${::IMEX::libVar}/mmmc/pllclk.lib\
+[02/24 17:08:47      7s]     ${::IMEX::libVar}/mmmc/ram_256x16A.lib\
+[02/24 17:08:47      7s]     ${::IMEX::libVar}/mmmc/rom_512x16A.lib]
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 17: create_timing_condition -name default_mapping_tc_2\
+[02/24 17:08:47      7s]    -library_sets [list libset_fast]
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 19: create_timing_condition -name default_mapping_tc_1\
+[02/24 17:08:47      7s]    -library_sets [list libset_slow]
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 21: create_rc_corner -name corner_worst_RMIN\
+[02/24 17:08:47      7s]    -pre_route_res 0.8\
+[02/24 17:08:47      7s]    -post_route_res {0.8 0.8 0.8}\
+[02/24 17:08:47      7s]    -pre_route_cap 1\
+[02/24 17:08:47      7s]    -post_route_cap 1\
+[02/24 17:08:47      7s]    -post_route_cross_cap 1\
+[02/24 17:08:47      7s]    -pre_route_clock_res 0\
+[02/24 17:08:47      7s]    -pre_route_clock_cap 0
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 29: create_rc_corner -name corner_worst_CMAX\
+[02/24 17:08:47      7s]    -pre_route_res 1\
+[02/24 17:08:47      7s]    -post_route_res {1 1 1}\
+[02/24 17:08:47      7s]    -pre_route_cap 1.2\
+[02/24 17:08:47      7s]    -post_route_cap {1.2 1.2 1.2}\
+[02/24 17:08:47      7s]    -post_route_cross_cap {1.2 1.2 1.2}\
+[02/24 17:08:47      7s]    -pre_route_clock_res 0\
+[02/24 17:08:47      7s]    -pre_route_clock_cap 0
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 37: create_rc_corner -name corner_worst_CMIN\
+[02/24 17:08:47      7s]    -pre_route_res 1\
+[02/24 17:08:47      7s]    -post_route_res {1 1 1}\
+[02/24 17:08:47      7s]    -pre_route_cap 0.8\
+[02/24 17:08:47      7s]    -post_route_cap {0.8 0.8 0.8}\
+[02/24 17:08:47      7s]    -post_route_cross_cap {0.8 0.8 0.8}\
+[02/24 17:08:47      7s]    -pre_route_clock_res 0\
+[02/24 17:08:47      7s]    -pre_route_clock_cap 0
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 45: create_rc_corner -name corner_worst_RCMAX\
+[02/24 17:08:47      7s]    -pre_route_res 1.2\
+[02/24 17:08:47      7s]    -post_route_res {1.2 1.2 1.2}\
+[02/24 17:08:47      7s]    -pre_route_cap 1.2\
+[02/24 17:08:47      7s]    -post_route_cap {1.2 1.2 1.2}\
+[02/24 17:08:47      7s]    -post_route_cross_cap {1.2 1.2 1.2}\
+[02/24 17:08:47      7s]    -pre_route_clock_res 0\
+[02/24 17:08:47      7s]    -pre_route_clock_cap 0
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 53: create_rc_corner -name corner_worst_RMAX\
+[02/24 17:08:47      7s]    -pre_route_res 1.2\
+[02/24 17:08:47      7s]    -post_route_res {1.2 1.2 1.2}\
+[02/24 17:08:47      7s]    -pre_route_cap 1\
+[02/24 17:08:47      7s]    -post_route_cap 1\
+[02/24 17:08:47      7s]    -post_route_cross_cap 1\
+[02/24 17:08:47      7s]    -pre_route_clock_res 0\
+[02/24 17:08:47      7s]    -pre_route_clock_cap 0
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 61: create_rc_corner -name corner_worst_RCMIN\
+[02/24 17:08:47      7s]    -pre_route_res 0.8\
+[02/24 17:08:47      7s]    -post_route_res {0.8 0.8 0.8}\
+[02/24 17:08:47      7s]    -pre_route_cap 0.8\
+[02/24 17:08:47      7s]    -post_route_cap {0.8 0.8 0.8}\
+[02/24 17:08:47      7s]    -post_route_cross_cap {0.8 0.8 0.8}\
+[02/24 17:08:47      7s]    -pre_route_clock_res 0\
+[02/24 17:08:47      7s]    -pre_route_clock_cap 0
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 69: create_delay_corner -name delay_corner_slow_CMIN\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_CMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 73: create_delay_corner -name delay_corner_fast_RCMAX\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_RCMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 77: create_delay_corner -name delay_corner_fast_CMIN\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_CMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 81: create_delay_corner -name delay_corner_fast_RCMIN\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_RCMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 85: create_delay_corner -name delay_corner_slow_RMAX\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_RMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 89: create_delay_corner -name delay_corner_fast_RMAX\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_RMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 93: create_delay_corner -name delay_corner_slow_RCMAX\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_RCMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 97: create_delay_corner -name delay_corner_slow_RMIN\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_RMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 101: create_delay_corner -name delay_corner_slow_CMAX\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_CMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 105: create_delay_corner -name delay_corner_fast_RMIN\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_RMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 109: create_delay_corner -name delay_corner_slow_RCMIN\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_1}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_RCMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 113: create_delay_corner -name delay_corner_fast_CMAX\
+[02/24 17:08:47      7s]    -early_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -late_timing_condition {default_mapping_tc_2}\
+[02/24 17:08:47      7s]    -rc_corner corner_worst_CMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 117: create_constraint_mode -name functionnal_mode\
+[02/24 17:08:47      7s]    -sdc_files\
+[02/24 17:08:47      7s]     [list /dev/null]
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 120: create_constraint_mode -name test_mode\
+[02/24 17:08:47      7s]    -sdc_files\
+[02/24 17:08:47      7s]     [list /dev/null]
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 123: create_constraint_mode -name scan_mode\
+[02/24 17:08:47      7s]    -sdc_files\
+[02/24 17:08:47      7s]     [list /dev/null]
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 126: create_analysis_view -name test_slow_CMIN -constraint_mode test_mode -delay_corner delay_corner_slow_CMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 127: create_analysis_view -name scan_fast_RMAX -constraint_mode scan_mode -delay_corner delay_corner_fast_RMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 128: create_analysis_view -name func_slow_CMIN -constraint_mode functionnal_mode -delay_corner delay_corner_slow_CMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 129: create_analysis_view -name test_fast_CMAX -constraint_mode test_mode -delay_corner delay_corner_fast_CMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 130: create_analysis_view -name func_fast_CMAX -constraint_mode functionnal_mode -delay_corner delay_corner_fast_CMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 131: create_analysis_view -name test_fast_RMIN -constraint_mode test_mode -delay_corner delay_corner_fast_RMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 132: create_analysis_view -name scan_slow_RMAX -constraint_mode scan_mode -delay_corner delay_corner_slow_RMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 133: create_analysis_view -name func_fast_RMIN -constraint_mode functionnal_mode -delay_corner delay_corner_fast_RMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 134: create_analysis_view -name test_slow_RCMAX -constraint_mode test_mode -delay_corner delay_corner_slow_RCMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 135: create_analysis_view -name scan_fast_RCMIN -constraint_mode scan_mode -delay_corner delay_corner_fast_RCMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 136: create_analysis_view -name func_slow_RCMAX -constraint_mode functionnal_mode -delay_corner delay_corner_slow_RCMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 137: create_analysis_view -name test_slow_CMAX -constraint_mode test_mode -delay_corner delay_corner_slow_CMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 138: create_analysis_view -name func_slow_CMAX -constraint_mode functionnal_mode -delay_corner delay_corner_slow_CMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 139: create_analysis_view -name test_slow_RMIN -constraint_mode test_mode -delay_corner delay_corner_slow_RMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 140: create_analysis_view -name func_slow_RMIN -constraint_mode functionnal_mode -delay_corner delay_corner_slow_RMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 141: create_analysis_view -name test_fast_RMAX -constraint_mode test_mode -delay_corner delay_corner_fast_RMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 142: create_analysis_view -name scan_fast_CMIN -constraint_mode scan_mode -delay_corner delay_corner_fast_CMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 143: create_analysis_view -name func_fast_RMAX -constraint_mode functionnal_mode -delay_corner delay_corner_fast_RMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 144: create_analysis_view -name test_fast_RCMIN -constraint_mode test_mode -delay_corner delay_corner_fast_RCMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 145: create_analysis_view -name scan_fast_RCMAX -constraint_mode scan_mode -delay_corner delay_corner_fast_RCMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 146: create_analysis_view -name func_fast_RCMIN -constraint_mode functionnal_mode -delay_corner delay_corner_fast_RCMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 147: create_analysis_view -name test_slow_RMAX -constraint_mode test_mode -delay_corner delay_corner_slow_RMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 148: create_analysis_view -name scan_slow_CMIN -constraint_mode scan_mode -delay_corner delay_corner_slow_CMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 149: create_analysis_view -name func_slow_RMAX -constraint_mode functionnal_mode -delay_corner delay_corner_slow_RMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 150: create_analysis_view -name scan_slow_RCMIN -constraint_mode scan_mode -delay_corner delay_corner_slow_RCMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 151: create_analysis_view -name scan_fast_CMAX -constraint_mode scan_mode -delay_corner delay_corner_fast_CMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 152: create_analysis_view -name test_fast_RCMAX -constraint_mode test_mode -delay_corner delay_corner_fast_RCMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 153: create_analysis_view -name scan_fast_RMIN -constraint_mode scan_mode -delay_corner delay_corner_fast_RMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 154: create_analysis_view -name func_fast_RCMAX -constraint_mode functionnal_mode -delay_corner delay_corner_fast_RCMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 155: create_analysis_view -name test_fast_CMIN -constraint_mode test_mode -delay_corner delay_corner_fast_CMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 156: create_analysis_view -name scan_slow_CMAX -constraint_mode scan_mode -delay_corner delay_corner_slow_CMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 157: create_analysis_view -name func_fast_CMIN -constraint_mode functionnal_mode -delay_corner delay_corner_fast_CMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 158: create_analysis_view -name scan_slow_RMIN -constraint_mode scan_mode -delay_corner delay_corner_slow_RMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 159: create_analysis_view -name test_slow_RCMIN -constraint_mode test_mode -delay_corner delay_corner_slow_RCMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 160: create_analysis_view -name scan_slow_RCMAX -constraint_mode scan_mode -delay_corner delay_corner_slow_RCMAX
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 161: create_analysis_view -name func_slow_RCMIN -constraint_mode functionnal_mode -delay_corner delay_corner_slow_RCMIN
+[02/24 17:08:47      7s] @file(viewDefinition.tcl) 162: set_analysis_view -setup [list func_slow_CMAX func_fast_CMAX func_slow_RCMAX func_fast_RCMAX func_slow_RMAX func_fast_RMAX func_slow_CMIN func_fast_CMIN func_slow_RCMIN func_fast_RCMIN func_slow_RMIN func_fast_RMIN scan_slow_CMAX scan_fast_CMAX scan_slow_RCMAX scan_fast_RCMAX scan_slow_RMAX scan_fast_RMAX scan_slow_CMIN scan_fast_CMIN scan_slow_RCMIN scan_fast_RCMIN scan_slow_RMIN scan_fast_RMIN test_slow_CMAX test_fast_CMAX test_slow_RCMAX test_fast_RCMAX test_slow_RMAX test_fast_RMAX test_slow_CMIN test_fast_CMIN test_slow_RCMIN test_fast_RCMIN test_slow_RMIN test_fast_RMIN] -hold [list func_slow_CMAX func_fast_CMAX func_slow_RCMAX func_fast_RCMAX func_slow_RMAX func_fast_RMAX func_slow_CMIN func_fast_CMIN func_slow_RCMIN func_fast_RCMIN func_slow_RMIN func_fast_RMIN scan_slow_CMAX scan_fast_CMAX scan_slow_RCMAX scan_fast_RCMAX scan_slow_RMAX scan_fast_RMAX scan_slow_CMIN scan_fast_CMIN scan_slow_RCMIN scan_fast_RCMIN scan_slow_RMIN scan_fast_RMIN test_slow_CMAX test_fast_CMAX test_slow_RCMAX test_fast_RCMAX test_slow_RMAX test_fast_RMAX test_slow_CMIN test_fast_CMIN test_slow_RCMIN test_fast_RCMIN test_slow_RMIN test_fast_RMIN]
+[02/24 17:08:47      7s] Selected to start server with first setup view 'func_slow_CMAX' from multiple views specified during set_analysis_view.
+[02/24 17:08:47      7s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[02/24 17:08:47      7s] #@ End verbose source ECO_INIT_11_optSetup_postECO.enc/viewDefinition.tcl
+[02/24 17:08:48      7s] Starting library reading in 'Multi-threaded flow' (with '8' threads)
+[02/24 17:08:48      7s] 
+[02/24 17:08:48      7s] Threads Configured:8
+[02/24 17:08:49      7s] Reading   timing library /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib.
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND4_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND4_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X1' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A1' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND4_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A2' of cell 'AND2_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A4' of cell 'AND4_X2' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A3' of cell 'AND3_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[02/24 17:08:49      7s] Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[02/24 17:08:49      7s] Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[02/24 17:08:49      7s] Read 113 cells in library FreePDK45_lib_v1.0.
+[02/24 17:08:49      7s] Reading   timing library /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/pllclk.lib.
+[02/24 17:08:49      7s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'clk1x' of cell 'pllclk' is not defined in the library. (File /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/pllclk.lib)
+[02/24 17:08:49      7s] Read 1 cells in library pllclk.
+[02/24 17:08:49      7s] Reading   timing library /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/ram_256x16A.lib.
+[02/24 17:08:49      7s] Read 1 cells in library USERLIB.
+[02/24 17:08:49      7s] Library reading multithread flow ended. (File /home/shadab/shadab/tempus_labs_CUI/libs/liberty/FreePDK45_lib_v1.0_worst.lib)
+[02/24 17:08:49      7s] Starting library reading in 'Multi-threaded flow' (with '8' threads)
+[02/24 17:08:49      7s] 
+[02/24 17:08:49      7s] Threads Configured:8
+[02/24 17:08:49      7s] Reading   timing library /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib.
+[02/24 17:08:49      7s] **WARN: (TECHLIB-459):	Appending library 'USERLIB' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib)
+[02/24 17:08:49      7s] Read 1 cells in library USERLIB.
+[02/24 17:08:49      7s] Library reading multithread flow ended. (File /home/shadab/shadab/tempus_labs_CUI/libs/MACRO/LIBERTY/rom_512x16A.lib)
+[02/24 17:08:51      7s] @file(loadDesign_DMMMC_postECO.tcl) 3: read_physical -lef {../../libs/lef/FreePDK45_lib_v1.0.lef ../../libs/MACRO/LEF/pllclk.lef ../../libs/MACRO/LEF/ram_256X16A.lef ../../libs/MACRO/LEF/rom_512x16A.lef}
+[02/24 17:08:52      7s] 
+[02/24 17:08:52      7s] Loading LEF file ../../libs/lef/FreePDK45_lib_v1.0.lef ...
+[02/24 17:08:52      7s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[02/24 17:08:52      7s] The LEF parser will ignore this statement.
+[02/24 17:08:52      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 33.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 205.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 207.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 208.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 212.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 214.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 215.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 219.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 221.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 222.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 226.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 228.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[02/24 17:08:53      7s] The LEF parser will ignore this statement.
+[02/24 17:08:53      7s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file ../../libs/lef/FreePDK45_lib_v1.0.lef at line 229.
+[02/24 17:08:53      7s] Set DBUPerIGU to M2 pitch 380.
+[02/24 17:08:53      7s] 
+[02/24 17:08:53      7s] Loading LEF file ../../libs/MACRO/LEF/pllclk.lef ...
+[02/24 17:08:53      7s] 
+[02/24 17:08:53      7s] Loading LEF file ../../libs/MACRO/LEF/ram_256X16A.lef ...
+[02/24 17:08:53      7s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[02/24 17:08:53      7s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[02/24 17:08:53      7s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../../libs/MACRO/LEF/ram_256X16A.lef at line 1530.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[02/24 17:08:53      7s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[02/24 17:08:53      7s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../../libs/MACRO/LEF/ram_256X16A.lef at line 1530.
+[02/24 17:08:53      7s] 
+[02/24 17:08:53      7s] Loading LEF file ../../libs/MACRO/LEF/rom_512x16A.lef ...
+[02/24 17:08:53      7s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[02/24 17:08:53      7s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[02/24 17:08:53      7s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../../libs/MACRO/LEF/rom_512x16A.lef at line 1008.
+[02/24 17:08:53      7s] WARNING (LEFPARS-2004): DIVIDERCHAR is a required statementon LEF file with version 5.5 and earlier.
+[02/24 17:08:53      7s] Without DIVIDECHAR defined, the LEF file is technically incorrect.
+[02/24 17:08:53      7s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file ../../libs/MACRO/LEF/rom_512x16A.lef at line 1008.
+[02/24 17:08:53      7s] 
+[02/24 17:08:53      7s] viaInitial starts at Tue Feb 24 17:08:53 2026
+[02/24 17:08:53      7s] viaInitial ends at Tue Feb 24 17:08:53 2026
+[02/24 17:08:53      7s] @file(loadDesign_DMMMC_postECO.tcl) 5: read_netlist "ECO_INIT_11_optSetup_postECO.enc/dtmf_recvr_core.v.gz" -top dtmf_recvr_core
+[02/24 17:08:53      7s] #% Begin Load netlist data ... (date=02/24 17:08:53, mem=425.2M)
+[02/24 17:08:54      7s] *** Begin netlist parsing (mem=580.5M) ***
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XNOR2_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XNOR2_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XNOR2_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XNOR2_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFF_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFF_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFF_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFF_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFFS_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFFS_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFFS_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFFS_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFFR_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFFR_X2' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SDFFR_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SDFFR_X1' is defined in LEF but not in the timing library.
+[02/24 17:08:54      7s] **WARN: (EMS-62):	Message <IMPVL-159> has exceeded the default message display limit of 20.
+[02/24 17:08:54      7s] To avoid this warning, increase the display limit per unique message by
+[02/24 17:08:54      7s] using the set_message -limit <number> command.
+[02/24 17:08:54      7s] The message limit can be removed by using the set_message -no_limit command.
+[02/24 17:08:54      7s] Note that setting a very large number using the set_message -limit command
+[02/24 17:08:54      7s] or removing the message limit using the set_message -no_limit command can
+[02/24 17:08:54      7s] significantly increase the log file size.
+[02/24 17:08:54      7s] To suppress a message, use the set_message -suppress command.
+[02/24 17:08:55      7s] Reading verilog netlist 'ECO_INIT_11_optSetup_postECO.enc/dtmf_recvr_core.v.gz'
+[02/24 17:08:55      7s] 
+[02/24 17:08:55      7s] *** Memory Usage v#1 (Current mem = 599.973M, initial mem = 249.914M) ***
+[02/24 17:08:55      7s] *** End netlist parsing (cpu=0:00:00.1, real=0:00:01.0, mem=600.0M) ***
+[02/24 17:08:55      7s] #% End Load netlist data ... (date=02/24 17:08:55, total cpu=0:00:00.2, real=0:00:02.0, peak res=425.2M, current mem=380.5M)
+[02/24 17:08:55      7s] Set top cell to dtmf_recvr_core.
+[02/24 17:08:56      7s] Building hierarchical netlist for Cell dtmf_recvr_core ...
+[02/24 17:08:56      7s] *** Netlist is unique.
+[02/24 17:08:57      7s] ** info: there are 152 modules.
+[02/24 17:08:57      7s] ** info: there are 8575 stdCell insts.
+[02/24 17:08:57      7s] ** info: there are 4 macros.
+[02/24 17:08:57      7s] 
+[02/24 17:08:57      7s] *** Memory Usage v#1 (Current mem = 626.012M, initial mem = 249.914M) ***
+[02/24 17:08:57      7s] @file(loadDesign_DMMMC_postECO.tcl) 6: init_design 
+[02/24 17:08:57      7s] Set Default Net Delay as 1000 ps.
+[02/24 17:08:57      7s] Set Default Net Load as 0.5 pF. 
+[02/24 17:08:57      7s] Set Default Input Pin Transition as 0.1 ps.
+[02/24 17:08:58      7s] Horizontal Layer M1 offset = 140 (guessed)
+[02/24 17:08:58      7s] Vertical Layer M2 offset = 190 (derived)
+[02/24 17:08:58      7s] Suggestion: specify LAYER OFFSET in LEF file
+[02/24 17:08:58      7s] Reason: hard to extract LAYER OFFSET from standard cells
+[02/24 17:08:58      7s] Generated pitch 0.19 in M4 is different from 0.14 defined in technology file in preferred direction.
+Extraction setup Delayed 
+[02/24 17:09:18      8s] Reading timing constraints file '/dev/null' ...
+[02/24 17:09:19      8s] Current (total cpu=0:00:08.2, real=0:00:41.0, peak res=509.0M, current mem=420.8M)
+[02/24 17:09:19      8s] Creating Cell Server ...(0, 1, 1, 1)
+[02/24 17:09:20      8s] Summary for sequential cells identification: 
+[02/24 17:09:20      8s]   Identified SBFF number: 16
+[02/24 17:09:20      8s]   Identified MBFF number: 0
+[02/24 17:09:20      8s]   Identified SB Latch number: 0
+[02/24 17:09:20      8s]   Identified MB Latch number: 0
+[02/24 17:09:20      8s]   Not identified SBFF number: 0
+[02/24 17:09:20      8s]   Not identified MBFF number: 0
+[02/24 17:09:20      8s]   Not identified SB Latch number: 0
+[02/24 17:09:20      8s]   Not identified MB Latch number: 0
+[02/24 17:09:20      8s]   Number of sequential cells which are not FFs: 4
+[02/24 17:09:20      8s] Total number of combinational cells: 93
+[02/24 17:09:20      8s] Total number of sequential cells: 20
+[02/24 17:09:20      8s] Total number of tristate cells: 0
+[02/24 17:09:20      8s] Total number of level shifter cells: 0
+[02/24 17:09:20      8s] Total number of power gating cells: 0
+[02/24 17:09:20      8s] Total number of isolation cells: 0
+[02/24 17:09:20      8s] Total number of power switch cells: 0
+[02/24 17:09:20      8s] Total number of pulse generator cells: 0
+[02/24 17:09:20      8s] Total number of always on buffers: 0
+[02/24 17:09:20      8s] Total number of retention cells: 0
+[02/24 17:09:20      8s] List of usable buffers: BUF_X2 BUF_X1 BUF_X16 BUF_X32 BUF_X4
+[02/24 17:09:20      8s] Total number of usable buffers: 5
+[02/24 17:09:20      8s] List of unusable buffers:
+[02/24 17:09:20      8s] Total number of unusable buffers: 0
+[02/24 17:09:20      8s] List of usable inverters: INV_X2 INV_X1 INV_X16 INV_X32 INV_X4 INV_X8
+[02/24 17:09:20      8s] Total number of usable inverters: 6
+[02/24 17:09:20      8s] List of unusable inverters:
+[02/24 17:09:20      8s] Total number of unusable inverters: 0
+[02/24 17:09:20      8s] List of identified usable delay cells: BUF_X8
+[02/24 17:09:20      8s] Total number of identified usable delay cells: 1
+[02/24 17:09:20      8s] List of identified unusable delay cells:
+[02/24 17:09:20      8s] Total number of identified unusable delay cells: 0
+[02/24 17:09:20      8s]  Visiting view : func_slow_CMAX
+[02/24 17:09:20      8s] Extraction setup Started 
+[02/24 17:09:20      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) capacitance scaling factor 1.2 for corner corner_worst_CMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 17:09:20      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) coupling capacitance scaling factor 1.2 for corner corner_worst_CMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 17:09:21      8s] **WARN: (IMPEXT-2773):	The via resistance between layers POLY and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[02/24 17:09:21      8s] Summary of Active RC-Corners : 
+[02/24 17:09:21      8s]  
+[02/24 17:09:21      8s]  Analysis View: func_slow_CMAX
+[02/24 17:09:21      8s]     RC-Corner Name        : corner_worst_CMAX
+[02/24 17:09:21      8s]     RC-Corner Index       : 0
+[02/24 17:09:21      8s]     RC-Corner Temperature : 25 Celsius
+[02/24 17:09:21      8s]     RC-Corner Cap Table   : ''
+[02/24 17:09:21      8s]     RC-Corner PostRoute Res Factor        : 1
+[02/24 17:09:21      8s]     RC-Corner PostRoute Cap Factor        : 1.2
+[02/24 17:09:21      8s]     RC-Corner PostRoute XCap Factor       : 1.2
+[02/24 17:09:21      8s] Warning: getNanoRouteMode is ignored by Tempus Timing Signoff Solution.
+[02/24 17:09:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 17:09:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 17:09:21      8s]  Visiting view : func_slow_CMAX
+[02/24 17:09:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 17:09:21      8s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 17:09:21      8s]  Setting StdDelay to 85.20
+[02/24 17:09:21      8s] Creating Cell Server, finished. 
+[02/24 17:09:21      8s] 
+[02/24 17:09:21      8s] Deleting Cell Server ...
+[02/24 17:09:22      8s] @file(loadDesign_DMMMC_postECO.tcl) 8: read_def "ECO_INIT_11_optSetup_postECO.def"
+[02/24 17:09:23      8s] Reading DEF file 'ECO_INIT_11_optSetup_postECO.def', current time is Tue Feb 24 17:09:23 2026 ...
+[02/24 17:09:23      8s] --- DIVIDERCHAR '/'
+[02/24 17:09:23      8s] --- UnitsPerDBU = 1.0000
+[02/24 17:09:23      8s] Horizontal Layer M1 offset = 140 (guessed)
+[02/24 17:09:23      8s] Vertical Layer M2 offset = 190 (derived)
+[02/24 17:09:23      8s] Suggestion: specify LAYER OFFSET in LEF file
+[02/24 17:09:23      8s] Reason: hard to extract LAYER OFFSET from standard cells
+[02/24 17:09:23      8s] Generated pitch 0.19 in M4 is different from 0.14 defined in technology file in preferred direction.
+[02/24 17:09:23      8s] --- DIEAREA (0 0) (920000 820000)
+[02/24 17:09:23      8s] defIn read 10000 lines...
+[02/24 17:09:24      8s] Extracting standard cell pins and blockage ...... 
+[02/24 17:09:24      8s] Pin and blockage extraction finished
+[02/24 17:09:24      8s] Extracting macro/IO cell pins and blockage ...... 
+[02/24 17:09:24      8s] Pin and blockage extraction finished
+[02/24 17:09:24      8s] defIn read 20000 lines...
+[02/24 17:09:24      8s] defIn read 30000 lines...
+[02/24 17:09:24      8s] defIn read 40000 lines...
+[02/24 17:09:24      8s] defIn read 50000 lines...
+[02/24 17:09:24      8s] defIn read 60000 lines...
+[02/24 17:09:24      8s] defIn read 70000 lines...
+[02/24 17:09:24      8s] defIn read 80000 lines...
+[02/24 17:09:24      8s] defIn read 90000 lines...
+[02/24 17:09:24      8s] defIn read 100000 lines...
+[02/24 17:09:24      8s] defIn read 110000 lines...
+[02/24 17:09:24      8s] defIn read 120000 lines...
+[02/24 17:09:25      8s] defIn read 130000 lines...
+[02/24 17:09:25      8s] defIn read 140000 lines...
+[02/24 17:09:25      8s] defIn read 150000 lines...
+[02/24 17:09:25      8s] defIn read 160000 lines...
+[02/24 17:09:25      8s] defIn read 170000 lines...
+[02/24 17:09:25      8s] defIn read 180000 lines...
+[02/24 17:09:25      8s] defIn read 190000 lines...
+[02/24 17:09:25      8s] DEF file 'ECO_INIT_11_optSetup_postECO.def' is parsed, current time is Tue Feb 24 17:09:25 2026.
+[02/24 17:09:25      8s] Updating the floorplan ...
+[02/24 17:09:25      8s] #@ End verbose source ../scripts/loadDesign_DMMMC_postECO.tcl
+[02/24 17:09:25      8s] #@ End verbose source .dmmc.init.6523
+[02/24 17:09:28      8s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[02/24 17:09:29      8s] Extraction setup Started 
+[02/24 17:09:29      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) resistance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 17:09:29      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) capacitance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 17:09:29      8s] **WARN: (IMPEXT-3570):	PostRoute (EffortLevel high) coupling capacitance scaling factor 1.2 for corner corner_worst_RCMAX is different than the expected 1.0 to match signoff Quantus QRC. Check that it is intended.
+[02/24 17:09:29      8s] **WARN: (IMPEXT-2773):	The via resistance between layers POLY and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+[02/24 17:09:29      8s] Summary of Active RC-Corners : 
+[02/24 17:09:29      8s]  
+[02/24 17:09:29      8s]  Analysis View: func_slow_RCMAX
+[02/24 17:09:29      8s]     RC-Corner Name        : corner_worst_RCMAX
+[02/24 17:09:29      8s]     RC-Corner Index       : 0
+[02/24 17:09:29      8s]     RC-Corner Temperature : 25 Celsius
+[02/24 17:09:29      8s]     RC-Corner Cap Table   : ''
+[02/24 17:09:29      8s]     RC-Corner PostRoute Res Factor        : 1.2
+[02/24 17:09:29      8s]     RC-Corner PostRoute Cap Factor        : 1.2
+[02/24 17:09:29      8s]     RC-Corner PostRoute XCap Factor       : 1.2
+[02/24 17:09:29      8s] Warning: getNanoRouteMode is ignored by Tempus Timing Signoff Solution.
+[02/24 17:09:53      9s] Reading timing constraints file '/dev/null' ...
+[02/24 17:09:53      9s] Current (total cpu=0:00:09.1, real=0:01:15, peak res=509.0M, current mem=420.8M)
+[02/24 17:09:53      9s] Creating Cell Server ...(0, 1, 1, 1)
+[02/24 17:09:54      9s] Summary for sequential cells identification: 
+[02/24 17:09:54      9s]   Identified SBFF number: 16
+[02/24 17:09:54      9s]   Identified MBFF number: 0
+[02/24 17:09:54      9s]   Identified SB Latch number: 0
+[02/24 17:09:54      9s]   Identified MB Latch number: 0
+[02/24 17:09:54      9s]   Not identified SBFF number: 0
+[02/24 17:09:54      9s]   Not identified MBFF number: 0
+[02/24 17:09:54      9s]   Not identified SB Latch number: 0
+[02/24 17:09:54      9s]   Not identified MB Latch number: 0
+[02/24 17:09:54      9s]   Number of sequential cells which are not FFs: 4
+[02/24 17:09:54      9s] Total number of combinational cells: 93
+[02/24 17:09:54      9s] Total number of sequential cells: 20
+[02/24 17:09:54      9s] Total number of tristate cells: 0
+[02/24 17:09:54      9s] Total number of level shifter cells: 0
+[02/24 17:09:54      9s] Total number of power gating cells: 0
+[02/24 17:09:54      9s] Total number of isolation cells: 0
+[02/24 17:09:54      9s] Total number of power switch cells: 0
+[02/24 17:09:54      9s] Total number of pulse generator cells: 0
+[02/24 17:09:54      9s] Total number of always on buffers: 0
+[02/24 17:09:54      9s] Total number of retention cells: 0
+[02/24 17:09:54      9s] List of usable buffers: BUF_X2 BUF_X1 BUF_X16 BUF_X32 BUF_X4
+[02/24 17:09:54      9s] Total number of usable buffers: 5
+[02/24 17:09:54      9s] List of unusable buffers:
+[02/24 17:09:54      9s] Total number of unusable buffers: 0
+[02/24 17:09:54      9s] List of usable inverters: INV_X2 INV_X1 INV_X16 INV_X32 INV_X4 INV_X8
+[02/24 17:09:54      9s] Total number of usable inverters: 6
+[02/24 17:09:54      9s] List of unusable inverters:
+[02/24 17:09:54      9s] Total number of unusable inverters: 0
+[02/24 17:09:54      9s] List of identified usable delay cells: BUF_X8
+[02/24 17:09:54      9s] Total number of identified usable delay cells: 1
+[02/24 17:09:54      9s] List of identified unusable delay cells:
+[02/24 17:09:54      9s] Total number of identified unusable delay cells: 0
+[02/24 17:09:54      9s]  Visiting view : func_slow_RCMAX
+[02/24 17:09:54      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 17:09:54      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 17:09:54      9s]  Visiting view : func_slow_RCMAX
+[02/24 17:09:54      9s]    : PowerDomain = none : Weighted F : unweighted  = 85.20 (1.000) with rcCorner = 0
+[02/24 17:09:54      9s]    : PowerDomain = none : Weighted F : unweighted  = 31.40 (1.000) with rcCorner = -1
+[02/24 17:09:54      9s]  Setting StdDelay to 85.20
+[02/24 17:09:54      9s] Creating Cell Server, finished. 
+[02/24 17:09:54      9s] 
+[02/24 17:09:54      9s] Deleting Cell Server ...
+[02/24 17:09:56      9s] #@ Begin verbose source ../scripts/sta_postECO_signoff.tcl
+[02/24 17:09:56      9s] @file(sta_postECO_signoff.tcl) 1: source spef_after.tcl
+[02/24 17:09:56      9s] #@ Begin verbose source spef_after.tcl
+[02/24 17:09:56      9s] @file(spef_after.tcl) 1: read_spef -rc_corner corner_worst_RMIN SPEF_AFTER/corner_worst_RMIN.spef.gz
+[02/24 17:09:56      9s] read_spef Option :  SPEF_AFTER/corner_worst_RMIN.spef.gz -noStarN -rc_corner corner_worst_RMIN 
+[02/24 17:09:56      9s] @file(spef_after.tcl) 2: read_spef -rc_corner corner_worst_CMAX SPEF_AFTER/corner_worst_CMAX.spef.gz
+[02/24 17:09:56      9s] read_spef Option :  SPEF_AFTER/corner_worst_CMAX.spef.gz -noStarN -rc_corner corner_worst_CMAX 
+[02/24 17:09:56      9s] @file(spef_after.tcl) 3: read_spef -rc_corner corner_worst_CMIN SPEF_AFTER/corner_worst_CMIN.spef.gz
+[02/24 17:09:56      9s] read_spef Option :  SPEF_AFTER/corner_worst_CMIN.spef.gz -noStarN -rc_corner corner_worst_CMIN 
+[02/24 17:09:56      9s] @file(spef_after.tcl) 4: read_spef -rc_corner corner_worst_RCMAX SPEF_AFTER/corner_worst_RCMAX.spef.gz
+[02/24 17:09:56      9s] read_spef Option :  SPEF_AFTER/corner_worst_RCMAX.spef.gz -noStarN -rc_corner corner_worst_RCMAX 
+[02/24 17:09:58      9s] 
+[02/24 17:09:58      9s] SPEF files for RC Corner corner_worst_RCMAX:
+[02/24 17:09:58      9s] Top-level spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz'.
+[02/24 17:09:58      9s] Number of corners: 1
+[02/24 17:09:58      9s] Number of parallel threads processing the nets is: 8
+[02/24 17:09:58      9s] Maximum backlog used in parser: 50.
+[02/24 17:09:58      9s] Start spef parsing (MEM=741.414).
+[02/24 17:09:58      9s] Reading multiple SPEF files in parallel.
+[02/24 17:09:58      9s] RCDB /tmp/ssv_tmpdir_6682_MlqAGX/dtmf_recvr_core_6682_HOdDaL.rcdb.d/dtmf_recvr_core.rcdb.d Creation Started (CPU Time= 0:00:00.0  MEM= 741.4M)
+[02/24 17:09:58      9s] Creating parasitic data file '/tmp/ssv_tmpdir_6682_MlqAGX/dtmf_recvr_core_6682_HOdDaL.rcdb.d/dtmf_recvr_core.rcdb.d' for storing RC.
+[02/24 17:09:59      9s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 10 %
+[02/24 17:09:59      9s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 20 %
+[02/24 17:09:59      9s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 30 %
+[02/24 17:09:59      9s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 40 %
+[02/24 17:09:59     10s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 50 %
+[02/24 17:09:59     10s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 60 %
+[02/24 17:09:59     10s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 70 %
+[02/24 17:09:59     10s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 80 %
+[02/24 17:09:59     10s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 90 %
+[02/24 17:09:59     10s] Spef file 'SPEF_AFTER/corner_worst_RCMAX.spef.gz' reading completed:: 100 %
+[02/24 17:10:04     10s] SPEF file SPEF_AFTER/corner_worst_RCMAX.spef.gz.
+[02/24 17:10:04     10s] Number of Resistors     : 169275
+[02/24 17:10:04     10s] Number of Ground Caps   : 177793
+[02/24 17:10:04     10s] Number of Coupling Caps : 46412
+[02/24 17:10:04     10s] 
+[02/24 17:10:06     10s] RCDB /tmp/ssv_tmpdir_6682_MlqAGX/dtmf_recvr_core_6682_HOdDaL.rcdb.d/dtmf_recvr_core.rcdb.d Creation Completed (CPU Time= 0:00:01.3  MEM= 846.4M)
+[02/24 17:10:06     10s] End spef parsing (MEM=788.891 CPU=0:00:01.3 REAL=0:00:08.0).
+[02/24 17:10:06     10s] Spef for RC Corner 'corner_worst_RCMAX' was previously specified. Dropping the previous specification.
+[02/24 17:10:06     10s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=788.891M)
+[02/24 17:10:06     10s] Opening parasitic data file '/tmp/ssv_tmpdir_6682_MlqAGX/dtmf_recvr_core_6682_HOdDaL.rcdb.d/dtmf_recvr_core.rcdb.d' for reading.
+[02/24 17:10:07     10s] Lumped Parasitic Loading Completed (total cpu=0:00:00.0, real=0:00:01.0, current mem=788.891M)
+[02/24 17:10:07     10s] 3 nets are missing in SPEF file. The names of these nets are saved in ./corner_worst_RCMAX.missing_nets.rpt.
+[02/24 17:10:11     10s] @file(spef_after.tcl) 5: read_spef -rc_corner corner_worst_RMAX SPEF_AFTER/corner_worst_RMAX.spef.gz
+[02/24 17:10:12     10s] read_spef Option :  SPEF_AFTER/corner_worst_RMAX.spef.gz -noStarN -rc_corner corner_worst_RMAX 
+[02/24 17:10:12     10s] @file(spef_after.tcl) 6: read_spef -rc_corner corner_worst_RCMIN SPEF_AFTER/corner_worst_RCMIN.spef.gz
+[02/24 17:10:12     10s] read_spef Option :  SPEF_AFTER/corner_worst_RCMIN.spef.gz -noStarN -rc_corner corner_worst_RCMIN 
+[02/24 17:10:12     10s] #@ End verbose source spef_after.tcl
+[02/24 17:10:12     10s] @file(sta_postECO_signoff.tcl) 2: set_db delaycal_enable_si true
+[02/24 17:10:13     10s] @file(sta_postECO_signoff.tcl) 4: report_constraint -all_violators  > rep.vio.gz
+[02/24 17:10:14     10s] User filename '/home/shadab/shadab/tempus_labs_CUI/eco/work/rep.vio.gz' was modified as unique path 'sta_postECO/func_slow_RCMAX/rep.vio.gz' for Distributed MMMC run.
+[02/24 17:10:17     10s] AAE DB initialization (MEM=810.684 CPU=0:00:00.1 REAL=0:00:00.0) 
+[02/24 17:10:17     10s] Starting SI iteration 1 using Infinite Timing Windows
+[02/24 17:10:17     10s] Multithreaded Timing Analysis is initialized with 8 threads
+[02/24 17:10:17     10s] 
+[02/24 17:10:38     10s] #################################################################################
+[02/24 17:10:38     10s] # Design Name: dtmf_recvr_core
+[02/24 17:10:38     10s] # Design Mode: 65nm
+[02/24 17:10:38     10s] # Analysis Mode: MMMC OCV 
+[02/24 17:10:38     10s] # Parasitics Mode: SPEF/RCDB
+[02/24 17:10:38     10s] # Signoff Settings: SI On 
+[02/24 17:10:38     10s] #################################################################################
+[02/24 17:10:52     13s] Topological Sorting (REAL = 0:00:03.0, MEM = 1158.6M, InitMEM = 1100.2M)
+[02/24 17:10:54     13s] Setting infinite Tws ...
+[02/24 17:10:54     13s] First Iteration Infinite Tw... 
+[02/24 17:10:54     13s] Start delay calculation (fullDC) (8 T). (MEM=1154.41)
+[02/24 17:10:57     13s] Start AAE Lib Loading. (MEM=1154.41)
+[02/24 17:10:59     13s] End AAE Lib Loading. (MEM=1173.48 CPU=0:00:00.0 Real=0:00:02.0)
+[02/24 17:10:59     13s] End AAE Lib Interpolated Model. (MEM=1173.48 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/24 17:11:18     13s] Opening parasitic data file '/tmp/ssv_tmpdir_6682_MlqAGX/dtmf_recvr_core_6682_HOdDaL.rcdb.d/dtmf_recvr_core.rcdb.d' for reading.
+[02/24 17:11:19     13s] RC Database In Completed (CPU Time= 0:00:00.3  Real Time=0:00:02.0  MEM= 1200.0M)
+[02/24 17:11:40     16s] **WARN: (IMPESI-3140):	Bumpy transitions may exist in the design which may lead to inaccurate delay computation. To report/analyze the nets having bumpy transition, please enable delay report and use command 'report_noise -bumpy_waveform' after timing analysis. Delay report is enabled by setting 'set_si_mode -enable_delay_report true' before timing analysis.
+[02/24 17:11:41     17s] AAE_INFO-618: Total number of nets in the design is 9098,  100.0 percent of the nets selected for SI analysis
+[02/24 17:11:44     18s] End Timing Check Calculation. (CPU Time=0:00:00.6, Real Time=0:00:03.0)
+[02/24 17:11:44     18s] End delay calculation. (MEM=1614.54 CPU=0:00:03.5 REAL=0:00:20.0)
+[02/24 17:12:09     18s] End delay calculation (fullDC). (MEM=1550.54 CPU=0:00:05.3 REAL=0:01:15)
+[02/24 17:12:10     18s] esiiDumpWaveformsThread is successfull 1 
+[02/24 17:12:10     18s] Save waveform /tmp/ssv_tmpdir_6682_MlqAGX/.AAE_y9To6h/.AAE_6682/waveform.data in separate thread...
+[02/24 17:12:10     18s] Finish pthread dumping compressed waveforms.
+[02/24 17:12:10     18s] *** CDM Built up (cpu=0:00:07.7  real=0:01:33  mem= 1565.5M) ***
+[02/24 17:12:19     18s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1572.5M)
+[02/24 17:12:20     18s] Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:01.0, MEM = 1557.5M)
+[02/24 17:12:20     18s] Starting SI iteration 2
+[02/24 17:12:21     18s] Start delay calculation (fullDC) (8 T). (MEM=1341.75)
+[02/24 17:12:21     18s] End AAE Lib Interpolated Model. (MEM=1341.75 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[02/24 17:12:21     18s] AAE_INFO-618: Total number of nets in the design is 9098,  0.0 percent of the nets selected for SI analysis
+[02/24 17:12:21     18s] End delay calculation. (MEM=1711 CPU=0:00:00.1 REAL=0:00:00.0)
+[02/24 17:12:21     18s] End delay calculation (fullDC). (MEM=1711 CPU=0:00:00.1 REAL=0:00:00.0)
+[02/24 17:12:21     18s] *** CDM Built up (cpu=0:00:00.1  real=0:00:01.0  mem= 1711.0M) ***
+[02/24 17:12:30     19s] @file(sta_postECO_signoff.tcl) 5: report_analysis_coverage > rep.coverage
+[02/24 17:12:31     19s] User filename '/home/shadab/shadab/tempus_labs_CUI/eco/work/rep.coverage' was modified as unique path 'sta_postECO/func_slow_RCMAX/rep.coverage' for Distributed MMMC run.
+[02/24 17:12:31     19s] @file(sta_postECO_signoff.tcl) 6: report_timing -path_type endpoint -fields {endpoint capture_data_edge slack view} -max_slack 0.1 > setup.rpt
+[02/24 17:12:31     19s] User filename '/home/shadab/shadab/tempus_labs_CUI/eco/work/setup.rpt' was modified as unique path 'sta_postECO/func_slow_RCMAX/setup.rpt' for Distributed MMMC run.
+[02/24 17:12:31     19s] @file(sta_postECO_signoff.tcl) 7: report_timing -path_type endpoint -fields {endpoint capture_data_edge slack view} -max_slack 0.1 -early > hold.rpt
+[02/24 17:12:31     19s] User filename '/home/shadab/shadab/tempus_labs_CUI/eco/work/hold.rpt' was modified as unique path 'sta_postECO/func_slow_RCMAX/hold.rpt' for Distributed MMMC run.
+[02/24 17:12:31     19s] @file(sta_postECO_signoff.tcl) 11: report_timing_summary > timing_summary
+[02/24 17:12:31     19s] **ERROR: (IMPSE-110):	File '../scripts/sta_postECO_signoff.tcl' line 31: invalid command name "report_timing_summary".
+[02/24 17:12:31     19s] #@ End verbose source ../scripts/sta_postECO_signoff.tcl
+[02/24 17:12:31     19s] ***Error: invalid command name "report_timing_summary"
+[02/24 17:13:32     19s] 
+[02/24 17:13:32     19s] *** Memory Usage v#1 (Current mem = 1376.848M, initial mem = 249.914M) ***
+[02/24 17:13:32     19s] 
+[02/24 17:13:32     19s] *** Summary of all messages that are not suppressed in this session:
+[02/24 17:13:32     19s] Severity  ID               Count  Summary                                  
+[02/24 17:13:32     19s] ERROR     IMPSE-110            1  File '%s' line %s: %s.                   
+[02/24 17:13:32     19s] WARNING   IMPEXT-2773          2  The via resistance between layers %s and...
+[02/24 17:13:32     19s] WARNING   IMPEXT-3570          5  PostRoute (EffortLevel high) %s scaling ...
+[02/24 17:13:32     19s] WARNING   IMPVL-159          232  Pin '%s' of cell '%s' is defined in LEF ...
+[02/24 17:13:32     19s] WARNING   IMPESI-3140          1  Bumpy transitions may exist in the desig...
+[02/24 17:13:32     19s] WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+[02/24 17:13:32     19s] WARNING   TECHLIB-459          1  Appending library '%s' to the previously...
+[02/24 17:13:32     19s] *** Message Summary: 261 warning(s), 1 error(s)
+[02/24 17:13:32     19s] 
+[02/24 17:13:32     19s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:19.6, real=0:04:54, mem=1376.8M) ---
